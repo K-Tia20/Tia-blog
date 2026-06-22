@@ -1,0 +1,6 @@
+오픈소스 yt-dlp 사용
+
+
+
+
+yt-dlp -f "bv+ba/b" --merge-output-format mp4 "https://youtu.be/7QcFc98KFH8?si=tIHS9Jbuc-KlMat8"
