@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Coding Test/[260420]두 수의 곱 구하기.md",
+                "file": "2.5D_Game/강의/2D 개념/다시정리/260701.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "[260420]두 수의 곱 구하기"
+              "title": "260701"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Coding Test/[260420]두 수의 곱 구하기.md",
+                "file": "2.5D_Game/강의/2D 개념/다시정리/260701.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "[260420]두 수의 곱 구하기 의 백링크"
+              "title": "260701 의 백링크"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Coding Test/[260420]두 수의 곱 구하기.md",
+                "file": "2.5D_Game/강의/2D 개념/다시정리/260701.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "[260420]두 수의 곱 구하기 의 나가는 링크"
+              "title": "260701 의 나가는 링크"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coding Test/[260420]두 수의 곱 구하기.md",
+                "file": "2.5D_Game/강의/2D 개념/다시정리/260701.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "[260420]두 수의 곱 구하기 의 개요"
+              "title": "260701 의 개요"
             }
           },
           {
@@ -196,6 +196,10 @@
   },
   "active": "2bc83233cb712ef2",
   "lastOpenFiles": [
+    "2.5D_Game/강의/2D 개념/Sprite Actions.md",
+    "2.5D_Game/강의/2D 개념/다시정리/260701.md",
+    "Coding Test/[260420]두 수의 곱 구하기.md",
+    "2.5D_Game/강의/2D 개념/다시정리",
     "NBC(내일배움캠프)/260601-배치고사/8번문제.md",
     "NBC(내일배움캠프)/260601-배치고사/6번문제.md",
     "NBC(내일배움캠프)/260601-배치고사/4번문제.md",
