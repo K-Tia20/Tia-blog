@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "이세계 반편성"
+              "title": "index"
             }
           }
         ]
@@ -199,12 +199,12 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "ed21fa0731abd996",
+  "active": "7b7e102ae994c6a1",
   "lastOpenFiles": [
+    "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
     "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
     "Unreal Tech Note/Unreal 함수/Cast.md",
     "게임 프로젝트/ProjectF/프로젝트 F.md",
-    "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
     "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
     "2.5D_Game/제작 방법/참고1_AI툴 사용.md",
     "게임 프로젝트/IsekaiClass(진행중)",
