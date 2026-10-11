@@ -16,17 +16,23 @@ export const sharedPageComponents: SharedLayout = {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
-    Component.GraphForIndex(),
-    Component.RecentNotesForIndex(),
-  ],
+    beforeBody: [
+        // 메인화면(index)이 아닐 때만 경로, 제목, 날짜를 보여주도록 설정
+        Component.ConditionalRender({
+            component: Component.Breadcrumbs(),
+            condition: (page) => page.fileData.slug !== "index",
+        }),
+        Component.ConditionalRender({
+            component: Component.ArticleTitle(),
+            condition: (page) => page.fileData.slug !== "index",
+        }),
+        Component.ConditionalRender({
+            component: Component.ContentMeta(),
+            condition: (page) => page.fileData.slug !== "index",
+        }),
+        Component.TagList(),
+        // 그래프와 최신 글 목록 코드는 삭제했습니다!
+    ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
