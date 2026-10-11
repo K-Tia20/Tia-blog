@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "하렘 텍스트 RPG"
+              "title": "index"
             }
           }
         ]
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
+                "file": "개발중인 게임/이세계 반편성(가제)/기획중/스토리.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -199,10 +199,12 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "2dc0bdc5a65ce5fd",
+  "active": "7b7e102ae994c6a1",
   "lastOpenFiles": [
-    "개발중인 게임/이세계 반편성(가제)/기획중/IsekaiClass 기획서(수정중).md",
     "개발중인 게임/이세계 반편성(가제)/기획중/스토리.md",
+    "개발중인 게임/이세계 반편성(가제)/기획중/IsekaiClass 기획서(수정중).md",
+    "게임 프로젝트/ProjectF/프로젝트 F.md",
+    "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
     "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
     "개발중인 게임/이세계 반편성(가제)/정리.md",
     "개발중인 게임/이세계 반편성(가제)",
@@ -221,10 +223,8 @@
     "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.md",
     "게임 프로젝트/PrincessRPG/구현기능/0. 구현기능.md",
     "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.png",
-    "게임 프로젝트/ProjectF/프로젝트 F.md",
     "게임 프로젝트/PrincessRPG/구현기능/0. 구현기능.png",
     "게임 프로젝트/PrincessRPG/구현기능/무제.md",
-    "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
     "게임 프로젝트/PrincessRPG/구현기능/무제 14.md",
     "게임 프로젝트/PrincessRPG/구현기능/무제 14 10.md",
     "게임 프로젝트/PrincessRPG/구현기능/무제 14 9.md",
