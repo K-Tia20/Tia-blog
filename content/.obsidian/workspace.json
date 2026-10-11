@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "하렘 텍스트 RPG"
             }
           }
         ]
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "portfolio.pdf",
+                "file": "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.5
+    "width": 341.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,45 +199,53 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "7b7e102ae994c6a1",
+  "active": "2dc0bdc5a65ce5fd",
   "lastOpenFiles": [
-    "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
+    "개발중인 게임/이세계 반편성(가제)/기획중/IsekaiClass 기획서(수정중).md",
+    "개발중인 게임/이세계 반편성(가제)/기획중/스토리.md",
     "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
-    "Unreal Tech Note/Unreal 함수/Cast.md",
+    "개발중인 게임/이세계 반편성(가제)/정리.md",
+    "개발중인 게임/이세계 반편성(가제)",
+    "개발중인 게임",
+    "게임 프로젝트/IsekaiClass(진행중)/IC_1.png",
+    "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
+    "개발중인 게임/이세계 반편성(가제)/기획중",
+    "게임 프로젝트/HaremTextRPG/구현 기능",
+    "Coding Test/[260420]두 수의 곱 구하기.md",
+    "Coding Test/[260420]두 수의 나눗셈.md",
+    "Coding Test/[260611]-부족한 금액 계산하기.md",
+    "Coding Test/[260618]-3진법 뒤집기.md",
+    "Coding Test/[260701]-두 개 뽑아서 더하기.md",
+    "Coding Test/[260706]-콜라 문제.md",
+    "Coding Test/[269999]-복붙용.md",
+    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.md",
+    "게임 프로젝트/PrincessRPG/구현기능/0. 구현기능.md",
+    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.png",
     "게임 프로젝트/ProjectF/프로젝트 F.md",
+    "게임 프로젝트/PrincessRPG/구현기능/0. 구현기능.png",
+    "게임 프로젝트/PrincessRPG/구현기능/무제.md",
     "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
-    "2.5D_Game/제작 방법/참고1_AI툴 사용.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 10.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 9.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 8.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 7.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 6.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 5.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 4.md",
+    "게임 프로젝트/PrincessRPG/구현기능/무제 14 3.md",
+    "게임 프로젝트/PrincessRPG/구현기능/29.png",
+    "게임 프로젝트/PrincessRPG/구현기능",
+    "게임 프로젝트/PrincessRPG/2.png",
+    "게임 프로젝트/PrincessRPG/1.png",
+    "게임 프로젝트/PrincessRPG/7.png",
+    "게임 프로젝트/PrincessRPG/6.png",
+    "게임 프로젝트/PrincessRPG/5.png",
+    "게임 프로젝트/PrincessRPG/4.png",
     "게임 프로젝트/IsekaiClass(진행중)",
-    "2.5D_Game/제작 방법/참고2_AI툴 사용+.md",
-    "팀플ch4_12/무제.md",
-    "팀플ch4_12/무제 1.md",
-    "팀플ch4_12/데디 서버 셋업.md",
-    "팀플ch4_12/260813.md",
-    "팀플ch4_12/무제 2.md",
-    "팀플ch4_12/무제 3.md",
-    "팀플ch4_12/무제 4.md",
-    "팀플ch4_12/무제 5.md",
-    "팀플ch4_12/Pasted image 20260813142034.png",
-    "index.md",
-    "Unreal Tech Note/일단위.md",
-    "Unreal Tech Note/템플릿.md",
     "portfolio.pdf",
-    "Unreal Tech Note/Unreal 함수/GetTimerRemaining.md",
     "게임 프로젝트/PrincessRPG",
     "게임 프로젝트/HaremTextRPG",
-    "게임 프로젝트/ProjectF",
-    "무제 1",
-    "Unreal Tech Note/Unreal 함수/GetTimerManager.md",
-    "Unreal Tech Note/Unreal 함수/ClearTimer.md",
-    "Unreal Tech Note/Unreal Engine/언리얼 엔진 주제.md",
-    "Unreal Tech Note/Unreal Engine/블루프린트 새 창으로 열리지 않게 설정하기.md",
-    "Unreal Tech Note/일단 저장/OOP.md",
-    "Unreal Tech Note/일단 저장/Delegate.md",
-    "Unreal Tech Note/일단 저장/Compile Time.md",
-    "게임 프로젝트",
-    "팀플ch4_12",
-    "Coding Test/첨부파일모음/Pasted image 20260617090252.png",
-    "Z-Pro",
-    "2.5D_Game/강의/2D 개념/다시정리"
+    "게임 프로젝트/ProjectF"
   ]
 }
