@@ -1,5 +1,5 @@
 
-
+![[하렘텍스트RPG.png]]
 
 # 🎮 제목 : 텍스트 RPG 세계관에서 하렘을 구축하는 방법
 > 모태솔로 개발자들이 모여 만드는 스릴 만점 현대 판타지 미연시 RPG 프로젝트. 
@@ -30,3 +30,7 @@
 ### 🛠️ 개발 환경 (Development Environment)
 * **Language** : C++
 * **IDE** : Visual Studio 2022 or JetBrains Rider 2026.1.2
+
+---
+### 발표 자료
+* ![[텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf]]
