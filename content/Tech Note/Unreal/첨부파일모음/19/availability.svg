@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+<rect width="1200" height="660" fill="#101b2a"/>
+<g font-family="Malgun Gothic, Noto Sans KR, sans-serif" fill="#f3f7ff">
+<text x="50" y="65" font-size="32" font-weight="bold">UE6 · Verse · Scene Graph의 로컬 제공 상태</text>
+<text x="50" y="105" font-size="19" fill="#a8c6e7">기준일 2026-11-02 · 현재 설치본에 대한 확인</text>
+<rect x="45" y="145" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="177" font-size="21" fill="#84dfc5">실행 중인 엔진</text>
+<text x="365" y="177" font-size="23">UE 5.8.4</text>
+<text x="365" y="209" font-size="17" fill="#c0ccdc">UE6 프로젝트로 실행한 결과가 아님</text>
+<rect x="45" y="253" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="285" font-size="21" fill="#84dfc5">WITH_VERSE_VM</text>
+<text x="365" y="285" font-size="23">0 · 비활성</text>
+<text x="365" y="317" font-size="17" fill="#c0ccdc">이 로컬 빌드에서 Verse VM을 실행하지 않음</text>
+<rect x="45" y="361" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="393" font-size="21" fill="#84dfc5">UEFN 등록</text>
+<text x="365" y="393" font-size="23">로컬 설치 등록 없음</text>
+<text x="365" y="425" font-size="17" fill="#c0ccdc">일반 UE 프로젝트와 사용 환경을 구분</text>
+<rect x="45" y="469" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="501" font-size="21" fill="#84dfc5">이 시리즈의 범위</text>
+<text x="365" y="501" font-size="23">제공 상태 조사 · 실제 구현 없음</text>
+<text x="365" y="533" font-size="17" fill="#c0ccdc">블루프린트 액터를 Scene Graph로 이름만 바꾸지 않음</text>
+<text x="50" y="625" font-size="17" fill="#a8c6e7">실제 기록을 설명한 도식입니다. 에디터나 게임 실행 화면 캡처가 아닙니다.</text>
+</g></svg>

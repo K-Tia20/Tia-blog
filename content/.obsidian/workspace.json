@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "게임 프로젝트/PrincessRPG/구현기능/0. 시연 영상.md",
+                "file": "Unreal9기 TIL/261014(수)_TIL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0. 시연 영상"
+              "title": "261014(수)_TIL"
             }
           }
         ]
@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -145,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 309.5
   },
   "right": {
     "id": "9959474c0cf63610",
@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,51 +201,51 @@
   },
   "active": "7b7e102ae994c6a1",
   "lastOpenFiles": [
-    "NBC/Unreal9기 TIL/260605(금)_TIL.md",
-    "NBC/Unreal9기 TIL/260000(요일)_TIL.md",
-    "개발중인 게임/이세계 반편성(가제)/기획중/IsekaiClass 기획서(수정중).md",
-    "개발중인 게임/이세계 반편성(가제)/기획중/스토리.md",
-    "게임 프로젝트/ProjectF/프로젝트 F.md",
-    "게임 프로젝트/ProjectF/구현 기능/0.시연 영상.md",
-    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.png",
-    "게임 프로젝트/PrincessRPG/구현기능/0. 시연 영상.md",
-    "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
-    "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
-    "게임 프로젝트/HaremTextRPG/하렘텍스트RPG.png",
-    "게임 프로젝트/HaremTextRPG/텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf",
-    "게임 프로젝트/HaremTextRPG/구현 기능/0.시연 영상.md",
-    "게임 프로젝트/IsekaiClass(진행중)/이세계 반편성.md",
-    "게임 프로젝트/IsekaiClass(진행중)/IC_1.png",
-    "게임 프로젝트/ProjectF/ProjectF.pdf",
-    "게임 프로젝트/ProjectF/ProjectF.png",
-    "게임 프로젝트/PrincessRPG/구현기능/3. 캐릭터 선택.png",
-    "게임 프로젝트/PrincessRPG/구현기능/14. 기본 공격.md",
-    "게임 프로젝트/PrincessRPG/구현기능/15. 범위 타격.md",
-    "게임 프로젝트/PrincessRPG/구현기능/54. 감지, 추적, 공격.png",
-    "게임 프로젝트/PrincessRPG/구현기능/49. 파티 HUD와 보상.png",
-    "게임 프로젝트/PrincessRPG/구현기능/48. 파티 관리.png",
-    "게임 프로젝트/PrincessRPG/구현기능/41. NPC 상호작용.md",
-    "게임 프로젝트/PrincessRPG/구현기능/40. 퀘스트 보상.md",
-    "게임 프로젝트/PrincessRPG/구현기능/33. 장비 스탯 반영.md",
-    "게임 프로젝트/PrincessRPG/구현기능/28. 스탯과 전투력.png",
-    "게임 프로젝트/PrincessRPG/구현기능/17. 데미지, 치명타.md",
-    "게임 프로젝트/PrincessRPG/구현기능/14. 기본 공격.png",
-    "게임 프로젝트/PrincessRPG/구현기능/3. 캐릭터 선택.md",
-    "게임 프로젝트/PrincessRPG/구현기능/2. 로그인 화면.md",
-    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.md",
-    "index.md",
-    "NBC/개별과제/3번과제.md",
-    "NBC/개별과제/7번과제.md",
-    "NBC/개별과제/6번과제.md",
-    "NBC/개별과제/4번과제.md",
-    "NBC/개별과제/5번과제_CoinGame/코드설명/MovingActor.md",
-    "게임 프로젝트/ProjectF/구현 기능",
-    "게임 프로젝트/HaremTextRPG/시연 영상",
-    "개발중인 게임/이세계 반편성(가제)",
-    "개발중인 게임",
-    "개발중인 게임/이세계 반편성(가제)/기획중",
-    "게임 프로젝트/HaremTextRPG/구현 기능",
-    "게임 프로젝트/PrincessRPG/구현기능",
-    "게임 프로젝트/IsekaiClass(진행중)"
+    "Unreal9기 TIL/261019(월)_TIL.md",
+    "Unreal9기 TIL/261014(수)_TIL.md",
+    "Unreal9기 TIL/260714(월)_TIL.md",
+    "Unreal9기 TIL/269999(요일)_TIL.md",
+    "Unreal9기 TIL/260708(수)_TIL.md",
+    "Unreal9기 TIL/260707(화)_TIL.md",
+    "Unreal9기 TIL/260701(수)_TIL.md",
+    "Unreal9기 TIL/260626(금)_TIL.md",
+    "Unreal9기 TIL/260625(목)_TIL.md",
+    "Unreal9기 TIL/260624(수)_TIL.md",
+    "Unreal9기 TIL/260623(화)_TIL.md",
+    "Unreal9기 TIL/260622(월)_TIL.md",
+    "Unreal9기 TIL/260619(금)_TIL.md",
+    "Unreal9기 TIL/260618(목)_TIL.md",
+    "Unreal9기 TIL/260617(수)_TIL.md",
+    "Unreal9기 TIL/260616(화)_TIL.md",
+    "Unreal9기 TIL/260615(월)_TIL.md",
+    "Unreal9기 TIL/260612(금)_TIL.md",
+    "Unreal9기 TIL/260611(목)_TIL.md",
+    "Unreal9기 TIL/260610(수)_TIL.md",
+    "Unreal9기 TIL/260609(화)_TIL.md",
+    "Unreal9기 TIL/260608(월)_TIL.md",
+    "Unreal9기 TIL/260605(금)_TIL.md",
+    "Unreal9기 TIL/260604(목)_TIL.md",
+    "Unreal9기 TIL/260602(화)_TIL.md",
+    "Z.그래프 뷰 태그/unreal.md",
+    "Tech Note/Unreal/첨부파일모음/13/result.png",
+    "Tech Note/Unreal/첨부파일모음/13/settings.png",
+    "Tech Note/Unreal/첨부파일모음/20/result.png",
+    "Tech Note/Unreal/첨부파일모음/13/gi-compare.gif",
+    "Tech Note/Unreal/첨부파일모음/21/editor.png",
+    "Tech Note/Unreal/첨부파일모음/18/settings.png",
+    "Tech Note/Unreal/첨부파일모음/17/workflow.svg",
+    "Tech Note/Unreal/첨부파일모음/20/settings.png",
+    "Tech Note/Unreal/첨부파일모음/20/settings-entry.png",
+    "Tech Note/Unreal/첨부파일모음/19/availability.svg",
+    "Tech Note/Unreal/첨부파일모음/16/review.mp4",
+    "Tech Note/Unreal/첨부파일모음/01/voice-demo.mp4",
+    "Tech Note/Unreal/첨부파일모음/02/voice-demo.mp4",
+    "Tech Note/Unreal/첨부파일모음/13",
+    "Tech Note/Unreal/첨부파일모음/21",
+    "Tech Note/Unreal/첨부파일모음/17",
+    "Tech Note/Unreal/첨부파일모음/20",
+    "Tech Note/Unreal/첨부파일모음/19",
+    "Tech Note/Unreal/첨부파일모음/18",
+    "Tech Note/Unreal/첨부파일모음/16"
   ]
 }

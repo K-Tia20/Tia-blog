@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660">
+<rect width="1200" height="660" fill="#101b2a"/>
+<g font-family="Malgun Gothic, Noto Sans KR, sans-serif" fill="#f3f7ff">
+<text x="50" y="65" font-size="32" font-weight="bold">UAF 걷기·달리기 그래프 읽기</text>
+<text x="50" y="105" font-size="19" fill="#a8c6e7">실제 에셋에서 내보낸 5개 노드·4개 연결의 핵심 흐름</text>
+<rect x="45" y="145" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="177" font-size="21" fill="#84dfc5">Walk.Result</text>
+<text x="365" y="177" font-size="23">→ WalkRunBlend.FalseChild</text>
+<text x="365" y="209" font-size="17" fill="#c0ccdc">UseRun=False이면 걷기 출력 사용</text>
+<rect x="45" y="253" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="285" font-size="21" fill="#84dfc5">Run.Result</text>
+<text x="365" y="285" font-size="23">→ WalkRunBlend.TrueChild</text>
+<text x="365" y="317" font-size="17" fill="#c0ccdc">UseRun=True이면 달리기 출력 사용</text>
+<rect x="45" y="361" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="393" font-size="21" fill="#84dfc5">UseRunInput.Value</text>
+<text x="365" y="393" font-size="23">→ WalkRunBlend.bCondition</text>
+<text x="365" y="425" font-size="17" fill="#c0ccdc">참·거짓 값을 선택 조건으로 전달</text>
+<rect x="45" y="469" width="1110" height="90" rx="12" fill="#1d3047"/>
+<text x="68" y="501" font-size="21" fill="#84dfc5">WalkRunBlend.Result</text>
+<text x="365" y="501" font-size="23">→ RigUnit_AnimNextGraphRoot.Result</text>
+<text x="365" y="533" font-size="17" fill="#c0ccdc">선택한 포즈를 그래프의 최종 출력으로 전달</text>
+<text x="50" y="625" font-size="17" fill="#a8c6e7">실제 기록을 설명한 도식입니다. 에디터나 게임 실행 화면 캡처가 아닙니다.</text>
+</g></svg>
