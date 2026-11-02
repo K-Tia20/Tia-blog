@@ -4,7 +4,7 @@
 
 마지막 작업은 18개 실행 맵과 한국어 목록을 묶고, Windows 실행본에서 직접 항목을 눌러 다시 확인하는 일이었다. 제작 도구 자체를 게임 실행 파일에 모두 넣는 작업과는 다르다.
 
-![통합 실험 목록](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/result.png)
+![통합 실험 목록](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/result.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -43,7 +43,7 @@ F10으로 목록을 열 때는 게임을 잠시 멈추고 마우스 커서를 �
 5. 필요한 에셋과 맵을 저장한다. 실행 중이면 **■ Stop**을 누른다.
 6. 아래 전체 스크립트의 경로와 결과 폴더를 읽은 뒤 패키징을 실행한다.
 
-![통합 프로젝트를 확인하는 실제 에디터](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/settings.png)
+![통합 프로젝트를 확인하는 실제 에디터](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -104,7 +104,7 @@ IOStore 컨테이너 목록에서 정식 맵 18개와 리뷰 시퀀스가 실제
 
 ## 편집 화면을 더 자세히 보기
 
-![프로젝트 설정 창의 범주와 검색창 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/settings-entry.png)
+![프로젝트 설정 창의 범주와 검색창 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/20/settings-entry.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

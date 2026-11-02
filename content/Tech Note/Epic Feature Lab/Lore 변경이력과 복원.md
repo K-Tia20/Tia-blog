@@ -10,7 +10,7 @@ Lore는 이번 프로젝트에서 **에디터 밖의 도구**로 사용했다. �
 
 최종 복원점에는 Content의 **6,625개 파일, 12,252,113,226바이트**와 관련 소스·설정·검증 자료를 포함했다. 약 12.25GB라는 십진 용량이며, Windows에서 표시하는 GiB와는 단위가 다르다.
 
-![실제 검증 기록에서 정리한 Lore 흐름](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/17/workflow.svg)
+![실제 검증 기록에서 정리한 Lore 흐름](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/17/workflow.svg)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

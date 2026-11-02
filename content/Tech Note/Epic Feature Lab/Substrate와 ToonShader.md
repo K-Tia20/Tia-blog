@@ -4,7 +4,7 @@
 
 재질(Material)은 표면이 빛에 어떻게 반응할지 정하는 자료다. 같은 모양의 구라도 재질이 달라지면 금속, 거친 표면, 코팅된 표면처럼 보일 수 있다.
 
-![코팅 구와 Toon 캐릭터](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/result.png)
+![코팅 구와 Toon 캐릭터](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/result.png)
 
 ## 조작부터 확인하기
 
@@ -20,7 +20,7 @@
 
 `M_LabCoatedCopper`를 더블클릭한다. 이번에는 Slab BSDF 두 개를 공식 **Vertical Layering**으로 연결했다. BSDF는 빛이 표면에 들어왔을 때 어느 방향으로 어떻게 반응할지 표현하는 모델이다. 여기서는 아래 금속층과 위 코팅층을 따로 다루기 위한 재료 단위로 보면 된다.
 
-![재질 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/folder.png)
+![재질 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -64,7 +64,7 @@
 | `M_LabCoatedCopper / M_LabToonSoft` | 실험용 코팅 구리 재질 / 부드러운 Toon 재질 이름. |
 
 
-![실제 Substrate 재질 그래프](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/settings.png)
+![실제 Substrate 재질 그래프](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -119,7 +119,7 @@
 
 또 조명 방향을 바꿨는데 픽셀 결과가 거의 변하지 않는 문제가 있었다. 조명 이동성을 **Movable**로 바꿨다. 정적인 조명 설정과 실행 중 실제로 움직일 조명을 구분해야 한다. 카메라도 얼굴 위가 잘리지 않도록 수정했다.
 
-![두께·거칠기·프로파일의 실제 캡처 비교](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/material-compare.gif)
+![두께·거칠기·프로파일의 실제 캡처 비교](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/material-compare.gif)
 
 *이 GIF는 설정별 정지 캡처의 비교다. 해당 변경이 보이는 부분을 번갈아 확인하기 위한 자료다.*
 
@@ -134,7 +134,7 @@
 
 ## 편집 화면을 더 자세히 보기
 
-![부드러운 Toon 재질을 연 실제 편집 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/toon.png)
+![부드러운 Toon 재질을 연 실제 편집 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/toon.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -169,7 +169,7 @@
 | `M_LabCoatedCopper / M_LabToonSoft` | 실험용 코팅 구리 재질 / 부드러운 Toon 재질 이름. |
 
 
-![Substrate 관련 프로젝트 설정 확인](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/project-settings.png)
+![Substrate 관련 프로젝트 설정 확인](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/14/project-settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

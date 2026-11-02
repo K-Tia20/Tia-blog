@@ -4,7 +4,7 @@ AI 도구를 연결했을 때 궁금한 부분은 ‘대답을 하는가’보�
 
 **Unreal MCP**는 실제 에디터 작업을 호출하는 연결, **AI Assistant**는 에디터 문맥에서 문서를 안내하는 도구, **Sandboxed Editing**은 원본과 분리해 변경을 제안하는 작업 방식으로 구분했다.
 
-![재질 비교 장면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/result.png)
+![재질 비교 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/result.png)
 
 ## 비교할 재료 두 개 준비
 
@@ -14,7 +14,7 @@ AI 도구를 연결했을 때 궁금한 부분은 ‘대답을 하는가’보�
 4. 두 파일의 기준 색상은 `(0.2, 0.2, 0.2, 1)`이다. 앞의 세 값이 RGB, 마지막 값이 알파다.
 5. `FL_15_AIWorkflow`를 열어 **▶ Play**하면 두 비교 구를 볼 수 있다. 이 화면은 결과 미리보기이며 게임 안에서 AI가 작업을 수행하는 데모는 아니다.
 
-![작업 에셋을 찾는 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/folder.png)
+![작업 에셋을 찾는 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -56,7 +56,7 @@ AI 도구를 연결했을 때 궁금한 부분은 ‘대답을 하는가’보�
 | `M_LabAIReviewBase` | 변경 전후를 비교할 기준 재질의 프로젝트 파일 이름. |
 
 
-![기본 재질 그래프](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/settings.png)
+![기본 재질 그래프](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -112,7 +112,7 @@ Approved를 반영한 다음 원본에서 해당 파일만 바뀌었는지 확�
 
 Toon 재질 편집기에서 대상 노드를 선택하고 **F1** 문맥 질문으로 공식 Assistant를 사용했다. 질문이 현재 재질과 선택 노드를 대상으로 전달되는지, 응답이 끝나고 실제 문서 참고가 포함되는지 확인했다.
 
-![공식 Assistant의 실제 질문 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/assistant-question.png)
+![공식 Assistant의 실제 질문 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/assistant-question.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -145,7 +145,7 @@ Toon 재질 편집기에서 대상 노드를 선택하고 **F1** 문맥 질문�
 | `M_LabAIReviewBase` | 변경 전후를 비교할 기준 재질의 프로젝트 파일 이름. |
 
 
-![공식 Assistant가 반환한 실제 응답](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/assistant-response.png)
+![공식 Assistant가 반환한 실제 응답](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/15/assistant-response.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

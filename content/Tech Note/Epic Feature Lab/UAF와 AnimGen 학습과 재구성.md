@@ -4,7 +4,7 @@
 
 직접 학습한 모델과 공식 사전 학습 모델을 같은 것으로 소개하지 않는다. UAF는 애니메이션을 연결해 실행하는 그래프에, AnimGen은 학습과 생성형 제어 실험에 사용했다.
 
-![기준 동작·UAF 실행·재구성 결과 비교](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/result.png)
+![기준 동작·UAF 실행·재구성 결과 비교](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/result.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -30,7 +30,7 @@
 
 `Content → FeatureLab → UAF`에서 `AG_PuppetLocomotion`을 연다. 이번 그래프는 5개 노드와 `UseRun` 입력을 사용한다. 입력이 거짓이면 걷기, 참이면 달리기를 선택하도록 구성했다. 참·거짓은 두 상태 중 하나를 나타내는 값이다.
 
-![UAF 그래프를 찾는 폴더](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/folder.png)
+![UAF 그래프를 찾는 폴더](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -74,7 +74,7 @@
 | `AG_PuppetLocomotion / AGAE_PuppetMotion` | 인형의 UAF 실행 그래프 / 인형 동작을 학습한 모델 파일 이름. |
 
 
-![실제 AnimGen 학습 모델 편집 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/settings.png)
+![실제 AnimGen 학습 모델 편집 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -125,7 +125,7 @@
 
 실제 뼈 위치를 비교한 평균 오차는 약 1.09cm, 최대 오차는 약 12.41cm였다. 특히 **학습에 사용한 동작을 다시 복원한 결과**다. 처음 보는 동작을 따로 떼어 평가한 일반화 성능은 아니다. 원래 루트 위치와 방향도 제공한 조건이다.
 
-![실제 애니메이션 비교 장면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/motion.gif)
+![실제 애니메이션 비교 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/motion.gif)
 
 ## 공식 제어기 장면에서 확인한 것
 
@@ -142,7 +142,7 @@ R을 눌렀을 때 위치만 돌아오고 내부 신경망 상태가 남으면 �
 
 ## 편집 화면을 더 자세히 보기
 
-![현재 UAF 에셋의 전체 연결을 옮긴 설명 도식 — 에디터 캡처 아님](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/graph.svg)
+![현재 UAF 에셋의 전체 연결을 옮긴 설명 도식 — 에디터 캡처 아님](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/graph.svg)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -164,9 +164,9 @@ R을 눌렀을 때 위치만 돌아오고 내부 신경망 상태가 남으면 �
 | `AG_PuppetLocomotion / AGAE_PuppetMotion` | 인형의 UAF 실행 그래프 / 인형 동작을 학습한 모델 파일 이름. |
 
 
-![별도 공식 AnimGen 제어기 장면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/result-control.png)
+![별도 공식 AnimGen 제어기 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/result-control.png)
 
-![공식 제어기 장면의 실제 연속 프레임](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/motion-control.gif)
+![공식 제어기 장면의 실제 연속 프레임](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/06/motion-control.gif)
 
 
 

@@ -4,7 +4,7 @@
 
 MetaHuman Crowds는 인물의 시각 자료를 준비하는 쪽, Mass는 많은 개체의 상태와 처리를 운영하는 쪽으로 나눠 보면 이해하기 쉽다. 엔티티는 Mass가 관리하는 개체의 식별 단위다.
 
-![실제 메타휴먼 군중](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/result.png)
+![실제 메타휴먼 군중](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/result.png)
 
 ## 화면에서 먼저 인원을 바꿔 보기
 
@@ -20,7 +20,7 @@ MetaHuman Crowds는 인물의 시각 자료를 준비하는 쪽, Mass는 많은 
 
 `Content → FeatureLab → Crowds`에서 `MC_LabCrowd`를 연다. 인물 컬렉션을 확인하는 파일이다. `MEC_LabCrowd`는 Mass 개체에 어떤 구성과 표현을 사용할지 정한 설정이다.
 
-![군중 에셋 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/folder.png)
+![군중 에셋 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -60,7 +60,7 @@ MetaHuman Crowds는 인물의 시각 자료를 준비하는 쪽, Mass는 많은 
 | `Update / Reset` | 현재 설정 반영 / 기준 상태로 초기화. |
 
 
-![컬렉션과 군중 설정을 확인하는 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/settings.png)
+![컬렉션과 군중 설정을 확인하는 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -124,7 +124,7 @@ MetaHuman Crowds는 인물의 시각 자료를 준비하는 쪽, Mass는 많은 
 
 ## 편집 화면을 더 자세히 보기
 
-![Mass 설정과 구분되는 메타휴먼 인물 컬렉션](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/collection.png)
+![Mass 설정과 구분되는 메타휴먼 인물 컬렉션](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/08/collection.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

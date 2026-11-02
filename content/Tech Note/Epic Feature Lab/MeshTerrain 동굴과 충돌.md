@@ -4,7 +4,7 @@
 
 Mesh Terrain은 편집기 미리보기와 게임 실행용 구역을 구분한다. 이번 작업에서 가장 크게 걸린 부분도 이 차이였다. 에디터에 보이던 지형이 패키지에서는 사라졌기 때문이다.
 
-![동굴과 돌출 지형 전체](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/result.png)
+![동굴과 돌출 지형 전체](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/result.png)
 
 ## 올바른 맵부터 열기
 
@@ -15,13 +15,13 @@ Mesh Terrain은 편집기 미리보기와 게임 실행용 구역을 구분한�
 5. **R**로 입구의 기준 위치로 복귀한다.
 6. 지형을 편집하려면 **■ Stop**을 누른다.
 
-![동굴 내부 확인](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/cave.png)
+![동굴 내부 확인](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/cave.png)
 
 ## 제작 자료와 장면의 역할
 
 `Content → FeatureLab → Terrain → MPD_LabTerrain`을 연다. MPD는 Mesh Partition Definition으로, 지형을 어떤 규칙과 처리 과정으로 만들지 정하는 자료다. 이 파일 자체가 게임에서 걷는 캐릭터는 아니다.
 
-![지형 정의 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/folder.png)
+![지형 정의 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -62,7 +62,7 @@ Mesh Terrain은 편집기 미리보기와 게임 실행용 구역을 구분한�
 | `MPD_LabTerrain` | 이번 지형용 Mesh Partition Definition 파일 이름. |
 
 
-![Mesh Partition Definition의 설정](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/settings.png)
+![Mesh Partition Definition의 설정](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/11/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

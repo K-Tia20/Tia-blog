@@ -4,7 +4,7 @@
 
 기둥을 흩어 놓는 그래프와 길을 따라 표지를 놓는 그래프를 따로 사용했다. 생성된 물건만 보면 단순한 블록 장면이지만, 시드와 밀도, 제외 영역, 스플라인을 바꿔 결과를 비교할 수 있다.
 
-![PCG로 만든 기둥과 곡선 표지 배치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/result.png)
+![PCG로 만든 기둥과 곡선 표지 배치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/result.png)
 
 ## 반드시 이 맵으로 시작하기
 
@@ -22,7 +22,7 @@
 
 **■ Stop**을 누른 뒤 `Content → FeatureLab → PCG`에서 `PCG_LabEnvironment`와 `PCG_LabSplinePosts`를 각각 연다. 화면을 한 번에 이해하려 하지 말고 입력에서 출력까지 왼쪽에서 오른쪽으로 연결을 따라간다.
 
-![그래프 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/folder.png)
+![그래프 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -63,7 +63,7 @@
 | `PCG_LabEnvironment / PCG_LabSplinePosts` | 주 배치 그래프 / 스플라인을 따라 기둥을 놓는 별도 그래프 이름. |
 
 
-![실제 PCG 그래프](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/settings.png)
+![실제 PCG 그래프](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -122,7 +122,7 @@
 
 ## 편집 화면을 더 자세히 보기
 
-![스플라인을 따라 기둥을 생성하는 별도 PCG 그래프](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/spline.png)
+![스플라인을 따라 기둥을 생성하는 별도 PCG 그래프](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/10/spline.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

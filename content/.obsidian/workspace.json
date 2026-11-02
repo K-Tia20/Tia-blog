@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Unreal9기 TIL/261014(수)_TIL.md",
+                "file": "ProjectE/에픽 게임잼 통합 기능 게임 기획서.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "261014(수)_TIL"
+              "title": "에픽 게임잼 통합 기능 게임 기획서"
+            }
+          },
+          {
+            "id": "46875ef2bc55ddad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tech Note/Epic Feature Lab/Mutable 외형변경과 이동연결.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mutable 외형변경과 이동연결"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -145,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 200
   },
   "right": {
     "id": "9959474c0cf63610",
@@ -185,7 +200,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 262.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,53 +214,53 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "7b7e102ae994c6a1",
+  "active": "46875ef2bc55ddad",
   "lastOpenFiles": [
-    "Unreal9기 TIL/261019(월)_TIL.md",
-    "Unreal9기 TIL/261014(수)_TIL.md",
-    "Unreal9기 TIL/260714(월)_TIL.md",
-    "Unreal9기 TIL/269999(요일)_TIL.md",
-    "Unreal9기 TIL/260708(수)_TIL.md",
-    "Unreal9기 TIL/260707(화)_TIL.md",
-    "Unreal9기 TIL/260701(수)_TIL.md",
-    "Unreal9기 TIL/260626(금)_TIL.md",
-    "Unreal9기 TIL/260625(목)_TIL.md",
-    "Unreal9기 TIL/260624(수)_TIL.md",
-    "Unreal9기 TIL/260623(화)_TIL.md",
-    "Unreal9기 TIL/260622(월)_TIL.md",
-    "Unreal9기 TIL/260619(금)_TIL.md",
-    "Unreal9기 TIL/260618(목)_TIL.md",
-    "Unreal9기 TIL/260617(수)_TIL.md",
-    "Unreal9기 TIL/260616(화)_TIL.md",
-    "Unreal9기 TIL/260615(월)_TIL.md",
-    "Unreal9기 TIL/260612(금)_TIL.md",
-    "Unreal9기 TIL/260611(목)_TIL.md",
-    "Unreal9기 TIL/260610(수)_TIL.md",
-    "Unreal9기 TIL/260609(화)_TIL.md",
-    "Unreal9기 TIL/260608(월)_TIL.md",
-    "Unreal9기 TIL/260605(금)_TIL.md",
-    "Unreal9기 TIL/260604(목)_TIL.md",
-    "Unreal9기 TIL/260602(화)_TIL.md",
-    "Z.그래프 뷰 태그/unreal.md",
-    "Tech Note/Unreal/첨부파일모음/13/result.png",
-    "Tech Note/Unreal/첨부파일모음/13/settings.png",
-    "Tech Note/Unreal/첨부파일모음/20/result.png",
-    "Tech Note/Unreal/첨부파일모음/13/gi-compare.gif",
-    "Tech Note/Unreal/첨부파일모음/21/editor.png",
-    "Tech Note/Unreal/첨부파일모음/18/settings.png",
-    "Tech Note/Unreal/첨부파일모음/17/workflow.svg",
-    "Tech Note/Unreal/첨부파일모음/20/settings.png",
-    "Tech Note/Unreal/첨부파일모음/20/settings-entry.png",
-    "Tech Note/Unreal/첨부파일모음/19/availability.svg",
-    "Tech Note/Unreal/첨부파일모음/16/review.mp4",
-    "Tech Note/Unreal/첨부파일모음/01/voice-demo.mp4",
-    "Tech Note/Unreal/첨부파일모음/02/voice-demo.mp4",
-    "Tech Note/Unreal/첨부파일모음/13",
-    "Tech Note/Unreal/첨부파일모음/21",
-    "Tech Note/Unreal/첨부파일모음/17",
-    "Tech Note/Unreal/첨부파일모음/20",
-    "Tech Note/Unreal/첨부파일모음/19",
-    "Tech Note/Unreal/첨부파일모음/18",
-    "Tech Note/Unreal/첨부파일모음/16"
+    "Tech Note/Epic Feature Lab/UnrealMCP AIAssistant 격리편집.md",
+    "Tech Note/Epic Feature Lab/Substrate와 ToonShader.md",
+    "Tech Note/Epic Feature Lab/PCG 시드 밀도 제외영역 스플라인.md",
+    "Tech Note/Epic Feature Lab/Fab 에셋반입과 출처관리.md",
+    "Tech Note/Epic Feature Lab/에디터 화면과 기본 용어.md",
+    "Tech Note/Epic Feature Lab/메타휴먼 제작과 디지털 체형맞춤.md",
+    "Tech Note/Epic Feature Lab/메타휴먼군중과 Mass.md",
+    "Tech Note/Epic Feature Lab/0.정리.md",
+    "ProjectE/에픽 게임잼 통합 기능 게임 기획서.md",
+    "ProjectE/에픽 게임잼 개발 준비와 시작 순서.md",
+    "Tech Note/Epic Feature Lab/UE6 Verse SceneGraph 제공상태확인.md",
+    "Tech Note/Epic Feature Lab/AI음성으로 메타휴먼 얼굴애니메이션.md",
+    "Tech Note/Epic Feature Lab/MetaHuman 전신 마커리스 모캡 실험.md",
+    "Tech Note/Epic Feature Lab/UAF와 AnimGen 학습과 재구성.md",
+    "Tech Note/Epic Feature Lab/GASP MotionMatching Mover.md",
+    "Tech Note/Epic Feature Lab/RealityScan 사진으로 3D 모델 만들기.md",
+    "Tech Note/Epic Feature Lab/MeshTerrain 동굴과 충돌.md",
+    "Tech Note/Epic Feature Lab/Dataflow와 ChaosCloth 망토.md",
+    "Tech Note/Epic Feature Lab/Mutable 외형변경과 이동연결.md",
+    "Tech Note/Epic Feature Lab/LiveLinkHub MocapManager MovieRenderGraph.md",
+    "Tech Note/Epic Feature Lab/뼈대부터 표정리그와 직접조작까지.md",
+    "Tech Note/Epic Feature Lab/MegaLights와 LumenLite 조명비교.md",
+    "ProjectE",
+    "Tech Note/Epic Feature Lab/통합메뉴와 Windows 패키징.md",
+    "Tech Note/Epic Feature Lab/ControlRig 물리와 Dynamics 비교.md",
+    "Tech Note/Epic Feature Lab/Lore 변경이력과 복원.md",
+    "Tech Note/Epic Feature Lab/PVE NaniteFoliage Megaplants.md",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/05-static-mesh-nanite.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/04-unreal-imported-scene.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/03-textured-model.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/02-alignment-pointcloud.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/01-input-workflow.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/synthetic-full-body-input.mp4",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/body-animation-preview.gif",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/03-performance-monocular-input.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/04-body-tracking-settings.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/02-exported-animation-and-tracks.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap",
+    "Tech Note/s",
+    "Tech Note/Epic Feature Lab/첨부파일모음/13/result.png",
+    "Tech Note/Epic Feature Lab/첨부파일모음/16/review.mp4",
+    "Tech Note/Epic Feature Lab/첨부파일모음/01/voice-demo.mp4",
+    "Tech Note/Epic Feature Lab/첨부파일모음/02/voice-demo.mp4",
+    "Tech Note/Epic Feature Lab/첨부파일모음/13",
+    "Tech Note/Epic Feature Lab/첨부파일모음/21"
   ]
 }

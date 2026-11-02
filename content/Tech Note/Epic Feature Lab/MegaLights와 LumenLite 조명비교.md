@@ -4,7 +4,7 @@
 
 Rect Light는 면에서 빛이 나오는 조명이다. 직접광은 조명에서 물체로 바로 도달하는 빛, 간접광은 벽과 바닥 등에 반사되어 도달하는 빛이다. MegaLights와 Lumen 비교를 읽기 전에 이 둘을 나눠 두면 좋다.
 
-![여러 동적 조명이 있는 비교 장면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/result.png)
+![여러 동적 조명이 있는 비교 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/result.png)
 
 ## 같은 방에서 조건 하나씩 바꾸기
 
@@ -22,7 +22,7 @@ Rect Light는 면에서 빛이 나오는 조명이다. 직접광은 조명에서
 
 **■ Stop** 후 Outliner에서 `FeatureLabLightingActor` 계열의 실험 액터를 선택하면, 디테일에서 장면 구성과 연결을 볼 수 있다. 실제 조명과 카메라 설정 생성은 C++ 클래스가 맡는다. 존재하지 않는 블루프린트 이벤트 그래프를 따로 찾아 만들 필요는 없다.
 
-![조명 실험을 선택한 에디터](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/settings.png)
+![조명 실험을 선택한 에디터](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -54,7 +54,7 @@ Lumen High와 Lite도 화면의 이름만 바꾸지 않았다. 실제 GPU 기록
 
 GI를 끈 조건에서는 두 Gather 경로가 나타나지 않는지 확인했다. 이름만 다른 버튼을 만들어 같은 결과를 재생하는 구성을 피하려는 검사다.
 
-![High와 Lite의 실제 화면 비교](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/gi-compare.gif)
+![High와 Lite의 실제 화면 비교](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/13/gi-compare.gif)
 
 *각 조건의 실제 캡처를 번갈아 표시한 비교 GIF다. 연속 카메라 녹화가 아니다. 개별 GPU 측정 당시의 화면이며 최종 통합 실행본에서도 표시와 모드 전환을 재검사했다.*
 

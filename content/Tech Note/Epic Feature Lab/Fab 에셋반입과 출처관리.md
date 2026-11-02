@@ -4,7 +4,7 @@
 
 은행나무를 화면에 놓는 결과는 12편 식생 실험과 공유한다. 이 글에서는 그래프를 만드는 방법보다 **어떤 자료를 어디서 가져왔고 실제로 무엇이 들어왔는지**에 초점을 맞춘다.
 
-![프로젝트에 반입해 사용한 식생 결과](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/result.png)
+![프로젝트에 반입해 사용한 식생 결과](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/result.png)
 
 ## Fab에서 프로젝트에 들어오기까지
 
@@ -21,7 +21,7 @@
 
 콘텐츠 브라우저에서 `Content → Megaplant_Library → Tree_Ginkgo`를 연다. 이번 반입의 원본 경로는 `/Game/Megaplant_Library/Tree_Ginkgo`다. 실험용 그래프는 `Content → FeatureLab → Vegetation → PVE_LabGinkgo`로 구분했다.
 
-![반입 자료를 찾는 콘텐츠 브라우저](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/folder.png)
+![반입 자료를 찾는 콘텐츠 브라우저](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -62,7 +62,7 @@
 | `Megaplant_Library / PVE_LabGinkgo` | 반입 원본 자료 폴더 / 실험용으로 별도 만든 식생 그래프 이름. |
 
 
-![반입된 은행나무 스켈레탈 메시를 연 실제 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/settings.png)
+![반입된 은행나무 스켈레탈 메시를 연 실제 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/18/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

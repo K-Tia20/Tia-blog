@@ -4,7 +4,7 @@
 
 Dataflow는 제작 과정의 데이터를 노드로 연결하는 그래프다. Chaos Cloth는 만들어진 천 자료를 실제로 움직이는 시뮬레이션이다. 그래프를 만든 일과 실행 중 천이 바람에 반응하는 일은 구분했다.
 
-![기준 망토와 시뮬레이션 망토](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/result.png)
+![기준 망토와 시뮬레이션 망토](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/result.png)
 
 ## 먼저 바람을 켜고 끄기
 
@@ -20,7 +20,7 @@ Dataflow는 제작 과정의 데이터를 노드로 연결하는 그래프다. C
 
 콘텐츠 브라우저에서 `Content → FeatureLab → Cloth → CA_LabCape`를 더블클릭한다. `CA`는 이 프로젝트에서 의상 에셋을 구분하는 이름이다. 연결된 Dataflow 그래프와 `PA_LabCapeBody` 충돌 자료도 확인한다.
 
-![의상 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/folder.png)
+![의상 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -61,7 +61,7 @@ Dataflow는 제작 과정의 데이터를 노드로 연결하는 그래프다. C
 | `CA_LabCape / PA_LabCapeBody` | 실험용 천 에셋 / 몸 충돌 형태 에셋 이름. |
 
 
-![의상과 Dataflow 설정 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/settings.png)
+![의상과 Dataflow 설정 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/09/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

@@ -4,7 +4,7 @@
 
 도구 셋의 역할은 `신호 수신·중계 → 촬영 자료 정리 → 최종 영상 출력`으로 나눠 보면 된다. FBX 파일을 하나 가져오는 것만으로 이 세 과정을 사용했다고 처리하지 않았다.
 
-![녹화 테이크와 기준 애니메이션의 실제 렌더 결과](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/result.png)
+![녹화 테이크와 기준 애니메이션의 실제 렌더 결과](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/result.png)
 
 ## 완성된 리뷰부터 보기
 
@@ -14,9 +14,9 @@
 4. **R**로 처음부터 재생한다.
 5. **■ Stop** 후 `Content → FeatureLab → Cinematics → LS_LabDigitalReview`를 연다. 이것이 리뷰 장면의 시퀀스다.
 
-![실제 실행 영상](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)
+![실제 실행 영상](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)
 
-[실제 MRG 출력 MP4 열기 — 3초·무음](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)
+[실제 MRG 출력 MP4 열기 — 3초·무음](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)
 
 ## 1단계: Hub가 받을 신호 만들기
 
@@ -38,7 +38,7 @@ Mocap Manager에는 `EpicFeatureLab` 제작과 `20261101_DigitalAnimation` 세�
 
 프로젝트의 `Cinematics/Productions/EpicFeatureLab/20261101_DigitalAnimation` 아래에 Performers, Takes, Scene 등의 자료가 있다. 퍼포머는 `Lab_DigitalPerformer`, 연결 Subject는 앞서 정한 `FeatureLab_Body`다. 이름을 다르게 입력하면 신호가 있어도 엉뚱한 대상을 찾을 수 있다.
 
-![시퀀서와 촬영 자료를 확인하는 실제 에디터](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/folder.png)
+![시퀀서와 촬영 자료를 확인하는 실제 에디터](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -99,7 +99,7 @@ Mocap Manager에는 `EpicFeatureLab` 제작과 `20261101_DigitalAnimation` 세�
 
 `Cinematics/MRG_LabDigitalPerformance`를 더블클릭한다. 렌더 그래프는 출력 설정과 처리 흐름을 노드로 구성하는 파일이다. `MRQ_LabDigitalPerformance`에는 세 출력 작업이 있다.
 
-![실제 Movie Render Graph](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/settings.png)
+![실제 Movie Render Graph](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -141,14 +141,14 @@ Mocap Manager에는 `EpicFeatureLab` 제작과 `20261101_DigitalAnimation` 세�
 
 해상도는 가로·세로 픽셀 수다. H.264는 MP4 안에 들어간 영상 압축 방식이다. 파일 확장자가 mp4라는 사실만 보지 않고 실제 코덱, 크기, 프레임 수와 재생 길이도 확인했다. 기본값으로 복귀한 결과의 0·45·89번 프레임은 원래 720p 결과와 픽셀 차이가 0이었다.
 
-고해상도 원본은 [review.mp4](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)에 함께 넣었다. GIF에는 소리가 없다.
+고해상도 원본은 [review.mp4](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/review.mp4)에 함께 넣었다. GIF에는 소리가 없다.
 
 전체 그래프 작성: [lab_build_movie_graph.py](#source-lab-lab-build-movie-graph-py). 리뷰 작성: [lab_build_capture_review.py](#source-lab-lab-build-capture-review-py). 렌더 실행: [lab_render_movie_graph.py](#source-lab-lab-render-movie-graph-py). 에디터가 백그라운드일 때 미리보기가 멈추면 실시간 뷰포트와 수신 재생 상태도 확인한다.
 
 
 ## 편집 화면을 더 자세히 보기
 
-![왼쪽 기록 동작과 오른쪽 기준 동작을 연결한 타임라인](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/sequencer.png)
+![왼쪽 기록 동작과 오른쪽 기준 동작을 연결한 타임라인](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/sequencer.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -188,7 +188,7 @@ Mocap Manager에는 `EpicFeatureLab` 제작과 `20261101_DigitalAnimation` 세�
 
 ## 별도 프로그램인 Live Link Hub 화면
 
-![추가 촬영 시점의 실제 Live Link Hub](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/live-link-hub.jpg)
+![추가 촬영 시점의 실제 Live Link Hub](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/live-link-hub.jpg)
 
 | 화면의 영어 | 한국어 뜻과 확인할 곳 |
 |---|---|
@@ -217,7 +217,7 @@ Mocap Manager에는 `EpicFeatureLab` 제작과 `20261101_DigitalAnimation` 세�
 3. 위쪽 Production과 Session에 실제 사용할 제작·세션 이름이 표시되는지 확인한다. 이번 값은 아래 사진과 같다.
 4. 새 세션을 만들기 전에는 기존 세션을 선택하는 **Swap Session**과 새로 만드는 **Create New Session**을 구분한다.
 
-![실제 디지털 촬영 세션을 연 Mocap Manager](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/mocap-manager.png)
+![실제 디지털 촬영 세션을 연 Mocap Manager](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/16/mocap-manager.png)
 
 | 화면의 영어 | 한국어 뜻과 역할 |
 |---|---|

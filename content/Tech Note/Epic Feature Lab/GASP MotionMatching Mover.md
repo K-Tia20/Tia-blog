@@ -1,37 +1,36 @@
 
 
-캐릭터가 대사를 말할 때 입만 열리고 닫히면 금방 어색해진다. 이번 실험에서는 같은 AI 음성을 넣고 표정의 분위기를 바꿨다. 음성 파일에서 얼굴 애니메이션을 만드는 도구는 **MetaHuman Animator**를 사용했다.
+W를 눌렀을 때 캐릭터가 앞으로 가는 것과, 그 상황에 맞는 걸음이 자연스럽게 나오는 것은 별개다. 이번에는 에픽의 Game Animation Sample Project, 줄여서 **GASP**를 가져와 이동과 애니메이션을 함께 살폈다.
 
-입력은 로컬 Piper로 생성한 약 **12.55초 음성**이다. 개인 목소리를 녹음하거나 얼굴 영상을 촬영하지 않았다. 처리 결과가 실제 메타휴먼의 눈, 입, 볼과 턱에 반영되는지 확인했다.
+**Mover**는 캐릭터의 실제 이동을, **Motion Matching**은 이동에 맞는 애니메이션 포즈 선택을 맡는다. 이번 장면은 공식 샘플을 기반으로 경사, 점프, 스마트 벤치와 네트워크 복구 검증을 추가한 구성이다.
 
-![음성 기반 메타휴먼 얼굴 재생](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/02/result.png)
+![공식 샘플 기반 이동 실험](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/05/result.png)
 
-## 파일 네 종류를 먼저 구분하기
+**참고 — 사진과 작업에 나온 영어 이름**
 
-| 종류 | 역할 |
+| 영어 표시 | 한국어 뜻과 쓰임 |
 |---|---|
-| WAV | 외부에서 만든 실제 소리 파일. |
-| SoundWave | WAV를 언리얼에 가져온 에셋. 이름은 파형이지만 ‘언리얼이 사용할 음성 재료’로 보면 된다. |
-| MetaHuman Performance | 어느 음성을 어떤 방식으로 처리할지 설정하는 작업 파일. |
-| Animation Sequence | 처리가 끝난 뒤 캐릭터에서 재생하는 애니메이션 파일. |
+| `Game Animation Sample` | 에픽 공식 애니메이션 샘플의 실험 구역 |
+| `Chooser` | 조건에 따라 사용할 동작 자료를 고르는 기능 |
+| `Motion Matching` | 이동 상황에 알맞은 자세를 찾아 선택하는 방식 |
 
-파일 네 개를 한 파일로 생각하면 어떤 단계에서 문제가 생겼는지 찾기 어렵다. 음성이 잘 들리는지, 처리가 끝났는지, 완성 애니메이션이 캐릭터에 연결됐는지를 나눠 확인했다.
 
-## 완성 결과를 먼저 비교해 보기
+## 다른 실험과 맵 위치가 다르다
 
-1. `Content → FeatureLab → Maps`에서 `FL_02_Performance`를 더블클릭한다.
-2. 위쪽 **▶ Play**를 누른 뒤 게임 화면을 한 번 클릭한다.
-3. **C**로 얼굴 시점을 확인한다.
-4. **M**을 눌러 감정 변형을 바꾼다. 같은 음성인데 얼굴의 분위기가 달라지는 부분을 본다.
-5. **P**를 누르면 얼굴과 음성이 함께 멈춘다. 다시 누르면 이어진다.
-6. **R**로 현재 선택한 표정과 음성을 처음부터 재생한다.
-7. 에셋을 열어 보려면 **■ Stop**을 누른다.
+1. 콘텐츠 브라우저의 `Content → Levels`로 간다.
+2. **DefaultLevel**을 더블클릭한다. `FeatureLab/Maps`만 검색하면 이 파일이 안 보일 수 있다.
+3. 위쪽 **▶ Play**를 누르고 게임 화면을 클릭한다.
+4. **WASD**로 이동하고 마우스로 시점을 바꾼다.
+5. **Left Ctrl**로 걷기, **Left Shift**로 빠르게 이동하기를 비교한다.
+6. **C**로 웅크리기, 빠르게 이동하는 동안 C로 슬라이드 상태를 확인한다.
+7. **Space**로 점프와 장애물 통과를 확인한다.
+8. `FL05_SmartBench` 앞에서는 **E**로 상호작용한다. 벤치가 캐릭터 앞에 있어야 한다.
 
-## 에디터에서 음성 처리 파일 열기
+## 캐릭터와 애니메이션 파일은 따로 열어 본다
 
-콘텐츠 브라우저의 검색창에 `MHP_`를 입력한다. 이 프로젝트에는 기본 음성 처리 파일과 AI 음성·감정 비교 파일이 함께 있으므로 이름만 보고 판단하지 않고, 에셋을 연 뒤 **Audio Sample에 연결된 소리**를 확인한다. AI 비교 결과는 `Capture` 아래의 `AIEmotion` 관련 에셋을 기준으로 읽는다.
+**■ Stop**을 누르고 콘텐츠 브라우저에서 `SandboxCharacter_Mover`를 검색한다. 캐릭터 블루프린트를 열어 이동 부품을 확인한다. 이어서 `SandboxCharacter_Mover_ABP`를 찾는다. `ABP`는 Animation Blueprint, 즉 캐릭터의 애니메이션을 계산하는 파일이다.
 
-![처리 에셋을 찾는 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/02/folder.png)
+![GASP 관련 에셋을 찾는 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/05/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -59,24 +58,21 @@
 | `Lit` | 조명과 재질을 적용해 보는 표시 방식. |
 | `Play / Stop` | 게임 실행 시작 / 종료. 에셋 편집 설명을 따라갈 때는 Stop으로 실행을 끝낸다. |
 | `Take Recorder` | 촬영 테이크를 기록하는 도구 창. 단순히 창이 보인다고 녹화가 진행 중인 것은 아니다. |
-| `MetaHuman Performance` | 입력 음성을 처리해 얼굴 연기를 만드는 작업 에셋. |
-| `Process` | 현재 입력과 옵션으로 분석·생성 처리를 실행한다. |
-| `Export Animation` | 처리 결과를 애니메이션 에셋으로 내보낸다. |
-| `Export Level Sequence` | 결과를 타임라인 작업에 사용할 시퀀스 형태로 내보내는 선택지. |
-| `Input Type / Audio` | 입력 자료의 종류 / 음성 입력 사용. |
-| `Audio` | 분석에 사용할 SoundWave 음성 에셋. |
-| `SoundWave` | 언리얼 안에서 사용하는 소리 에셋. 원본 WAV 파일을 가져온 결과다. |
-| `Visualization Object` | 미리보기에 사용할 대상. 사진의 None은 대상이 지정되지 않았다는 뜻이다. |
-| `Frame Range` | 처리할 프레임 구간. 프레임은 시간에 따라 이어지는 한 장면이다. |
-| `Solve Overrides` | 기본 처리 옵션 대신 지정할 설정. |
-| `Mood / Mood Intensity` | 표정 분위기 / 그 분위기의 강도. |
-| `Neutral / Anger / Happiness` | 중립 / 분노 / 행복. 같은 음성에 다른 표정 조건을 적용할 때 쓴 이름이다. |
-| `Generate Blinks` | 자동 눈 깜박임 생성 옵션. |
-| `MHP_AI_Neutral` | 이 프로젝트에서 AI 음성의 중립 표정 처리를 위해 만든 파일 이름. |
-| `MHP_ / AS_` | 이 프로젝트에서 Performance 작업 파일 / 애니메이션 시퀀스를 구분하는 이름. |
+| `GASP / Game Animation Sample` | 에픽의 게임 애니메이션 샘플 프로젝트. |
+| `Motion Matching` | 현재 이동과 맞는 동작을 자료에서 검색해 고르는 방식. |
+| `Pose Search Database` | 검색 후보 동작을 모아 둔 데이터베이스. |
+| `Pose Search Schema` | 검색에서 어떤 자세·이동 특성을 비교할지 정한 기준. |
+| `Trajectory` | 캐릭터가 이동할 것으로 예상하는 경로. |
+| `Mover` | 이동 시뮬레이션과 이동 상태를 다루는 프레임워크. |
+| `AnimGraph` | 애니메이션 포즈를 계산하는 그래프. |
+| `EventGraph` | 이벤트가 발생했을 때 실행할 로직을 연결하는 그래프. |
+| `State Machine` | 동작 상태와 상태 전환을 관리하는 구성. |
+| `Debug / Preview Instance` | 실행 상태 확인 / 미리보기에서 사용할 인스턴스 선택. |
+| `SandboxCharacter_Mover_ABP` | 이 프로젝트에서 사용하는 GASP 기반 Mover 애니메이션 Blueprint. |
+| `Game Animation Sample 영역 표지` | 공식 샘플의 이동 시험 구역 표시. 이동 시험은 본문 키 입력과 실제 검사 기록을 함께 본다. |
 
 
-![입력 음성과 처리 옵션을 확인하는 에디터](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/02/settings.png)
+![실제 이동 캐릭터 또는 애니메이션 에셋 편집기](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/05/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -95,97 +91,78 @@
 | `Output Log` | 에디터가 남긴 작업·경고·오류 기록. |
 | `All Saved / Unsaved` | 모두 저장됨 / 저장되지 않은 변경이 있음. |
 | `Revision Control` | 변경 이력 도구 연결 상태. 이것만 표시된다고 Lore 로컬 검증까지 끝났다는 뜻은 아니다. |
-| `MetaHuman Performance` | 입력 음성을 처리해 얼굴 연기를 만드는 작업 에셋. |
-| `Process` | 현재 입력과 옵션으로 분석·생성 처리를 실행한다. |
-| `Export Animation` | 처리 결과를 애니메이션 에셋으로 내보낸다. |
-| `Export Level Sequence` | 결과를 타임라인 작업에 사용할 시퀀스 형태로 내보내는 선택지. |
-| `Input Type / Audio` | 입력 자료의 종류 / 음성 입력 사용. |
-| `Audio` | 분석에 사용할 SoundWave 음성 에셋. |
-| `SoundWave` | 언리얼 안에서 사용하는 소리 에셋. 원본 WAV 파일을 가져온 결과다. |
-| `Visualization Object` | 미리보기에 사용할 대상. 사진의 None은 대상이 지정되지 않았다는 뜻이다. |
-| `Frame Range` | 처리할 프레임 구간. 프레임은 시간에 따라 이어지는 한 장면이다. |
-| `Solve Overrides` | 기본 처리 옵션 대신 지정할 설정. |
-| `Mood / Mood Intensity` | 표정 분위기 / 그 분위기의 강도. |
-| `Neutral / Anger / Happiness` | 중립 / 분노 / 행복. 같은 음성에 다른 표정 조건을 적용할 때 쓴 이름이다. |
-| `Generate Blinks` | 자동 눈 깜박임 생성 옵션. |
-| `MHP_AI_Neutral` | 이 프로젝트에서 AI 음성의 중립 표정 처리를 위해 만든 파일 이름. |
-| `MHP_ / AS_` | 이 프로젝트에서 Performance 작업 파일 / 애니메이션 시퀀스를 구분하는 이름. |
+| `GASP / Game Animation Sample` | 에픽의 게임 애니메이션 샘플 프로젝트. |
+| `Motion Matching` | 현재 이동과 맞는 동작을 자료에서 검색해 고르는 방식. |
+| `Pose Search Database` | 검색 후보 동작을 모아 둔 데이터베이스. |
+| `Pose Search Schema` | 검색에서 어떤 자세·이동 특성을 비교할지 정한 기준. |
+| `Trajectory` | 캐릭터가 이동할 것으로 예상하는 경로. |
+| `Mover` | 이동 시뮬레이션과 이동 상태를 다루는 프레임워크. |
+| `AnimGraph` | 애니메이션 포즈를 계산하는 그래프. |
+| `EventGraph` | 이벤트가 발생했을 때 실행할 로직을 연결하는 그래프. |
+| `State Machine` | 동작 상태와 상태 전환을 관리하는 구성. |
+| `Debug / Preview Instance` | 실행 상태 확인 / 미리보기에서 사용할 인스턴스 선택. |
+| `SandboxCharacter_Mover_ABP` | 이 프로젝트에서 사용하는 GASP 기반 Mover 애니메이션 Blueprint. |
+| `Game Animation Sample 영역 표지` | 공식 샘플의 이동 시험 구역 표시. 이동 시험은 본문 키 입력과 실제 검사 기록을 함께 본다. |
+| `Find / Hide Unrelated` | 그래프에서 찾기 / 선택 노드와 관계없는 부분 숨기기. |
+| `Class Settings / Class Defaults` | 클래스 구성 / 클래스 기본값 편집. |
+| `Parent class: Anim Instance` | 이 Blueprint의 부모가 애니메이션 실행 인스턴스 클래스라는 뜻. |
+| `Pose Watch Manager / My Blueprint` | 포즈 관찰 도구 / 현재 Blueprint의 그래프·함수·변수 목록. |
+| `Movement Analysis / Root Offset / Steering` | 이동 상태 분석 / 루트 위치·회전 보정 / 진행 방향 조향. |
+| `Animation Layers / Interfaces` | 애니메이션 계산 층 / 약속된 함수 연결 규격. |
+| `Functions / Override` | 함수 목록 / 부모가 제공한 함수를 이 Blueprint에서 구현하기. |
+| `Blueprint Thread Safe Update Animation` | 애니메이션 값을 스레드 안전 조건에서 갱신하는 이벤트 함수. |
+| `Just Teleported` | 방금 순간 이동했는지 판단하는 항목. |
+| `Macros / Variables / Boolean` | 여러 노드 묶음 / 값 보관 이름 / 참·거짓 자료형. |
+| `Aim Offset / Additive Lean / Foot Placement` | 조준 방향 보정 / 기울임을 추가하는 동작 / 발 배치 보정. |
+| `Has Owning Actor / Has Mover` | 소유 액터가 있는지 / Mover가 있는지 확인하는 값. |
+| `Compiler Results / Find Results` | 컴파일 검사 결과 / 그래프 검색 결과. |
+| `Movement Mode / OnGround` | 이동 모드 / 지면 위 상태. |
+| `Rotation Mode / OrientToMovement` | 회전 방식 / 이동 방향을 바라보는 방식. |
+| `Movement State / Idle / Moving` | 이동 상태 / 대기 / 이동 중. |
+| `Gait / Walk` | 보행 유형 / 걷기. |
+| `Last Frame / Recent / Time / Last State Time` | 직전 프레임 값 / 최근 값 / 현재 상태 시간 / 이전 상태 시간. |
+| `NOT YET FULLY TUNED` | 아직 완전히 조정되지 않았다는 공식 샘플의 주석. |
+| `Steering - Node is experimental` | 조향 노드가 실험 단계라는 컴파일 경고. 오류와 구분해 읽는다. |
+| `Bone manipulation is disabled in this mode` | 현재 미리보기 모드에서 뼈 직접 조작이 비활성화됐다는 안내. |
+| `Post process Animation Blueprint / Disable / Edit` | 최종 후처리 애니메이션 Blueprint / 사용 끄기 / 열어 편집하기. 이번 사진을 따라 설정을 임의로 끄는 단계는 없다. |
 
 
-동일한 작업을 새로 해 보려면 콘텐츠 브라우저 빈 곳을 우클릭하고 **MetaHuman Animator → MetaHuman Performance**로 작업 파일을 만든다. 연 파일에서 다음을 지정한다.
+Motion Matching은 준비된 동작 데이터에서 현재 자세와 앞으로의 이동 조건에 맞는 포즈를 찾는 방식이다. 이번에는 공식 샘플의 움직임 자료와 구조를 사용했다. 빈 애니메이션 그래프에서 걷기·달리기 전환만 만든 결과를 Motion Matching으로 부르지 않았다.
 
-1. **Input Type**은 `Audio`로 둔다. 영상 입력이 아니다.
-2. **Audio**에서 사용할 SoundWave를 선택한다.
-3. **Visualization Object**를 확인한다. 사진의 작업 파일은 `None`이어서 가운데 미리보기가 비어 있다. 이번 배치 처리에서는 애니메이션을 대상 얼굴 스켈레톤으로 내보내 실제 캐릭터에서 확인했다.
-4. 처리할 프레임 범위를 확인한다. 프레임은 애니메이션의 한 장면이다.
-5. 표정 분위기를 비교할 때는 **Solve Overrides의 Mood**와 강도를 바꾼다.
-6. **Process**를 누르고 처리가 끝날 때까지 기다린다.
-7. 결과를 확인한 뒤 **Export Animation**으로 애니메이션 에셋을 내보낸다.
+Mover에서는 위치와 속도만 보지 않고 현재 이동 상태, 바닥과의 접촉, 입력이 시뮬레이션에 적용되는 시점을 함께 확인했다. 시뮬레이션은 시간에 따라 이동 상태를 계산하는 과정이다.
 
-메뉴 이름은 영어 UI 기준이다. 이번 프로젝트의 여러 감정 변형은 이 입력·처리·내보내기 과정을 Python으로 반복 실행해 만들었다. 화면에서 매번 같은 설정을 누르는 부분을 자동화한 것이다.
+## 경사로에서는 발뼈 위치만 재면 안 됐다
 
-## 비교할 때 바꾼 것과 고정한 것
+10·15·20·25·30·35·40도 경사에서 오르내리는 코스를 사용했다. 발이 바닥과 얼마나 떨어지는지 확인할 때 ‘발뼈의 중심’을 ‘발바닥 표면’과 같은 위치로 취급하면 측정이 틀어진다.
 
-감정 이름을 바꿀 때마다 다른 음성을 넣으면 표정 차이가 어느 입력에서 온 것인지 알기 어렵다. 음성은 같게 두고 감정과 강도만 바꿨다. 비교를 흐리지 않도록 처리 단계의 자동 눈 깜박임 생성도 끈 조건을 사용했다.
+그래서 발의 낮은 쪽 ball 뼈와 실제 충돌 표면의 법선 방향을 기준으로 거리를 기록했다. 법선은 표면이 향하는 방향이다. 경사에서는 수직 Z 차이만 재는 것과 표면에 직각인 거리가 다르다. 이 기록을 발바닥 전체가 항상 완벽하게 붙는다는 주장으로 넓히지는 않았다.
 
-기록에는 **13개 감정 모드**, 강도 차이와 반복 처리를 포함한 **15번의 처리**, 런타임에서 고를 수 있는 **14개 변형**이 있다. 서로 다른 개수다. ‘감정이 15종류다’라고 정리하지 않았다.
+점프는 실제 키 입력 후 높이 변화를 확인했고 약 119.33cm를 기록했다. 숫자는 이번 샘플 설정에서 측정한 값이다.
 
-한 처리 결과는 376프레임과 260개 곡선을 포함했다. 곡선은 시간에 따라 바뀌는 제어값이다. 예를 들어 입을 벌리는 값이 시간 순서대로 저장된다고 생각하면 된다. 실제 결과에는 여러 얼굴 제어값이 함께 들어 있다.
+## 벤치는 장식이 아니라 상태 전환 실험이다
 
-## 파일이 만들어진 다음이 더 중요했다
+`FL05_SmartBench`는 약 `(-650, 1000, 0)` 위치에 배치했다. 캐릭터가 벤치 앞에 접근해 상호작용하면 진입·착석·이탈 과정이 이어지는지 확인했다. 앉는 애니메이션 파일을 단독 재생하는 것과 실제 상호작용 상태에 진입하는 것을 구분했다.
 
-애니메이션 에셋 생성만으로 끝내지 않고, 캐릭터에서 최종 피부가 변하는지 측정했다. 감정별로 얼굴 정점 위치가 달랐고, Neutral을 같은 조건으로 다시 처리한 곡선 차이는 기록상 0이었다. 얼굴 재생을 초기화했을 때 피부도 기준 위치로 돌아왔다.
+장면에서 벤치를 못 찾겠다면 실행을 멈춘 뒤 **Outliner 검색창**에 액터 이름을 넣는다. 액터를 선택하면 디테일의 Transform에서 위치를 확인할 수 있다. Transform은 위치·회전·크기를 모은 설정이다.
 
-![실제 실행 영상](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/02/voice-demo.mp4)
+## 이동 초기화에서 직접 순간이동만 쓰지 않은 이유
 
-[소리가 포함된 짧은 MP4 열기](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/02/voice-demo.mp4)
+처음 위치로 돌아가는 코드를 작성할 때 액터 좌표만 바꾸면, 다음 Mover 계산이 이전 상태를 다시 적용할 수 있다. 그래서 속도를 0으로 만드는 효과와 순간이동 효과를 **Mover 시뮬레이션 안에 전달**했다.
 
-*실제 실행 프레임과 같은 재생 시점의 원본 음성을 묶은 발췌 영상이다. 영상의 시간 간격은 실제 촬영 기록을 사용했다.*
+네트워크 확인은 실제 두 월드를 만들고 양쪽 송신에 100ms 지연을 적용했다. 입력을 놓은 뒤와 권한 상태로 복구한 뒤 위치 차이가 0으로 돌아오는지 검사했다. 실제 인터넷 서버 운영이나 모든 지연 조건을 검증한 것은 아니다.
 
-이 값은 이번 음성과 이 캐릭터에서 확인한 반복 결과다. 어떤 문장이나 어떤 목소리에서도 항상 같은 품질이 나온다는 평가로 넓히지는 않았다.
+![이동 샘플의 실행 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/05/motion.gif)
 
-## 소리는 나는데 표정이 안 움직인다면
+## 따라 하며 확인할 것
 
-- Performance 파일의 입력이 Audio인지 확인한다.
-- Audio 항목이 비어 있지 않은지 확인한다. 이름이 비슷한 기본 음성과 AI 음성을 구분한다.
-- 얼굴 메시와 내보낸 애니메이션의 대상 스켈레톤이 맞는지 확인한다. 스켈레톤은 뼈대 구조다.
-- Play 상태인지 확인한다. 에셋을 레벨에 놓기만 했다고 자동으로 재생되지는 않는다.
-- 음성과 얼굴이 어긋나면 둘의 시작 시간을 함께 돌리는지 확인한다. 이 프로젝트의 R은 두 재생 위치를 함께 초기화한다.
+캐릭터가 제자리에서 발만 움직이면 실제 위치와 애니메이션을 따로 본다. 장애물 앞에서 E가 반응하지 않으면 입력 초점과 캐릭터의 바라보는 방향을 확인한다. 네트워크 검증 후에는 원래 에디터 네트워크 설정으로 복구됐는지도 확인한다.
 
-## 실제 소스와 참고
-
-[전체 소스 폴더](%EC%97%90%EB%94%94%ED%84%B0%20%ED%99%94%EB%A9%B4%EA%B3%BC%20%EA%B8%B0%EB%B3%B8%20%EC%9A%A9%EC%96%B4.md#code-reading)의 `Lab`에서 `ai`, `mood`, `performance`가 들어간 생성·검증 파일을 확인할 수 있다. 기본 재생 장면 작성은 [lab_build_performance.py](#source-lab-lab-build-performance-py), 런타임 재생 동기화는 [FeatureLabRuntime.cpp](#source-source-mutablesample-featurelabruntime-cpp)에 있다. 입력 생성과 감정 처리에 사용한 추가 파일은 이 글의 [작업 파일 목록](#code-index)에 연결했다.
-
-공식 설명: [Audio Driven Animation](https://dev.epicgames.com/documentation/en-us/metahuman/audio-driven-animation).
+전체 구현·측정 코드는 [작업 파일 목록](#code-index)의 05번에 연결했다. 공통 런타임은 [FeatureLabRuntime.cpp](#source-source-mutablesample-featurelabruntime-cpp)와 [헤더](#source-source-mutablesample-featurelabruntime-h)에 있다. 공식 샘플의 파일은 샘플 내부 참조가 많으므로 캐릭터 파일 하나만 새 프로젝트에 복사하면 같은 구성이 완성되지 않는다.
 
 
-## 영상 속 대사는 무슨 뜻인가
-
-원본 입력 문장은 “The signal tower is awake. We found the hidden path, and the bridge is safe. Keep moving, watch the lights, and meet me at the next beacon. This voice was generated by a local neural model.”이다.
-
-한국어로는 ‘신호탑이 깨어났다. 숨겨진 길을 찾았고 다리는 안전하다. 계속 이동하면서 불빛을 보고, 다음 신호 지점에서 만나자. 이 음성은 로컬 신경망 모델로 만들었다’는 뜻이다. 위 영상은 이 음성의 일부 구간을 실제 얼굴 재생과 함께 보여 준다. 입력 WAV 전체도 같은 영상 폴더에 보관했다.
+위 GIF는 방향 입력을 넣기 전 기본 대기 상태의 연속 프레임이다. 이동·외형 변경·상호작용 입력의 결과와 반복 검사는 본문의 단계 및 연결한 검증 기록에서 확인한다.
 
 <!-- korean-ui-explanations -->
-
-
-## 사진 오른쪽에 보이는 나머지 항목 읽기
-
-| 실제 화면의 영어 | 한국어 뜻 |
-|---|---|
-| Image Review | 입력 영상을 검토하는 영역. 이번 음성 입력에서는 비어 있다. |
-| A\|B Viewport | 미리보기 두 상태를 비교하는 화면. 현재 Visualization Object가 None이라 얼굴이 보이지 않는다. |
-| Data | 입력 자료를 지정하는 설정 묶음. |
-| Timecode Alignment / Relative | 타임코드를 맞추는 방식 / 상대적인 기준으로 맞추기. |
-| Visualization Object / None | 미리보기 대상 / 대상이 지정되지 않은 상태. |
-| Control Rig | 얼굴 제어값을 표현하는 리그 연결. |
-| Head Movement / Transform Track | 머리 움직임 처리 / 위치·회전 트랙으로 표현하는 방식. |
-| Processing Parameters | 실제 처리 범위를 정하는 설정. |
-| Start Frame to Process / End Frame to Process | 처리할 시작 / 끝 프레임. 사진의 0과 376을 확인한다. |
-| Realtime Audio | 실시간 음성 처리 방식. 사진에서는 체크하지 않은 배치 처리 조건이다. |
-| Downmix Channels | 여러 음성 채널을 처리용으로 합쳐 줄이는 옵션. |
-| Cancel | 진행 중인 처리를 중단하는 버튼. |
-
-미리보기 얼굴이 비어 있다는 이유만으로 처리된 애니메이션까지 없다고 판단하지 않는다. 오른쪽 입력과 처리 범위, 아래 음성 파형, 내보낸 애니메이션과 실제 실행 영상 순서로 확인한다.
 
 
 <a id="code-index"></a>
@@ -195,203 +172,18 @@
 아래는 제작과 검증에 사용한 전체 코드에 한국어 주석을 더한 설명본이다. `.py`는 언리얼 에디터에서 실행하는 제작·검사 코드, `.cpp`와 `.h`는 프로젝트에 넣어 빌드하는 코드다. 파일마다 첫 주석에 역할과 입력 조건을 적었다.
 
 
-<a id="source-lab-lab-build-performance-py"></a>
+<a id="source-lab-lab-add-gasp-bench-py"></a>
 
-### lab_build_performance.py
+### lab_add_gasp_bench.py
 
 ```python
-# 파일 역할: 에셋·그래프·장면을 구성하는 제작 작업. 이미 있는 원본을 대상으로 재실행해도 되는지 가드 조건부터 읽는다.
+# 파일 역할: EpicFeatureLab의 lab_add_gasp_bench 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
 # 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
 # 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
 # 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
 # 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Maps/FL_02_Performance
-#   /Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face
-#   /Game/MetaHumans/Assembled/MH_MCP_Test/BP_MH_MCP_Test
-
-"""Inspect the real solved curves and prepare an assembled MetaHuman playback scene."""
-
-import json
-import traceback
-from pathlib import Path
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-
-# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
-ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-OUT = ROOT / "Evidence" / "case02-playback-build.json"
-report = {"status": "building", "visual_validation": "pending", "personal_input_used": False}
-# 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-try:
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    animation = unreal.EditorAssetLibrary.load_asset(
-        "/Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face"
-    )
-    assert animation, "Audio solve must finish before building playback"
-    curve_names = unreal.AnimationLibrary.get_animation_curve_names(
-        animation, unreal.RawCurveTrackTypes.RCT_FLOAT
-    )
-    ranges = []
-    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 name의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-    for name in curve_names:
-        times, values = unreal.AnimationLibrary.get_float_keys(animation, name)
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: values 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-        if values:
-            low, high = min(values), max(values)
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: high - low > 0.0001 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-            if high - low > 0.0001:
-                # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-                ranges.append(
-                    {
-                        "name": str(name),
-                        "keys": len(values),
-                        "min": low,
-                        "max": high,
-                        "range": high - low,
-                    }
-                )
-    # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-    assert (
-        len(ranges) > 10
-    ), "A valid speech solve should have multiple changing facial controls"
-    report["curve_count"] = len(curve_names)
-    report["varying_curve_count"] = len(ranges)
-    report["varying_curves"] = sorted(ranges, key=lambda x: x["range"], reverse=True)
-    # 에디터가 제공하는 작업 관리자를 얻는다. 뒤의 클래스 이름이 어떤 관리자를 요청하는지 나타낸다.
-    editor = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
-    # 에디터가 제공하는 작업 관리자를 얻는다. 뒤의 클래스 이름이 어떤 관리자를 요청하는지 나타낸다.
-    actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
-    level = "/Game/FeatureLab/Maps/FL_02_Performance"
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: unreal.EditorAssetLibrary.does_asset_exist(level) 작업할 맵을 연다. 현재 맵과 다른 맵이므로 실행 중인 PIE를 먼저 끝내는지 확인한다.
-    if unreal.EditorAssetLibrary.does_asset_exist(level):
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 작업할 맵을 연다. 현재 맵과 다른 맵이므로 실행 중인 PIE를 먼저 끝내는지 확인한다.
-        assert editor.load_level(level)
-    else:
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-        assert editor.new_level(level)
-    # 현재 편집 레벨의 액터 목록을 가져온다. 모든 프로젝트 에셋 목록을 가져오는 것은 아니다.
-    owned = [
-        actor
-        for actor in actors.get_all_level_actors()
-        if "FeatureLab_02" in [str(x) for x in actor.tags]
-    ]
-    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 actor의 값이 매번 바뀐다.
-    for actor in owned:
-        actors.destroy_actor(actor)
-
-    # 함수 spawn: 이름은 spawn이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: cls, loc, label, rotation 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
-    def spawn(cls, loc, label, rotation=None):
-        # 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
-        actor = actors.spawn_actor_from_class(
-            cls, unreal.Vector(*loc), rotation or unreal.Rotator()
-        )
-        actor.set_actor_label(label)
-        actor.tags = ["FeatureLab_02"]
-        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-        return actor
-
-    floor = spawn(unreal.StaticMeshActor, (0, 0, -50), "FL02_Floor")
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    floor.static_mesh_component.set_static_mesh(
-        unreal.EditorAssetLibrary.load_asset("/Engine/BasicShapes/Cube")
-    )
-    floor.set_actor_scale3d(unreal.Vector(24, 24, 1))
-    spawn(unreal.DirectionalLight, (0, 0, 900), "FL02_Sun", unreal.Rotator(-45, -25, 0))
-    spawn(unreal.SkyLight, (0, 0, 400), "FL02_Sky")
-    spawn(unreal.SkyAtmosphere, (0, 0, 0), "FL02_Atmosphere")
-    hero_class = unreal.EditorAssetLibrary.load_blueprint_class(
-        "/Game/MetaHumans/Assembled/MH_MCP_Test/BP_MH_MCP_Test"
-    )
-    assert hero_class, "Assembled MetaHuman missing"
-    hero = spawn(hero_class, (0, 0, 0), "FL02_MetaHuman_AudioSpeech")
-    components = hero.get_components_by_class(unreal.SkeletalMeshComponent)
-    report["skeletal_components"] = [
-        {
-            "name": c.get_name(),
-            "mesh": (
-                c.get_skeletal_mesh_asset().get_path_name()
-                if c.get_skeletal_mesh_asset()
-                else None
-            ),
-        }
-        for c in components
-    ]
-    faces = [c for c in components if c.get_name().lower() == "face"]
-    assert len(faces) == 1, "Could not uniquely identify assembled facial component"
-    face = faces[0]
-    # 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 visibility_based_anim_tick_option이다.
-    face.set_editor_property(
-        "visibility_based_anim_tick_option",
-        unreal.VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES,
-    )
-    # Editing a generated assembly component reconstructs its owning Blueprint.
-    # Resolve Face again instead of continuing with the invalid TRASH component.
-    face = [
-        c
-        for c in hero.get_components_by_class(unreal.SkeletalMeshComponent)
-        if c.get_name().lower() == "face"
-    ][0]
-    face_mesh = face.get_skeletal_mesh_asset()
-    assert face_mesh, "Reconstructed Face lost its skeletal mesh"
-    face.override_animation_data(animation, True, True, 0.0, 1.0)
-    face = [
-        c
-        for c in hero.get_components_by_class(unreal.SkeletalMeshComponent)
-        if c.get_name().lower() == "face"
-    ][0]
-    report["face_component"] = face.get_path_name()
-    report["face_skeleton"] = face_mesh.get_editor_property("skeleton").get_path_name()
-    report["animation_skeleton"] = animation.get_editor_property("skeleton").get_path_name()
-    camera = spawn(unreal.CineCameraActor, (240, -65, 170), "FL02_FaceInspectionCamera")
-    # 액터 방향을 바꾼다. 위치 이동과 구분한다.
-    camera.set_actor_rotation(
-        unreal.MathLibrary.find_look_at_rotation(
-            camera.get_actor_location(), unreal.Vector(0, 0, 155)
-        ),
-        False,
-    )
-    camera.get_cine_camera_component().set_editor_property("current_focal_length", 50.0)
-    spawn(unreal.PlayerStart, (450, 0, 110), "FL02_PlayerStart", unreal.Rotator(0, 180, 0))
-    sign = spawn(
-        unreal.TextRenderActor, (0, -350, 230), "FL02_Instructions", unreal.Rotator(0, 90, 0)
-    )
-    text = sign.get_component_by_class(unreal.TextRenderComponent)
-    text.set_text(
-        "02 | 합성 음성 → 실제 MetaHuman 표정 곡선\n얼굴 카메라: FL02_FaceInspectionCamera\n입력 WAV·대본: ExternalWorkflows/CaptureInputs"
-    )
-    text.set_world_size(24)
-    editor.save_current_level()
-    report.update(
-        status="authored_curve_data_verified",
-        map=level,
-        animation=animation.get_path_name(),
-        actor=hero.get_path_name(),
-        remaining=[
-            "PIE facial-bone motion",
-            "visual speech playback",
-            "mood control and repeat verification",
-        ],
-    )
-except Exception:
-    report.update(status="failed", error=traceback.format_exc())
-OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
-RESULT = {k: v for k, v in report.items() if k != "varying_curves"}
-```
-
-<a id="source-lab-lab-connect-ai-moods-py"></a>
-
-### lab_connect_ai_moods.py
-
-```python
-# 파일 역할: EpicFeatureLab의 lab_connect_ai_moods 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-# 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Maps/FL_02_Performance
-#   /Game/FeatureLab/Framework/BP_LabViewerGameMode
-#   /Game/FeatureLab/Capture/AIEmotion/FeatureLabAISpeech
+#   /Game/Levels/DefaultLevel
+#   /Game/Blueprints/SmartObjects/Bench/BP_SmartBench
 
 import json
 from pathlib import Path
@@ -402,784 +194,325 @@ root = Path(unreal.Paths.project_dir()).resolve()
 assert root.name == "EpicFeatureLab"
 # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
 assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
-batch = json.loads(
-    (root / "Evidence" / "case02-ai-mood-batch.json").read_text(encoding="utf-8")
-)
-assert batch["status"] == "processed_exported_curve_validation_passed"
 # 에디터가 제공하는 작업 관리자를 얻는다. 뒤의 클래스 이름이 어떤 관리자를 요청하는지 나타낸다.
 editor = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
-assert editor.load_level("/Game/FeatureLab/Maps/FL_02_Performance")
-viewer = unreal.EditorAssetLibrary.load_blueprint_class(
-    "/Game/FeatureLab/Framework/BP_LabViewerGameMode"
-)
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 default_pawn_class이다.
-assert (
-    viewer
-    and unreal.get_default_object(viewer).get_editor_property("default_pawn_class")
-    == unreal.SpectatorPawn.static_class()
-)
-# 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 default_game_mode이다.
-unreal.get_editor_subsystem(
-    unreal.UnrealEditorSubsystem
-).get_editor_world().get_world_settings().set_editor_property("default_game_mode", viewer)
-# 현재 편집 레벨의 액터 목록을 가져온다. 모든 프로젝트 에셋 목록을 가져오는 것은 아니다.
-actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors()
-controllers = [a for a in actors if isinstance(a, unreal.FeatureLabFacePlayback)]
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert len(controllers) == 1
-controller = controllers[0]
-variants = [unreal.load_asset(v["animation"]) for v in batch["runtime_variants"]]
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert len(variants) == 14 and all(variants)
-wave = unreal.load_asset("/Game/FeatureLab/Capture/AIEmotion/FeatureLabAISpeech")
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert wave
-controller.set_editor_property("facial_variants", variants)
-# 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 facial_variant_names이다.
-controller.set_editor_property(
-    "facial_variant_names",
-    [
-        v["name"] + (" (25%)" if v["intensity"] == 0.25 else "")
-        for v in batch["runtime_variants"]
-    ],
-)
-controller.set_editor_property("facial_animation", variants[0])
-controller.set_editor_property("speech", wave)
-controller.set_editor_property("feature_caption", "02 | Neural AI speech -> MetaHuman face")
-face = controller.get_face()
-assert face and face.get_skeletal_mesh_asset().get_editor_property("skeleton") == variants[
-    0
-].get_editor_property("skeleton")
-face.play_animation(variants[0], True)
-face.set_editor_property("forced_lod_model", 1)
-overview = next((a for a in actors if a.get_actor_label() == "FL02_OverviewCamera"), None)
-# 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not overview 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
-if not overview:
-    # 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
-    overview = unreal.get_editor_subsystem(unreal.EditorActorSubsystem).spawn_actor_from_class(
-        unreal.CineCameraActor, unreal.Vector(0, 500, 145)
-    )
-    overview.set_actor_label("FL02_OverviewCamera")
-    overview.tags = ["FeatureLab_02"]
-# 액터 위치를 바꾼다. 별도 이동 시뮬레이션이 소유한 상태까지 자동 초기화되는지는 확인해야 한다.
-overview.set_actor_location(unreal.Vector(0, 500, 145), False, False)
-# 액터 방향을 바꾼다. 위치 이동과 구분한다.
-overview.set_actor_rotation(
-    unreal.MathLibrary.find_look_at_rotation(
-        overview.get_actor_location(), unreal.Vector(0, 0, 115)
-    ),
-    False,
-)
-overview.set_editor_property("auto_activate_for_player", unreal.AutoReceiveInput.PLAYER0)
-camera = overview.get_cine_camera_component()
-camera.set_editor_property("current_focal_length", 40.0)
-focus = camera.get_editor_property("focus_settings")
-focus.set_editor_property("focus_method", unreal.CameraFocusMethod.DISABLE)
-camera.set_editor_property("focus_settings", focus)
-# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 actor의 값이 매번 바뀐다.
-for actor in actors:
-    if actor.get_actor_label() == "FL02_Instructions":
-        actor.get_component_by_class(unreal.TextRenderComponent).set_text(
-            "02 | Local neural AI voice -> MetaHuman Animator\nM: emotion | P: pause | R: restart | C: face camera\n13 moods + happiness intensity comparison"
-        )
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert editor.save_current_level()
-# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
-RESULT = {
-    "status": "connected",
-    "map": "/Game/FeatureLab/Maps/FL_02_Performance",
-    "controller": controller.get_actor_label(),
-    "variants": len(variants),
-    "speech": wave.get_path_name(),
-    "default_view": overview.get_actor_label(),
-    "preserved_existing_scene_cameras_and_lights": True,
-}
-(root / "Evidence" / "case02-ai-mood-scene.json").write_text(
-    json.dumps(RESULT, indent=2), encoding="utf-8"
-)
-```
-
-<a id="source-lab-lab-generate-ai-moods-py"></a>
-
-### lab_generate_ai_moods.py
-
-```python
-# 파일 역할: EpicFeatureLab의 lab_generate_ai_moods 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-# 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Capture/AIEmotion
-#   /Game/MetaHumans/Assembled/MH_MCP_Test/Face/SKM_MH_ToolTest_FaceMesh
-
-import hashlib
-import bisect
-import json
-import math
-import time
-import traceback
-from pathlib import Path
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-
-# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
-ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
-assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
-VOICE = json.loads(
-    (ROOT / "Evidence" / "case02-ai-voice-input.json").read_text(encoding="utf-8")
-)
-assert VOICE["uses_neural_network"] and VOICE["duration_seconds"] > 10
-# LIB: 에디터 에셋 작업에 사용할 API 묶음이다.
-LIB = unreal.EditorAssetLibrary
-FOLDER = "/Game/FeatureLab/Capture/AIEmotion"
-OUT = ROOT / "Evidence" / "case02-ai-mood-batch.json"
-SPECS = [
-    ("Neutral", "NEUTRAL", 1.0),
-    ("Happiness", "HAPPINESS", 1.0),
-    ("Sadness", "SADNESS", 1.0),
-    ("Anger", "ANGER", 1.0),
-    ("Surprise", "SURPRISE", 1.0),
-    ("Fear", "FEAR", 1.0),
-    ("Disgust", "DISGUST", 1.0),
-    ("Confidence", "CONFIDENCE", 1.0),
-    ("Confusion", "CONFUSION", 1.0),
-    ("Excitement", "EXCITEMENT", 1.0),
-    ("Playfulness", "PLAYFULNESS", 1.0),
-    ("Boredom", "BOREDOM", 1.0),
-    ("AutoDetect", "AUTO_DETECT", 1.0),
-    ("HappinessSoft", "HAPPINESS", 0.25),
-    ("NeutralRepeat", "NEUTRAL", 1.0),
-]
-# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
-REPORT = {
-    "status": "preparing",
-    "input_voice": VOICE["output"],
-    "input_sha256": VOICE["output_sha256"],
-    "total": len(SPECS),
-    "results": {},
-    "checks": {},
-}
-# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
-HANDLE = None
-# INDEX에 기준값 0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-INDEX = 0
-# PERFORMANCE에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-PERFORMANCE = None
-# STARTED에 기준값 0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-STARTED = 0
-# DONE에 기준값 False을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-DONE = False
-# NEUTRAL에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-NEUTRAL = None
-# HAPPY에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-HAPPY = None
-MESH = LIB.load_asset("/Game/MetaHumans/Assembled/MH_MCP_Test/Face/SKM_MH_ToolTest_FaceMesh")
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert MESH
-TARGET_SKELETON = MESH.get_editor_property("skeleton")
-LIB.make_directory(FOLDER)
-WAVE = LIB.load_asset(FOLDER + "/FeatureLabAISpeech")
-# 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not WAVE 여러 속성을 이름:값 사전으로 한 번에 설정한다. 각 항목이 개별 설정과 대응한다.
-if not WAVE:
-    task = unreal.AssetImportTask()
-    # 여러 속성을 이름:값 사전으로 한 번에 설정한다. 각 항목이 개별 설정과 대응한다.
-    task.set_editor_properties(
-        {
-            "filename": VOICE["output"],
-            "destination_path": FOLDER,
-            "destination_name": "FeatureLabAISpeech",
-            "automated": True,
-            "save": True,
-        }
-    )
-    unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks([task])
-    WAVE = LIB.load_asset(FOLDER + "/FeatureLabAISpeech")
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert WAVE
-
-
-# 함수 save: 이름은 save이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
-def save():
-    OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
-
-
-# 함수 unregister: 이름은 unregister이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-def unregister():
-    global HANDLE
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: HANDLE 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-    if HANDLE:
-        # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-        unreal.unregister_slate_post_tick_callback(HANDLE)
-    # HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
-    HANDLE = None
-
-
-# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: exception
-def finish(exception=None):
-    global DONE, PERFORMANCE, MESH, TARGET_SKELETON, WAVE, NEUTRAL, HAPPY
-    unregister()
-    # DONE에 기준값 True을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    DONE = True
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: exception
-    if exception:
-        REPORT["error"] = exception
-    REPORT["status"] = (
-        "processed_exported_curve_validation_passed"
-        if not exception and all(REPORT["checks"].values())
-        else "failed"
-    )
-    save()
-    # PERFORMANCE에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    PERFORMANCE = MESH = TARGET_SKELETON = WAVE = NEUTRAL = HAPPY = None
-
-
-# 함수 differences: 이름은 differences이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: a, b, tokens 여러 목록의 같은 위치 항목을 묶어 순서대로 비교한다.
-def differences(a, b, tokens=None):
-    # square에 기준값 0.0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    square = 0.0
-    # count에 기준값 0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    count = 0
-    # maximum에 기준값 0.0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    maximum = 0.0
-    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 (name, values)의 값이 매번 바뀐다. 여러 목록의 같은 위치 항목을 묶어 순서대로 비교한다.
-    for name, values in a.items():
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: name not in b or (tokens and (not any((t in name.lower() for t in tokens))))
-        if name not in b or (tokens and not any(t in name.lower() for t in tokens)):
-            continue
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-        assert len(values) == len(b[name]), name
-        # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 (x, y)의 값이 매번 바뀐다. 여러 목록의 같은 위치 항목을 묶어 순서대로 비교한다.
-        for x, y in zip(values, b[name]):
-            # 차이의 부호를 없애 크기만 비교한다. 오차 허용 범위 검사에 자주 사용한다.
-            d = abs(x - y)
-            square += d * d
-            count += 1
-            maximum = max(maximum, d)
-    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-    return {
-        "rms": math.sqrt(square / count) if count else 0.0,
-        "maximum": maximum,
-        "samples": count,
-    }
-
-
-# 함수 start_next: 이름은 start_next이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-def start_next():
-    global PERFORMANCE, STARTED, HANDLE
-    name, enum_name, intensity = SPECS[INDEX]
-    path = FOLDER + "/MHP_AI_" + name
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    PERFORMANCE = LIB.load_asset(path)
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not PERFORMANCE 지정한 경로·이름·종류로 새 에셋을 만든다. 같은 이름의 원본이 있는지 검사하는 코드와 함께 읽는다.
-    if not PERFORMANCE:
-        # 지정한 경로·이름·종류로 새 에셋을 만든다. 같은 이름의 원본이 있는지 검사하는 코드와 함께 읽는다.
-        PERFORMANCE = unreal.AssetToolsHelpers.get_asset_tools().create_asset(
-            "MHP_AI_" + name,
-            FOLDER,
-            unreal.MetaHumanPerformance,
-            unreal.MetaHumanPerformanceFactoryNew(),
-        )
-    assert not PERFORMANCE.is_processing(), "Do not overlap an active audio solve"
-    # SetInputType/SetAudio need their individual PostEditChangeProperty events
-    # to initialize the audio frame limits. Bulk editing skips that initialization.
-    PERFORMANCE.set_editor_property("input_type", unreal.DataInputType.AUDIO)
-    PERFORMANCE.set_editor_property("audio", None)
-    PERFORMANCE.set_editor_property("audio", WAVE)
-    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 (prop, value)의 값이 매번 바뀐다. 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다.
-    for prop, value in {
-        "downmix_channels": True,
-        "bRealtimeAudio": False,
-        "bGenerateBlinks": False,
-        "AudioDrivenAnimationOutputControls": unreal.AudioDrivenAnimationOutputControls.FULL_FACE,
-    }.items():
-        # 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다.
-        PERFORMANCE.set_editor_property(prop, value)
-    overrides = unreal.AudioDrivenAnimationSolveOverrides(
-        mood=getattr(unreal.AudioDrivenAnimationMood, enum_name), mood_intensity=intensity
-    )
-    PERFORMANCE.set_editor_property("AudioDrivenAnimationSolveOverrides", overrides)
-    PERFORMANCE.set_blocking_processing(False)
-    # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-    assert PERFORMANCE.can_process(), name
-    result = PERFORMANCE.start_pipeline(True)
-    STARTED = time.monotonic()
-    REPORT.update(status="processing", current=name, completed=INDEX)
-    REPORT["results"][name] = {
-        "status": "processing",
-        "performance": path,
-        "mood": enum_name,
-        "intensity": intensity,
-        "start_result": str(result),
-        "solve_settings": overrides.export_text(),
-    }
-    save()
-    # HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
-    HANDLE = unreal.register_slate_post_tick_callback(tick)
-
-
-# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta
-def tick(delta):
-    global INDEX, NEUTRAL, HAPPY
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: DONE
-    if DONE:
-        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-        return
-    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
-    try:
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: PERFORMANCE.is_processing()
-        if PERFORMANCE.is_processing():
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: time.monotonic() - STARTED > 300
-            if time.monotonic() - STARTED > 300:
-                PERFORMANCE.cancel_pipeline()
-                raise RuntimeError("Audio solve timeout: " + SPECS[INDEX][0])
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        unregister()
-        name, enum_name, intensity = SPECS[INDEX]
-        entry = REPORT["results"][name]
-        frames = PERFORMANCE.get_number_of_processed_frames()
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-        assert PERFORMANCE.contains_animation_data() and frames > 200, (name, frames)
-        settings = (
-            unreal.MetaHumanPerformanceExportUtils.get_export_animation_sequence_settings(
-                PERFORMANCE
-            )
-        )
-        settings.target_skeleton_or_skeletal_mesh = MESH
-        # settings.show_export_dialog에 기준값 False을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        settings.show_export_dialog = False
-        settings.package_path = FOLDER
-        settings.asset_name = "AS_AI_" + name
-        # settings.auto_save_anim_sequence에 기준값 True을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        settings.auto_save_anim_sequence = True
-        animation = unreal.MetaHumanPerformanceExportUtils.export_animation_sequence(
-            PERFORMANCE, settings
-        )
-        assert animation and animation.get_editor_property("skeleton") == TARGET_SKELETON
-        names = unreal.AnimationLibrary.get_animation_curve_names(
-            animation, unreal.RawCurveTrackTypes.RCT_FLOAT
-        )
-        curves = {}
-        # varying에 기준값 0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        varying = 0
-        # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 curve의 값이 매번 바뀐다. 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-        for curve in names:
-            times, values = unreal.AnimationLibrary.get_float_keys(animation, curve)
-            # Export key reduction differs by emotion. Reconstruct each curve on
-            # the common 30 Hz input timeline before comparing output values.
-            source_times = [float(t) for t in times]
-            source_values = [float(v) for v in values]
-            values = []
-            # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 frame의 값이 매번 바뀐다. 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-            for frame in range(frames):
-                sample = frame / 30.0
-                k = bisect.bisect_right(source_times, sample)
-                # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not source_values
-                if not source_values:
-                    # value에 기준값 0.0을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-                    value = 0.0
-                # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: k == 0
-                elif k == 0:
-                    value = source_values[0]
-                # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: k == len(source_values)
-                elif k == len(source_values):
-                    value = source_values[-1]
-                else:
-                    a = (sample - source_times[k - 1]) / (source_times[k] - source_times[k - 1])
-                    value = source_values[k - 1] * (1.0 - a) + source_values[k] * a
-                # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-                values.append(value)
-            # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-            assert all(math.isfinite(v) for v in values)
-            curves[str(curve)] = values
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: values and max(values) - min(values) > 0.0001
-            if values and max(values) - min(values) > 0.0001:
-                varying += 1
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-        assert varying > 20 and len(curves) > 100
-        entry.update(
-            status="processed_exported",
-            animation=animation.get_path_name(),
-            processed_frames=frames,
-            curve_count=len(curves),
-            varying_curve_count=varying,
-            comparison_sampling="30Hz linear reconstruction of exported reduced curve keys",
-            curve_sha256=hashlib.sha256(
-                json.dumps(curves, sort_keys=True, separators=(",", ":")).encode()
-            ).hexdigest(),
-            elapsed_seconds=round(time.monotonic() - STARTED, 3),
-        )
-        if name == "Neutral":
-            NEUTRAL = curves
-        else:
-            entry["difference_from_neutral"] = differences(curves, NEUTRAL)
-            entry["upper_face_difference"] = differences(
-                curves, NEUTRAL, ["brow", "eye", "cheek", "nose"]
-            )
-        if name == "Happiness":
-            HAPPY = curves
-        if name == "HappinessSoft":
-            entry["difference_from_full_happiness"] = differences(curves, HAPPY)
-        # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 메모리에서 편집한 에셋을 실제 파일에 저장한다. Play 중의 임시 상태 저장과 구분한다.
-        assert LIB.save_loaded_asset(PERFORMANCE, False)
-        INDEX += 1
-        REPORT["completed"] = INDEX
-        save()
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: INDEX < len(SPECS)
-        if INDEX < len(SPECS):
-            start_next()
-        else:
-            entries = REPORT["results"]
-            fixed = [
-                s[0] for s in SPECS if s[0] not in ["Neutral", "AutoDetect", "NeutralRepeat"]
-            ]
-            REPORT["checks"] = {
-                "all_requested_solves_exported": all(
-                    e["status"] == "processed_exported" for e in entries.values()
-                ),
-                "same_audio_frame_count": len({e["processed_frames"] for e in entries.values()})
-                == 1,
-                "all_named_moods_change_face": all(
-                    entries[n]["difference_from_neutral"]["rms"] > 0.00001 for n in fixed
-                ),
-                "happiness_and_sadness_change_upper_face": all(
-                    entries[n]["upper_face_difference"]["rms"] > 0.00001
-                    for n in ["Happiness", "Sadness"]
-                ),
-                "mood_intensity_changes_result": entries["HappinessSoft"][
-                    "difference_from_full_happiness"
-                ]["rms"]
-                > 0.00001,
-                "repeat_produces_valid_same_length_animation": entries["NeutralRepeat"][
-                    "processed_frames"
-                ]
-                == entries["Neutral"]["processed_frames"]
-                and entries["NeutralRepeat"]["varying_curve_count"] > 20,
-            }
-            REPORT["runtime_variants"] = [
-                {"name": n, "animation": e["animation"], "intensity": e["intensity"]}
-                for n, e in entries.items()
-                if n != "NeutralRepeat"
-            ]
-            finish()
-    except Exception:
-        finish(traceback.format_exc())
-
-
-# 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
-try:
-    start_next()
-except Exception:
-    finish(traceback.format_exc())
-# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
-RESULT = {
-    "status": REPORT["status"],
-    "current": REPORT.get("current"),
-    "total": len(SPECS),
-    "evidence": str(OUT),
-    "error": REPORT.get("error"),
-}
-```
-
-<a id="source-lab-lab-inspect-native-face-input-py"></a>
-
-### lab_inspect_native_face_input.py
-
-```python
-# 파일 역할: 현재 에셋·객체·실행 상태를 읽어 기록하는 관찰 작업.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-import json
-from pathlib import Path
-
-# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
-world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert world
-controller = unreal.GameplayStatics.get_all_actors_of_class(
-    world, unreal.FeatureLabFacePlayback
-)[0]
-pc = unreal.GameplayStatics.get_player_controller(world, 0)
-# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
-RESULT = {
-    "input_components": [
-        c.get_path_name() for c in controller.get_components_by_class(unreal.InputComponent)
-    ],
-    "paused": (
-        controller.b_paused
-        if hasattr(controller, "b_paused")
-        else controller.get_editor_property("paused")
-    ),
-    "position": controller.get_face().get_position(),
-    "player_controller": pc.get_path_name(),
-}
-(Path(unreal.Paths.project_dir()) / "Evidence" / "case02-keyboard-state.json").write_text(
-    json.dumps(RESULT, indent=2), encoding="utf-8"
-)
-```
-
-<a id="source-lab-lab-light-face-scene-py"></a>
-
-### lab_light_face_scene.py
-
-```python
-# 파일 역할: EpicFeatureLab의 lab_light_face_scene 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-
-import json
-from pathlib import Path
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-
-# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
-ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
-assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-# 에디터가 제공하는 작업 관리자를 얻는다. 뒤의 클래스 이름이 어떤 관리자를 요청하는지 나타낸다.
-editor = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
-# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 편집 중인 월드를 얻는다. 게임 실행 월드와 다르므로 대상을 혼동하지 않는다.
-world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
-assert world.get_name() == "FL_02_Performance"
+assert editor.load_level("/Game/Levels/DefaultLevel")
 # 에디터가 제공하는 작업 관리자를 얻는다. 뒤의 클래스 이름이 어떤 관리자를 요청하는지 나타낸다.
 actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
 # 현재 편집 레벨의 액터 목록을 가져온다. 모든 프로젝트 에셋 목록을 가져오는 것은 아니다.
-all_actors = actors.get_all_level_actors()
-camera = next(a for a in all_actors if a.get_actor_label() == "FL02_FaceInspectionCamera")
-target = unreal.Vector(0, 8, 158)
-# 액터 위치를 바꾼다. 별도 이동 시뮬레이션이 소유한 상태까지 자동 초기화되는지는 확인해야 한다.
-camera.set_actor_location(unreal.Vector(55, 240, 170), False, True)
-# 액터 방향을 바꾼다. 위치 이동과 구분한다.
-camera.set_actor_rotation(
-    unreal.MathLibrary.find_look_at_rotation(camera.get_actor_location(), target), False
+bench = next(
+    (a for a in actors.get_all_level_actors() if a.get_actor_label() == "FL05_SmartBench"), None
 )
-cine = camera.get_cine_camera_component()
-focus = cine.get_editor_property("focus_settings")
-focus.set_editor_property("manual_focus_distance", 240.0)
-cine.set_editor_property("focus_settings", focus)
-# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 (label, location, intensity, color)의 값이 매번 바뀐다. 액터 방향을 바꾼다. 위치 이동과 구분한다.
-for label, location, intensity, color in [
-    ("FL02_Key", (160, 200, 220), 30, (1.0, 0.9, 0.8)),
-    ("FL02_Fill", (-160, 160, 185), 10, (0.75, 0.85, 1.0)),
-    ("FL02_Rim", (0, -150, 225), 20, (1.0, 0.9, 0.8)),
-]:
-    matches = [a for a in all_actors if a.get_actor_label() == label]
+# 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not bench 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
+if not bench:
+    cls = unreal.EditorAssetLibrary.load_blueprint_class(
+        "/Game/Blueprints/SmartObjects/Bench/BP_SmartBench"
+    )
+    # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+    assert cls
     # 지정한 클래스의 실제 액터를 편집 장면에 만든다. 에셋 파일 생성과는 다르다.
-    light = (
-        matches[0]
-        if matches
-        else actors.spawn_actor_from_class(unreal.RectLight, unreal.Vector(*location))
+    bench = actors.spawn_actor_from_class(
+        cls, unreal.Vector(-650, 1000, 0), unreal.Rotator(pitch=0, yaw=180, roll=0)
     )
-    light.set_actor_label(label)
-    # 액터 방향을 바꾼다. 위치 이동과 구분한다.
-    light.set_actor_rotation(
-        unreal.MathLibrary.find_look_at_rotation(light.get_actor_location(), target), False
-    )
-    component = light.get_component_by_class(unreal.RectLightComponent)
-    component.set_intensity(intensity)
-    component.set_light_color(unreal.LinearColor(*color, 1.0), True)
-    component.set_editor_property("source_width", 120.0)
-    component.set_editor_property("source_height", 120.0)
-    component.set_attenuation_radius(650.0)
-    light.tags = ["FeatureLab_02", "FeatureLab_Owned"]
-start = next(a for a in all_actors if isinstance(a, unreal.PlayerStart))
-# 액터 위치를 바꾼다. 별도 이동 시뮬레이션이 소유한 상태까지 자동 초기화되는지는 확인해야 한다.
-start.set_actor_location(unreal.Vector(0, 450, 110), False, True)
-# 액터 방향을 바꾼다. 위치 이동과 구분한다.
-start.set_actor_rotation(unreal.Rotator(0, -90, 0), False)
-playback = next(a for a in all_actors if isinstance(a, unreal.FeatureLabFacePlayback))
-playback.get_component_by_class(unreal.AudioComponent).set_volume_multiplier(0.3)
-# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 actor의 값이 매번 바뀐다.
-for actor in all_actors:
-    if actor.get_actor_label() == "FL02_Instructions":
-        actor.set_actor_hidden_in_game(True)
+    bench.set_actor_label("FL05_SmartBench")
+    bench.tags = ["FeatureLab_05"]
+bench.set_actor_location_and_rotation(
+    unreal.Vector(-650, 1000, 0), unreal.Rotator(pitch=0, yaw=180, roll=0), False, True
+)
 # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
 assert editor.save_current_level()
 # RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
 RESULT = {
-    "saved": True,
-    "camera": [55, 240, 170],
-    "target": [0, 8, 158],
-    "lighting": "three-point face inspection",
-    "volume": 0.3,
+    "status": "bench_added",
+    "map": "/Game/Levels/DefaultLevel",
+    "actor": bench.get_actor_label(),
+    "source": "/Game/Blueprints/SmartObjects/Bench/BP_SmartBench",
+    "location": [-650, 1000, 0],
+    "approach_location": [-800, 1000, 90],
+    "main_movement_lane_unchanged": True,
+    "separate_from_controls_widgets": True,
 }
-(ROOT / "Evidence" / "case02-face-presentation.json").write_text(
+(root / "Evidence" / "case05-bench-scene.json").write_text(
     json.dumps(RESULT, indent=2), encoding="utf-8"
 )
 ```
 
-<a id="source-lab-lab-mha-audio-py"></a>
+<a id="source-lab-lab-arm-gasp-jump-py"></a>
 
-### lab_mha_audio.py
+### lab_arm_gasp_jump.py
 
 ```python
-# 파일 역할: EpicFeatureLab의 lab_mha_audio 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
+# 파일 역할: EpicFeatureLab의 lab_arm_gasp_jump 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
 # 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
 # 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
 # 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-# 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Capture
 
 import json
 import time
-import traceback
 from pathlib import Path
 # 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
 import unreal
 
 # ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
 ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-# LIB: 에디터 에셋 작업에 사용할 API 묶음이다.
-LIB = unreal.EditorAssetLibrary
-OUTPUT = ROOT / "Evidence" / "case02-audio-performance.json"
-REPORT = {"status": "preparing", "personal_recording_used": False}
-# TICK에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-TICK = None
-# DONE에 기준값 False을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-DONE = False
+OUT = ROOT / "Evidence" / "case05-keyboard-jump.json"
+# 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert WORLD
+PAWN = unreal.GameplayStatics.get_player_pawn(WORLD, 0)
+MOVER = PAWN.get_component_by_class(unreal.MoverComponent)
+START = PAWN.get_actor_location()
+BEGIN = time.monotonic()
+# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
+REPORT = {
+    "status": "armed",
+    "input_method": "Waiting for physical Space key; this script injects no input",
+    "samples": [],
+}
+STATE = {"air": False, "done": False}
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
+HANDLE = None
 
 
-# 함수 save_report: 이름은 save_report이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
-def save_report():
-    OUTPUT.write_text(json.dumps(REPORT, indent=2, ensure_ascii=False), encoding="utf-8")
-
-
-# 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-try:
-    folder = "/Game/FeatureLab/Capture"
-    LIB.make_directory(folder)
-    wave_path = folder + "/FeatureLabSpeech"
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    wave = LIB.load_asset(wave_path)
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not wave 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 filename이다.
-    if not wave:
-        task = unreal.AssetImportTask()
-        # 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 filename이다.
-        task.set_editor_property(
-            "filename",
-            str(ROOT / "ExternalWorkflows" / "CaptureInputs" / "FeatureLabSpeech.wav"),
+# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+def tick(delta):
+    global WORLD, PAWN, MOVER
+    if STATE["done"]:
+        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+        return
+    p = PAWN.get_actor_location()
+    mode = str(MOVER.get_movement_mode_name())
+    REPORT["samples"].append({"z": p.z, "mode": mode, "seconds": time.monotonic() - BEGIN})
+    if mode != "Walking" and p.z > START.z + 10:
+        STATE["air"] = True
+    landed = STATE["air"] and mode == "Walking" and abs(p.z - START.z) < 5
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: landed or time.monotonic() - BEGIN > 45 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+    if landed or time.monotonic() - BEGIN > 45:
+        STATE["done"] = True
+        # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+        unreal.unregister_slate_post_tick_callback(HANDLE)
+        height = max(s["z"] for s in REPORT["samples"]) - START.z
+        checks = {
+            "physical_key_causes_takeoff": STATE["air"],
+            "jump_raises_pawn": height > 30,
+            "lands_back_on_ground": landed,
+        }
+        REPORT.update(
+            status="passed" if all(checks.values()) else "failed",
+            checks=checks,
+            jump_height_cm=height,
         )
-        task.set_editor_property("destination_path", folder)
-        task.set_editor_property("automated", True)
-        task.set_editor_property("save", True)
-        unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks([task])
-        # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-        wave = LIB.load_asset(wave_path)
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not wave
-    if not wave:
-        raise RuntimeError("Synthetic speech did not import as a SoundWave")
-    path = folder + "/MHP_AudioSpeech"
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    performance = LIB.load_asset(path)
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not performance 지정한 경로·이름·종류로 새 에셋을 만든다. 같은 이름의 원본이 있는지 검사하는 코드와 함께 읽는다.
-    if not performance:
-        # 지정한 경로·이름·종류로 새 에셋을 만든다. 같은 이름의 원본이 있는지 검사하는 코드와 함께 읽는다.
-        performance = unreal.AssetToolsHelpers.get_asset_tools().create_asset(
-            "MHP_AudioSpeech",
-            folder,
-            unreal.MetaHumanPerformance,
-            unreal.MetaHumanPerformanceFactoryNew(),
-        )
-    performance.set_editor_property("input_type", unreal.DataInputType.AUDIO)
-    performance.set_editor_property("audio", wave)
-    performance.set_editor_property("downmix_channels", True)
-    performance.set_blocking_processing(False)
-    REPORT.update(
-        performance=path, sound=wave.get_path_name(), can_process=performance.can_process()
-    )
-    if not REPORT["can_process"]:
-        raise RuntimeError("MetaHuman Performance is not ready to process this audio")
-    started = performance.start_pipeline(True)
-    REPORT.update(status="processing", start_result=str(started))
-    START = time.monotonic()
-    save_report()
+        OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
+        # WORLD에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+        WORLD = PAWN = MOVER = None
 
-    # 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-    def tick(delta):
-        global TICK, DONE
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: DONE
-        if DONE:
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: performance.is_processing()
-        if performance.is_processing():
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: time.monotonic() - START > 300
-            if time.monotonic() - START > 300:
-                performance.cancel_pipeline()
-                REPORT.update(status="failed", error="Audio pipeline exceeded 300 seconds")
-            else:
-                # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-                return
-        # DONE에 기준값 True을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        DONE = True
-        handle, TICK = TICK, None
-        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: handle is not None 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-        if handle is not None:
-            # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-            unreal.unregister_slate_post_tick_callback(handle)
-        # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 show_export_dialog이다.
-        try:
-            REPORT["processed_frames"] = performance.get_number_of_processed_frames()
-            REPORT["contains_animation"] = performance.contains_animation_data()
-            if not REPORT["contains_animation"] or REPORT["processed_frames"] < 1:
-                raise RuntimeError(
-                    "The pipeline did not produce valid animation frames: " + str(started)
-                )
-            settings = (
-                unreal.MetaHumanPerformanceExportUtils.get_export_animation_sequence_settings(
-                    performance
-                )
-            )
-            settings.set_editor_property("show_export_dialog", False)
-            settings.set_editor_property("package_path", folder)
-            settings.set_editor_property("asset_name", "AS_AudioSpeech_Face")
-            settings.set_editor_property("auto_save_anim_sequence", True)
-            animation = unreal.MetaHumanPerformanceExportUtils.export_animation_sequence(
-                performance, settings
-            )
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not animation
-            if not animation:
-                raise RuntimeError("Animation export did not return an AnimSequence")
-            # 메모리에서 편집한 에셋을 실제 파일에 저장한다. Play 중의 임시 상태 저장과 구분한다.
-            LIB.save_loaded_asset(performance, False)
-            REPORT.update(
-                status="processed_and_exported",
-                animation=animation.get_path_name(),
-                can_export=performance.can_export_animation(),
-                elapsed_seconds=round(time.monotonic() - START, 2),
-                remaining=[
-                    "face playback and measurable curve changes",
-                    "visual speech playback",
-                    "mood control and repeat verification",
-                ],
-            )
-        except Exception:
-            REPORT.update(status="failed", error=traceback.format_exc())
-        save_report()
 
-    # 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
-    TICK = unreal.register_slate_post_tick_callback(tick)
-except Exception:
-    REPORT.update(status="failed", error=traceback.format_exc())
-    save_report()
-# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
-RESULT = REPORT
+OUT.write_text(json.dumps(REPORT), encoding="utf-8")
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
+HANDLE = unreal.register_slate_post_tick_callback(tick)
+RESULT = {"status": "armed", "timeout_seconds": 45}
 ```
 
-<a id="source-lab-lab-peek-ai-mood-controls-py"></a>
+<a id="source-lab-lab-inspect-gasp-landmarks-py"></a>
 
-### lab_peek_ai_mood_controls.py
+### lab_inspect_gasp_landmarks.py
+
+```python
+# 파일 역할: 현재 에셋·객체·실행 상태를 읽어 기록하는 관찰 작업.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Levels/DefaultLevel
+#   /Game/Input
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 작업할 맵을 연다. 현재 맵과 다른 맵이므로 실행 중인 PIE를 먼저 끝내는지 확인한다.
+assert unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).load_level(
+    "/Game/Levels/DefaultLevel"
+)
+# 현재 편집 레벨의 액터 목록을 가져온다. 모든 프로젝트 에셋 목록을 가져오는 것은 아니다.
+actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors()
+rows = []
+
+
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [round(v.x, 3), round(v.y, 3), round(v.z, 3)]
+
+
+# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 a의 값이 매번 바뀐다.
+for a in actors:
+    label = a.get_actor_label()
+    cls = a.get_class().get_name()
+    rot = a.get_actor_rotation()
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: any((k in (label + cls).lower() for k in ['ramp', 'slope', 'stair', 'bench', 'slide', 'travers', 'playerstart'])) or abs(rot.pitch) > 3.0 or abs(rot.roll) > 3.0 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+    if (
+        any(
+            k in (label + cls).lower()
+            for k in ["ramp", "slope", "stair", "bench", "slide", "travers", "playerstart"]
+        )
+        or abs(rot.pitch) > 3.0
+        or abs(rot.roll) > 3.0
+    ):
+        origin, extent = a.get_actor_bounds(False)
+        mesh = a.get_component_by_class(unreal.StaticMeshComponent)
+        # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        rows.append(
+            {
+                "label": label,
+                "class": cls,
+                "location": vector(a.get_actor_location()),
+                "rotation": [rot.pitch, rot.yaw, rot.roll],
+                "bounds_origin": vector(origin),
+                "bounds_extent": vector(extent),
+                "mesh": mesh.static_mesh.get_path_name() if mesh and mesh.static_mesh else None,
+            }
+        )
+actions = unreal.AssetRegistryHelpers.get_asset_registry().get_assets_by_path(
+    "/Game/Input", True
+)
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
+RESULT = {
+    "actors": len(actors),
+    "landmarks": rows,
+    "input_assets": [str(a.package_name) for a in actions],
+}
+(root / "Evidence" / "case05-level-landmarks.json").write_text(
+    json.dumps(RESULT, indent=2), encoding="utf-8"
+)
+```
+
+<a id="source-lab-lab-inspect-gasp-network-py"></a>
+
+### lab_inspect_gasp_network.py
+
+```python
+# 파일 역할: 현재 에셋·객체·실행 상태를 읽어 기록하는 관찰 작업.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+worlds = unreal.FeatureLabRuntimeLibrary.get_play_worlds()
+rows = []
+library = unreal.get_default_object(
+    unreal.load_class(None, "/Script/Engine.SubsystemBlueprintLibrary")
+)
+# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 world의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+for world in worlds:
+    pawns = []
+    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 pawn의 값이 매번 바뀐다.
+    for pawn in unreal.GameplayStatics.get_all_actors_of_class(world, unreal.Pawn):
+        mover = pawn.get_component_by_class(unreal.MoverComponent)
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not mover
+        if not mover:
+            continue
+        local = pawn.is_locally_controlled()
+        controller = pawn.get_controller()
+        # subsystem에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+        subsystem = None
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: local and controller
+        if local and controller:
+            subsystem = library.call_method(
+                "GetLocalPlayerSubSystemFromPlayerController",
+                (controller, unreal.EnhancedInputLocalPlayerSubsystem.static_class()),
+            )
+        p = pawn.get_actor_location()
+        # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        pawns.append(
+            {
+                "pawn": pawn.get_name(),
+                "role": str(pawn.get_local_role()),
+                "local": local,
+                "location": [p.x, p.y, p.z],
+                "input_subsystem": subsystem.get_path_name() if subsystem else None,
+                "components": [
+                    c.get_class().get_name()
+                    for c in pawn.get_components_by_class(unreal.ActorComponent)
+                    if "Liaison" in c.get_class().get_name()
+                ],
+            }
+        )
+    rows.append({"world": world.get_path_name(), "pawns": pawns})
+RESULT = {"world_count": len(worlds), "worlds": rows}
+(root / "Evidence" / "case05-network-inspection.json").write_text(
+    json.dumps(RESULT, indent=2), encoding="utf-8"
+)
+```
+
+<a id="source-lab-lab-inspect-gasp-runtime-py"></a>
+
+### lab_inspect_gasp_runtime.py
+
+```python
+# 파일 역할: 현재 에셋·객체·실행 상태를 읽어 기록하는 관찰 작업.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert world
+pawn = unreal.GameplayStatics.get_player_pawn(world, 0)
+mover = pawn.get_component_by_class(unreal.MoverComponent)
+meshes = []
+# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 component의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+for component in pawn.get_components_by_class(unreal.SkeletalMeshComponent):
+    component.visibility_based_anim_tick_option = (
+        unreal.VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES
+    )
+    mesh = component.get_skeletal_mesh_asset()
+    animation = component.get_anim_instance()
+    # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+    meshes.append(
+        {
+            "name": component.get_name(),
+            "mesh": mesh.get_path_name() if mesh else None,
+            "animation": animation.get_path_name() if animation else None,
+            "animation_class": animation.get_class().get_path_name() if animation else None,
+        }
+    )
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
+RESULT = {
+    "pawn": pawn.get_path_name(),
+    "class": pawn.get_class().get_path_name(),
+    "mover": mover.get_path_name() if mover else None,
+    "mode": str(mover.get_movement_mode_name()) if mover else None,
+    "meshes": meshes,
+}
+(root / "Evidence" / "case05-gasp-runtime-inspection.json").write_text(
+    json.dumps(RESULT, indent=2), encoding="utf-8"
+)
+```
+
+<a id="source-lab-lab-peek-gasp-controls-py"></a>
+
+### lab_peek_gasp_controls.py
 
 ```python
 # 파일 역할: 현재 에셋·객체·실행 상태를 읽어 기록하는 관찰 작업.
@@ -1196,106 +529,370 @@ import unreal
 world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
 # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
 assert world
-controller = unreal.GameplayStatics.get_all_actors_of_class(
-    world, unreal.FeatureLabFacePlayback
-)[0]
-pc = unreal.GameplayStatics.get_player_controller(world, 0)
-audio = controller.get_component_by_class(unreal.AudioComponent)
-face = controller.get_face()
-# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 bPaused이다.
+pawn = unreal.GameplayStatics.get_player_pawn(world, 0)
+mesh = next(
+    c
+    for c in pawn.get_components_by_class(unreal.SkeletalMeshComponent)
+    if c.get_anim_instance()
+)
+anim = mesh.get_anim_instance()
+montage = anim.get_current_active_montage()
+p = pawn.get_actor_location()
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
 RESULT = {
-    "variant": controller.facial_variant_index,
-    "variant_count": len(controller.facial_variants),
-    "name": controller.facial_variant_names[controller.facial_variant_index],
-    "paused": controller.get_editor_property("bPaused"),
-    "position": face.get_position(),
-    "restart_count": controller.restart_count,
-    "audio_state": str(audio.get_play_state()),
-    "speech": controller.speech.get_path_name(),
-    "animation": controller.facial_animation.get_path_name(),
-    "camera": pc.get_view_target().get_name(),
-    "inspection": pc.get_view_target() == controller.inspection_camera,
+    "location": [p.x, p.y, p.z],
+    "stance": str(anim.get_editor_property("Stance")),
+    "gait": str(anim.get_editor_property("Gait")),
+    "mode": str(pawn.get_component_by_class(unreal.MoverComponent).get_movement_mode_name()),
+    "capsule_half_height": pawn.get_component_by_class(
+        unreal.CapsuleComponent
+    ).get_scaled_capsule_half_height(),
+    "montage": montage.get_path_name() if montage else None,
+    "pelvis_relative_z": mesh.get_socket_location("pelvis").z - p.z,
 }
-(Path(unreal.Paths.project_dir()) / "Evidence" / "case02-ai-keyboard-state.json").write_text(
+forward = pawn.get_actor_forward_vector()
+RESULT.update(
+    actor_yaw=pawn.get_actor_rotation().yaw,
+    forward=[forward.x, forward.y, forward.z],
+    control_yaw=unreal.GameplayStatics.get_player_controller(world, 0)
+    .get_control_rotation()
+    .yaw,
+)
+(Path(unreal.Paths.project_dir()) / "Evidence" / "case05-keyboard-state.json").write_text(
     json.dumps(RESULT, indent=2), encoding="utf-8"
 )
 ```
 
-<a id="source-lab-lab-reexport-face-py"></a>
+<a id="source-lab-lab-prepare-bench-keyboard-py"></a>
 
-### lab_reexport_face.py
+### lab_prepare_bench_keyboard.py
 
 ```python
-# 파일 역할: EpicFeatureLab의 lab_reexport_face 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
+# 파일 역할: EpicFeatureLab의 lab_prepare_bench_keyboard 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
 # 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
 # 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
 # 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-# 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face
-#   /Game/MetaHumans/Assembled/MH_MCP_Test/Face/SKM_MH_ToolTest_FaceMesh
-#   /Game/FeatureLab/Capture/MHP_AudioSpeech
-#   /Game/FeatureLab/Capture
 
 import json
-import traceback
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert world
+pawn = unreal.GameplayStatics.get_player_pawn(world, 0)
+pc = unreal.GameplayStatics.get_player_controller(world, 0)
+# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+scene = json.loads(
+    (Path(unreal.Paths.project_dir()) / "Evidence" / "case05-bench-scene.json").read_text(
+        encoding="utf-8"
+    )
+)
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+    pawn, unreal.Vector(*scene["approach_location"]), unreal.Rotator(pitch=0, yaw=0, roll=0)
+)
+pc.set_control_rotation(unreal.Rotator(pitch=0, yaw=0, roll=0))
+RESULT = {"status": "bench_approach_queued", "input_injected": False}
+```
+
+<a id="source-lab-lab-prepare-gasp-network-py"></a>
+
+### lab_prepare_gasp_network.py
+
+```python
+# 파일 역할: EpicFeatureLab의 lab_prepare_gasp_network 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+
+import json
 from pathlib import Path
 # 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
 import unreal
 
 root = Path(unreal.Paths.project_dir()).resolve()
 assert root.name == "EpicFeatureLab"
-report = {"status": "started"}
-# 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-try:
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    mesh = unreal.EditorAssetLibrary.load_asset(
-        "/Game/MetaHumans/Assembled/MH_MCP_Test/Face/SKM_MH_ToolTest_FaceMesh"
-    )
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    performance = unreal.EditorAssetLibrary.load_asset(
-        "/Game/FeatureLab/Capture/MHP_AudioSpeech"
-    )
-    target = "/Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face"
-    # 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-    animation = unreal.EditorAssetLibrary.load_asset(target)
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not animation
-    if not animation:
-        settings = (
-            unreal.MetaHumanPerformanceExportUtils.get_export_animation_sequence_settings(
-                performance
-            )
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+out = root / "Evidence" / "case05-network-session.json"
+native = unreal.get_default_object(
+    unreal.load_class(None, "/Script/ConfigSettingsToolset.ConfigSettingsToolset")
+)
+names = [
+    "PlayNetMode",
+    "RunUnderOneProcess",
+    "PlayNumberOfClients",
+    "ClientWindowWidth",
+    "ServerPort",
+    "bLaunchSeparateServer",
+    "NetworkEmulationSettings",
+]
+
+
+# 함수 read: 이름은 read이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+def read():
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다. JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+    return json.loads(
+        native.call_method(
+            "GetSectionPropertyValues", ("Editor", "LevelEditor", "PlayIn", names)
         )
-        settings.target_skeleton_or_skeletal_mesh = mesh
-        # settings.show_export_dialog에 기준값 False을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        settings.show_export_dialog = False
-        settings.package_path = "/Game/FeatureLab/Capture"
-        settings.asset_name = "AS_AudioSpeech_MH58_Face"
-        # settings.auto_save_anim_sequence에 기준값 True을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-        settings.auto_save_anim_sequence = True
-        animation = unreal.MetaHumanPerformanceExportUtils.export_animation_sequence(
-            performance, settings
-        )
-    # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-    assert animation
-    source_skeleton = animation.get_editor_property("skeleton")
-    target_skeleton = mesh.get_editor_property("skeleton")
+    )
+
+
+before = read()
+# 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: out.exists() JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+if out.exists():
+    previous = json.loads(out.read_text(encoding="utf-8"))
     # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
     assert (
-        source_skeleton == target_skeleton
-    ), "Export must use this assembled UE 5.8 face skeleton"
-    report.update(
-        status="passed",
-        animation=animation.get_path_name(),
-        skeleton=source_skeleton.get_path_name(),
-        processed_frames=performance.get_number_of_processed_frames(),
-    )
-except Exception:
-    report.update(status="failed", error=traceback.format_exc())
-(root / "Evidence" / "case02-targeted-export.json").write_text(
-    json.dumps(report, indent=2), encoding="utf-8"
+        not previous.get("restore_required") or before == previous["before"]
+    ), "Restore the previous network test first"
+target = dict(before)
+target.update(
+    PlayNetMode="PIE_ListenServer",
+    RunUnderOneProcess=True,
+    PlayNumberOfClients=2,
+    ClientWindowWidth=800,
+    bLaunchSeparateServer=False,
 )
+target["NetworkEmulationSettings"] = {
+    "bIsNetworkEmulationEnabled": True,
+    "emulationTarget": "Any",
+    "currentProfile": "Custom",
+    "outPackets": {"minLatency": 100, "maxLatency": 100, "packetLossPercentage": 0},
+    "inPackets": {"minLatency": 0, "maxLatency": 0, "packetLossPercentage": 0},
+}
+report = {
+    "status": "prepared",
+    "restore_required": True,
+    "before": before,
+    "target": target,
+    "section": {
+        "containerName": "Editor",
+        "categoryName": "LevelEditor",
+        "sectionName": "PlayIn",
+    },
+    "configuration_tool": "ConfigSettingsToolset.ConfigSettingsToolset",
+}
+out.write_text(json.dumps(report, indent=2), encoding="utf-8")
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. Python의 사전·목록을 JSON 문자열로 바꾼다. 저장 전 직렬화 단계다.
+assert native.call_method(
+    "SetSectionProperties", ("Editor", "LevelEditor", "PlayIn", json.dumps(target))
+)
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert read() == target
+report["status"] = "settings_applied"
+out.write_text(json.dumps(report, indent=2), encoding="utf-8")
 # RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
 RESULT = report
+```
+
+<a id="source-lab-lab-prepare-gasp-test-py"></a>
+
+### lab_prepare_gasp_test.py
+
+```python
+# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Levels/DefaultLevel
+#   /Game/Input/
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 작업할 맵을 연다. 현재 맵과 다른 맵이므로 실행 중인 PIE를 먼저 끝내는지 확인한다.
+assert unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).load_level(
+    "/Game/Levels/DefaultLevel"
+)
+# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 편집 중인 월드를 얻는다. 게임 실행 월드와 다르므로 대상을 혼동하지 않는다.
+world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
+mode = world.get_world_settings().get_editor_property("default_game_mode")
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다. 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
+RESULT = {
+    "map": world.get_path_name(),
+    "game_mode": mode.get_path_name() if mode else None,
+    "input_assets": {
+        name: bool(unreal.load_asset("/Game/Input/" + name))
+        for name in ["IA_Move", "IA_Look", "IA_Jump", "IA_Walk", "IA_Strafe"]
+    },
+}
+(root / "Evidence" / "case05-gasp-preparation.json").write_text(
+    json.dumps(RESULT, indent=2), encoding="utf-8"
+)
+```
+
+<a id="source-lab-lab-probe-gasp-surfaces-py"></a>
+
+### lab_probe_gasp_surfaces.py
+
+```python
+# 파일 역할: EpicFeatureLab의 lab_probe_gasp_surfaces 작업. 파일 이름만 보고 실행하지 말고 아래 경로와 API 호출을 먼저 확인한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Input/
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+# world: 현재 작업 대상 월드다. 편집 월드인지 PIE 월드인지 얻는 호출을 확인한다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert world
+pawn = unreal.GameplayStatics.get_player_pawn(world, 0)
+mesh = next(
+    c
+    for c in pawn.get_components_by_class(unreal.SkeletalMeshComponent)
+    if c.get_anim_instance()
+)
+anim = mesh.get_anim_instance()
+
+
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [round(v.x, 3), round(v.y, 3), round(v.z, 3)]
+
+
+rows = []
+# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 y의 값이 매번 바뀐다. 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
+for y in [1400.0, 1500.0]:
+    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 x의 값이 매번 바뀐다. 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
+    for x in range(2200, 6601, 200):
+        hit = unreal.SystemLibrary.line_trace_single(
+            world,
+            unreal.Vector(x, y, 3000),
+            unreal.Vector(x, y, -1000),
+            unreal.TraceTypeQuery.TRACE_TYPE_QUERY1,
+            False,
+            [pawn],
+            unreal.DrawDebugTrace.NONE,
+        )
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: hit 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        if hit:
+            parts = hit.to_tuple()
+            rows.append({"x": x, "y": y, "point": vector(parts[5]), "normal": vector(parts[7])})
+props = {}
+# 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 name의 값이 매번 바뀐다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+for name in [
+    "Stance",
+    "Gait",
+    "MovementState",
+    "MovementMode",
+    "OrientationMode",
+    "EnableFootPlacement",
+    "Enable Foot Placement",
+    "BlendStackInputs",
+    "Trajectory",
+    "LocomotionAction",
+]:
+    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+    try:
+        # 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+        v = anim.get_editor_property(name)
+        props[name] = v.export_text() if hasattr(v, "export_text") else str(v)
+    except Exception:
+        pass
+# 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 value_type이다.
+actions = {
+    name: str(unreal.load_asset("/Game/Input/" + name).get_editor_property("value_type"))
+    for name in [
+        "IA_Move",
+        "IA_Move_WorldSpace",
+        "IA_Crouch",
+        "IA_Sprint",
+        "IA_Strafe",
+        "IA_Traverse",
+        "IA_Interact",
+    ]
+}
+components = [
+    {"name": c.get_name(), "class": c.get_class().get_name()}
+    for c in pawn.get_components_by_class(unreal.ActorComponent)
+]
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
+RESULT = {
+    "pawn_class": pawn.get_class().get_path_name(),
+    "location": vector(pawn.get_actor_location()),
+    "feet": {
+        b: vector(mesh.get_socket_location(b)) for b in ["foot_l", "foot_r", "ball_l", "ball_r"]
+    },
+    "surfaces": rows,
+    "animation_properties": props,
+    "components": components,
+    "input_value_types": actions,
+    "dynamic_call_documentation": getattr(pawn.call_method, "__doc__", None),
+}
+(root / "Evidence" / "case05-surface-probe.json").write_text(
+    json.dumps(RESULT, indent=2), encoding="utf-8"
+)
+```
+
+<a id="source-lab-lab-restore-gasp-network-py"></a>
+
+### lab_restore_gasp_network.py
+
+```python
+# 파일 역할: 실험에서 바꾼 상태를 기준으로 복구하는 작업.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+
+import json
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+root = Path(unreal.Paths.project_dir()).resolve()
+assert root.name == "EpicFeatureLab"
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+assert not unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+out = root / "Evidence" / "case05-network-session.json"
+report = json.loads(out.read_text(encoding="utf-8"))
+native = unreal.get_default_object(
+    unreal.load_class(None, "/Script/ConfigSettingsToolset.ConfigSettingsToolset")
+)
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다. Python의 사전·목록을 JSON 문자열로 바꾼다. 저장 전 직렬화 단계다.
+assert native.call_method(
+    "SetSectionProperties", ("Editor", "LevelEditor", "PlayIn", json.dumps(report["before"]))
+)
+# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+actual = json.loads(
+    native.call_method(
+        "GetSectionPropertyValues", ("Editor", "LevelEditor", "PlayIn", list(report["before"]))
+    )
+)
+assert actual == report["before"]
+report.update(status="restored", restore_required=False, restoration_readback=actual)
+out.write_text(json.dumps(report, indent=2), encoding="utf-8")
+proof = {
+    "status": "passed",
+    "original_settings_restored": True,
+    "original": report["before"],
+    "readback": actual,
+    "section": report["section"],
+}
+(root / "Evidence" / "case05-network-settings-restoration.json").write_text(
+    json.dumps(proof, indent=2), encoding="utf-8"
+)
+RESULT = {"status": "restored", "original_play_settings_restored": True}
 ```
 
 <a id="source-lab-lab-save-checkpoint-py"></a>
@@ -1494,17 +1091,17 @@ RESULT = {
 unreal.SystemLibrary.quit_editor()
 ```
 
-<a id="source-lab-lab-test-ai-mood-runtime-py"></a>
+<a id="source-lab-lab-test-gasp-bench-py"></a>
 
-### lab_test_ai_mood_runtime.py
+### lab_test_gasp_bench.py
 
 ```python
 # 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
 # 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
 # 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
 # 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-
-"""Check every generated mood on the actual MetaHuman's final skinned face."""
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Input/IA_
 
 import json
 import math
@@ -1517,114 +1114,111 @@ import unreal
 # ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
 ROOT = Path(unreal.Paths.project_dir()).resolve()
 assert ROOT.name == "EpicFeatureLab"
-OUT = ROOT / "Evidence" / "case02-ai-mood-runtime.json"
+OUT = ROOT / "Evidence" / "case05-bench-runtime.json"
 # 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
 WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
 # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
 assert WORLD
-CONTROLLER = unreal.GameplayStatics.get_all_actors_of_class(
-    WORLD, unreal.FeatureLabFacePlayback
-)[0]
-FACE = CONTROLLER.get_face()
-AUDIO = CONTROLLER.get_component_by_class(unreal.AudioComponent)
-# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
-BATCH = json.loads(
-    (ROOT / "Evidence" / "case02-ai-mood-batch.json").read_text(encoding="utf-8")
+PAWN = unreal.GameplayStatics.get_player_pawn(WORLD, 0)
+PC = unreal.GameplayStatics.get_player_controller(WORLD, 0)
+MOVER = PAWN.get_component_by_class(unreal.MoverComponent)
+MESH = next(
+    c
+    for c in PAWN.get_components_by_class(unreal.SkeletalMeshComponent)
+    if c.get_anim_instance()
 )
-VARIANTS = BATCH["runtime_variants"]
+ANIM = MESH.get_anim_instance()
+SMART = next(
+    c
+    for c in PAWN.get_components_by_class(unreal.ActorComponent)
+    if c.get_class().get_name() == "AC_SmartObjectAnimation_C"
+)
+BENCH = next(
+    a
+    for a in unreal.GameplayStatics.get_all_actors_of_class(WORLD, unreal.Actor)
+    if a.get_actor_label() == "FL05_SmartBench"
+)
+NATIVE = unreal.get_default_object(
+    unreal.load_class(None, "/Script/Engine.SubsystemBlueprintLibrary")
+)
+INPUT = NATIVE.call_method(
+    "GetLocalPlayerSubSystemFromPlayerController",
+    (PC, unreal.EnhancedInputLocalPlayerSubsystem.static_class()),
+)
+ACTIONS = {n: unreal.load_asset("/Game/Input/IA_" + n) for n in ["Interact", "Move"]}
+START = PAWN.get_actor_location()
+ROTATION = PC.get_control_rotation()
+scene = json.loads((ROOT / "Evidence" / "case05-bench-scene.json").read_text(encoding="utf-8"))
 # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert len(CONTROLLER.facial_variants) == len(VARIANTS) == 14
-assert FACE.get_bone_index("head") >= 0
-STATS = unreal.FeatureLabRuntimeLibrary.inspect_mesh(FACE)
-# 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-INDICES = list(range(0, STATS.vertices, max(1, STATS.vertices // 96)))
-# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
-NAMES = [
-    r["name"]
-    for r in json.loads(
-        (ROOT / "Evidence" / "case02-playback-build.json").read_text(encoding="utf-8")
-    )["varying_curves"][:20]
+assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+    PAWN, unreal.Vector(*scene["approach_location"]), unreal.Rotator(pitch=0, yaw=0, roll=0)
+)
+PC.set_control_rotation(unreal.Rotator(pitch=0, yaw=0, roll=0))
+PHASES = [
+    ("approach", 1.0),
+    ("interact", 0.2),
+    ("enter", 5.0),
+    ("seated", 2.0),
+    ("exit_interact", 0.2),
+    ("exit_move", 2.0),
+    ("settle", 1.5),
+    ("reset", 1.0),
 ]
-# 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-STEPS = [(i, t) for i in range(len(VARIANTS)) for t in (0.0, 4.0)] + [(0, 0.0)]
-STATE = {"step": 0, "started": 0.0, "done": False, "busy": False, "warmup": True}
-# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
-REPORT = {
-    "status": "running",
-    "samples": [],
-    "selections": [],
-    "vertex_probe_count": len(INDICES),
-    "sample_space": "Face component skin vertices transformed into the current head bone's local space; rigid head motion removed",
+STATE = {
+    "index": 0,
+    "start": unreal.GameplayStatics.get_time_seconds(WORLD),
+    "last": -1.0,
+    "done": False,
+    "busy": False,
+    "reset": False,
 }
+REPORT = {"status": "running", "samples": [], "bench": BENCH.get_path_name()}
 # HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
 HANDLE = None
 
 
-# 함수 save: 이름은 save이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
-def save():
-    OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [v.x, v.y, v.z]
 
 
-# 함수 distance: 이름은 distance이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: a, b 여러 목록의 같은 위치 항목을 묶어 순서대로 비교한다.
-def distance(a, b):
-    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다. 여러 목록의 같은 위치 항목을 묶어 순서대로 비교한다.
-    return max(math.dist(x, y) for x, y in zip(a, b))
+# 함수 clock: 이름은 clock이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
+def clock():
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return unreal.GameplayStatics.get_time_seconds(WORLD)
 
 
-# 함수 prepare: 이름은 prepare이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-def prepare():
-    i, t = STEPS[STATE["step"]]
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: t == 0.0 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-    if t == 0.0:
-        CONTROLLER.select_facial_variant(i)
-        REPORT["selections"].append(
-            {
-                "index": i,
-                "selected": CONTROLLER.facial_variant_index,
-                "reset_position": FACE.get_position(),
-                "audio_playing_before_pause": AUDIO.is_playing(),
-                "speech": CONTROLLER.speech.get_path_name(),
-                "clip": CONTROLLER.facial_animation.get_path_name(),
-            }
-        )
-    if not CONTROLLER.get_editor_property("bPaused"):
-        CONTROLLER.toggle_pause()
-    FACE.set_position(t, False)
-    STATE["started"] = time.monotonic()
-
-
-# 함수 snapshot: 이름은 snapshot이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-def snapshot():
-    i, t = STEPS[STATE["step"]]
-    vertices = unreal.FeatureLabRuntimeLibrary.sample_final_skin_vertices(FACE, INDICES)
-    # The skin helper refreshes LOD0 bones; use that same pose for alignment.
-    head = FACE.get_socket_transform("head", unreal.RelativeTransformSpace.RTS_COMPONENT)
-    positions = []
-    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 vertex의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-    for vertex in vertices:
-        p = unreal.MathLibrary.inverse_transform_location(head, vertex)
-        # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-        positions.append([p.x, p.y, p.z])
-    # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-    assert len(positions) == len(INDICES) and all(
-        math.isfinite(v) for p in positions for v in p
-    )
-    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 bPaused이다.
+# 함수 sample: 이름은 sample이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: phase
+def sample(phase):
+    montage = ANIM.get_current_active_montage()
+    # payload에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+    payload = None
+    for name in ["IncomingAnimationPayload", "Incoming Animation Payload"]:
+        # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+        try:
+            # 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+            payload = SMART.get_editor_property(name).export_text()
+            break
+        except Exception:
+            pass
+    location = PAWN.get_actor_location()
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
     return {
-        "index": i,
-        "name": VARIANTS[i]["name"],
-        "requested_time": t,
-        "position": FACE.get_position(),
-        "paused": CONTROLLER.get_editor_property("bPaused"),
-        "audio_state": str(AUDIO.get_play_state()),
-        "skin": positions,
-        "curves": {n: FACE.get_anim_instance().get_curve_value(n) for n in NAMES},
+        "phase": phase,
+        "seconds": clock(),
+        "location": vector(location),
+        "pelvis_z": MESH.get_socket_location("pelvis").z,
+        "pelvis_relative_z": MESH.get_socket_location("pelvis").z - location.z,
+        "montage": montage.get_path_name() if montage else None,
+        "payload": payload,
+        "mode": str(MOVER.get_movement_mode_name()),
     }
 
 
-# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: error 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: error 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
 def finish(error=None):
-    global WORLD, CONTROLLER, FACE, AUDIO
+    global WORLD, PAWN, PC, MOVER, MESH, ANIM, SMART, BENCH, INPUT
     STATE["done"] = True
     # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: HANDLE 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
     if HANDLE:
@@ -1633,369 +1227,9 @@ def finish(error=None):
     # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: error
     if error:
         REPORT.update(status="failed", error=error)
-    save()
-    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: CONTROLLER
-    if CONTROLLER:
-        CONTROLLER.select_facial_variant(0)
-    # WORLD에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
-    WORLD = CONTROLLER = FACE = AUDIO = None
-
-
-# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-def tick(delta):
-    if STATE["done"] or STATE["busy"]:
-        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-        return
-    STATE["busy"] = True
-    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-    try:
-        if time.monotonic() - STATE["started"] < (2.0 if STATE["warmup"] else 0.45):
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        if STATE["warmup"]:
-            # Initialize the CPU LOD0 skin path before taking the first baseline.
-            unreal.FeatureLabRuntimeLibrary.sample_final_skin_vertices(FACE, INDICES)
-            STATE.update(warmup=False, started=time.monotonic())
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        REPORT["samples"].append(snapshot())
-        STATE["step"] += 1
-        if STATE["step"] < len(STEPS):
-            prepare()
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        samples = REPORT["samples"]
-        neutral = samples[1]["skin"]
-        # 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-        movement = {
-            VARIANTS[i]["name"]: distance(samples[2 * i]["skin"], samples[2 * i + 1]["skin"])
-            for i in range(len(VARIANTS))
-        }
-        # 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-        moods = {
-            VARIANTS[i]["name"]: distance(neutral, samples[2 * i + 1]["skin"])
-            for i in range(1, len(VARIANTS))
-        }
-        reset = distance(samples[0]["skin"], samples[-1]["skin"])
-        intensity = distance(samples[3]["skin"], samples[27]["skin"])
-        before = CONTROLLER.restart_count
-        CONTROLLER.select_facial_variant(-1)
-        CONTROLLER.select_facial_variant(len(VARIANTS))
-        invalid_ignored = (
-            CONTROLLER.restart_count == before and CONTROLLER.facial_variant_index == 0
-        )
-        CONTROLLER.select_facial_variant(len(VARIANTS) - 1)
-        CONTROLLER.cycle_facial_variant()
-        wrapped = CONTROLLER.facial_variant_index == 0
-        selections = REPORT["selections"]
-        checks = {
-            "every_runtime_variant_selected": {s["index"] for s in selections}
-            == set(range(14)),
-            "every_selection_restarts_correct_clip": all(
-                s["selected"] == s["index"]
-                and s["clip"] == VARIANTS[s["index"]]["animation"]
-                and abs(s["reset_position"]) < 0.0001
-                for s in selections
-            ),
-            "every_selection_restarts_ai_audio": all(
-                s["audio_playing_before_pause"]
-                and "/AIEmotion/FeatureLabAISpeech." in s["speech"]
-                for s in selections
-            ),
-            "paused_playheads_match_requested_times": all(
-                s["paused"] and abs(s["position"] - s["requested_time"]) < 0.0001
-                for s in samples
-            ),
-            "audio_pauses_with_face": all(
-                "PAUSED" in s["audio_state"].upper() for s in samples
-            ),
-            "every_mood_has_speech_geometry_motion": all(v > 0.01 for v in movement.values()),
-            "every_fixed_mood_changes_actual_face": all(
-                v > 0.001 for n, v in moods.items() if n != "AutoDetect"
-            ),
-            "intensity_changes_actual_face": intensity > 0.001,
-            "neutral_reset_repeats_actual_skin": reset < 0.001,
-            "invalid_selection_ignored": invalid_ignored,
-            "cycle_wraps_to_neutral": wrapped,
-            "real_face_geometry": STATS.bones > 500 and STATS.vertices > 10000,
-        }
-        REPORT.update(
-            status="passed" if all(checks.values()) else "failed",
-            checks=checks,
-            speech_geometry_motion_cm=movement,
-            head_aligned_mood_geometry_difference_cm=moods,
-            intensity_geometry_difference_cm=intensity,
-            neutral_reset_skin_error_cm=reset,
-            mesh={
-                "bones": STATS.bones,
-                "vertices": STATS.vertices,
-                "triangles": STATS.triangles,
-            },
-        )
-        finish()
-    except Exception:
-        finish(traceback.format_exc())
-    finally:
-        STATE["busy"] = False
-
-
-prepare()
-save()
-# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
-HANDLE = unreal.register_slate_post_tick_callback(tick)
-RESULT = {"status": "running", "steps": len(STEPS), "output": str(OUT)}
-```
-
-<a id="source-lab-lab-test-face-runtime-py"></a>
-
-### lab_test_face_runtime.py
-
-```python
-# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-# 이 파일이 참조하는 주요 에셋:
-#   /Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face
-
-"""Measure real PIE facial curves, facial bones, playback, and deterministic scrub reset."""
-
-import json
-import time
-import traceback
-from pathlib import Path
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-
-# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
-ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-OUT = ROOT / "Evidence" / "case02-face-runtime.json"
-# 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
-WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-assert WORLD, "Start PIE in FL_02_Performance first"
-HERO = next(
-    a
-    for a in unreal.GameplayStatics.get_all_actors_of_class(WORLD, unreal.Actor)
-    if a.get_name().startswith("BP_MH_MCP_Test_C")
-)
-FACE = next(
-    c
-    for c in HERO.get_components_by_class(unreal.SkeletalMeshComponent)
-    if c.get_name() == "Face"
-)
-# 언리얼 객체의 속성을 바꾼다. 첫 인자는 속성 이름, 다음 인자는 새 값이다. 여기서 다루는 속성은 visibility_based_anim_tick_option이다.
-FACE.set_editor_property(
-    "visibility_based_anim_tick_option",
-    unreal.VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES,
-)
-FACE = next(
-    c
-    for c in HERO.get_components_by_class(unreal.SkeletalMeshComponent)
-    if c.get_name() == "Face"
-)
-ANIMATION_PATH = "/Game/FeatureLab/Capture/AS_AudioSpeech_MH58_Face"
-# EditorAssetLibrary intentionally refuses asset operations during PIE.
-# Generic runtime loading is required here.
-# 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
-ANIMATION = unreal.load_asset(ANIMATION_PATH)
-assert ANIMATION, "Targeted facial animation must exist before changing playback"
-FACE.play_animation(ANIMATION, True)
-FACE.set_component_tick_enabled(True)
-# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
-NAMES = [
-    r["name"]
-    for r in json.loads(
-        (ROOT / "Evidence" / "case02-playback-build.json").read_text(encoding="utf-8")
-    )["varying_curves"][:20]
-]
-# 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-BONES = [
-    str(FACE.get_bone_name(i))
-    for i in range(FACE.get_num_bones())
-    if any(s in str(FACE.get_bone_name(i)).lower() for s in ["jaw", "lip", "eyelid"])
-][:80]
-START = time.monotonic()
-SAMPLES = []
-PHASES = {}
-STATE = {"phase": "live", "last": -1.0, "phase_start": START, "done": False, "busy": False}
-# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
-HANDLE = None
-
-
-# 함수 snapshot: 이름은 snapshot이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
-def snapshot():
-    instance = FACE.get_anim_instance()
-    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-    return {
-        "elapsed": round(time.monotonic() - START, 3),
-        "position": FACE.get_position(),
-        "curves": {name: instance.get_curve_value(name) for name in NAMES},
-        "bones": {
-            name: [v for v in (lambda p: (p.x, p.y, p.z))(FACE.get_socket_location(name))]
-            for name in BONES
-        },
-    }
-
-
-# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: report 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-def finish(report):
-    STATE["done"] = True
-    # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-    unreal.unregister_slate_post_tick_callback(HANDLE)
-    report.update(
-        samples=SAMPLES,
-        scrub=PHASES,
-        visual_validation="pending",
-        actor=HERO.get_path_name() if HERO else None,
-        animation=ANIMATION_PATH,
-    )
-    OUT.write_text(json.dumps(report, indent=2), encoding="utf-8")
-
-
-# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-def tick(delta):
-    if STATE["done"] or STATE["busy"]:
-        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-        return
-    STATE["busy"] = True
-    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-    try:
-        elapsed = time.monotonic() - START
-        if elapsed - STATE["last"] < 0.2:
-            # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
-            return
-        STATE["last"] = elapsed
-        phase = STATE["phase"]
-        if phase == "live":
-            # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
-            SAMPLES.append(snapshot())
-            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: elapsed >= 5
-            if elapsed >= 5:
-                FACE.set_play_rate(0.0)
-                FACE.set_position(0.0, False)
-                STATE.update(phase="zero_before", phase_start=time.monotonic())
-        elif time.monotonic() - STATE["phase_start"] >= 0.8:
-            PHASES[phase] = snapshot()
-            if phase == "zero_before":
-                FACE.set_position(3.0, False)
-                STATE.update(phase="speech", phase_start=time.monotonic())
-            elif phase == "speech":
-                FACE.set_position(0.0, False)
-                STATE.update(phase="zero_after", phase_start=time.monotonic())
-            else:
-                varying_curves = {
-                    name: max(s["curves"][name] for s in SAMPLES)
-                    - min(s["curves"][name] for s in SAMPLES)
-                    for name in NAMES
-                }
-                # 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
-                moving_bones = {
-                    name: max(
-                        max(s["bones"][name][i] for s in SAMPLES)
-                        - min(s["bones"][name][i] for s in SAMPLES)
-                        for i in range(3)
-                    )
-                    for name in BONES
-                }
-                # 차이의 부호를 없애 크기만 비교한다. 오차 허용 범위 검사에 자주 사용한다.
-                reset_error = max(
-                    abs(
-                        PHASES["zero_before"]["curves"][name]
-                        - PHASES["zero_after"]["curves"][name]
-                    )
-                    for name in NAMES
-                )
-                checks = {
-                    "playhead_advances": max(s["position"] for s in SAMPLES)
-                    - min(s["position"] for s in SAMPLES)
-                    > 1.0,
-                    "live_curves_change": sum(v > 0.001 for v in varying_curves.values()) >= 3,
-                    "facial_bones_move": sum(v > 0.001 for v in moving_bones.values()) >= 3,
-                    "zero_scrub_repeats": reset_error < 0.0001,
-                }
-                FACE.set_play_rate(1.0)
-                finish(
-                    {
-                        "status": "passed" if all(checks.values()) else "failed",
-                        "checks": checks,
-                        "curve_ranges": varying_curves,
-                        "bone_motion_cm": moving_bones,
-                        "reset_curve_error": reset_error,
-                    }
-                )
-    except Exception:
-        finish({"status": "failed", "error": traceback.format_exc()})
-    finally:
-        STATE["busy"] = False
-
-
-# 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
-OUT.write_text(
-    json.dumps({"status": "running", "visual_validation": "pending"}), encoding="utf-8"
-)
-# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
-HANDLE = unreal.register_slate_post_tick_callback(tick)
-RESULT = {"status": "running", "output": str(OUT)}
-```
-
-<a id="source-lab-lab-test-native-face-controls-py"></a>
-
-### lab_test_native_face_controls.py
-
-```python
-# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
-# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
-# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
-# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
-
-import json
-import time
-import traceback
-from pathlib import Path
-# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
-import unreal
-
-# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
-ROOT = Path(unreal.Paths.project_dir()).resolve()
-assert ROOT.name == "EpicFeatureLab"
-OUT = ROOT / "Evidence" / "case02-native-controls.json"
-# 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
-WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert WORLD
-CONTROLLER = unreal.GameplayStatics.get_all_actors_of_class(
-    WORLD, unreal.FeatureLabFacePlayback
-)[0]
-PC = unreal.GameplayStatics.get_player_controller(WORLD, 0)
-FACE = CONTROLLER.get_face()
-# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
-assert FACE
-AUDIO = CONTROLLER.get_component_by_class(unreal.AudioComponent)
-INITIAL_CAMERA = PC.get_view_target()
-STATE = {"phase": "play", "start": time.monotonic(), "done": False, "busy": False}
-# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
-REPORT = {
-    "status": "running",
-    "initial_position": FACE.get_position(),
-    "initial_restart_count": CONTROLLER.restart_count,
-    "visual_validation": "pending",
-}
-# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
-HANDLE = None
-
-
-# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-def finish():
-    STATE["done"] = True
-    # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
-    unreal.unregister_slate_post_tick_callback(HANDLE)
     OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
-
-
-# 함수 phase: 이름은 phase이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: name
-def phase(name):
-    STATE.update(phase=name, start=time.monotonic())
+    # WORLD에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+    WORLD = PAWN = PC = MOVER = MESH = ANIM = SMART = BENCH = INPUT = None
 
 
 # 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta
@@ -2006,61 +1240,60 @@ def tick(delta):
     STATE["busy"] = True
     # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
     try:
-        elapsed = time.monotonic() - STATE["start"]
-        name = STATE["phase"]
-        if name == "play" and elapsed > 1.0:
-            REPORT["playing_position"] = FACE.get_position()
-            REPORT["audio_is_playing"] = AUDIO.is_playing()
-            CONTROLLER.toggle_pause()
-            REPORT["paused_start"] = FACE.get_position()
-            phase("paused")
-        elif name == "paused" and elapsed > 0.8:
-            REPORT["paused_end"] = FACE.get_position()
-            CONTROLLER.toggle_pause()
-            phase("resumed")
-        elif name == "resumed" and elapsed > 1.0:
-            REPORT["resumed_position"] = FACE.get_position()
-            CONTROLLER.restart_playback()
-            phase("reset")
-        elif name == "reset" and elapsed > 0.12:
-            REPORT["reset_position"] = FACE.get_position()
-            REPORT["reset_count"] = CONTROLLER.restart_count
-            CONTROLLER.toggle_camera()
-            phase("camera")
-        elif name == "camera" and elapsed > 0.35:
-            REPORT["inspection_camera_selected"] = (
-                PC.get_view_target() == CONTROLLER.inspection_camera
+        phase, duration = PHASES[STATE["index"]]
+        elapsed = clock() - STATE["start"]
+        if phase in ["interact", "exit_interact"]:
+            INPUT.inject_input_vector_for_action(
+                ACTIONS["Interact"], unreal.Vector(1, 0, 0), [], []
             )
-            CONTROLLER.toggle_camera()
-            phase("camera_return")
-        elif name == "camera_return" and elapsed > 0.35:
-            REPORT["original_camera_restored"] = PC.get_view_target() == INITIAL_CAMERA
-            stats = unreal.FeatureLabRuntimeLibrary.inspect_mesh(FACE)
-            REPORT["mesh_stats"] = {
-                "bones": stats.bones,
-                "vertices": stats.vertices,
-                "triangles": stats.triangles,
-                "materials": stats.materials,
-                "physics_bodies": stats.physics_bodies,
-            }
-            # 차이의 부호를 없애 크기만 비교한다. 오차 허용 범위 검사에 자주 사용한다.
-            checks = {
-                "autoplay": REPORT["playing_position"] > REPORT["initial_position"] + 0.5,
-                "pause_holds_position": abs(REPORT["paused_end"] - REPORT["paused_start"])
-                < 0.0001,
-                "resume_advances": REPORT["resumed_position"] > REPORT["paused_end"] + 0.5,
-                "reset_returns_start": REPORT["reset_position"] < 0.35
-                and REPORT["reset_count"] > REPORT["initial_restart_count"],
-                "audio_playing": REPORT["audio_is_playing"],
-                "camera_round_trip": REPORT["inspection_camera_selected"]
-                and REPORT["original_camera_restored"],
-                "real_rigged_face_geometry": stats.bones > 50 and stats.vertices > 1000,
-            }
-            REPORT.update(status="passed" if all(checks.values()) else "failed", checks=checks)
-            finish()
+        if phase == "exit_move":
+            INPUT.inject_input_vector_for_action(
+                ACTIONS["Move"], unreal.Vector(0, -1, 0), [], []
+            )
+        if phase == "reset" and not STATE["reset"]:
+            # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+            assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+                PAWN, START, unreal.Rotator(pitch=0, yaw=0, roll=0)
+            )
+            PC.set_control_rotation(ROTATION)
+            STATE["reset"] = True
+        if elapsed - STATE["last"] >= 0.1:
+            REPORT["samples"].append(sample(phase))
+            STATE["last"] = elapsed
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: elapsed >= duration
+        if elapsed >= duration:
+            STATE["index"] += 1
+            STATE.update(start=clock(), last=-1.0)
+            if STATE["index"] == len(PHASES):
+                samples = REPORT["samples"]
+                baseline = [s for s in samples if s["phase"] == "approach"][-1]
+                seated = [s for s in samples if s["phase"] in ["enter", "seated"]]
+                settled = [s for s in samples if s["phase"] == "settle"][-1]
+                drop = baseline["pelvis_relative_z"] - min(
+                    s["pelvis_relative_z"] for s in seated
+                )
+                checks = {
+                    "interaction_plays_real_montage": any(s["montage"] for s in seated),
+                    "official_bench_animation_payload": any(
+                        "Bench" in (s["payload"] or "") for s in seated
+                    ),
+                    "pelvis_lowers_into_seat": drop > 20,
+                    "movement_exits_seat": settled["pelvis_relative_z"]
+                    > min(s["pelvis_relative_z"] for s in seated) + 15,
+                    "reset_returns_start": math.dist(samples[-1]["location"], vector(START))
+                    < 8,
+                }
+                REPORT.update(
+                    status="passed" if all(checks.values()) else "failed",
+                    checks=checks,
+                    pelvis_drop_cm=drop,
+                )
+                finish()
+            else:
+                REPORT["current"] = PHASES[STATE["index"]][0]
+                OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
     except Exception:
-        REPORT.update(status="failed", error=traceback.format_exc())
-        finish()
+        finish(traceback.format_exc())
     finally:
         STATE["busy"] = False
 
@@ -2071,210 +1304,929 @@ HANDLE = unreal.register_slate_post_tick_callback(tick)
 RESULT = {"status": "running", "output": str(OUT)}
 ```
 
-<a id="source-source-mutablesample-featurelabmetahuman-cpp"></a>
+<a id="source-lab-lab-test-gasp-core-py"></a>
 
-### FeatureLabMetaHuman.cpp
+### lab_test_gasp_core.py
 
-```cpp
-// 파일 역할: 01·02·08번의 실제 메타휴먼 피부·텍스처·변형 자료 처리
-// 클래스=작업 종류, 객체=실제 한 개, 포인터(* 또는 TObjectPtr)=다른 객체를 가리키는 참조.
-// nullptr은 대상 없음, bool은 참/거짓, TArray는 순서 있는 목록, FString은 문자열이다.
-// WITH_EDITOR 구간은 에디터 빌드에서만 사용하는 코드다. 원본과의 토큰 비교 결과는 code-validation.json에 기록한다.
+```python
+# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Input/
+#   /Game/Levels/DefaultLevel
+#   /Game/Characters/UEFN_Mannequin/Animations/[A-Za-z0-9_./]+
 
-#include "FeatureLabRuntime.h"
-// 빌드 조건에 따라 포함할 코드를 고른다. 게임 실행 중의 if 조건과 달리 빌드할 때 구분한다.
-#if WITH_EDITOR
-#include "MetaHumanCharacter.h"
-#include "MetaHumanCharacterEditorSubsystem.h"
-#include "Engine/Texture2D.h"
-#include "Materials/MaterialInstance.h"
-#include "Serialization/JsonSerializer.h"
-#include "AssetRegistry/AssetRegistryModule.h"
-#endif
+"""Exercise real Enhanced Input and measure GASP/Mover output in the integrated lab."""
 
-// 【함수 역할】현재 객체와 실행 결과를 읽어 검증용 자료로 반환한다. 결과를 만드는 함수와 결과를 측정하는 함수를 구분해서 읽는다.
-// 【입력 읽기】괄호 안의 자료형은 값의 종류, 그 뒤 이름은 함수 안에서 사용할 이름이다. void 반환형이면 별도 결과값을 돌려주지 않는다.
-FString UFeatureLabRuntimeLibrary::InspectLabMetaHumanTextures(UObject *Object)
-{
-// 빌드 조건에 따라 포함할 코드를 고른다. 게임 실행 중의 if 조건과 달리 빌드할 때 구분한다.
-#if WITH_EDITOR
-    UMetaHumanCharacter *Character = Cast<UMetaHumanCharacter>(Object);
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (!Character || !Character->GetPathName().StartsWith(TEXT("/Game/FeatureLab/Characters/")))
-        // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-        return TEXT("{}");
-    auto *Sub = UMetaHumanCharacterEditorSubsystem::Get();
-    TSharedRef<FJsonObject> Report = MakeShared<FJsonObject>();
-    // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-    Report->SetBoolField(TEXT("synthesis_model_valid"), Sub->IsTextureSynthesisEnabled());
-    // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-    Report->SetBoolField(TEXT("has_stored_synthesis"), Character->HasSynthesizedTextures());
-    // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-    Report->SetBoolField(TEXT("has_high_resolution_sources"),
-                         Character->HasHighResolutionTextures());
-    // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-    Report->SetNumberField(TEXT("preview_material"), (int32)Character->PreviewMaterialType);
-    TArray<TSharedPtr<FJsonValue>> Textures;
-    // 괄호에 적힌 대상들을 순서대로 처리한다. 반복 횟수와 실제 생성·검사 대상이 무엇인지 함께 본다.
-    for (const auto &Pair : Character->GetValidFaceTextures())
-    {
-        TSharedRef<FJsonObject> Item = MakeShared<FJsonObject>();
-        // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-        Item->SetNumberField(TEXT("type"), (int32)Pair.Key);
-        // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-        if (UTexture2D *Texture = Pair.Value)
-        {
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetStringField(TEXT("asset"), Texture->GetPathName());
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("width"), Texture->GetSizeX());
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("height"), Texture->GetSizeY());
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetBoolField(TEXT("source_valid"), Texture->Source.IsValid());
-        }
-        Textures.Add(MakeShared<FJsonValueObject>(Item));
+import json
+import math
+import re
+import time
+import traceback
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
+ROOT = Path(unreal.Paths.project_dir()).resolve()
+assert ROOT.name == "EpicFeatureLab"
+OUT = ROOT / "Evidence" / "case05-gasp-core.json"
+# 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert WORLD
+PAWN = unreal.GameplayStatics.get_player_pawn(WORLD, 0)
+PC = unreal.GameplayStatics.get_player_controller(WORLD, 0)
+MOVER = PAWN.get_component_by_class(unreal.MoverComponent)
+assert MOVER, "Expected the official Mover pawn"
+MESH = next(
+    c
+    for c in PAWN.get_components_by_class(unreal.SkeletalMeshComponent)
+    if c.get_anim_instance()
+)
+MESH.visibility_based_anim_tick_option = (
+    unreal.VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES
+)
+ANIM = MESH.get_anim_instance()
+SUBSYSTEMS = [
+    x
+    for x in unreal.ObjectIterator(unreal.EnhancedInputLocalPlayerSubsystem)
+    if not x.get_name().startswith("Default__")
+]
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert len(SUBSYSTEMS) == 1
+INPUT = SUBSYSTEMS[0]
+# 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
+ACTIONS = {
+    name: unreal.load_asset("/Game/Input/" + name)
+    for name in ["IA_Move", "IA_Look", "IA_Jump", "IA_Walk"]
+}
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert all(ACTIONS.values())
+START_LOCATION = PAWN.get_actor_location()
+START_ROTATION = PAWN.get_actor_rotation()
+START_CONTROL = PC.get_control_rotation()
+PHASES = [
+    ("idle", 0.7),
+    ("run", 2.0),
+    ("settle", 0.8),
+    ("walk", 1.6),
+    ("settle_after_walk", 0.8),
+    ("jump", 1.8),
+    ("land", 0.8),
+    ("camera", 0.8),
+    ("reset", 1.0),
+]
+STATE = {
+    "index": 0,
+    "start": time.monotonic(),
+    "last_sample": -1.0,
+    "busy": False,
+    "done": False,
+    "reset_applied": False,
+}
+SAMPLES = []
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
+HANDLE = None
+
+
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [round(v.x, 4), round(v.y, 4), round(v.z, 4)]
+
+
+# 함수 prop: 이름은 prop이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: name 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+def prop(name):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다. 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다.
+    return ANIM.get_editor_property(name)
+
+
+# 함수 snapshot: 이름은 snapshot이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: phase
+def snapshot(phase):
+    location = PAWN.get_actor_location()
+    camera = PC.player_camera_manager.get_camera_rotation()
+    blend = prop("BlendStackInputs")
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return {
+        "phase": phase,
+        "world_seconds": unreal.GameplayStatics.get_time_seconds(WORLD),
+        "location": vector(location),
+        "velocity": vector(PAWN.get_velocity()),
+        "mode": str(MOVER.get_movement_mode_name()),
+        "camera": [camera.pitch, camera.yaw, camera.roll],
+        "gait": str(prop("Gait")),
+        "search_cost": float(prop("Search Cost")),
+        "blend_stack": blend.export_text(),
+        "feet_relative": {
+            name: vector(MESH.get_socket_location(name) - location)
+            for name in ["foot_l", "foot_r"]
+        },
+        "trajectory": prop("Trajectory").export_text(),
     }
-    Report->SetArrayField(TEXT("valid_face_textures"), Textures);
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (const auto *Ref = Sub->GetMetaHumanCharacterEditorData(Character))
-    {
-        const auto &Data = **Ref;
-        // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-        Report->SetNumberField(TEXT("cached_image_count"), Data.CachedSynthesizedImages.Num());
-        // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-        Report->SetNumberField(TEXT("face_texture_future_count"),
-                               Data.SynthesizedFaceTexturesFutures.Num());
-        TArray<TSharedPtr<FJsonValue>> Images;
-        // 괄호에 적힌 대상들을 순서대로 처리한다. 반복 횟수와 실제 생성·검사 대상이 무엇인지 함께 본다.
-        for (const auto &Pair : Data.CachedSynthesizedImages)
-        {
-            TSharedRef<FJsonObject> Item = MakeShared<FJsonObject>();
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("type"), (int32)Pair.Key);
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("width"), Pair.Value.SizeX);
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("height"), Pair.Value.SizeY);
-            // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-            Item->SetNumberField(TEXT("bytes"), (double)Pair.Value.RawData.Num());
-            Images.Add(MakeShared<FJsonValueObject>(Item));
-        }
-        Report->SetArrayField(TEXT("cached_images"), Images);
-        TArray<TSharedPtr<FJsonValue>> Materials;
-        Data.HeadMaterials.ForEachSkinMaterial<UMaterialInstance>(
-            [&](EMetaHumanCharacterSkinMaterialSlot Slot, UMaterialInstance *Material) {
-                TSharedRef<FJsonObject> Item = MakeShared<FJsonObject>();
-                // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-                Item->SetNumberField(TEXT("slot"), (int32)Slot);
-                // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-                Item->SetStringField(TEXT("material"),
-                                     Material ? Material->GetPathName() : TEXT(""));
-                // 괄호에 적힌 대상들을 순서대로 처리한다. 반복 횟수와 실제 생성·검사 대상이 무엇인지 함께 본다.
-                for (const FName Name :
-                     {FName(TEXT("Basecolor Original")), FName(TEXT("Basecolor Original VT"))})
-                {
-                    UTexture *Texture = nullptr;
-                    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-                    if (Material &&
-                        Material->GetTextureParameterValue(FMaterialParameterInfo(Name), Texture) &&
-                        Texture)
-                        // 이름이 붙은 측정값을 JSON 결과에 넣는다. 화면용 게임 로직과 검증 기록을 구분한다.
-                        Item->SetStringField(Name.ToString(), Texture->GetPathName());
+
+
+# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: report 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+def finish(report):
+    STATE["done"] = True
+    # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+    unreal.unregister_slate_post_tick_callback(HANDLE)
+    report.update(
+        samples=SAMPLES,
+        project=str(ROOT),
+        map="/Game/Levels/DefaultLevel",
+        visual_validation="pending",
+        remaining=[
+            "slide and bench interactions",
+            "slopes and foot contact",
+            "Mover prediction/network case",
+            "visual control verification",
+        ],
+    )
+    OUT.write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+
+# 함수 inject: 이름은 inject이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: name, x, y
+def inject(name, x, y=0):
+    INPUT.inject_input_vector_for_action(ACTIONS[name], unreal.Vector(x, y, 0), [], [])
+
+
+# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta
+def tick(delta):
+    if STATE["done"] or STATE["busy"]:
+        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+        return
+    STATE["busy"] = True
+    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
+    try:
+        phase, duration = PHASES[STATE["index"]]
+        elapsed = time.monotonic() - STATE["start"]
+        if phase in ["run", "walk"]:
+            inject("IA_Move", 0, 1)
+        if phase == "walk" and elapsed < 0.15:
+            inject("IA_Walk", 1)
+        if phase == "jump" and elapsed < 0.15:
+            inject("IA_Jump", 1)
+        if phase == "camera":
+            inject("IA_Look", 0.25, -0.05)
+        if phase == "reset" and not STATE["reset_applied"]:
+            PAWN.set_actor_location_and_rotation(START_LOCATION, START_ROTATION, False, True)
+            PC.set_control_rotation(START_CONTROL)
+            STATE["reset_applied"] = True
+        if elapsed - STATE["last_sample"] >= 0.12:
+            # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+            SAMPLES.append(snapshot(phase))
+            STATE["last_sample"] = elapsed
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: elapsed >= duration
+        if elapsed >= duration:
+            STATE["index"] += 1
+            STATE.update(start=time.monotonic(), last_sample=-1.0)
+            if STATE["index"] >= len(PHASES):
+                initial = SAMPLES[0]
+                runs = [s for s in SAMPLES if s["phase"] == "run"]
+                jumps = [s for s in SAMPLES if s["phase"] in ["jump", "land"]]
+                camera = [s for s in SAMPLES if s["phase"] == "camera"]
+                all_blends = sorted(set(s["blend_stack"] for s in SAMPLES))
+                clips = sorted(
+                    set(
+                        path
+                        for s in SAMPLES
+                        for path in re.findall(
+                            r"/Game/Characters/UEFN_Mannequin/Animations/[A-Za-z0-9_./]+",
+                            s["blend_stack"],
+                        )
+                    )
+                )
+                walks = [s for s in SAMPLES if s["phase"] == "walk"]
+                speed = lambda s: math.hypot(s["velocity"][0], s["velocity"][1])
+                # 반복에 쓸 정수 순서를 만든다. 끝 값은 포함되지 않는다.
+                foot_motion = max(
+                    max(s["feet_relative"][bone][axis] for s in runs)
+                    - min(s["feet_relative"][bone][axis] for s in runs)
+                    for bone in ["foot_l", "foot_r"]
+                    for axis in range(3)
+                )
+                checks = {
+                    "moves": max(math.dist(s["location"], initial["location"]) for s in runs)
+                    > 100,
+                    "run_speed": max(map(speed, runs)) > 100,
+                    "jump_height": max(s["location"][2] for s in jumps)
+                    - min(s["location"][2] for s in jumps)
+                    > 30,
+                    "in_air_and_landing": any(s["mode"] != "Walking" for s in jumps)
+                    and SAMPLES[-1]["mode"] == "Walking",
+                    "camera_changes": max(s["camera"][1] for s in camera)
+                    - min(s["camera"][1] for s in camera)
+                    > 5,
+                    "animation_selection_changes": len(clips) >= 3,
+                    "walk_gait_selected": any("WALK" in s["gait"] for s in walks),
+                    "walk_slower_than_run": max(map(speed, walks))
+                    < 0.8 * max(map(speed, runs)),
+                    "foot_pose_changes": foot_motion > 5,
+                    "trajectory_changes": len(set(s["trajectory"] for s in runs)) > 2,
+                    "search_cost_finite": all(
+                        math.isfinite(s["search_cost"]) and s["search_cost"] >= 0
+                        for s in SAMPLES
+                    ),
+                    "reset_position": math.dist(SAMPLES[-1]["location"], initial["location"])
+                    < 10,
                 }
-                Materials.Add(MakeShared<FJsonValueObject>(Item));
-            });
-        Report->SetArrayField(TEXT("skin_materials"), Materials);
-    }
-    FString Text;
-    FJsonSerializer::Serialize(Report, TJsonWriterFactory<>::Create(&Text));
-    // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-    return Text;
-#else
-    // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-    return TEXT("{}");
-#endif
-}
+                finish(
+                    {
+                        "status": "passed" if all(checks.values()) else "failed",
+                        "checks": checks,
+                        "foot_motion_cm": foot_motion,
+                        "max_run_speed_cm_s": max(map(speed, runs)),
+                        "selected_animation_assets": clips,
+                        "blend_states": all_blends,
+                    }
+                )
+            else:
+                # 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
+                OUT.write_text(
+                    json.dumps(
+                        {
+                            "status": "running",
+                            "phase": PHASES[STATE["index"]][0],
+                            "samples": len(SAMPLES),
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+    except Exception:
+        finish({"status": "failed", "error": traceback.format_exc()})
+    finally:
+        STATE["busy"] = False
 
-// 【함수 역할】이름은 EnableLabMetaHumanSkin이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다.
-// 【입력 읽기】괄호 안의 자료형은 값의 종류, 그 뒤 이름은 함수 안에서 사용할 이름이다. void 반환형이면 별도 결과값을 돌려주지 않는다.
-bool UFeatureLabRuntimeLibrary::EnableLabMetaHumanSkin(UObject *Object)
-{
-// 빌드 조건에 따라 포함할 코드를 고른다. 게임 실행 중의 if 조건과 달리 빌드할 때 구분한다.
-#if WITH_EDITOR
-    UMetaHumanCharacter *Character = Cast<UMetaHumanCharacter>(Object);
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (!Character || !Character->GetPathName().StartsWith(TEXT("/Game/FeatureLab/Characters/")))
-        // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-        return false;
-    auto *Sub = UMetaHumanCharacterEditorSubsystem::Get();
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (!Sub->IsObjectAddedForEditing(Character) && !Sub->TryAddObjectToEdit(Character))
-        // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-        return false;
-    Sub->UpdateCharacterPreviewMaterial(Character,
-                                        EMetaHumanCharacterSkinPreviewMaterial::Editable);
-    // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-    return true;
-#else
-    // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-    return false;
-#endif
-}
 
-// 【함수 역할】이름은 PublishLabMetaHumanSkinTextures이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다.
-// 【입력 읽기】괄호 안의 자료형은 값의 종류, 그 뒤 이름은 함수 안에서 사용할 이름이다. void 반환형이면 별도 결과값을 돌려주지 않는다.
-TArray<UObject *> UFeatureLabRuntimeLibrary::PublishLabMetaHumanSkinTextures(UObject *Object)
-{
-    TArray<UObject *> Result;
-// 빌드 조건에 따라 포함할 코드를 고른다. 게임 실행 중의 if 조건과 달리 빌드할 때 구분한다.
-#if WITH_EDITOR
-    UMetaHumanCharacter *Character = Cast<UMetaHumanCharacter>(Object);
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (!Character || !Character->GetPathName().StartsWith(TEXT("/Game/FeatureLab/Characters/")))
-        // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-        return Result;
-    auto *Sub = UMetaHumanCharacterEditorSubsystem::Get();
-    const auto *Ref = Sub->GetMetaHumanCharacterEditorData(Character);
-    // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-    if (!Ref)
-        // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-        return Result;
-    const auto &Data = **Ref;
-    // 괄호에 적힌 대상들을 순서대로 처리한다. 반복 횟수와 실제 생성·검사 대상이 무엇인지 함께 본다.
-    for (const auto &Pair : Data.CachedSynthesizedImages)
-    {
-        const int32 Type = (int32)Pair.Key;
-        // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-        if (Type != 0 && Type != 4 && Type != 8)
-            continue;
-        // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-        if (Pair.Value.SizeX <= 0 || Pair.Value.SizeY <= 0 || Pair.Value.RawData.IsEmpty())
-            continue;
-        const FString Name = FString::Printf(TEXT("%s_Skin_%d"), *Character->GetName(), Type);
-        const FString PackageName = TEXT("/Game/FeatureLab/Crowds/SkinTextures/") + Name;
-        UTexture2D *Texture = LoadObject<UTexture2D>(nullptr, *(PackageName + TEXT(".") + Name));
-        const bool bNew = Texture == nullptr;
-        // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-        if (!Texture)
-            Texture = NewObject<UTexture2D>(CreatePackage(*PackageName), *Name,
-                                            RF_Public | RF_Standalone | RF_Transactional);
-        Texture->Source.Init(Pair.Value);
-        Texture->SRGB = Pair.Value.GammaSpace != EGammaSpace::Linear;
-        Texture->CompressionSettings = Type == 4 ? TC_Normalmap : Type == 8 ? TC_Masks : TC_Default;
-        Texture->LODGroup = Type == 4   ? TEXTUREGROUP_CharacterNormalMap
-                            : Type == 8 ? TEXTUREGROUP_CharacterSpecular
-                                        : TEXTUREGROUP_Character;
-        Texture->PostEditChange();
-        Texture->MarkPackageDirty();
-        // 괄호 조건이 참일 때만 다음 작업을 한다. 객체가 있는지 검사하는 조건은 없는 대상을 호출하지 않기 위한 것이다.
-        if (bNew)
-            FAssetRegistryModule::AssetCreated(Texture);
-        Result.Add(Texture);
+OUT.write_text(json.dumps({"status": "running", "phase": "idle"}), encoding="utf-8")
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
+HANDLE = unreal.register_slate_post_tick_callback(tick)
+RESULT = {"status": "running", "output": str(OUT)}
+```
+
+<a id="source-lab-lab-test-gasp-extended-py"></a>
+
+### lab_test_gasp_extended.py
+
+```python
+# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Input/IA_
+#   /Game/Characters/UEFN_Mannequin/Animations/[A-Za-z0-9_./]+
+
+"""Drive official GASP/Mover through gait changes and the 10–40 degree course."""
+
+import bisect
+import json
+import math
+import re
+import statistics
+import time
+import traceback
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
+ROOT = Path(unreal.Paths.project_dir()).resolve()
+assert ROOT.name == "EpicFeatureLab"
+OUT = ROOT / "Evidence" / "case05-gasp-extended.json"
+# 게임 실행 월드를 얻는다. PIE가 없으면 객체가 없을 수 있어 None 검사가 필요하다.
+WORLD = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert WORLD
+PAWN = unreal.GameplayStatics.get_player_pawn(WORLD, 0)
+PC = unreal.GameplayStatics.get_player_controller(WORLD, 0)
+MOVER = PAWN.get_component_by_class(unreal.MoverComponent)
+MESH = next(
+    c
+    for c in PAWN.get_components_by_class(unreal.SkeletalMeshComponent)
+    if c.get_anim_instance()
+)
+MESH.visibility_based_anim_tick_option = (
+    unreal.VisibilityBasedAnimTickOption.ALWAYS_TICK_POSE_AND_REFRESH_BONES
+)
+ANIM = MESH.get_anim_instance()
+INPUT = next(
+    s
+    for s in unreal.ObjectIterator(unreal.EnhancedInputLocalPlayerSubsystem)
+    if not s.get_name().startswith("Default__")
+)
+# 이미 존재하는 언리얼 에셋을 메모리로 읽는다. 새 파일을 만드는 호출은 아니다.
+ACTIONS = {
+    n: unreal.load_asset("/Game/Input/IA_" + n)
+    for n in ["Move", "Crouch", "Sprint", "Strafe", "Walk"]
+}
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert all(ACTIONS.values())
+IGNORE = [PAWN] + list(PAWN.get_all_child_actors(True))
+ORIGINAL_LOCATION = PAWN.get_actor_location()
+ORIGINAL_ROTATION = PAWN.get_actor_rotation()
+ORIGINAL_CONTROL = PC.get_control_rotation()
+PHASES = [
+    ("idle", 0.6),
+    ("crouch_enter", 0.3),
+    ("crouch_move", 1.6),
+    ("stand", 0.7),
+    ("run", 2.5),
+    ("sprint", 2.5),
+    ("slide", 1.5),
+    ("recover", 0.8),
+    ("reverse", 2.0),
+    ("strafe", 2.0),
+    ("slope_prepare", 1.0),
+    ("slope_up", 35.0),
+    ("slope_settle", 0.8),
+    ("slope_down", 35.0),
+    ("slope_stop", 0.8),
+    ("reset", 1.0),
+]
+STATE = {
+    "index": 0,
+    "start": unreal.GameplayStatics.get_time_seconds(WORLD),
+    "last_sample": -1.0,
+    "done": False,
+    "busy": False,
+    "teleported": False,
+    "stand_toggle": False,
+}
+# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
+REPORT = {
+    "status": "running",
+    "samples": [],
+    "phase_events": [],
+    "course": {"y": 1500, "start_x": 2300, "upper_x": 6310, "lower_x": 2450},
+    "prediction_comparison": "Trajectory future world XY versus interpolated actual pawn XY during the same flat-ground input phase",
+}
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
+HANDLE = None
+
+
+# 함수 clock: 이름은 clock이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
+def clock():
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return unreal.GameplayStatics.get_time_seconds(WORLD)
+
+
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [float(v.x), float(v.y), float(v.z)]
+
+
+# 함수 inject: 이름은 inject이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: name, x, y
+def inject(name, x, y=0):
+    INPUT.inject_input_vector_for_action(ACTIONS[name], unreal.Vector(x, y, 0), [], [])
+
+
+# 함수 save: 이름은 save이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
+def save():
+    OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
+
+
+# 함수 ground: 이름은 ground이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: point
+def ground(point):
+    hit = unreal.SystemLibrary.line_trace_single(
+        WORLD,
+        point + unreal.Vector(0, 0, 300),
+        point - unreal.Vector(0, 0, 800),
+        unreal.TraceTypeQuery.TRACE_TYPE_QUERY1,
+        False,
+        IGNORE,
+        unreal.DrawDebugTrace.NONE,
+    )
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not hit
+    if not hit:
+        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+        return None
+    values = hit.to_tuple()
+    p, n = values[5], values[7]
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return {
+        "point": vector(p),
+        "normal": vector(n),
+        "gap_cm": (point - p).dot(n),
+        "slope_degrees": math.degrees(math.acos(max(-1.0, min(1.0, n.z)))),
     }
-#endif
-    // 이 함수의 결과를 호출한 곳으로 돌려준다. 중간 return이면 아래 작업은 실행하지 않는다.
-    return Result;
+
+
+# 함수 sample: 이름은 sample이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: phase 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 Trajectory이다.
+def sample(phase):
+    location = PAWN.get_actor_location()
+    trajectory = ANIM.get_editor_property("Trajectory")
+    future = [s for s in trajectory.samples if s.time_in_seconds > 0.3]
+    # 차이의 부호를 없애 크기만 비교한다. 오차 허용 범위 검사에 자주 사용한다.
+    predicted = min(future, key=lambda s: abs(s.time_in_seconds - 0.5)) if future else None
+    feet = {b: ground(MESH.get_socket_location(b)) for b in ["ball_l", "ball_r"]}
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return {
+        "phase": phase,
+        "seconds": clock(),
+        "location": vector(location),
+        "speed": math.hypot(PAWN.get_velocity().x, PAWN.get_velocity().y),
+        "mode": str(MOVER.get_movement_mode_name()),
+        "gait": str(ANIM.get_editor_property("Gait")),
+        "stance": str(ANIM.get_editor_property("Stance")),
+        "search_cost": float(ANIM.get_editor_property("Search Cost")),
+        "blend": ANIM.get_editor_property("BlendStackInputs").export_text(),
+        "capsule_half_height": PAWN.get_component_by_class(
+            unreal.CapsuleComponent
+        ).get_scaled_capsule_half_height(),
+        "feet": feet,
+        "ground": ground(location),
+        "prediction": (
+            {"horizon": predicted.time_in_seconds, "position": vector(predicted.position)}
+            if predicted
+            else None
+        ),
+    }
+
+
+# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: error 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+def finish(error=None):
+    global WORLD, PAWN, PC, MOVER, MESH, ANIM, INPUT, IGNORE
+    STATE["done"] = True
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: HANDLE 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+    if HANDLE:
+        # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+        unreal.unregister_slate_post_tick_callback(HANDLE)
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: error
+    if error:
+        REPORT.update(status="failed", error=error)
+    save()
+    # WORLD에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+    WORLD = PAWN = PC = MOVER = MESH = ANIM = INPUT = None
+    IGNORE = []
+
+
+# 함수 analyze: 이름은 analyze이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
+def analyze():
+    samples = REPORT["samples"]
+    phases = {n: [s for s in samples if s["phase"] == n] for n, d in PHASES}
+    slope = [
+        s
+        for s in samples
+        if s["phase"] in ["slope_up", "slope_down"] and s["ground"] and s["mode"] == "Walking"
+    ]
+    contacts = {}
+    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 s의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+    for s in slope:
+        angle = s["ground"]["slope_degrees"]
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: angle < 7
+        if angle < 7:
+            continue
+        band = str(round(angle / 5) * 5)
+        gaps = [f["gap_cm"] for f in s["feet"].values() if f]
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: len(gaps) == 2 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        if len(gaps) == 2:
+            # 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+            contacts.setdefault(band, []).append(min(gaps))
+    contact_stats = {
+        k: {
+            "samples": len(v),
+            "median_lower_ball_gap_cm": statistics.median(v),
+            "minimum_gap_cm": min(v),
+            "p90_lower_ball_gap_cm": sorted(v)[int(0.9 * (len(v) - 1))],
+        }
+        for k, v in contacts.items()
+    }
+    times = [s["seconds"] for s in samples]
+    errors = []
+    # 반복 대상에서 하나씩 꺼내 아래 들여쓰기 구간을 실행한다. 반복 변수 s의 값이 매번 바뀐다. 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+    for s in samples:
+        p = s["prediction"]
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: not p or s['phase'] not in ['run', 'sprint', 'reverse', 'strafe'] or s['speed'] < 100
+        if (
+            not p
+            or s["phase"] not in ["run", "sprint", "reverse", "strafe"]
+            or s["speed"] < 100
+        ):
+            continue
+        target = s["seconds"] + p["horizon"]
+        j = bisect.bisect_right(times, target)
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: j == 0 or j >= len(samples)
+        if j == 0 or j >= len(samples):
+            continue
+        a, b = samples[j - 1], samples[j]
+        if a["phase"] != s["phase"] or b["phase"] != s["phase"]:
+            continue
+        alpha = (target - a["seconds"]) / (b["seconds"] - a["seconds"])
+        actual = [a["location"][i] * (1 - alpha) + b["location"][i] * alpha for i in (0, 1)]
+        errors.append(math.dist(p["position"][:2], actual))
+    clips = sorted(
+        set(
+            path
+            for s in samples
+            for path in re.findall(
+                r"/Game/Characters/UEFN_Mannequin/Animations/[A-Za-z0-9_./]+", s["blend"]
+            )
+        )
+    )
+    # 차이의 부호를 없애 크기만 비교한다. 오차 허용 범위 검사에 자주 사용한다.
+    checks = {
+        "crouch_changes_stance": any("CROUCH" in s["stance"] for s in phases["crouch_move"]),
+        "stand_recovers": any("STAND" in s["stance"] for s in phases["run"]),
+        "sprint_faster_than_run": max(s["speed"] for s in phases["sprint"])
+        > 1.1 * max(s["speed"] for s in phases["run"]),
+        "reverse_changes_travel_direction": phases["reverse"][-1]["location"][0]
+        < phases["reverse"][0]["location"][0] - 100,
+        "strafe_changes_lateral_position": abs(
+            phases["strafe"][-1]["location"][1] - phases["strafe"][0]["location"][1]
+        )
+        > 100,
+        "walks_complete_uphill_course": max(s["location"][0] for s in phases["slope_up"])
+        > 6300,
+        "walks_complete_downhill_course": min(s["location"][0] for s in phases["slope_down"])
+        < 2460,
+        "ground_height_changes_over_1400cm": max(s["location"][2] for s in slope)
+        - min(s["location"][2] for s in slope)
+        > 1400,
+        "multiple_slope_bands_measured": len(contact_stats) >= 6,
+        "foot_contact_on_each_slope": bool(contact_stats)
+        and all(
+            abs(v["median_lower_ball_gap_cm"]) < 12 and v["minimum_gap_cm"] > -10
+            for v in contact_stats.values()
+        ),
+        "future_trajectory_matches_actual_movement": len(errors) >= 5
+        and statistics.median(errors) < 35,
+        "motion_search_finite_and_changes": all(
+            math.isfinite(s["search_cost"]) for s in samples
+        )
+        and len(clips) >= 8,
+        "reset_returns_original_location": math.dist(
+            samples[-1]["location"], vector(ORIGINAL_LOCATION)
+        )
+        < 10,
+    }
+    REPORT.update(
+        status="passed" if all(checks.values()) else "failed",
+        checks=checks,
+        contact_by_slope=contact_stats,
+        prediction={
+            "comparisons": len(errors),
+            "median_xy_error_cm": statistics.median(errors) if errors else None,
+            "maximum_xy_error_cm": max(errors) if errors else None,
+        },
+        selected_clips=clips,
+        slide_observations={
+            "modes": sorted({s["mode"] for s in phases["slide"]}),
+            "stances": sorted({s["stance"] for s in phases["slide"]}),
+            "clips": [c for c in clips if "Slide" in c],
+        },
+    )
+    REPORT["checks"]["slide_uses_movement_mode_and_slide_animations"] = any(
+        s["mode"] == "Sliding" for s in phases["slide"]
+    ) and any("/Slide/" in c for c in clips)
+    REPORT["status"] = "passed" if all(REPORT["checks"].values()) else "failed"
+
+
+# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta
+def tick(delta):
+    if STATE["done"] or STATE["busy"]:
+        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+        return
+    STATE["busy"] = True
+    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
+    try:
+        phase, duration = PHASES[STATE["index"]]
+        elapsed = clock() - STATE["start"]
+        if phase in ["crouch_enter", "crouch_move"]:
+            inject("Crouch", 1)
+        if phase in ["crouch_move", "run", "sprint", "slide", "slope_up"]:
+            inject("Move", 0, 1)
+        if phase in ["sprint", "slide"]:
+            inject("Sprint", 1)
+        if phase == "slide" and elapsed < 0.2:
+            inject("Crouch", 1)
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: phase in ['stand', 'recover'] and elapsed > 0.2 and ('CROUCH' in str(ANIM.get_editor_property('Stance'))) and (not STATE['stand_toggle']) 객체에 실제 저장된 속성을 읽는다. 괄호 안 문자열이 속성 이름이다. 여기서 다루는 속성은 Stance이다.
+        if (
+            phase in ["stand", "recover"]
+            and elapsed > 0.2
+            and "CROUCH" in str(ANIM.get_editor_property("Stance"))
+            and not STATE["stand_toggle"]
+        ):
+            inject("Crouch", 1)
+            STATE["stand_toggle"] = True
+        if phase in ["reverse", "slope_down"]:
+            inject("Move", 0, -1)
+        if phase == "strafe":
+            inject("Move", 1, 0)
+            inject("Strafe", 1)
+        if phase == "slope_prepare":
+            if not STATE["teleported"]:
+                # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+                assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+                    PAWN, unreal.Vector(2300, 1500, 90), unreal.Rotator(pitch=0, yaw=0, roll=0)
+                )
+                PC.set_control_rotation(unreal.Rotator(pitch=0, yaw=0, roll=0))
+                STATE["teleported"] = True
+            # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: elapsed < 0.1
+            if elapsed < 0.1:
+                inject("Walk", 1)
+        if phase == "reset" and not STATE["teleported"]:
+            # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+            assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+                PAWN, ORIGINAL_LOCATION, ORIGINAL_ROTATION
+            )
+            PC.set_control_rotation(ORIGINAL_CONTROL)
+            STATE["teleported"] = True
+        if elapsed - STATE["last_sample"] >= 0.1:
+            REPORT["samples"].append(sample(phase))
+            STATE["last_sample"] = elapsed
+        completed = (
+            elapsed >= duration
+            or (phase == "slope_up" and PAWN.get_actor_location().x > 6310)
+            or (phase == "slope_down" and PAWN.get_actor_location().x < 2450)
+        )
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: completed 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        if completed:
+            REPORT["phase_events"].append(
+                {
+                    "phase": phase,
+                    "duration_seconds": elapsed,
+                    "end": vector(PAWN.get_actor_location()),
+                }
+            )
+            STATE["index"] += 1
+            STATE.update(start=clock(), last_sample=-1.0, teleported=False, stand_toggle=False)
+            if STATE["index"] >= len(PHASES):
+                analyze()
+                finish()
+            else:
+                REPORT["current"] = PHASES[STATE["index"]][0]
+                save()
+    except Exception:
+        finish(traceback.format_exc())
+    finally:
+        STATE["busy"] = False
+
+
+save()
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
+HANDLE = unreal.register_slate_post_tick_callback(tick)
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
+RESULT = {
+    "status": "running",
+    "output": str(OUT),
+    "timing": "game seconds, with actual endpoint checks",
+}
+```
+
+<a id="source-lab-lab-test-gasp-network-py"></a>
+
+### lab_test_gasp_network.py
+
+```python
+# 파일 역할: 완성 결과를 실제 값과 비교하는 검증 작업. 생성 코드와 검사 코드를 구분한다.
+# 실행 환경: 이 파일에서 unreal을 가져온다면 해당 플러그인이 준비된 Unreal Editor 안에서 실행한다.
+# 읽는 순서: 입력 경로와 기준값 → 함수 정의 → 실제 호출 → 저장/검사 결과. 함수 정의만 읽었다고 실행된 것은 아니다.
+# 문법: = 값 저장, == 같은지 비교, [] 목록/항목 접근, {} 이름:값 사전, None 대상 없음, 들여쓰기 같은 작업 묶음.
+# 이 파일이 참조하는 주요 에셋:
+#   /Game/Input/IA_Move
+
+import json
+import math
+import time
+import traceback
+from pathlib import Path
+# 사용할 모듈을 가져온다. unreal은 실행 중인 언리얼 에디터 API이며 일반 Python 콘솔에 같은 환경이 자동으로 생기지는 않는다.
+import unreal
+
+# ROOT: 프로젝트 루트 경로. 결과 파일을 어느 프로젝트에 쓰는지 정하는 기준이다.
+ROOT = Path(unreal.Paths.project_dir()).resolve()
+assert ROOT.name == "EpicFeatureLab"
+OUT = ROOT / "Evidence" / "case05-network-prediction.json"
+WORLDS = unreal.FeatureLabRuntimeLibrary.get_play_worlds()
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert len(WORLDS) == 2
+
+
+# 함수 movers: 이름은 movers이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: world
+def movers(world):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [
+        p
+        for p in unreal.GameplayStatics.get_all_actors_of_class(world, unreal.Pawn)
+        if p.get_component_by_class(unreal.MoverComponent)
+    ]
+
+
+CLIENT_WORLD = next(
+    w for w in WORLDS if any("AUTONOMOUS_PROXY" in str(p.get_local_role()) for p in movers(w))
+)
+SERVER_WORLD = next(w for w in WORLDS if w != CLIENT_WORLD)
+CLIENT_PAWN = next(p for p in movers(CLIENT_WORLD) if p.is_locally_controlled())
+SERVER_PAWN = next(p for p in movers(SERVER_WORLD) if not p.is_locally_controlled())
+HOST_PAWN = next(p for p in movers(SERVER_WORLD) if p.is_locally_controlled())
+CLIENT_PC = CLIENT_PAWN.get_controller()
+LIBRARY = unreal.get_default_object(
+    unreal.load_class(None, "/Script/Engine.SubsystemBlueprintLibrary")
+)
+INPUT = LIBRARY.call_method(
+    "GetLocalPlayerSubSystemFromPlayerController",
+    (CLIENT_PC, unreal.EnhancedInputLocalPlayerSubsystem.static_class()),
+)
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert INPUT
+ACTION = unreal.load_asset("/Game/Input/IA_Move")
+TARGET = unreal.Vector(-800, -1000, 90)
+CLIENT_PC.set_control_rotation(unreal.Rotator(pitch=0, yaw=0, roll=0))
+# 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+    SERVER_PAWN, TARGET, unreal.Rotator(pitch=0, yaw=0, roll=0)
+)
+HOST_START = HOST_PAWN.get_actor_location()
+PHASES = [("warmup", 2.0), ("drive", 4.0), ("coast", 2.0), ("server_reset", 2.5)]
+STATE = {
+    "index": 0,
+    "start": unreal.GameplayStatics.get_time_seconds(CLIENT_WORLD),
+    "wall_start": time.monotonic(),
+    "last": -1.0,
+    "done": False,
+    "busy": False,
+    "reset_queued": False,
+}
+# JSON 문자열을 Python 사전·목록으로 읽는다. 데이터 형식을 해석하는 단계다.
+SESSION = json.loads(
+    (ROOT / "Evidence" / "case05-network-session.json").read_text(encoding="utf-8")
+)
+LOG = (ROOT / "Evidence" / "graphical-editor-mover-reset.log").read_text(
+    encoding="utf-8-sig", errors="replace"
+)
+# REPORT: 이번 작업의 입력·측정·성공 여부를 모을 기록용 사전이다. 게임의 실행 상태 자체와는 다르다.
+REPORT = {
+    "status": "running",
+    "world_count": 2,
+    "client_role": str(CLIENT_PAWN.get_local_role()),
+    "server_role": str(SERVER_PAWN.get_local_role()),
+    "input_subsystem": INPUT.get_path_name(),
+    "configured_emulation": SESSION["target"]["NetworkEmulationSettings"],
+    "net_driver_log_confirms_lag": "?PktLagMin=100?PktLagMax=100" in LOG,
+    "samples": [],
+    "phase_events": [],
+}
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다.
+HANDLE = None
+
+
+# 함수 vector: 이름은 vector이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: v
+def vector(v):
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return [float(v.x), float(v.y), float(v.z)]
+
+
+# 함수 clock: 이름은 clock이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
+def clock():
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return unreal.GameplayStatics.get_time_seconds(CLIENT_WORLD)
+
+
+# 함수 sample: 이름은 sample이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: phase
+def sample(phase):
+    client = CLIENT_PAWN.get_actor_location()
+    server = SERVER_PAWN.get_actor_location()
+    # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+    return {
+        "phase": phase,
+        "seconds": clock(),
+        "client": vector(client),
+        "server": vector(server),
+        "separation_cm": (client - server).length(),
+        "client_lead_x_cm": client.x - server.x,
+        "client_speed": CLIENT_PAWN.get_velocity().length(),
+        "server_speed": SERVER_PAWN.get_velocity().length(),
+    }
+
+
+# 함수 save: 이름은 save이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음 문자열을 파일에 기록한다. 결과 JSON이나 보고서인지, 실제 코드·설정 파일인지 경로를 확인한다.
+def save():
+    OUT.write_text(json.dumps(REPORT, indent=2), encoding="utf-8")
+
+
+# 함수 finish: 이름은 finish이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: error 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+def finish(error=None):
+    global WORLDS, CLIENT_WORLD, SERVER_WORLD, CLIENT_PAWN, SERVER_PAWN, HOST_PAWN, CLIENT_PC, INPUT
+    STATE["done"] = True
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: HANDLE 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+    if HANDLE:
+        # 등록했던 콜백을 해제한다. 반복 작업을 끝내기 위한 처리다.
+        unreal.unregister_slate_post_tick_callback(HANDLE)
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: INPUT
+    if INPUT:
+        INPUT.inject_input_vector_for_action(ACTION, unreal.Vector(), [], [])
+    # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: error
+    if error:
+        REPORT.update(status="failed", error=error)
+    save()
+    WORLDS = []
+    # CLIENT_WORLD에 기준값 None을 저장한다. 뒤에서 이 이름을 읽을 때 사용할 값이다.
+    CLIENT_WORLD = SERVER_WORLD = CLIENT_PAWN = SERVER_PAWN = HOST_PAWN = CLIENT_PC = INPUT = (
+        None
+    )
+
+
+# 함수 analyze: 이름은 analyze이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: 별도 입력 없음
+def analyze():
+    samples = REPORT["samples"]
+    phase = {n: [s for s in samples if s["phase"] == n] for n, d in PHASES}
+    warm = phase["warmup"][-1]
+    drive = phase["drive"]
+    coast = phase["coast"][-1]
+    reset = phase["server_reset"][-1]
+    host_error = math.dist(vector(HOST_PAWN.get_actor_location()), vector(HOST_START))
+    backend = lambda p: any(
+        c.get_class().get_name() == "MoverNetworkPredictionLiaisonComponent"
+        for c in p.get_components_by_class(unreal.ActorComponent)
+    )
+    checks = {
+        "real_autonomous_and_authority_roles": "AUTONOMOUS_PROXY" in REPORT["client_role"]
+        and "AUTHORITY" in REPORT["server_role"],
+        "actual_network_prediction_backend": backend(CLIENT_PAWN) and backend(SERVER_PAWN),
+        "lag_applied_to_real_net_driver": REPORT["net_driver_log_confirms_lag"],
+        "initial_authority_teleport_reaches_client": warm["separation_cm"] < 8
+        and math.dist(warm["server"], vector(TARGET)) < 8,
+        "client_input_moves_predicted_pawn": max(
+            math.dist(s["client"], warm["client"]) for s in drive
+        )
+        > 200,
+        "server_receives_client_movement": max(
+            math.dist(s["server"], warm["server"]) for s in drive
+        )
+        > 200,
+        "client_predicts_ahead_of_delayed_server": max(s["client_lead_x_cm"] for s in drive)
+        > 12,
+        "positions_converge_after_input_release": coast["separation_cm"] < 8,
+        "authority_reset_replicates_and_converges": reset["separation_cm"] < 8
+        and math.dist(reset["server"], vector(TARGET)) < 8,
+        "reset_actually_moves_back": math.dist(coast["client"], reset["client"]) > 200,
+        "host_input_remains_independent": host_error < 5,
+    }
+    REPORT.update(
+        status="passed" if all(checks.values()) else "failed",
+        checks=checks,
+        maximum_client_lead_cm=max(s["client_lead_x_cm"] for s in drive),
+        after_release_separation_cm=coast["separation_cm"],
+        after_reset_separation_cm=reset["separation_cm"],
+        host_movement_cm=host_error,
+    )
+
+
+# 함수 tick: 이름은 tick이다. 아래의 입력 인자, 상태 변경, return을 순서대로 읽는다. 호출 목록 주석은 이 함수가 실제로 연결하는 작업을 보여 준다. 입력 이름: delta
+def tick(delta):
+    if STATE["done"] or STATE["busy"]:
+        # 이 함수의 결과를 돌려주고 함수 실행을 끝낸다.
+        return
+    STATE["busy"] = True
+    # 아래 작업의 오류를 뒤의 except에서 기록하거나 처리한다. 성공했다는 뜻으로 오류를 숨기는 구간은 아니다.
+    try:
+        if time.monotonic() - STATE["wall_start"] > 80:
+            raise RuntimeError("Network test exceeded 80 wall seconds")
+        phase, duration = PHASES[STATE["index"]]
+        elapsed = clock() - STATE["start"]
+        INPUT.inject_input_vector_for_action(
+            ACTION, unreal.Vector(0, 1 if phase == "drive" else 0, 0), [], []
+        )
+        if phase == "server_reset" and not STATE["reset_queued"]:
+            # 검증 조건이다. 조건을 만족하지 않으면 여기서 중단한다. 실패를 무시하고 다음 생성·저장을 이어 가면 잘못된 결과를 정상으로 기록할 수 있다.
+            assert unreal.FeatureLabRuntimeLibrary.teleport_mover(
+                SERVER_PAWN, TARGET, unreal.Rotator(pitch=0, yaw=0, roll=0)
+            )
+            STATE["reset_queued"] = True
+        if elapsed - STATE["last"] >= 0.05:
+            REPORT["samples"].append(sample(phase))
+            STATE["last"] = elapsed
+        # 다음 조건을 만족하는 경우에만 아래 구간을 실행한다: elapsed >= duration 목록 끝에 항목 하나를 추가한다. 기존 목록을 새 목록으로 바꾸는 연산은 아니다.
+        if elapsed >= duration:
+            REPORT["phase_events"].append(REPORT["samples"][-1])
+            STATE["index"] += 1
+            STATE.update(start=clock(), last=-1.0)
+            if STATE["index"] == len(PHASES):
+                analyze()
+                finish()
+            else:
+                REPORT["current"] = PHASES[STATE["index"]][0]
+                save()
+    except Exception:
+        finish(traceback.format_exc())
+    finally:
+        STATE["busy"] = False
+
+
+save()
+# HANDLE: 나중에 콜백을 해제하기 위해 보관하는 등록 표식이다. 에디터 갱신 뒤 호출할 함수를 등록한다. 작업이 끝나면 핸들로 해제해야 반복 호출이 남지 않는다.
+HANDLE = unreal.register_slate_post_tick_callback(tick)
+# RESULT: MCP가 작업 완료 뒤 읽어 갈 반환 정보다.
+RESULT = {
+    "status": "running",
+    "worlds": 2,
+    "outgoing_lag_ms_each_endpoint": 100,
+    "output": str(OUT),
 }
 ```
 

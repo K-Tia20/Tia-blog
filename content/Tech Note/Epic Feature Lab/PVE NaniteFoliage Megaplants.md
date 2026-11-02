@@ -4,7 +4,7 @@
 
 PVE는 식생을 만드는 제작 도구, Nanite Foliage는 여기서 사용한 스킨드 식생의 표현과 렌더링, Megaplants는 실제로 반입해 쓴 공식 식생 재료다. 같은 결과 화면을 공유하지만 담당하는 단계는 다르다.
 
-![식생 비교 장면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/result.png)
+![식생 비교 장면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/result.png)
 
 ## 바람과 수종을 직접 바꾸기
 
@@ -20,7 +20,7 @@ PVE는 식생을 만드는 제작 도구, Nanite Foliage는 여기서 사용한 
 
 **■ Stop** 후 `Content → FeatureLab → Vegetation`을 연다. `PVE_LabConifer`는 직접 실험한 침엽수 생성 그래프다. `PVE_LabGinkgo`는 반입한 공식 은행나무 그래프를 편집용으로 구분한 파일이다.
 
-![PVE 작업 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/folder.png)
+![PVE 작업 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -60,7 +60,7 @@ PVE는 식생을 만드는 제작 도구, Nanite Foliage는 여기서 사용한 
 | `PVE_LabConifer / PVE_LabGinkgo` | 침엽수 / 은행나무 실험용 생성 그래프 이름. |
 
 
-![식생 생성 그래프 편집 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/settings.png)
+![식생 생성 그래프 편집 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -105,7 +105,7 @@ PVE는 식생을 만드는 제작 도구, Nanite Foliage는 여기서 사용한 
 
 고해상도 단발 캡처는 시간 이력을 초기화해 바람 비교가 불명확한 경우가 있었다. 그래서 연속 뷰포트 캡처로 무풍·보통·강풍과 방향 변경을 비교했다. 사진을 찍는 방식 자체가 시간에 따른 효과를 가릴 수 있다는 점을 확인한 사례다.
 
-![무풍·강풍 상태의 실제 캡처 비교](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/wind-compare.gif)
+![무풍·강풍 상태의 실제 캡처 비교](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/wind-compare.gif)
 
 *이 GIF는 상태별 실제 캡처를 번갈아 표시한 비교 자료다. 연속 녹화 영상은 아니다.*
 
@@ -124,7 +124,7 @@ PVE는 식생을 만드는 제작 도구, Nanite Foliage는 여기서 사용한 
 
 ## 편집 화면을 더 자세히 보기
 
-![은행나무와 별도로 시험한 침엽수 생성 그래프](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/conifer.png)
+![은행나무와 별도로 시험한 침엽수 생성 그래프](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/12/conifer.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 

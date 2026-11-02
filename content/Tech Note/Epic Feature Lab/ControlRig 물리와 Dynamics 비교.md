@@ -4,7 +4,7 @@
 
 한 장면에 **기준 캐릭터, Control Rig Physics, Control Rig Dynamics**를 놓았다. 같은 충격을 주고 결과를 비교하려는 구성이다. 흔들린다는 이유만으로 두 기능을 같은 것으로 처리하지 않았다.
 
-![기준과 두 물리 리그의 비교 화면](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/result.png)
+![기준과 두 물리 리그의 비교 화면](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/result.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -29,7 +29,7 @@
 
 `Content → FeatureLab → Rigging`에서 `CR_LabPhysics`를 연다. 이어서 `CR_LabDynamics`를 열어 그래프와 계층을 비교한다. 처음에는 노드를 전부 외우기보다 입력이 어디로 들어와 어떤 뼈에 적용되는지 선을 따라간다.
 
-![리그 파일 위치](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/folder.png)
+![리그 파일 위치](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/folder.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -72,7 +72,7 @@
 | `NoEnvironmentCollider` | 환경 충돌 대상을 뺀 비교 조건이라는 프로젝트 파일 이름. |
 
 
-![물리 리그 설정과 연결](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/settings.png)
+![물리 리그 설정과 연결](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/settings.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
@@ -128,7 +128,7 @@ Dynamics 쪽은 체인의 움직임을 계산하는 별도 리그를 구성했�
 
 초기화도 단순히 캐릭터를 같은 위치로 옮기는 것으로 끝내지 않았다. 이전 시뮬레이션의 속도나 흔들림이 남으면 같은 충격을 줘도 결과가 달라진다. R로 리셋한 표면과 반복 리셋 결과를 비교했고 해당 오차도 0으로 확인했다.
 
-![실제 물리 장면에서 촬영한 프레임](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/motion.gif)
+![실제 물리 장면에서 촬영한 프레임](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/motion.gif)
 
 ## 확인하며 따라갈 체크포인트
 
@@ -147,7 +147,7 @@ Dynamics 쪽은 체인의 움직임을 계산하는 별도 리그를 구성했�
 
 ## 편집 화면을 더 자세히 보기
 
-![Physics와 별도로 만든 Dynamics 리그](Tech%20Note/Unreal/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/dynamics.png)
+![Physics와 별도로 만든 Dynamics 리그](Tech%20Note/Epic%20Feature%20Lab/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A8%EC%9D%8C/04/dynamics.png)
 
 **참고 — 사진과 작업에 나온 영어 이름**
 
