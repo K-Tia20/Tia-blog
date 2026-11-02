@@ -11,32 +11,15 @@
             "id": "7b7e102ae994c6a1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "ProjectE/에픽 게임잼 통합 기능 게임 기획서.md",
-                "mode": "source",
-                "source": false
+                "file": "Coding Test/첨부파일모음/Pasted image 20260617090252.png"
               },
-              "icon": "lucide-file",
-              "title": "에픽 게임잼 통합 기능 게임 기획서"
-            }
-          },
-          {
-            "id": "46875ef2bc55ddad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tech Note/Epic Feature Lab/Mutable 외형변경과 이동연결.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mutable 외형변경과 이동연결"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260617090252"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,7 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 323.5
   },
   "right": {
     "id": "9959474c0cf63610",
@@ -214,53 +197,53 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "46875ef2bc55ddad",
+  "active": "7b7e102ae994c6a1",
   "lastOpenFiles": [
-    "Tech Note/Epic Feature Lab/UnrealMCP AIAssistant 격리편집.md",
-    "Tech Note/Epic Feature Lab/Substrate와 ToonShader.md",
-    "Tech Note/Epic Feature Lab/PCG 시드 밀도 제외영역 스플라인.md",
-    "Tech Note/Epic Feature Lab/Fab 에셋반입과 출처관리.md",
-    "Tech Note/Epic Feature Lab/에디터 화면과 기본 용어.md",
-    "Tech Note/Epic Feature Lab/메타휴먼 제작과 디지털 체형맞춤.md",
-    "Tech Note/Epic Feature Lab/메타휴먼군중과 Mass.md",
-    "Tech Note/Epic Feature Lab/0.정리.md",
-    "ProjectE/에픽 게임잼 통합 기능 게임 기획서.md",
-    "ProjectE/에픽 게임잼 개발 준비와 시작 순서.md",
-    "Tech Note/Epic Feature Lab/UE6 Verse SceneGraph 제공상태확인.md",
-    "Tech Note/Epic Feature Lab/AI음성으로 메타휴먼 얼굴애니메이션.md",
-    "Tech Note/Epic Feature Lab/MetaHuman 전신 마커리스 모캡 실험.md",
-    "Tech Note/Epic Feature Lab/UAF와 AnimGen 학습과 재구성.md",
-    "Tech Note/Epic Feature Lab/GASP MotionMatching Mover.md",
-    "Tech Note/Epic Feature Lab/RealityScan 사진으로 3D 모델 만들기.md",
-    "Tech Note/Epic Feature Lab/MeshTerrain 동굴과 충돌.md",
-    "Tech Note/Epic Feature Lab/Dataflow와 ChaosCloth 망토.md",
-    "Tech Note/Epic Feature Lab/Mutable 외형변경과 이동연결.md",
-    "Tech Note/Epic Feature Lab/LiveLinkHub MocapManager MovieRenderGraph.md",
-    "Tech Note/Epic Feature Lab/뼈대부터 표정리그와 직접조작까지.md",
-    "Tech Note/Epic Feature Lab/MegaLights와 LumenLite 조명비교.md",
+    "게임 프로젝트/IsekaiClass(진행중)/이세계 클래스.md",
+    "게임 프로젝트/IsekaiClass(진행중)/IC_1.png",
+    "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
+    "게임 프로젝트/PrincessRPG/구현기능/10. 포털 상호작용.md",
+    "게임 프로젝트/PrincessRPG/구현기능/8. 창 배치와 포커스.md",
+    "게임 프로젝트/PrincessRPG/구현기능/20. 사망 상태.png",
+    "게임 프로젝트/PrincessRPG/구현기능/33. 장비 스탯 반영.png",
+    "게임 프로젝트/PrincessRPG/구현기능/30. 획득과 스택.md",
+    "게임 프로젝트/PrincessRPG/구현기능/34. 툴팁과 세트.md",
+    "게임 프로젝트/PrincessRPG/구현기능/35. 강화 미리보기.md",
+    "게임 프로젝트/PrincessRPG/구현기능/36. 성공과 실패.png",
+    "게임 프로젝트/PrincessRPG/구현기능/45. 판매.md",
+    "게임 프로젝트/PrincessRPG/구현기능/47. 초대와 수락.png",
+    "게임 프로젝트/PrincessRPG/구현기능/49. 파티 HUD와 보상.md",
+    "게임 프로젝트/PrincessRPG/구현기능/52. 필터, 쿨다운, 알림.md",
+    "게임 프로젝트/PrincessRPG/구현기능/53. 스폰과 리스폰.md",
+    "게임 프로젝트/PrincessRPG/구현기능/43. 개인 퀘스트 오브젝트.png",
+    "게임 프로젝트/PrincessRPG/구현기능/24. 클래스 스킬 목록.png",
+    "게임 프로젝트/PrincessRPG/구현기능/25. 스킬 포인트 투자.png",
+    "게임 프로젝트/PrincessRPG/구현기능/26. 스킬 레벨업.md",
+    "게임 프로젝트/PrincessRPG/구현기능/27. EXP와 레벨업.png",
+    "게임 프로젝트/PrincessRPG/구현기능/29. 유니온 보너스.png",
+    "게임 프로젝트/PrincessRPG/구현기능/31. 퀵슬롯과 소비.md",
+    "게임 프로젝트/PrincessRPG/구현기능/46. 거래소 서비스.md",
+    "게임 프로젝트/PrincessRPG/구현기능/54. 감지, 추적, 공격.md",
+    "게임 프로젝트/PrincessRPG/구현기능/55. 처치와 드롭.md",
+    "게임 프로젝트/PrincessRPG/구현기능/48. 파티 관리.md",
+    "게임 프로젝트/PrincessRPG/구현기능/50. 전체, 파티 채팅.md",
+    "게임 프로젝트/PrincessRPG/구현기능/7. 내비게이션 메뉴.md",
+    "게임 프로젝트/PrincessRPG/구현기능/2. 로그인 화면.md",
+    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.md",
+    "게임 프로젝트/PrincessRPG/구현기능/0. 시연 영상.md",
+    "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
+    "게임 프로젝트/HaremTextRPG/텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf",
+    "게임 프로젝트/HaremTextRPG/구현 기능/0.시연 영상.md",
+    "Tech Note/언리얼 엔진5 핵심기술/언리얼_엔진5_핵심기술_한눈에보기.md",
+    "Tech Note/언리얼 엔진5 핵심기술/12_Motion_Matching.md",
+    "Tech Note/언리얼 엔진5 핵심기술",
     "ProjectE",
-    "Tech Note/Epic Feature Lab/통합메뉴와 Windows 패키징.md",
-    "Tech Note/Epic Feature Lab/ControlRig 물리와 Dynamics 비교.md",
-    "Tech Note/Epic Feature Lab/Lore 변경이력과 복원.md",
-    "Tech Note/Epic Feature Lab/PVE NaniteFoliage Megaplants.md",
-    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/05-static-mesh-nanite.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/04-unreal-imported-scene.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/03-textured-model.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/02-alignment-pointcloud.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan/01-input-workflow.png",
     "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan",
     "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/synthetic-full-body-input.mp4",
-    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/body-animation-preview.gif",
-    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/03-performance-monocular-input.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/04-body-tracking-settings.png",
-    "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap/02-exported-animation-and-tracks.png",
     "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap",
     "Tech Note/s",
-    "Tech Note/Epic Feature Lab/첨부파일모음/13/result.png",
     "Tech Note/Epic Feature Lab/첨부파일모음/16/review.mp4",
     "Tech Note/Epic Feature Lab/첨부파일모음/01/voice-demo.mp4",
-    "Tech Note/Epic Feature Lab/첨부파일모음/02/voice-demo.mp4",
-    "Tech Note/Epic Feature Lab/첨부파일모음/13",
-    "Tech Note/Epic Feature Lab/첨부파일모음/21"
+    "Tech Note/Epic Feature Lab/첨부파일모음/02/voice-demo.mp4"
   ]
 }
