@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 388.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,7 +199,7 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "ed21fa0731abd996",
+  "active": "2dc0bdc5a65ce5fd",
   "lastOpenFiles": [
     "Coding Test/[260615]-행렬의 덧셈.md",
     "Coding Test/[260623]-크기가 작은 부분 문자열.md",
