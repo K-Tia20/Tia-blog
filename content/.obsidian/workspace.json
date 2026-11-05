@@ -11,12 +11,14 @@
             "id": "7b7e102ae994c6a1",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Coding Test/첨부파일모음/Pasted image 20260617090252.png"
+                "file": "Coding Test/[260608]-문자열 내림차순으로 배치하기.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260617090252"
+              "icon": "lucide-file",
+              "title": "[260608]-문자열 내림차순으로 배치하기"
             }
           }
         ]
@@ -143,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 327.5
   },
   "right": {
     "id": "9959474c0cf63610",
@@ -197,45 +199,46 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "7b7e102ae994c6a1",
+  "active": "ed21fa0731abd996",
   "lastOpenFiles": [
-    "게임 프로젝트/IsekaiClass(진행중)/이세계 클래스.md",
-    "게임 프로젝트/IsekaiClass(진행중)/IC_1.png",
-    "게임 프로젝트/PrincessRPG/프린세스 RPG.md",
-    "게임 프로젝트/PrincessRPG/구현기능/10. 포털 상호작용.md",
-    "게임 프로젝트/PrincessRPG/구현기능/8. 창 배치와 포커스.md",
-    "게임 프로젝트/PrincessRPG/구현기능/20. 사망 상태.png",
-    "게임 프로젝트/PrincessRPG/구현기능/33. 장비 스탯 반영.png",
-    "게임 프로젝트/PrincessRPG/구현기능/30. 획득과 스택.md",
-    "게임 프로젝트/PrincessRPG/구현기능/34. 툴팁과 세트.md",
-    "게임 프로젝트/PrincessRPG/구현기능/35. 강화 미리보기.md",
-    "게임 프로젝트/PrincessRPG/구현기능/36. 성공과 실패.png",
-    "게임 프로젝트/PrincessRPG/구현기능/45. 판매.md",
-    "게임 프로젝트/PrincessRPG/구현기능/47. 초대와 수락.png",
-    "게임 프로젝트/PrincessRPG/구현기능/49. 파티 HUD와 보상.md",
-    "게임 프로젝트/PrincessRPG/구현기능/52. 필터, 쿨다운, 알림.md",
-    "게임 프로젝트/PrincessRPG/구현기능/53. 스폰과 리스폰.md",
-    "게임 프로젝트/PrincessRPG/구현기능/43. 개인 퀘스트 오브젝트.png",
-    "게임 프로젝트/PrincessRPG/구현기능/24. 클래스 스킬 목록.png",
-    "게임 프로젝트/PrincessRPG/구현기능/25. 스킬 포인트 투자.png",
-    "게임 프로젝트/PrincessRPG/구현기능/26. 스킬 레벨업.md",
-    "게임 프로젝트/PrincessRPG/구현기능/27. EXP와 레벨업.png",
-    "게임 프로젝트/PrincessRPG/구현기능/29. 유니온 보너스.png",
-    "게임 프로젝트/PrincessRPG/구현기능/31. 퀵슬롯과 소비.md",
-    "게임 프로젝트/PrincessRPG/구현기능/46. 거래소 서비스.md",
-    "게임 프로젝트/PrincessRPG/구현기능/54. 감지, 추적, 공격.md",
-    "게임 프로젝트/PrincessRPG/구현기능/55. 처치와 드롭.md",
-    "게임 프로젝트/PrincessRPG/구현기능/48. 파티 관리.md",
-    "게임 프로젝트/PrincessRPG/구현기능/50. 전체, 파티 채팅.md",
-    "게임 프로젝트/PrincessRPG/구현기능/7. 내비게이션 메뉴.md",
-    "게임 프로젝트/PrincessRPG/구현기능/2. 로그인 화면.md",
-    "게임 프로젝트/PrincessRPG/구현기능/1. 회원가입.md",
-    "게임 프로젝트/PrincessRPG/구현기능/0. 시연 영상.md",
-    "게임 프로젝트/HaremTextRPG/하렘 텍스트 RPG.md",
+    "Coding Test/[260615]-행렬의 덧셈.md",
+    "Coding Test/[260623]-크기가 작은 부분 문자열.md",
+    "Coding Test/260528(목) - 핸드폰 번호 가리기.md",
+    "Coding Test/[260701]-두 개 뽑아서 더하기.md",
+    "Coding Test/260401(수) - 두 수의 나눗셈.md",
+    "Coding Test/260415(수) - 피자 나눠 먹기 (3).md",
+    "Tech Note/언리얼 엔진5 핵심기술/11_Chaos_Physics.md",
+    "Tech Note/언리얼 엔진5 핵심기술/09_PVE_상세.md",
+    "Tech Note/언리얼 엔진5 핵심기술/07_World_Partition.md",
+    "Tech Note/언리얼 엔진5 핵심기술/05_Substrate.md",
+    "Tech Note/언리얼 엔진5 핵심기술/03_Nanite.md",
+    "Tech Note/언리얼 엔진5 핵심기술/02_Lumen.md",
+    "Tech Note/언리얼 엔진5 핵심기술/01_MetaHuman.md",
+    "Tech Note/MetaHuman/무제.md",
+    "TIL/261104(수)_TIL.md",
+    "TIL/261014(수)_TIL.md",
+    "TIL/260707(화)_TIL.md",
+    "TIL/260622(월)_TIL.md",
+    "TIL/260611(목)_TIL.md",
+    "TIL/260601(월)_TIL.md",
+    "TIL/260519(화)_TIL.md",
+    "TIL/260605(금)_TIL.md",
+    "TIL/261105(목)_TIL.md",
+    "TIL/260714(월)_TIL.md",
+    "TIL/260701(수)_TIL.md",
+    "TIL/260330(월)_TIL.md",
+    "Tech Note/MetaHuman/Pasted image 20261103193206.png",
+    "Tech Note/MetaHuman/Pasted image 20261103193145.png",
+    "Tech Note/MetaHuman",
+    "TIL/첨부파일모음/20261103-vroid-lighting-day_outside.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-night_inside.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-night_outside.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-after_eyes.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-before_eyes.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-day_inside.png",
+    "TIL/첨부파일모음/20261103-vroid-lighting-before_inside.png",
+    "Coding Test/첨부파일모음/Pasted image 20260617090252.png",
     "게임 프로젝트/HaremTextRPG/텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf",
-    "게임 프로젝트/HaremTextRPG/구현 기능/0.시연 영상.md",
-    "Tech Note/언리얼 엔진5 핵심기술/언리얼_엔진5_핵심기술_한눈에보기.md",
-    "Tech Note/언리얼 엔진5 핵심기술/12_Motion_Matching.md",
     "Tech Note/언리얼 엔진5 핵심기술",
     "ProjectE",
     "Tech Note/Epic Feature Lab/첨부파일모음/RealityScan",
@@ -243,7 +246,6 @@
     "Tech Note/Epic Feature Lab/첨부파일모음/MarkerlessMocap",
     "Tech Note/s",
     "Tech Note/Epic Feature Lab/첨부파일모음/16/review.mp4",
-    "Tech Note/Epic Feature Lab/첨부파일모음/01/voice-demo.mp4",
-    "Tech Note/Epic Feature Lab/첨부파일모음/02/voice-demo.mp4"
+    "Tech Note/Epic Feature Lab/첨부파일모음/01/voice-demo.mp4"
   ]
 }
