@@ -1,0 +1,4491 @@
+{
+  "meshes": [
+    {
+      "family": "N00_001_01_Shoes",
+      "sourceMeshResource": "00c64f2263a06fa3a07731d59deab32b70c493f9.mesh",
+      "resourcePath": "N00/N00_001_01_Shoes/N00_001_01_Shoes/M_N00_001_01_Shoes.mesh",
+      "vertexCount": 536,
+      "triangleCount": 540,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Bip_L_Foot": {
+          "vertices": 200,
+          "uMin": 0.031856998801231384,
+          "uMax": 0.9876999855041504,
+          "pngYMin": 0.04324620962142944,
+          "pngYMax": 0.7497079968452454
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 68,
+          "uMin": 0.21003499627113342,
+          "uMax": 0.6979140043258667,
+          "pngYMin": 0.03456670045852661,
+          "pngYMax": 0.9719539880752563
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 200,
+          "uMin": 0.031856998801231384,
+          "uMax": 0.9876999855041504,
+          "pngYMin": 0.04324620962142944,
+          "pngYMax": 0.7497079968452454
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 68,
+          "uMin": 0.21003499627113342,
+          "uMax": 0.6979140043258667,
+          "pngYMin": 0.03456670045852661,
+          "pngYMax": 0.9719539880752563
+        }
+      }
+    },
+    {
+      "family": "N00_001_01_Tops",
+      "sourceMeshResource": "02a6484483fc6fec58566cf2605b06d3327b8cbf.mesh",
+      "resourcePath": "N00/N00_001_01_Tops/N00_001_01_Tops/M_N00_001_01_Tops.mesh",
+      "vertexCount": 1428,
+      "triangleCount": 2066,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 81,
+          "uMin": 0.07155227661132812,
+          "uMax": 0.9284477233886719,
+          "pngYMin": 0.6374114751815796,
+          "pngYMax": 0.820005476474762
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 146,
+          "uMin": 0.07155227661132812,
+          "uMax": 0.9284477233886719,
+          "pngYMin": 0.8031380772590637,
+          "pngYMax": 0.9934477210044861
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 219,
+          "uMin": 0.07155227661132812,
+          "uMax": 0.9284477233886719,
+          "pngYMin": 0.0333247184753418,
+          "pngYMax": 0.43404853343963623
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 12,
+          "uMin": 0.3643887937068939,
+          "uMax": 0.6356111764907837,
+          "pngYMin": 0.8124337196350098,
+          "pngYMax": 0.8387336730957031
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 384,
+          "uMin": 0.07155227661132812,
+          "uMax": 0.9284477233886719,
+          "pngYMin": 0.004601716995239258,
+          "pngYMax": 0.7135301828384399
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 52,
+          "uMin": 0.32997098565101624,
+          "uMax": 0.8368492126464844,
+          "pngYMin": 0.10501247644424438,
+          "pngYMax": 0.5056952238082886
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 127,
+          "uMin": 0.6479362845420837,
+          "uMax": 0.9245579838752747,
+          "pngYMin": 0.004601716995239258,
+          "pngYMax": 0.4636000394821167
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 96,
+          "uMin": 0.7455897927284241,
+          "uMax": 0.953607976436615,
+          "pngYMin": 0.004601716995239258,
+          "pngYMax": 0.3602280020713806
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 52,
+          "uMin": 0.16315080225467682,
+          "uMax": 0.6704540252685547,
+          "pngYMin": 0.10501247644424438,
+          "pngYMax": 0.5056952238082886
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 127,
+          "uMin": 0.07544291019439697,
+          "uMax": 0.35206368565559387,
+          "pngYMin": 0.004601716995239258,
+          "pngYMax": 0.4636000394821167
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 96,
+          "uMin": 0.04639260843396187,
+          "uMax": 0.2544102072715759,
+          "pngYMin": 0.004601716995239258,
+          "pngYMax": 0.3602280020713806
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 18,
+          "uMin": 0.558805525302887,
+          "uMax": 0.6469150185585022,
+          "pngYMin": 0.5553848147392273,
+          "pngYMax": 0.6521649956703186
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 18,
+          "uMin": 0.3530850112438202,
+          "uMax": 0.4411945044994354,
+          "pngYMin": 0.5553848147392273,
+          "pngYMax": 0.6521649956703186
+        }
+      }
+    },
+    {
+      "family": "N00_010_01_Onepiece",
+      "sourceMeshResource": "0450055b44b2061ee4720e502c23a2cdff0e9094.mesh",
+      "resourcePath": "N00/N00_010_01_OnePiece/N00_010_01_OnePiece/M_N00_010_01_Onepiece.mesh",
+      "vertexCount": 5035,
+      "triangleCount": 8796,
+      "wireframe": "UV_Mesh_Wireframes/N00_010_01_Onepiece.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 163,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.25080692768096924,
+          "pngYMax": 0.38865232467651367
+        },
+        "J_Adj_C_FaceChinNeck": {
+          "vertices": 11,
+          "uMin": 0.4954744875431061,
+          "uMax": 0.5045589804649353,
+          "pngYMin": 0.06541907787322998,
+          "pngYMax": 0.07155674695968628
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 341,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.3951827883720398,
+          "pngYMax": 0.6287720799446106
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 104,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.05380558967590332,
+          "pngYMax": 0.1580650806427002
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 56,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.38035839796066284,
+          "pngYMax": 0.4511457085609436
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 292,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.08755689859390259,
+          "pngYMax": 0.32275545597076416
+        },
+        "J_Adj_L_FaceChinNeck1": {
+          "vertices": 4,
+          "uMin": 0.528572678565979,
+          "uMax": 0.5372666120529175,
+          "pngYMin": 0.035388171672821045,
+          "pngYMax": 0.04401969909667969
+        },
+        "J_Adj_L_FaceChinNeck2": {
+          "vertices": 6,
+          "uMin": 0.5168215036392212,
+          "uMax": 0.5293635129928589,
+          "pngYMin": 0.04643338918685913,
+          "pngYMax": 0.06231802701950073
+        },
+        "J_Adj_L_FaceChinNeck3": {
+          "vertices": 5,
+          "uMin": 0.5060994029045105,
+          "uMax": 0.5141903162002563,
+          "pngYMin": 0.05963444709777832,
+          "pngYMax": 0.06628745794296265
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 182,
+          "uMin": 0.576928973197937,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.08036971092224121,
+          "pngYMax": 0.48583900928497314
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 78,
+          "uMin": 0.7661839723587036,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.2950618267059326,
+          "pngYMax": 0.39436793327331543
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 270,
+          "uMin": 0.5523290038108826,
+          "uMax": 0.9959747791290283,
+          "pngYMin": 0.5849800109863281,
+          "pngYMax": 0.9965119957923889
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.7624940872192383,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.7921692728996277,
+          "pngYMax": 0.85923832654953
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 65,
+          "uMin": 0.5482296943664551,
+          "uMax": 0.9537755846977234,
+          "pngYMin": 0.012934386730194092,
+          "pngYMax": 0.18937522172927856
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 152,
+          "uMin": 0.5926814079284668,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.05396217107772827,
+          "pngYMax": 0.2747405767440796
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 59,
+          "uMin": 0.7661839723587036,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.11623519659042358,
+          "pngYMax": 0.21015608310699463
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 152,
+          "uMin": 0.5409963726997375,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.5077853202819824,
+          "pngYMax": 0.7055832147598267
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 79,
+          "uMin": 0.7624940872192383,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.5257014036178589,
+          "pngYMax": 0.6202390789985657
+        },
+        "J_Adj_R_FaceChinNeck1": {
+          "vertices": 4,
+          "uMin": 0.46257609128952026,
+          "uMax": 0.47130081057548523,
+          "pngYMin": 0.03539931774139404,
+          "pngYMax": 0.04396873712539673
+        },
+        "J_Adj_R_FaceChinNeck2": {
+          "vertices": 6,
+          "uMin": 0.47058990597724915,
+          "uMax": 0.4829958975315094,
+          "pngYMin": 0.04634356498718262,
+          "pngYMax": 0.06239199638366699
+        },
+        "J_Adj_R_FaceChinNeck3": {
+          "vertices": 5,
+          "uMin": 0.48569050431251526,
+          "uMax": 0.4940088987350464,
+          "pngYMin": 0.05956864356994629,
+          "pngYMax": 0.06630736589431763
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 182,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.4230709969997406,
+          "pngYMin": 0.08036971092224121,
+          "pngYMax": 0.48583900928497314
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 78,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.233815997838974,
+          "pngYMin": 0.2950618267059326,
+          "pngYMax": 0.39436793327331543
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 270,
+          "uMin": 0.004025160800665617,
+          "uMax": 0.44767099618911743,
+          "pngYMin": 0.5849800109863281,
+          "pngYMax": 0.9965119957923889
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.23750589787960052,
+          "pngYMin": 0.7921692728996277,
+          "pngYMax": 0.85923832654953
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 65,
+          "uMin": 0.046224359422922134,
+          "uMax": 0.4517703056335449,
+          "pngYMin": 0.012934386730194092,
+          "pngYMax": 0.18937522172927856
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 152,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.4073185920715332,
+          "pngYMin": 0.05396217107772827,
+          "pngYMax": 0.2747405767440796
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 59,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.233815997838974,
+          "pngYMin": 0.11623519659042358,
+          "pngYMax": 0.21015608310699463
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 152,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.45900359749794006,
+          "pngYMin": 0.5077853202819824,
+          "pngYMax": 0.7055832147598267
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 79,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.23750589787960052,
+          "pngYMin": 0.5257014036178589,
+          "pngYMax": 0.6202390789985657
+        },
+        "J_Bip_C_Head": {
+          "vertices": 32,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.019302308559417725,
+          "pngYMax": 0.06688845157623291
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 136,
+          "uMin": 0.5061579942703247,
+          "uMax": 0.7611050009727478,
+          "pngYMin": 0.6144390106201172,
+          "pngYMax": 0.7768470048904419
+        },
+        "J_Bip_L_Hand": {
+          "vertices": 93,
+          "uMin": 0.5803020000457764,
+          "uMax": 0.675553023815155,
+          "pngYMin": 0.015289902687072754,
+          "pngYMax": 0.20015698671340942
+        },
+        "J_Bip_L_Index1": {
+          "vertices": 50,
+          "uMin": 0.599407970905304,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.007309913635253906,
+          "pngYMax": 0.8590909838676453
+        },
+        "J_Bip_L_Index2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_L_Index3": {
+          "vertices": 33,
+          "uMin": 0.691215991973877,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_L_Little1": {
+          "vertices": 41,
+          "uMin": 0.6364399790763855,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.0375363826751709,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Little2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Little3": {
+          "vertices": 33,
+          "uMin": 0.691215991973877,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Middle1": {
+          "vertices": 38,
+          "uMin": 0.6217269897460938,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.015540719032287598,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_L_Middle2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_L_Middle3": {
+          "vertices": 33,
+          "uMin": 0.691215991973877,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_L_Ring1": {
+          "vertices": 46,
+          "uMin": 0.631505012512207,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.020685672760009766,
+          "pngYMax": 0.9687849879264832
+        },
+        "J_Bip_L_Ring2": {
+          "vertices": 18,
+          "uMin": 0.7184759974479675,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_L_Ring3": {
+          "vertices": 33,
+          "uMin": 0.691215991973877,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_L_Thumb1": {
+          "vertices": 20,
+          "uMin": 0.6205599904060364,
+          "uMax": 0.6567469835281372,
+          "pngYMin": 0.13919597864151,
+          "pngYMax": 0.18660402297973633
+        },
+        "J_Bip_L_Thumb2": {
+          "vertices": 44,
+          "uMin": 0.6540200114250183,
+          "uMax": 0.7580159902572632,
+          "pngYMin": 0.13646799325942993,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_L_Thumb3": {
+          "vertices": 33,
+          "uMin": 0.691215991973877,
+          "uMax": 0.719165027141571,
+          "pngYMin": 0.7262880206108093,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 72,
+          "uMin": 0.5106229782104492,
+          "uMax": 0.6695039868354797,
+          "pngYMin": 0.6781489849090576,
+          "pngYMax": 0.7816439867019653
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 136,
+          "uMin": 0.2388949990272522,
+          "uMax": 0.4938420057296753,
+          "pngYMin": 0.6144390106201172,
+          "pngYMax": 0.7768470048904419
+        },
+        "J_Bip_R_Hand": {
+          "vertices": 93,
+          "uMin": 0.32444700598716736,
+          "uMax": 0.41969799995422363,
+          "pngYMin": 0.015289902687072754,
+          "pngYMax": 0.20015698671340942
+        },
+        "J_Bip_R_Index1": {
+          "vertices": 50,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.40059199929237366,
+          "pngYMin": 0.007309913635253906,
+          "pngYMax": 0.8590909838676453
+        },
+        "J_Bip_R_Index2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_R_Index3": {
+          "vertices": 33,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.30878400802612305,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_R_Little1": {
+          "vertices": 41,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.3635599911212921,
+          "pngYMin": 0.0375363826751709,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Little2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Little3": {
+          "vertices": 33,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.30878400802612305,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Middle1": {
+          "vertices": 38,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.37827301025390625,
+          "pngYMin": 0.015540719032287598,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_R_Middle2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_R_Middle3": {
+          "vertices": 33,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.30878400802612305,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_R_Ring1": {
+          "vertices": 46,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.36849498748779297,
+          "pngYMin": 0.020685672760009766,
+          "pngYMax": 0.9687849879264832
+        },
+        "J_Bip_R_Ring2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.28152400255203247,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_R_Ring3": {
+          "vertices": 33,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.30878400802612305,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_R_Thumb1": {
+          "vertices": 20,
+          "uMin": 0.3432529866695404,
+          "uMax": 0.3794400095939636,
+          "pngYMin": 0.13919597864151,
+          "pngYMax": 0.18660402297973633
+        },
+        "J_Bip_R_Thumb2": {
+          "vertices": 44,
+          "uMin": 0.24198399484157562,
+          "uMax": 0.3459799885749817,
+          "pngYMin": 0.13646799325942993,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_R_Thumb3": {
+          "vertices": 33,
+          "uMin": 0.28083500266075134,
+          "uMax": 0.30878400802612305,
+          "pngYMin": 0.7262880206108093,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 72,
+          "uMin": 0.33049601316452026,
+          "uMax": 0.4893769919872284,
+          "pngYMin": 0.6781489849090576,
+          "pngYMax": 0.7816439867019653
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 111,
+          "uMin": 0.5252602100372314,
+          "uMax": 0.5980200171470642,
+          "pngYMin": 0.21214038133621216,
+          "pngYMax": 0.28384554386138916
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 111,
+          "uMin": 0.4019800126552582,
+          "uMax": 0.47473978996276855,
+          "pngYMin": 0.21214038133621216,
+          "pngYMax": 0.28384554386138916
+        }
+      }
+    },
+    {
+      "family": "N00_007_02_Accessory_Tie",
+      "sourceMeshResource": "117ddefc0fda3f7656e8cac9032aeb173590acea.mesh",
+      "resourcePath": "N00/N00_007_02_Accessory_Tie/N00_007_02_Accessory_Tie/M_N00_007_02_Accessory_Tie.mesh",
+      "vertexCount": 551,
+      "triangleCount": 488,
+      "wireframe": "UV_Mesh_Wireframes/N00_007_02_Accessory_Tie.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Neck": {
+          "vertices": 32,
+          "uMin": 0.08215296268463135,
+          "uMax": 0.9178463220596313,
+          "pngYMin": 0.011385321617126465,
+          "pngYMax": 0.12754327058792114
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 519,
+          "uMin": 0.08215293288230896,
+          "uMax": 0.9178463220596313,
+          "pngYMin": 0.01138538122177124,
+          "pngYMax": 0.9882692694664001
+        }
+      }
+    },
+    {
+      "family": "N00_002_01_Shoes",
+      "sourceMeshResource": "133ed175cd0df67f689e6c645bee8ab4fe18ec3b.mesh",
+      "resourcePath": "N00/N00_002_01_Shoes/N00_002_01_Shoes/M_N00_002_01_Shoes.mesh",
+      "vertexCount": 516,
+      "triangleCount": 760,
+      "wireframe": "UV_Mesh_Wireframes/N00_002_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 58,
+          "uMin": 0.15910999476909637,
+          "uMax": 0.8410620093345642,
+          "pngYMin": 0.12067598104476929,
+          "pngYMax": 0.35158395767211914
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 58,
+          "uMin": 0.15910999476909637,
+          "uMax": 0.8410620093345642,
+          "pngYMin": 0.12067598104476929,
+          "pngYMax": 0.35158395767211914
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 142,
+          "uMin": 0.010773399844765663,
+          "uMax": 0.9885630011558533,
+          "pngYMin": 0.008893072605133057,
+          "pngYMax": 0.9897850155830383
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 58,
+          "uMin": 0.28657999634742737,
+          "uMax": 0.9733763933181763,
+          "pngYMin": 0.02123701572418213,
+          "pngYMax": 0.9897850155830383
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 142,
+          "uMin": 0.010773399844765663,
+          "uMax": 0.9885630011558533,
+          "pngYMin": 0.008893072605133057,
+          "pngYMax": 0.9897850155830383
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 58,
+          "uMin": 0.28657999634742737,
+          "uMax": 0.9733763933181763,
+          "pngYMin": 0.02123701572418213,
+          "pngYMax": 0.9897850155830383
+        }
+      }
+    },
+    {
+      "family": "N00_000_00_Body",
+      "sourceMeshResource": "152a638eed4a30e81fa2e294ab5e4ac501c60d63.mesh",
+      "resourcePath": "N00/N00_000_00_Body/N00_000_00_Body/M_N00_000_00_Body.mesh",
+      "vertexCount": 3295,
+      "triangleCount": 5970,
+      "wireframe": "UV_Mesh_Wireframes/N00_000_00_Body.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 163,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.25080692768096924,
+          "pngYMax": 0.38865232467651367
+        },
+        "J_Adj_C_FaceChinNeck": {
+          "vertices": 11,
+          "uMin": 0.4954744875431061,
+          "uMax": 0.5045589804649353,
+          "pngYMin": 0.06541907787322998,
+          "pngYMax": 0.07155674695968628
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 341,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.3951827883720398,
+          "pngYMax": 0.6287720799446106
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 104,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.05380558967590332,
+          "pngYMax": 0.1580650806427002
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 56,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.38035839796066284,
+          "pngYMax": 0.4511457085609436
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 292,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.08755689859390259,
+          "pngYMax": 0.32275545597076416
+        },
+        "J_Adj_L_FaceChinNeck1": {
+          "vertices": 4,
+          "uMin": 0.528572678565979,
+          "uMax": 0.5372666120529175,
+          "pngYMin": 0.035388171672821045,
+          "pngYMax": 0.04401969909667969
+        },
+        "J_Adj_L_FaceChinNeck2": {
+          "vertices": 6,
+          "uMin": 0.5168215036392212,
+          "uMax": 0.5293635129928589,
+          "pngYMin": 0.04643338918685913,
+          "pngYMax": 0.06231802701950073
+        },
+        "J_Adj_L_FaceChinNeck3": {
+          "vertices": 5,
+          "uMin": 0.5060994029045105,
+          "uMax": 0.5141902565956116,
+          "pngYMin": 0.05963444709777832,
+          "pngYMax": 0.06628745794296265
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 135,
+          "uMin": 0.7661839723587036,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.2470160722732544,
+          "pngYMax": 0.47084200382232666
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 78,
+          "uMin": 0.7661839723587036,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.2950618267059326,
+          "pngYMax": 0.39436793327331543
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 224,
+          "uMin": 0.761877179145813,
+          "uMax": 0.9959747791290283,
+          "pngYMin": 0.698957622051239,
+          "pngYMax": 0.9965119957923889
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.7624940872192383,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.7921692728996277,
+          "pngYMax": 0.85923832654953
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 65,
+          "uMin": 0.5482296943664551,
+          "uMax": 0.9537755846977234,
+          "pngYMin": 0.012934386730194092,
+          "pngYMax": 0.18937522172927856
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 152,
+          "uMin": 0.5926814079284668,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.05396217107772827,
+          "pngYMax": 0.2747405767440796
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 59,
+          "uMin": 0.7661839723587036,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.11623519659042358,
+          "pngYMax": 0.21015608310699463
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 152,
+          "uMin": 0.5409963726997375,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.5077853202819824,
+          "pngYMax": 0.7055832147598267
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 79,
+          "uMin": 0.7624940872192383,
+          "uMax": 0.9953781962394714,
+          "pngYMin": 0.5257014036178589,
+          "pngYMax": 0.6202390789985657
+        },
+        "J_Adj_R_FaceChinNeck1": {
+          "vertices": 4,
+          "uMin": 0.46257609128952026,
+          "uMax": 0.4713008403778076,
+          "pngYMin": 0.03539931774139404,
+          "pngYMax": 0.04396873712539673
+        },
+        "J_Adj_R_FaceChinNeck2": {
+          "vertices": 6,
+          "uMin": 0.47058993577957153,
+          "uMax": 0.482995867729187,
+          "pngYMin": 0.04634356498718262,
+          "pngYMax": 0.06239199638366699
+        },
+        "J_Adj_R_FaceChinNeck3": {
+          "vertices": 5,
+          "uMin": 0.48569050431251526,
+          "uMax": 0.494008868932724,
+          "pngYMin": 0.05956864356994629,
+          "pngYMax": 0.06630736589431763
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 135,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.233815997838974,
+          "pngYMin": 0.2470160722732544,
+          "pngYMax": 0.47084200382232666
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 78,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.233815997838974,
+          "pngYMin": 0.2950618267059326,
+          "pngYMax": 0.39436793327331543
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 224,
+          "uMin": 0.004025160800665617,
+          "uMax": 0.23812280595302582,
+          "pngYMin": 0.698957622051239,
+          "pngYMax": 0.9965119957923889
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.23750589787960052,
+          "pngYMin": 0.7921692728996277,
+          "pngYMax": 0.85923832654953
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 65,
+          "uMin": 0.046224359422922134,
+          "uMax": 0.4517703056335449,
+          "pngYMin": 0.012934386730194092,
+          "pngYMax": 0.18937522172927856
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 152,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.4073185920715332,
+          "pngYMin": 0.05396217107772827,
+          "pngYMax": 0.2747405767440796
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 59,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.233815997838974,
+          "pngYMin": 0.11623519659042358,
+          "pngYMax": 0.21015608310699463
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 152,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.45900359749794006,
+          "pngYMin": 0.5077853202819824,
+          "pngYMax": 0.7055832147598267
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 79,
+          "uMin": 0.004621804226189852,
+          "uMax": 0.23750589787960052,
+          "pngYMin": 0.5257014036178589,
+          "pngYMax": 0.6202390789985657
+        },
+        "J_Bip_C_Head": {
+          "vertices": 32,
+          "uMin": 0.24193020164966583,
+          "uMax": 0.7580698132514954,
+          "pngYMin": 0.019302308559417725,
+          "pngYMax": 0.06688845157623291
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 111,
+          "uMin": 0.5252602100372314,
+          "uMax": 0.5980200171470642,
+          "pngYMin": 0.21214038133621216,
+          "pngYMax": 0.28384554386138916
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 111,
+          "uMin": 0.4019800126552582,
+          "uMax": 0.47473978996276855,
+          "pngYMin": 0.21214038133621216,
+          "pngYMax": 0.28384554386138916
+        }
+      }
+    },
+    {
+      "family": "N00_003_01_Tops",
+      "sourceMeshResource": "1cbb901a64a4044be029f96a37e723f2885cc32a.mesh",
+      "resourcePath": "N00/N00_003_01_Tops/N00_003_01_Tops/M_N00_003_01_Tops.mesh",
+      "vertexCount": 374,
+      "triangleCount": 626,
+      "wireframe": "UV_Mesh_Wireframes/N00_003_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 50,
+          "uMin": 0.2296968400478363,
+          "uMax": 0.7705401182174683,
+          "pngYMin": 0.4189746379852295,
+          "pngYMax": 0.99344801902771
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 7,
+          "uMin": 0.4360029995441437,
+          "uMax": 0.5639969706535339,
+          "pngYMin": 0.545557975769043,
+          "pngYMax": 0.6083229780197144
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 121,
+          "uMin": 0.226950004696846,
+          "uMax": 0.7730500102043152,
+          "pngYMin": 0.09911251068115234,
+          "pngYMax": 0.8644105792045593
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 28,
+          "uMin": 0.2974986135959625,
+          "uMax": 0.7025630474090576,
+          "pngYMin": 0.010488390922546387,
+          "pngYMax": 0.6539649963378906
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 33,
+          "uMin": 0.2456044852733612,
+          "uMax": 0.8726552724838257,
+          "pngYMin": 0.0497967004776001,
+          "pngYMax": 0.7591005563735962
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 21,
+          "uMin": 0.11846499890089035,
+          "uMax": 0.8817729949951172,
+          "pngYMin": 0.09451150894165039,
+          "pngYMax": 0.8480528593063354
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 28,
+          "uMin": 0.29743692278862,
+          "uMax": 0.7025014162063599,
+          "pngYMin": 0.010488390922546387,
+          "pngYMax": 0.6539649963378906
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 33,
+          "uMin": 0.12748999893665314,
+          "uMax": 0.7543954849243164,
+          "pngYMin": 0.0497967004776001,
+          "pngYMax": 0.7570805549621582
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 21,
+          "uMin": 0.11822699755430222,
+          "uMax": 0.881534993648529,
+          "pngYMin": 0.09451150894165039,
+          "pngYMax": 0.8480528593063354
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 16,
+          "uMin": 0.5661133527755737,
+          "uMax": 0.6706600189208984,
+          "pngYMin": 0.2564629912376404,
+          "pngYMax": 0.3549152612686157
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 16,
+          "uMin": 0.32934001088142395,
+          "uMax": 0.43390682339668274,
+          "pngYMin": 0.2564629912376404,
+          "pngYMax": 0.354684054851532
+        }
+      }
+    },
+    {
+      "family": "N00_003_01_Bottoms",
+      "sourceMeshResource": "1e152672b7e5050de8bb8d0debc687868aa4f1ed.mesh",
+      "resourcePath": "N00/N00_003_01_Bottoms/N00_003_01_Bottoms/M_N00_003_01_Bottoms.mesh",
+      "vertexCount": 633,
+      "triangleCount": 1106,
+      "wireframe": "UV_Mesh_Wireframes/N00_003_01_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 84,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.00972890853881836,
+          "pngYMax": 0.12607896327972412
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 114,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.11217302083969116,
+          "pngYMax": 0.36744898557662964
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 24,
+          "uMin": 0.3762019872665405,
+          "uMax": 0.6237980127334595,
+          "pngYMin": 0.11217302083969116,
+          "pngYMax": 0.1859620213508606
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 65,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.7227969765663147,
+          "pngYMax": 0.9927330017089844
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 32,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.9027320146560669,
+          "pngYMax": 0.9927350282669067
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 88,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.3214700222015381,
+          "pngYMax": 0.7419880032539368
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 37,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.41765403747558594,
+          "pngYMax": 0.5316420197486877
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 61,
+          "uMin": 0.06788399815559387,
+          "uMax": 0.9321159720420837,
+          "pngYMin": 0.7227969765663147,
+          "pngYMax": 0.9927330017089844
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 23,
+          "uMin": 0.2179889976978302,
+          "uMax": 0.4632830023765564,
+          "pngYMin": 0.9027320146560669,
+          "pngYMax": 0.9927330017089844
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 77,
+          "uMin": 0.08032769709825516,
+          "uMax": 0.48782798647880554,
+          "pngYMin": 0.3214700222015381,
+          "pngYMax": 0.7419880032539368
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 28,
+          "uMin": 0.08003269881010056,
+          "uMax": 0.48776400089263916,
+          "pngYMin": 0.41765403747558594,
+          "pngYMax": 0.5316420197486877
+        }
+      }
+    },
+    {
+      "family": "N00_002_03_Tops",
+      "sourceMeshResource": "23eb438f50ffbf14c86de4be7f793768d24e1a84.mesh",
+      "resourcePath": "N00/N00_002_03_Tops/N00_002_03_Tops/M_N00_002_03_Tops.mesh",
+      "vertexCount": 1003,
+      "triangleCount": 1670,
+      "wireframe": "UV_Mesh_Wireframes/N00_002_03_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_SkirtBack1": {
+          "vertices": 12,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtBack2": {
+          "vertices": 16,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551219940185547
+        },
+        "$Additional:J_Sec_L_SkirtFront1": {
+          "vertices": 8,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtFront2": {
+          "vertices": 13,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_L_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtBack1": {
+          "vertices": 8,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtBack2": {
+          "vertices": 10,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtFront1": {
+          "vertices": 5,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.45317599177360535,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8261979818344116
+        },
+        "$Additional:J_Sec_R_SkirtFront2": {
+          "vertices": 14,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.5,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 181,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.18131697177886963,
+          "pngYMax": 0.5524929761886597
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 105,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.22240102291107178,
+          "pngYMax": 0.7879089713096619
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 56,
+          "uMin": 0.26335498690605164,
+          "uMax": 0.736644983291626,
+          "pngYMin": 0.25909602642059326,
+          "pngYMax": 0.31906598806381226
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 43,
+          "uMin": 0.2837179899215698,
+          "uMax": 0.7162820100784302,
+          "pngYMin": 0.1993730068206787,
+          "pngYMax": 0.6224759817123413
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 190,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12649601697921753,
+          "pngYMax": 0.4650399684906006
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.5446730256080627,
+          "uMax": 0.9237710237503052,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 41,
+          "uMin": 0.5831760168075562,
+          "uMax": 0.9634770154953003,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 39,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.18759000301361084,
+          "pngYMax": 0.2657170295715332
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.07622899860143661,
+          "uMax": 0.45532700419425964,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 41,
+          "uMin": 0.0365229994058609,
+          "uMax": 0.41682401299476624,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 39,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.18759000301361084,
+          "pngYMax": 0.2657170295715332
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 30,
+          "uMin": 0.5225309729576111,
+          "uMax": 0.5780739784240723,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 30,
+          "uMin": 0.42192599177360535,
+          "uMax": 0.47746899724006653,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        }
+      }
+    },
+    {
+      "family": "N00_005_01_Shoes",
+      "sourceMeshResource": "2742df701281a4723cb74b25fac8fc99f503ff0e.mesh",
+      "resourcePath": "N00/N00_005_01_Shoes/N00_005_01_Shoes/M_N00_005_01_Shoes.mesh",
+      "vertexCount": 552,
+      "triangleCount": 732,
+      "wireframe": "UV_Mesh_Wireframes/N00_005_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 61,
+          "uMin": 0.060993000864982605,
+          "uMax": 0.7745800018310547,
+          "pngYMin": 0.10142099857330322,
+          "pngYMax": 0.5333340167999268
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 61,
+          "uMin": 0.060993000864982605,
+          "uMax": 0.7745800018310547,
+          "pngYMin": 0.10142099857330322,
+          "pngYMax": 0.5333340167999268
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 174,
+          "uMin": 0.007955069653689861,
+          "uMax": 0.992044985294342,
+          "pngYMin": 0.009970009326934814,
+          "pngYMax": 0.8351039886474609
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 41,
+          "uMin": 0.22624999284744263,
+          "uMax": 0.6898699998855591,
+          "pngYMin": 0.10692000389099121,
+          "pngYMax": 0.9900540113449097
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 174,
+          "uMin": 0.007955069653689861,
+          "uMax": 0.992044985294342,
+          "pngYMin": 0.009970009326934814,
+          "pngYMax": 0.8351039886474609
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 41,
+          "uMin": 0.22624999284744263,
+          "uMax": 0.6898699998855591,
+          "pngYMin": 0.10692000389099121,
+          "pngYMax": 0.9900540113449097
+        }
+      }
+    },
+    {
+      "family": "N00_001_02_Bottoms",
+      "sourceMeshResource": "2a60e3a65029d67f1612a05bbd45aaa7c4a7e6e4.mesh",
+      "resourcePath": "N00/N00_001_02_Bottoms/N00_001_02_Bottoms/M_N00_001_02_Bottoms.mesh",
+      "vertexCount": 952,
+      "triangleCount": 1624,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_02_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Hips": {
+          "vertices": 249,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.007567763328552246,
+          "pngYMax": 0.26461803913116455
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 29,
+          "uMin": 0.0692870020866394,
+          "uMax": 0.9307129979133606,
+          "pngYMin": 0.04695338010787964,
+          "pngYMax": 0.05330771207809448
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 110,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.545307993888855,
+          "pngYMax": 0.9397379755973816
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 39,
+          "uMin": 0.5197129845619202,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.7104880213737488,
+          "pngYMax": 0.7824180126190186
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 109,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.16698801517486572,
+          "pngYMax": 0.5557180047035217
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 40,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.25992703437805176,
+          "pngYMax": 0.42789798974990845
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 110,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.545307993888855,
+          "pngYMax": 0.9397379755973816
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 39,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48028698563575745,
+          "pngYMin": 0.7104880213737488,
+          "pngYMax": 0.7824180126190186
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 109,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.16698801517486572,
+          "pngYMax": 0.5557180047035217
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 40,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.25992703437805176,
+          "pngYMax": 0.42789798974990845
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 39,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.9552180171012878,
+          "pngYMax": 0.9947879910469055
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 39,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.9552180171012878,
+          "pngYMax": 0.9947879910469055
+        }
+      }
+    },
+    {
+      "family": "N00_001_03_Bottoms",
+      "sourceMeshResource": "3ac0aa10fbcb2d8d76fb06ec6847806c3adfb33d.mesh",
+      "resourcePath": "N00/N00_001_03_Bottoms/N00_001_02_Bottoms/M_N00_001_03_Bottoms.mesh",
+      "vertexCount": 723,
+      "triangleCount": 700,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_03_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_SkirtBack": {
+          "vertices": 23,
+          "uMin": 0.8251559734344482,
+          "uMax": 0.9558640122413635,
+          "pngYMin": 0.868008017539978,
+          "pngYMax": 0.9803029894828796
+        },
+        "$Additional:J_Sec_L_SkirtFront": {
+          "vertices": 49,
+          "uMin": 0.5001410245895386,
+          "uMax": 0.6404799222946167,
+          "pngYMin": 0.7773309946060181,
+          "pngYMax": 0.9803029894828796
+        },
+        "$Additional:J_Sec_L_SkirtSide": {
+          "vertices": 54,
+          "uMin": 0.6543170213699341,
+          "uMax": 0.8306649923324585,
+          "pngYMin": 0.7773309946060181,
+          "pngYMax": 0.9803029894828796
+        },
+        "$Additional:J_Sec_R_SkirtBack": {
+          "vertices": 28,
+          "uMin": 0.00893389992415905,
+          "uMax": 0.9913370013237,
+          "pngYMin": 0.868008017539978,
+          "pngYMax": 0.9803680181503296
+        },
+        "$Additional:J_Sec_R_SkirtFront": {
+          "vertices": 56,
+          "uMin": 0.3209260106086731,
+          "uMax": 0.4899689853191376,
+          "pngYMin": 0.7773309946060181,
+          "pngYMax": 0.9792619943618774
+        },
+        "$Additional:J_Sec_R_SkirtSide": {
+          "vertices": 53,
+          "uMin": 0.157710000872612,
+          "uMax": 0.31765198707580566,
+          "pngYMin": 0.7773309946060181,
+          "pngYMax": 0.9792619943618774
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 48,
+          "uMin": 0.00893389992415905,
+          "uMax": 0.9913369417190552,
+          "pngYMin": 0.0317835807800293,
+          "pngYMax": 0.3282480239868164
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 320,
+          "uMin": 0.00893389992415905,
+          "uMax": 0.9913370013237,
+          "pngYMin": 0.3928030729293823,
+          "pngYMax": 0.868008017539978
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 92,
+          "uMin": 0.00893389992415905,
+          "uMax": 0.9913369417190552,
+          "pngYMin": 0.32824796438217163,
+          "pngYMax": 0.4834679961204529
+        }
+      }
+    },
+    {
+      "family": "N00_001_01_Accessory_Tie",
+      "sourceMeshResource": "3c73f4b59a6d40b48efb80ecebc6412a3a8264e5.mesh",
+      "resourcePath": "N00/N00_001_01_Accessory_Tie/N00_001_01_Accessory_Tie/M_N00_001_01_Accessory_Tie.mesh",
+      "vertexCount": 77,
+      "triangleCount": 92,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_01_Accessory_Tie.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Neck": {
+          "vertices": 10,
+          "uMin": 0.1114019975066185,
+          "uMax": 0.8885980248451233,
+          "pngYMin": 0.05593222379684448,
+          "pngYMax": 0.2388240098953247
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 67,
+          "uMin": 0.1114019975066185,
+          "uMax": 0.8885980248451233,
+          "pngYMin": 0.008477270603179932,
+          "pngYMax": 0.9818289875984192
+        }
+      }
+    },
+    {
+      "family": "N00_008_01_Shoes",
+      "sourceMeshResource": "3de2b38299fd3545e31fb3bd834c1a2042f0dd71.mesh",
+      "resourcePath": "N00/N00_008_01_Shoes/N00_008_01_Shoes/M_N00_008_01_Shoes.mesh",
+      "vertexCount": 956,
+      "triangleCount": 1492,
+      "wireframe": "UV_Mesh_Wireframes/N00_008_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 164,
+          "uMin": 0.027126789093017578,
+          "uMax": 0.9727768898010254,
+          "pngYMin": 0.011556863784790039,
+          "pngYMax": 0.5725737810134888
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.027126789093017578,
+          "uMax": 0.9727768898010254,
+          "pngYMin": 0.10242772102355957,
+          "pngYMax": 0.2501983642578125
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 164,
+          "uMin": 0.027126789093017578,
+          "uMax": 0.9727768898010254,
+          "pngYMin": 0.011556863784790039,
+          "pngYMax": 0.5725737810134888
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 78,
+          "uMin": 0.027126789093017578,
+          "uMax": 0.9727768898010254,
+          "pngYMin": 0.10242772102355957,
+          "pngYMax": 0.2501983642578125
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 166,
+          "uMin": 0.021058380603790283,
+          "uMax": 0.9788805842399597,
+          "pngYMin": 0.5719549059867859,
+          "pngYMax": 0.9898558855056763
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 70,
+          "uMin": 0.04005694016814232,
+          "uMax": 0.9599431157112122,
+          "pngYMin": 0.6865708827972412,
+          "pngYMax": 0.9485424757003784
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 166,
+          "uMin": 0.021058380603790283,
+          "uMax": 0.9788805842399597,
+          "pngYMin": 0.5719549059867859,
+          "pngYMax": 0.9898558855056763
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 70,
+          "uMin": 0.04005694016814232,
+          "uMax": 0.9599431157112122,
+          "pngYMin": 0.6865708827972412,
+          "pngYMax": 0.9485424757003784
+        }
+      }
+    },
+    {
+      "family": "N00_001_01_Bottoms",
+      "sourceMeshResource": "408cfa5fa9fd455de851a0e85bf0128f66019b79.mesh",
+      "resourcePath": "N00/N00_001_01_Bottoms/N00_001_01_Bottoms/M_N00_001_01_Bottoms.mesh",
+      "vertexCount": 1076,
+      "triangleCount": 1624,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_01_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Hips": {
+          "vertices": 267,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.007567763328552246,
+          "pngYMax": 0.26461803913116455
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 29,
+          "uMin": 0.0692870020866394,
+          "uMax": 0.9307129979133606,
+          "pngYMin": 0.04695338010787964,
+          "pngYMax": 0.05330771207809448
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 127,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.545307993888855,
+          "pngYMax": 0.9397379755973816
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 45,
+          "uMin": 0.5197129845619202,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.7104880213737488,
+          "pngYMax": 0.7824180126190186
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 128,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.16698801517486572,
+          "pngYMax": 0.5557180047035217
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 45,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.25992703437805176,
+          "pngYMax": 0.42789798974990845
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 127,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.545307993888855,
+          "pngYMax": 0.9397379755973816
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 45,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48028698563575745,
+          "pngYMin": 0.7104880213737488,
+          "pngYMax": 0.7824180126190186
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 128,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.16698801517486572,
+          "pngYMax": 0.5557180047035217
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 45,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.25992703437805176,
+          "pngYMax": 0.42789798974990845
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 45,
+          "uMin": 0.5199530124664307,
+          "uMax": 0.9789929986000061,
+          "pngYMin": 0.9552180171012878,
+          "pngYMax": 0.9947879910469055
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 45,
+          "uMin": 0.021006999537348747,
+          "uMax": 0.48004698753356934,
+          "pngYMin": 0.9552180171012878,
+          "pngYMax": 0.9947879910469055
+        }
+      }
+    },
+    {
+      "family": "N00_000_00_Hand",
+      "sourceMeshResource": "44ab85d7d74076c5f31f866655772baccfacb3ee.mesh",
+      "resourcePath": "N00/N00_000_00_Body/N00_000_00_Hand/M_N00_000_00_Hand.mesh",
+      "vertexCount": 1580,
+      "triangleCount": 2302,
+      "wireframe": "UV_Mesh_Wireframes/N00_000_00_Hand.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.576928973197937,
+          "uMax": 0.9930379986763,
+          "pngYMin": 0.08036971092224121,
+          "pngYMax": 0.48583900928497314
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.006962000858038664,
+          "uMax": 0.4230709969997406,
+          "pngYMin": 0.08036971092224121,
+          "pngYMax": 0.48583900928497314
+        },
+        "J_Bip_L_Hand": {
+          "vertices": 93,
+          "uMin": 0.5803020000457764,
+          "uMax": 0.675553023815155,
+          "pngYMin": 0.015289902687072754,
+          "pngYMax": 0.20015698671340942
+        },
+        "J_Bip_L_Index1": {
+          "vertices": 50,
+          "uMin": 0.599407970905304,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.007309913635253906,
+          "pngYMax": 0.8590909838676453
+        },
+        "J_Bip_L_Index2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_L_Index3": {
+          "vertices": 65,
+          "uMin": 0.6608139872550964,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.870976984500885
+        },
+        "J_Bip_L_Little1": {
+          "vertices": 41,
+          "uMin": 0.6364399790763855,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.0375363826751709,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Little2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Little3": {
+          "vertices": 65,
+          "uMin": 0.6608139872550964,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_L_Middle1": {
+          "vertices": 38,
+          "uMin": 0.6217269897460938,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.015540719032287598,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_L_Middle2": {
+          "vertices": 18,
+          "uMin": 0.7185879945755005,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_L_Middle3": {
+          "vertices": 65,
+          "uMin": 0.6608139872550964,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.9114779829978943
+        },
+        "J_Bip_L_Ring1": {
+          "vertices": 46,
+          "uMin": 0.631505012512207,
+          "uMax": 0.7578359842300415,
+          "pngYMin": 0.020685672760009766,
+          "pngYMax": 0.9687849879264832
+        },
+        "J_Bip_L_Ring2": {
+          "vertices": 18,
+          "uMin": 0.7184759974479675,
+          "uMax": 0.7337740063667297,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_L_Ring3": {
+          "vertices": 65,
+          "uMin": 0.6608139872550964,
+          "uMax": 0.7152389883995056,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9517459869384766
+        },
+        "J_Bip_L_Thumb1": {
+          "vertices": 20,
+          "uMin": 0.6205599904060364,
+          "uMax": 0.6567469835281372,
+          "pngYMin": 0.13919597864151,
+          "pngYMax": 0.18660402297973633
+        },
+        "J_Bip_L_Thumb2": {
+          "vertices": 44,
+          "uMin": 0.6540200114250183,
+          "uMax": 0.7580159902572632,
+          "pngYMin": 0.13646799325942993,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_L_Thumb3": {
+          "vertices": 65,
+          "uMin": 0.6608139872550964,
+          "uMax": 0.719165027141571,
+          "pngYMin": 0.7262880206108093,
+          "pngYMax": 0.8297770023345947
+        },
+        "J_Bip_R_Hand": {
+          "vertices": 93,
+          "uMin": 0.32444700598716736,
+          "uMax": 0.41969799995422363,
+          "pngYMin": 0.015289902687072754,
+          "pngYMax": 0.20015698671340942
+        },
+        "J_Bip_R_Index1": {
+          "vertices": 50,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.40059199929237366,
+          "pngYMin": 0.007309913635253906,
+          "pngYMax": 0.8590909838676453
+        },
+        "J_Bip_R_Index2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.8281850218772888
+        },
+        "J_Bip_R_Index3": {
+          "vertices": 65,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.33918601274490356,
+          "pngYMin": 0.7814859747886658,
+          "pngYMax": 0.870976984500885
+        },
+        "J_Bip_R_Little1": {
+          "vertices": 41,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.3635599911212921,
+          "pngYMin": 0.0375363826751709,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Little2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Little3": {
+          "vertices": 65,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.33918601274490356,
+          "pngYMin": 0.9460309743881226,
+          "pngYMax": 0.9927300214767456
+        },
+        "J_Bip_R_Middle1": {
+          "vertices": 38,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.37827301025390625,
+          "pngYMin": 0.015540719032287598,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_R_Middle2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.2814120054244995,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.8830360174179077
+        },
+        "J_Bip_R_Middle3": {
+          "vertices": 65,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.33918601274490356,
+          "pngYMin": 0.8363379836082458,
+          "pngYMax": 0.9114779829978943
+        },
+        "J_Bip_R_Ring1": {
+          "vertices": 46,
+          "uMin": 0.2421640008687973,
+          "uMax": 0.36849498748779297,
+          "pngYMin": 0.020685672760009766,
+          "pngYMax": 0.9687849879264832
+        },
+        "J_Bip_R_Ring2": {
+          "vertices": 18,
+          "uMin": 0.26622599363327026,
+          "uMax": 0.28152400255203247,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9377800226211548
+        },
+        "J_Bip_R_Ring3": {
+          "vertices": 65,
+          "uMin": 0.2847610116004944,
+          "uMax": 0.33918601274490356,
+          "pngYMin": 0.8910809755325317,
+          "pngYMax": 0.9517459869384766
+        },
+        "J_Bip_R_Thumb1": {
+          "vertices": 20,
+          "uMin": 0.3432529866695404,
+          "uMax": 0.3794400095939636,
+          "pngYMin": 0.13919597864151,
+          "pngYMax": 0.18660402297973633
+        },
+        "J_Bip_R_Thumb2": {
+          "vertices": 44,
+          "uMin": 0.24198399484157562,
+          "uMax": 0.3459799885749817,
+          "pngYMin": 0.13646799325942993,
+          "pngYMax": 0.7729870080947876
+        },
+        "J_Bip_R_Thumb3": {
+          "vertices": 65,
+          "uMin": 0.28083500266075134,
+          "uMax": 0.33918601274490356,
+          "pngYMin": 0.7262880206108093,
+          "pngYMax": 0.8297770023345947
+        }
+      }
+    },
+    {
+      "family": "N00_011_01_Bottoms",
+      "sourceMeshResource": "51b25afb3d04a291274fbffdbd5cfbe9ac790650.mesh",
+      "resourcePath": "N00/N00_011_01_Bottoms/N00_011_01_Bottoms/M_N00_011_01_Bottoms.mesh",
+      "vertexCount": 2246,
+      "triangleCount": 4196,
+      "wireframe": "UV_Mesh_Wireframes/N00_011_01_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 120,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.008842527866363525,
+          "pngYMax": 0.09009569883346558
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 268,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.09009510278701782,
+          "pngYMax": 0.34326696395874023
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 56,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.06313621997833252,
+          "pngYMax": 0.16643863916397095
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 508,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.991188645362854,
+          "pngYMin": 0.515968918800354,
+          "pngYMax": 0.9911574721336365
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 122,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.6833931803703308,
+          "pngYMax": 0.8009307384490967
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 251,
+          "uMin": 0.016989409923553467,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.24818754196166992,
+          "pngYMax": 0.515968918800354
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 32,
+          "uMin": 0.6007050275802612,
+          "uMax": 0.8659510016441345,
+          "pngYMin": 0.3441429138183594,
+          "pngYMax": 0.4181056022644043
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 508,
+          "uMin": 0.0088118314743042,
+          "uMax": 0.4903075695037842,
+          "pngYMin": 0.5159687697887421,
+          "pngYMax": 0.9911574721336365
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 122,
+          "uMin": 0.00881195068359375,
+          "uMax": 0.4903075695037842,
+          "pngYMin": 0.6833927631378174,
+          "pngYMax": 0.8009307384490967
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 227,
+          "uMin": 0.008811891078948975,
+          "uMax": 0.9911884665489197,
+          "pngYMin": 0.24818754196166992,
+          "pngYMax": 0.515968918800354
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 32,
+          "uMin": 0.1340491771697998,
+          "uMax": 0.39929497241973877,
+          "pngYMin": 0.3441429138183594,
+          "pngYMax": 0.4181056022644043
+        }
+      }
+    },
+    {
+      "family": "N00_002_02_Tops",
+      "sourceMeshResource": "52b6ea25f007701a13411c7486efc09ded8663bc.mesh",
+      "resourcePath": "N00/N00_002_02_Tops/N00_002_02_Tops/M_N00_002_02_Tops.mesh",
+      "vertexCount": 1107,
+      "triangleCount": 1862,
+      "wireframe": "UV_Mesh_Wireframes/N00_002_02_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_SkirtBack1": {
+          "vertices": 12,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtBack2": {
+          "vertices": 16,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551219940185547
+        },
+        "$Additional:J_Sec_L_SkirtFront1": {
+          "vertices": 8,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtFront2": {
+          "vertices": 13,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_L_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtBack1": {
+          "vertices": 8,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtBack2": {
+          "vertices": 10,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtFront1": {
+          "vertices": 5,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.45317599177360535,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8261979818344116
+        },
+        "$Additional:J_Sec_R_SkirtFront2": {
+          "vertices": 14,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.5,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 181,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.18131697177886963,
+          "pngYMax": 0.5524929761886597
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 105,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.22240102291107178,
+          "pngYMax": 0.7879089713096619
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 56,
+          "uMin": 0.26335498690605164,
+          "uMax": 0.736644983291626,
+          "pngYMin": 0.25909602642059326,
+          "pngYMax": 0.31906598806381226
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 43,
+          "uMin": 0.2837179899215698,
+          "uMax": 0.7162820100784302,
+          "pngYMin": 0.1993730068206787,
+          "pngYMax": 0.6224759817123413
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 190,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12649601697921753,
+          "pngYMax": 0.4650399684906006
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 27,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.33370500802993774,
+          "pngYMax": 0.40007901191711426
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.5446730256080627,
+          "uMax": 0.9237710237503052,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 75,
+          "uMin": 0.5831760168075562,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 30,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.195622980594635,
+          "pngYMax": 0.2735750079154968
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 27,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.33370500802993774,
+          "pngYMax": 0.40007901191711426
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.07622899860143661,
+          "uMax": 0.45532700419425964,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 75,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.41682401299476624,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 30,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.195622980594635,
+          "pngYMax": 0.2735750079154968
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 30,
+          "uMin": 0.5225309729576111,
+          "uMax": 0.5780739784240723,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 30,
+          "uMin": 0.42192599177360535,
+          "uMax": 0.47746899724006653,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        }
+      }
+    },
+    {
+      "family": "N00_011_02_Bottoms",
+      "sourceMeshResource": "60877d8dce69fc2f38c2d3209de4c5e58f105052.mesh",
+      "resourcePath": "N00/N00_011_02_Bottoms/N00_011_02_Bottoms/M_N00_011_02_Bottoms.mesh",
+      "vertexCount": 2414,
+      "triangleCount": 4196,
+      "wireframe": "UV_Mesh_Wireframes/N00_011_02_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 120,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.008842527866363525,
+          "pngYMax": 0.09009569883346558
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 290,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.09009510278701782,
+          "pngYMax": 0.34326696395874023
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 58,
+          "uMin": 0.06441181898117065,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.06313621997833252,
+          "pngYMax": 0.16643863916397095
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 548,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.991188645362854,
+          "pngYMin": 0.515968918800354,
+          "pngYMax": 0.9911574721336365
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 132,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.6833931803703308,
+          "pngYMax": 0.8009307384490967
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 268,
+          "uMin": 0.016989409923553467,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.24818754196166992,
+          "pngYMax": 0.515968918800354
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 37,
+          "uMin": 0.6007050275802612,
+          "uMax": 0.8659510016441345,
+          "pngYMin": 0.3441429138183594,
+          "pngYMax": 0.4181056022644043
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 548,
+          "uMin": 0.0088118314743042,
+          "uMax": 0.4903075695037842,
+          "pngYMin": 0.5159687697887421,
+          "pngYMax": 0.9911574721336365
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 132,
+          "uMin": 0.00881195068359375,
+          "uMax": 0.4903075695037842,
+          "pngYMin": 0.6833927631378174,
+          "pngYMax": 0.8009307384490967
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 244,
+          "uMin": 0.008811891078948975,
+          "uMax": 0.9911884665489197,
+          "pngYMin": 0.24818754196166992,
+          "pngYMax": 0.515968918800354
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 37,
+          "uMin": 0.1340491771697998,
+          "uMax": 0.39929497241973877,
+          "pngYMin": 0.3441429138183594,
+          "pngYMax": 0.4181056022644043
+        }
+      }
+    },
+    {
+      "family": "N00_000_00_Foot",
+      "sourceMeshResource": "6f662e38dac8d92cc9cfeff4f96009b4513c907d.mesh",
+      "resourcePath": "N00/N00_000_00_Body/N00_000_00_Foot/M_N00_000_00_Foot.mesh",
+      "vertexCount": 1216,
+      "triangleCount": 1756,
+      "wireframe": "UV_Mesh_Wireframes/N00_000_00_Foot.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 46,
+          "uMin": 0.5523290038108826,
+          "uMax": 0.7179409861564636,
+          "pngYMin": 0.5849800109863281,
+          "pngYMax": 0.631373405456543
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 46,
+          "uMin": 0.2820590138435364,
+          "uMax": 0.44767099618911743,
+          "pngYMin": 0.5849800109863281,
+          "pngYMax": 0.631373405456543
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 137,
+          "uMin": 0.5061579942703247,
+          "uMax": 0.7611050009727478,
+          "pngYMin": 0.6144390106201172,
+          "pngYMax": 0.7768470048904419
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 425,
+          "uMin": 0.5106229782104492,
+          "uMax": 0.6695039868354797,
+          "pngYMin": 0.6743320226669312,
+          "pngYMax": 0.991241991519928
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 137,
+          "uMin": 0.2388949990272522,
+          "uMax": 0.4938420057296753,
+          "pngYMin": 0.6144390106201172,
+          "pngYMax": 0.7768470048904419
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 425,
+          "uMin": 0.33049601316452026,
+          "uMax": 0.4893769919872284,
+          "pngYMin": 0.6743320226669312,
+          "pngYMax": 0.991241991519928
+        }
+      }
+    },
+    {
+      "family": "N00_007_01_Tops",
+      "sourceMeshResource": "6f6cf573e60d411d99dabb1d7c0710564ea6ece6.mesh",
+      "resourcePath": "N00/N00_007_01_Tops/N00_007_01_Tops/M_N00_007_01_Tops.mesh",
+      "vertexCount": 2354,
+      "triangleCount": 4072,
+      "wireframe": "UV_Mesh_Wireframes/N00_007_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.7092084288597107,
+          "uMax": 0.7683281898498535,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.5358002781867981,
+          "uMax": 0.5724328756332397,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.6498469710350037,
+          "uMax": 0.6498469710350037,
+          "pngYMin": 0.8599187135696411,
+          "pngYMax": 0.9071475267410278
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide2": {
+          "vertices": 27,
+          "uMin": 0.590938925743103,
+          "uMax": 0.7092084288597107,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.2315569967031479,
+          "uMax": 0.2906768023967743,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.42745229601860046,
+          "uMax": 0.46408501267433167,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.3500382900238037,
+          "uMax": 0.3500382900238037,
+          "pngYMin": 0.8599187135696411,
+          "pngYMax": 0.9071475267410278
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide2": {
+          "vertices": 27,
+          "uMin": 0.2906768023967743,
+          "uMax": 0.40894630551338196,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 106,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.3757804036140442,
+          "pngYMax": 0.4749404191970825
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 199,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.49693405628204346,
+          "pngYMax": 0.6602798104286194
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 151,
+          "uMin": 0.19679370522499084,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.135786771774292,
+          "pngYMax": 0.2608206272125244
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 37,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.4749404191970825,
+          "pngYMax": 0.536775529384613
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 216,
+          "uMin": 0.19679370522499084,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.007699072360992432,
+          "pngYMax": 0.4285638928413391
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.7349125146865845,
+          "uMax": 0.9948645830154419,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.7897213101387024,
+          "uMax": 0.8595777750015259,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 78,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 20,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 58,
+          "uMin": 0.5589907765388489,
+          "uMax": 0.7549149990081787,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.635259211063385,
+          "uMax": 0.776509702205658,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.646169900894165,
+          "uMax": 0.7169982194900513,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 169,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.005135415121912956,
+          "uMax": 0.2650874853134155,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.14042219519615173,
+          "uMax": 0.2102787047624588,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 58,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 14,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 58,
+          "uMin": 0.2449702024459839,
+          "uMax": 0.44089439511299133,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.22349029779434204,
+          "uMax": 0.364740788936615,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.2830018103122711,
+          "uMax": 0.35383009910583496,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 146,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Bip_L_Hand": {
+          "vertices": 61,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_L_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Bip_R_Hand": {
+          "vertices": 61,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_R_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 25,
+          "uMin": 0.5346375703811646,
+          "uMax": 0.5952253937721252,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 25,
+          "uMin": 0.40465980768203735,
+          "uMax": 0.46524760127067566,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        }
+      }
+    },
+    {
+      "family": "N00_007_03_Tops",
+      "sourceMeshResource": "8378d329fcfa76e4549ec715dfafb029014289ff.mesh",
+      "resourcePath": "N00/N00_007_03_Tops/N00_007_03_Tops/M_N00_007_03_Tops.mesh",
+      "vertexCount": 2569,
+      "triangleCount": 4408,
+      "wireframe": "UV_Mesh_Wireframes/N00_007_03_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.7092084288597107,
+          "uMax": 0.7683281898498535,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.5358002781867981,
+          "uMax": 0.5724328756332397,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.6498469710350037,
+          "uMax": 0.6498469710350037,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.8837376236915588
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide2": {
+          "vertices": 28,
+          "uMin": 0.590938925743103,
+          "uMax": 0.7092084288597107,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.2315569967031479,
+          "uMax": 0.2906768023967743,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.42745229601860046,
+          "uMax": 0.46408501267433167,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.3500382900238037,
+          "uMax": 0.3500382900238037,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.8837376236915588
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide2": {
+          "vertices": 28,
+          "uMin": 0.2906768023967743,
+          "uMax": 0.40894630551338196,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 106,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.3757804036140442,
+          "pngYMax": 0.4749404191970825
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 199,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.49693405628204346,
+          "pngYMax": 0.6602798104286194
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 156,
+          "uMin": 0.19690850377082825,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.003875136375427246,
+          "pngYMax": 0.26125407218933105
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 37,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.4749404191970825,
+          "pngYMax": 0.536775529384613
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 265,
+          "uMin": 0.19679370522499084,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.007699072360992432,
+          "pngYMax": 0.4285638928413391
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.7349125146865845,
+          "uMax": 0.9948645830154419,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.7897213101387024,
+          "uMax": 0.8595777750015259,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 77,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 20,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 55,
+          "uMin": 0.5622416138648987,
+          "uMax": 0.7543537020683289,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.635259211063385,
+          "uMax": 0.776509702205658,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.646169900894165,
+          "uMax": 0.7169982194900513,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 169,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.005135415121912956,
+          "uMax": 0.2650874853134155,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.14042219519615173,
+          "uMax": 0.2102787047624588,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 57,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 14,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 55,
+          "uMin": 0.24564629793167114,
+          "uMax": 0.4377583861351013,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.22349029779434204,
+          "uMax": 0.364740788936615,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.2830018103122711,
+          "uMax": 0.35383009910583496,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 146,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Bip_C_Head": {
+          "vertices": 167,
+          "uMin": 0.40160951018333435,
+          "uMax": 0.5983834266662598,
+          "pngYMin": 0.03064727783203125,
+          "pngYMax": 0.16973388195037842
+        },
+        "J_Bip_L_Hand": {
+          "vertices": 61,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_L_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Bip_R_Hand": {
+          "vertices": 61,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_R_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 25,
+          "uMin": 0.5346375703811646,
+          "uMax": 0.5952253937721252,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 25,
+          "uMin": 0.40465980768203735,
+          "uMax": 0.46524760127067566,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        }
+      }
+    },
+    {
+      "family": "N00_009_01_Shoes",
+      "sourceMeshResource": "b106ae46c39f07112b4356db080b2cc62dcf4a7d.mesh",
+      "resourcePath": "N00/N00_009_01_Shoes/N00_009_01_Shoes/M_N00_009_01_Shoes.mesh",
+      "vertexCount": 1212,
+      "triangleCount": 1812,
+      "wireframe": "UV_Mesh_Wireframes/N00_009_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 45,
+          "uMin": 0.01934102177619934,
+          "uMax": 0.9806589484214783,
+          "pngYMin": 0.013780057430267334,
+          "pngYMax": 0.1904689073562622
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 45,
+          "uMin": 0.01934102177619934,
+          "uMax": 0.9806589484214783,
+          "pngYMin": 0.013780057430267334,
+          "pngYMax": 0.1904689073562622
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 561,
+          "uMin": 0.016216790303587914,
+          "uMax": 0.9813150763511658,
+          "pngYMin": 0.1310824155807495,
+          "pngYMax": 0.9833421111106873
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 561,
+          "uMin": 0.016216790303587914,
+          "uMax": 0.9813150763511658,
+          "pngYMin": 0.1310824155807495,
+          "pngYMax": 0.9833421111106873
+        }
+      }
+    },
+    {
+      "family": "N00_004_01_Shoes",
+      "sourceMeshResource": "b286585a211233b3318a51ce4509f99078007a44.mesh",
+      "resourcePath": "N00/N00_004_01_Shoes/N00_004_01_Shoes/M_N00_004_01_Shoes.mesh",
+      "vertexCount": 600,
+      "triangleCount": 712,
+      "wireframe": "UV_Mesh_Wireframes/N00_004_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 15,
+          "uMin": 0.2920379936695099,
+          "uMax": 0.7071170210838318,
+          "pngYMin": 0.30311596393585205,
+          "pngYMax": 0.45982199907302856
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 15,
+          "uMin": 0.2920379936695099,
+          "uMax": 0.7071170210838318,
+          "pngYMin": 0.30311596393585205,
+          "pngYMax": 0.45982199907302856
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 240,
+          "uMin": 0.06451600044965744,
+          "uMax": 0.9346389770507812,
+          "pngYMin": 0.00997227430343628,
+          "pngYMax": 0.7966510057449341
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 45,
+          "uMin": 0.2590489983558655,
+          "uMax": 0.684116005897522,
+          "pngYMin": 0.0771780014038086,
+          "pngYMax": 0.9900509715080261
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 240,
+          "uMin": 0.06451600044965744,
+          "uMax": 0.9346389770507812,
+          "pngYMin": 0.00997227430343628,
+          "pngYMax": 0.7966510057449341
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 45,
+          "uMin": 0.2590489983558655,
+          "uMax": 0.684116005897522,
+          "pngYMin": 0.0771780014038086,
+          "pngYMax": 0.9900509715080261
+        }
+      }
+    },
+    {
+      "family": "N00_007_01_Accessory_Tie",
+      "sourceMeshResource": "c30a9fded0dc32944be694c2644cd9a8aed1510a.mesh",
+      "resourcePath": "N00/N00_007_01_Accessory_Tie/N00_007_01_Accessory_Tie/M_N00_007_01_Accessory_Tie.mesh",
+      "vertexCount": 145,
+      "triangleCount": 206,
+      "wireframe": "UV_Mesh_Wireframes/N00_007_01_Accessory_Tie.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 20,
+          "uMin": 0.21378479897975922,
+          "uMax": 0.7862151861190796,
+          "pngYMin": 0.5716736912727356,
+          "pngYMax": 0.8139386773109436
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 12,
+          "uMin": 0.11437640339136124,
+          "uMax": 0.885623574256897,
+          "pngYMin": 0.1379321813583374,
+          "pngYMax": 0.2017425298690796
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 7,
+          "uMin": 0.19509169459342957,
+          "uMax": 0.804908275604248,
+          "pngYMin": 0.9031901955604553,
+          "pngYMax": 0.9881383776664734
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 106,
+          "uMin": 0.11437640339136124,
+          "uMax": 0.885623574256897,
+          "pngYMin": 0.012292623519897461,
+          "pngYMax": 0.5156546235084534
+        }
+      }
+    },
+    {
+      "family": "N00_003_01_Shoes",
+      "sourceMeshResource": "c507b781bc0f737f466e56aea91e8e66e47f85b5.mesh",
+      "resourcePath": "N00/N00_003_01_Shoes/N00_003_01_Shoes/M_N00_003_01_Shoes.mesh",
+      "vertexCount": 502,
+      "triangleCount": 572,
+      "wireframe": "UV_Mesh_Wireframes/N00_003_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Bip_L_Foot": {
+          "vertices": 187,
+          "uMin": 0.007804126478731632,
+          "uMax": 0.9918258190155029,
+          "pngYMin": 0.08054614067077637,
+          "pngYMax": 0.9956623911857605
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 64,
+          "uMin": 0.28798604011535645,
+          "uMax": 0.7143225073814392,
+          "pngYMin": 0.03845703601837158,
+          "pngYMax": 0.9172513484954834
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 187,
+          "uMin": 0.007804126478731632,
+          "uMax": 0.9918258190155029,
+          "pngYMin": 0.08054614067077637,
+          "pngYMax": 0.9956623911857605
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 64,
+          "uMin": 0.28798604011535645,
+          "uMax": 0.7143225073814392,
+          "pngYMin": 0.03845703601837158,
+          "pngYMax": 0.9172513484954834
+        }
+      }
+    },
+    {
+      "family": "N00_001_02_Tops",
+      "sourceMeshResource": "cb18864547320ac3315ffde2c31a84085235afcb.mesh",
+      "resourcePath": "N00/N00_001_02_Tops/N00_001_02_Tops/M_N00_001_02_Tops.mesh",
+      "vertexCount": 1781,
+      "triangleCount": 2726,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_02_Tops.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 81,
+          "uMin": 0.24571509659290314,
+          "uMax": 0.754154622554779,
+          "pngYMin": 0.16513657569885254,
+          "pngYMax": 0.2734788656234741
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 146,
+          "uMin": 0.24571509659290314,
+          "uMax": 0.754154622554779,
+          "pngYMin": 0.2634705901145935,
+          "pngYMax": 0.3763909339904785
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 219,
+          "uMin": 0.24571509659290314,
+          "uMax": 0.754154622554779,
+          "pngYMin": 0.005874752998352051,
+          "pngYMax": 0.8846529722213745
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 12,
+          "uMin": 0.41946980357170105,
+          "uMax": 0.5803998112678528,
+          "pngYMin": 0.26898622512817383,
+          "pngYMax": 0.2845911979675293
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 377,
+          "uMin": 0.004320024978369474,
+          "uMax": 0.9956799745559692,
+          "pngYMin": 0.004170060157775879,
+          "pngYMax": 0.9957680106163025
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 186,
+          "uMin": 0.7658699750900269,
+          "uMax": 0.9950299263000488,
+          "pngYMin": 0.17505007982254028,
+          "pngYMax": 0.5315200090408325
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 47,
+          "uMin": 0.7658699750900269,
+          "uMax": 0.9950299263000488,
+          "pngYMin": 0.20806008577346802,
+          "pngYMax": 0.28356003761291504
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 52,
+          "uMin": 0.40646499395370483,
+          "uMax": 0.9329800009727478,
+          "pngYMin": 0.005874752998352051,
+          "pngYMax": 0.9061189889907837
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 134,
+          "uMin": 0.5877128839492798,
+          "uMax": 0.9950299263000488,
+          "pngYMin": 0.007319927215576172,
+          "pngYMax": 0.20067012310028076
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 36,
+          "uMin": 0.7658200263977051,
+          "uMax": 0.9950299263000488,
+          "pngYMin": 0.06618016958236694,
+          "pngYMax": 0.13276010751724243
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 186,
+          "uMin": 0.004970013163983822,
+          "uMax": 0.23412999510765076,
+          "pngYMin": 0.17505007982254028,
+          "pngYMax": 0.5315200090408325
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 47,
+          "uMin": 0.0049700140953063965,
+          "uMax": 0.23412999510765076,
+          "pngYMin": 0.20806008577346802,
+          "pngYMax": 0.28356003761291504
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 52,
+          "uMin": 0.0670199990272522,
+          "uMax": 0.5935350060462952,
+          "pngYMin": 0.005874752998352051,
+          "pngYMax": 0.9061189889907837
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 134,
+          "uMin": 0.0049700140953063965,
+          "uMax": 0.41215670108795166,
+          "pngYMin": 0.007319927215576172,
+          "pngYMax": 0.20067012310028076
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 36,
+          "uMin": 0.0049700140953063965,
+          "uMax": 0.2341800034046173,
+          "pngYMin": 0.06618010997772217,
+          "pngYMax": 0.13276010751724243
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 18,
+          "uMin": 0.5348271727561951,
+          "uMax": 0.5871068835258484,
+          "pngYMin": 0.11646592617034912,
+          "pngYMax": 0.17389047145843506
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 18,
+          "uMin": 0.41276270151138306,
+          "uMax": 0.46504250168800354,
+          "pngYMin": 0.11646592617034912,
+          "pngYMax": 0.17389047145843506
+        }
+      }
+    },
+    {
+      "family": "N00_001_02_Accessory_Tie",
+      "sourceMeshResource": "cc47491754895d16b2bda1aef7483d0c80431a03.mesh",
+      "resourcePath": "N00/N00_001_02_Accessory_Tie/N00_001_02_Accessory_Tie/M_N00_001_02_Accessory_Tie.mesh",
+      "vertexCount": 201,
+      "triangleCount": 214,
+      "wireframe": "UV_Mesh_Wireframes/N00_001_02_Accessory_Tie.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:PartOrigin": {
+          "vertices": 201,
+          "uMin": 0.018631000071763992,
+          "uMax": 0.9813690185546875,
+          "pngYMin": 0.018920719623565674,
+          "pngYMax": 0.9726089835166931
+        }
+      }
+    },
+    {
+      "family": "N00_005_01_Tops",
+      "sourceMeshResource": "ccd037b93b95c394d3384f27d7a7dd6a96449c37.mesh",
+      "resourcePath": "N00/N00_005_01_Tops/N00_005_01_Tops/M_N00_005_01_Tops.mesh",
+      "vertexCount": 1754,
+      "triangleCount": 3016,
+      "wireframe": "UV_Mesh_Wireframes/N00_005_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_C_Hood": {
+          "vertices": 44,
+          "uMin": 0.42966228723526,
+          "uMax": 0.57033771276474,
+          "pngYMin": 0.02408432960510254,
+          "pngYMax": 0.2784925103187561
+        },
+        "$Additional:J_Sec_L_HoodString1": {
+          "vertices": 12,
+          "uMin": 0.6447724103927612,
+          "uMax": 0.6533170938491821,
+          "pngYMin": 0.4462367296218872,
+          "pngYMax": 0.5236237049102783
+        },
+        "$Additional:J_Sec_L_HoodString2": {
+          "vertices": 12,
+          "uMin": 0.6447724103927612,
+          "uMax": 0.6533170938491821,
+          "pngYMin": 0.5480170249938965,
+          "pngYMax": 0.6201738715171814
+        },
+        "$Additional:J_Sec_R_HoodString1": {
+          "vertices": 12,
+          "uMin": 0.34668290615081787,
+          "uMax": 0.35522758960723877,
+          "pngYMin": 0.4462367296218872,
+          "pngYMax": 0.5236237049102783
+        },
+        "$Additional:J_Sec_R_HoodString2": {
+          "vertices": 12,
+          "uMin": 0.34668290615081787,
+          "uMax": 0.35522758960723877,
+          "pngYMin": 0.5480170249938965,
+          "pngYMax": 0.6201738715171814
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 82,
+          "uMin": 0.10660851001739502,
+          "uMax": 0.893391489982605,
+          "pngYMin": 0.6399039030075073,
+          "pngYMax": 0.7360769510269165
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 214,
+          "uMin": 0.10660791397094727,
+          "uMax": 0.8933920860290527,
+          "pngYMin": 0.5171332955360413,
+          "pngYMax": 0.9271352291107178
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 58,
+          "uMin": 0.10662752389907837,
+          "uMax": 0.8933724761009216,
+          "pngYMin": 0.010414659976959229,
+          "pngYMax": 0.5280902981758118
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 15,
+          "uMin": 0.4430743455886841,
+          "uMax": 0.5569256544113159,
+          "pngYMin": 0.736664891242981,
+          "pngYMax": 0.7976967096328735
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 174,
+          "uMin": 0.007804393768310547,
+          "uMax": 0.9921956062316895,
+          "pngYMin": 0.09429031610488892,
+          "pngYMax": 0.6978952884674072
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 148,
+          "uMin": 0.7050155997276306,
+          "uMax": 0.9921956062316895,
+          "pngYMin": 0.20884060859680176,
+          "pngYMax": 0.48030149936676025
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 54,
+          "uMin": 0.7050155997276306,
+          "uMax": 0.9921956062316895,
+          "pngYMin": 0.256632924079895,
+          "pngYMax": 0.34628140926361084
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 122,
+          "uMin": 0.28371700644493103,
+          "uMax": 0.8467304706573486,
+          "pngYMin": 0.021471679210662842,
+          "pngYMax": 0.5555070638656616
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 106,
+          "uMin": 0.6073034405708313,
+          "uMax": 0.9921956062316895,
+          "pngYMin": 0.09164714813232422,
+          "pngYMax": 0.6375123858451843
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 26,
+          "uMin": 0.7275546789169312,
+          "uMax": 0.9764522910118103,
+          "pngYMin": 0.13555467128753662,
+          "pngYMax": 0.6568480730056763
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 101,
+          "uMin": 0.10662771016359329,
+          "uMax": 0.8933724761009216,
+          "pngYMin": 0.8760262727737427,
+          "pngYMax": 0.9968783259391785
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 148,
+          "uMin": 0.007804393768310547,
+          "uMax": 0.2949844002723694,
+          "pngYMin": 0.20884060859680176,
+          "pngYMax": 0.48030149936676025
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 54,
+          "uMin": 0.007804393768310547,
+          "uMax": 0.2949844002723694,
+          "pngYMin": 0.256632924079895,
+          "pngYMax": 0.34628140926361084
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 118,
+          "uMin": 0.15326952934265137,
+          "uMax": 0.7162829637527466,
+          "pngYMin": 0.021471679210662842,
+          "pngYMax": 0.5555070638656616
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 106,
+          "uMin": 0.007804393768310547,
+          "uMax": 0.3926965594291687,
+          "pngYMin": 0.09164714813232422,
+          "pngYMax": 0.6375123858451843
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 26,
+          "uMin": 0.023547708988189697,
+          "uMax": 0.27244532108306885,
+          "pngYMin": 0.13555467128753662,
+          "pngYMax": 0.6568480730056763
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 70,
+          "uMin": 0.10662752389907837,
+          "uMax": 0.8933724761009216,
+          "pngYMin": 0.8760262727737427,
+          "pngYMax": 0.9542888402938843
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 20,
+          "uMin": 0.5198472142219543,
+          "uMax": 0.6041194796562195,
+          "pngYMin": 0.5892776250839233,
+          "pngYMax": 0.6552622318267822
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 20,
+          "uMin": 0.3958805203437805,
+          "uMax": 0.48018312454223633,
+          "pngYMin": 0.5892776250839233,
+          "pngYMax": 0.6552622318267822
+        }
+      }
+    },
+    {
+      "family": "N00_007_02_Tops",
+      "sourceMeshResource": "d2c75084530619c24481a639e811150dc5981633.mesh",
+      "resourcePath": "N00/N00_007_02_Tops/N00_007_02_Tops/M_N00_007_02_Tops.mesh",
+      "vertexCount": 2476,
+      "triangleCount": 4294,
+      "wireframe": "UV_Mesh_Wireframes/N00_007_02_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.7092084288597107,
+          "uMax": 0.7683281898498535,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.5358002781867981,
+          "uMax": 0.5724328756332397,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.6498469710350037,
+          "uMax": 0.6498469710350037,
+          "pngYMin": 0.8599187135696411,
+          "pngYMax": 0.9071475267410278
+        },
+        "$Additional:J_Sec_L_CoatSkirtSide2": {
+          "vertices": 27,
+          "uMin": 0.590938925743103,
+          "uMax": 0.7092084288597107,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtBack": {
+          "vertices": 17,
+          "uMin": 0.2315569967031479,
+          "uMax": 0.2906768023967743,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtFront": {
+          "vertices": 14,
+          "uMin": 0.42745229601860046,
+          "uMax": 0.46408501267433167,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide1": {
+          "vertices": 3,
+          "uMin": 0.3500382900238037,
+          "uMax": 0.3500382900238037,
+          "pngYMin": 0.8599187135696411,
+          "pngYMax": 0.9071475267410278
+        },
+        "$Additional:J_Sec_R_CoatSkirtSide2": {
+          "vertices": 27,
+          "uMin": 0.2906768023967743,
+          "uMax": 0.40894630551338196,
+          "pngYMin": 0.9071475267410278,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 106,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.3757804036140442,
+          "pngYMax": 0.4749404191970825
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 199,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.49693405628204346,
+          "pngYMax": 0.6602798104286194
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 159,
+          "uMin": 0.19679370522499084,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.122658371925354,
+          "pngYMax": 0.2608206272125244
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 37,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.4749404191970825,
+          "pngYMax": 0.536775529384613
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 308,
+          "uMin": 0.19679370522499084,
+          "uMax": 0.8030915260314941,
+          "pngYMin": 0.007699072360992432,
+          "pngYMax": 0.4285638928413391
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.7349125146865845,
+          "uMax": 0.9948645830154419,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.7897213101387024,
+          "uMax": 0.8595777750015259,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 78,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 20,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 69,
+          "uMin": 0.3716909885406494,
+          "uMax": 0.7549149990081787,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.635259211063385,
+          "uMax": 0.776509702205658,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.646169900894165,
+          "uMax": 0.7169982194900513,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 169,
+          "uMin": 0.19653719663619995,
+          "uMax": 0.8033481240272522,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 161,
+          "uMin": 0.005135415121912956,
+          "uMax": 0.2650874853134155,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20189833641052246
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 76,
+          "uMin": 0.14042219519615173,
+          "uMax": 0.2102787047624588,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 58,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8136519193649292,
+          "pngYMax": 0.9878913164138794
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 14,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.8367636203765869,
+          "pngYMax": 0.9487131237983704
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 69,
+          "uMin": 0.2449702024459839,
+          "uMax": 0.6285524964332581,
+          "pngYMin": 0.05984318256378174,
+          "pngYMax": 0.293123722076416
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 60,
+          "uMin": 0.22349029779434204,
+          "uMax": 0.364740788936615,
+          "pngYMin": 0.007696032524108887,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 54,
+          "uMin": 0.2830018103122711,
+          "uMax": 0.35383009910583496,
+          "pngYMin": 0.007695257663726807,
+          "pngYMax": 0.20160818099975586
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 146,
+          "uMin": 0.2137679010629654,
+          "uMax": 0.4814296066761017,
+          "pngYMin": 0.604242205619812,
+          "pngYMax": 0.8136519193649292
+        },
+        "J_Bip_L_Hand": {
+          "vertices": 61,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_L_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.9375141263008118,
+          "uMax": 0.9614095091819763,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Bip_R_Hand": {
+          "vertices": 61,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.007695972919464111,
+          "pngYMax": 0.20160728693008423
+        },
+        "J_Bip_R_Thumb1": {
+          "vertices": 24,
+          "uMin": 0.03859049454331398,
+          "uMax": 0.062485869973897934,
+          "pngYMin": 0.14201688766479492,
+          "pngYMax": 0.18917310237884521
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 25,
+          "uMin": 0.5346375703811646,
+          "uMax": 0.5952253937721252,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 25,
+          "uMin": 0.40465980768203735,
+          "uMax": 0.46524760127067566,
+          "pngYMin": 0.338482141494751,
+          "pngYMax": 0.40517568588256836
+        }
+      }
+    },
+    {
+      "family": "N00_006_01_Shoes",
+      "sourceMeshResource": "d44d9a3c66af1b837866325cc536a1df04e17219.mesh",
+      "resourcePath": "N00/N00_006_01_Shoes/N00_006_01_Shoes/M_N00_006_01_Shoes.mesh",
+      "vertexCount": 614,
+      "triangleCount": 724,
+      "wireframe": "UV_Mesh_Wireframes/N00_006_01_Shoes.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 69,
+          "uMin": 0.0957999974489212,
+          "uMax": 0.7694799900054932,
+          "pngYMin": 0.11838001012802124,
+          "pngYMax": 0.4991599917411804
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 69,
+          "uMin": 0.0957999974489212,
+          "uMax": 0.7694799900054932,
+          "pngYMin": 0.11838001012802124,
+          "pngYMax": 0.4991599917411804
+        },
+        "J_Bip_L_Foot": {
+          "vertices": 198,
+          "uMin": 0.031380001455545425,
+          "uMax": 0.9681000113487244,
+          "pngYMin": 0.009970009326934814,
+          "pngYMax": 0.802370011806488
+        },
+        "J_Bip_L_ToeBase": {
+          "vertices": 40,
+          "uMin": 0.2920700013637543,
+          "uMax": 0.687529981136322,
+          "pngYMin": 0.10518002510070801,
+          "pngYMax": 0.9951500296592712
+        },
+        "J_Bip_R_Foot": {
+          "vertices": 198,
+          "uMin": 0.031380001455545425,
+          "uMax": 0.9681000113487244,
+          "pngYMin": 0.009970009326934814,
+          "pngYMax": 0.802370011806488
+        },
+        "J_Bip_R_ToeBase": {
+          "vertices": 40,
+          "uMin": 0.2920700013637543,
+          "uMax": 0.687529981136322,
+          "pngYMin": 0.10518002510070801,
+          "pngYMax": 0.9951500296592712
+        }
+      }
+    },
+    {
+      "family": "N00_002_04_Tops",
+      "sourceMeshResource": "daa1712b4a3b56c98bedfc0a6e23b183e1d70ddc.mesh",
+      "resourcePath": "N00/N00_002_04_Tops/N00_002_04_Tops/M_N00_002_04_Tops.mesh",
+      "vertexCount": 1267,
+      "triangleCount": 2158,
+      "wireframe": "UV_Mesh_Wireframes/N00_002_04_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_LowerSleeve": {
+          "vertices": 22,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.3556389808654785,
+          "pngYMax": 0.42181700468063354
+        },
+        "$Additional:J_Sec_L_TipSleeve": {
+          "vertices": 13,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.5165119767189026,
+          "pngYMax": 0.5165119767189026
+        },
+        "$Additional:J_Sec_R_LowerSleeve": {
+          "vertices": 22,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.3556389808654785,
+          "pngYMax": 0.42181700468063354
+        },
+        "$Additional:J_Sec_R_TipSleeve": {
+          "vertices": 13,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.5165119767189026,
+          "pngYMax": 0.5165119767189026
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 198,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.18131697177886963,
+          "pngYMax": 0.5899800062179565
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 103,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.22240102291107178,
+          "pngYMax": 0.8612160086631775
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 56,
+          "uMin": 0.26335498690605164,
+          "uMax": 0.736644983291626,
+          "pngYMin": 0.25909602642059326,
+          "pngYMax": 0.31906598806381226
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 41,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.1993730068206787,
+          "pngYMax": 0.6549720168113708
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 190,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12649601697921753,
+          "pngYMax": 0.4650399684906006
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.28809404373168945,
+          "pngYMax": 0.48783397674560547
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 22,
+          "uMin": 0.7666580080986023,
+          "uMax": 0.9473419785499573,
+          "pngYMin": 0.310757040977478,
+          "pngYMax": 0.40084898471832275
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.5446730256080627,
+          "uMax": 0.9237710237503052,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 55,
+          "uMin": 0.5831760168075562,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 29,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.19348502159118652,
+          "pngYMax": 0.25419700145721436
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 33,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.9551079869270325
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 42,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.8612160086631775,
+          "pngYMax": 0.9551219940185547
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.28809404373168945,
+          "pngYMax": 0.48783397674560547
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 22,
+          "uMin": 0.052657999098300934,
+          "uMax": 0.2333420068025589,
+          "pngYMin": 0.310757040977478,
+          "pngYMax": 0.40084898471832275
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.07622899860143661,
+          "uMax": 0.45532700419425964,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 55,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.41682401299476624,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 29,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.19348502159118652,
+          "pngYMax": 0.25419700145721436
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 31,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.45317599177360535,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.9551079869270325
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 35,
+          "uMin": 0.015778979286551476,
+          "uMax": 0.4836302101612091,
+          "pngYMin": 0.8612160086631775,
+          "pngYMax": 0.955115020275116
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 30,
+          "uMin": 0.5225309729576111,
+          "uMax": 0.5780739784240723,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 30,
+          "uMin": 0.42192599177360535,
+          "uMax": 0.47746899724006653,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        }
+      }
+    },
+    {
+      "family": "N00_002_01_Tops",
+      "sourceMeshResource": "e197e5f713d37609f5bcba7f719fe7d1e93535d5.mesh",
+      "resourcePath": "N00/N00_002_01_Tops/N00_002_01_Tops/M_N00_002_01_Tops.mesh",
+      "vertexCount": 1247,
+      "triangleCount": 2122,
+      "wireframe": "UV_Mesh_Wireframes/N00_002_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_LowerSleeve": {
+          "vertices": 22,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.3556389808654785,
+          "pngYMax": 0.42181700468063354
+        },
+        "$Additional:J_Sec_L_SkirtBack1": {
+          "vertices": 12,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtBack2": {
+          "vertices": 16,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551219940185547
+        },
+        "$Additional:J_Sec_L_SkirtFront1": {
+          "vertices": 8,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtFront2": {
+          "vertices": 14,
+          "uMin": 0.5,
+          "uMax": 0.6312879920005798,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_L_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_L_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.672573983669281,
+          "uMax": 0.8039169907569885,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_L_TipSleeve": {
+          "vertices": 13,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.5165119767189026,
+          "pngYMax": 0.5165119767189026
+        },
+        "$Additional:J_Sec_R_LowerSleeve": {
+          "vertices": 22,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.3556389808654785,
+          "pngYMax": 0.42181700468063354
+        },
+        "$Additional:J_Sec_R_SkirtBack1": {
+          "vertices": 8,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtBack2": {
+          "vertices": 10,
+          "uMin": 0.04801600053906441,
+          "uMax": 0.14568500220775604,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtFront1": {
+          "vertices": 6,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.5,
+          "pngYMin": 0.7496200203895569,
+          "pngYMax": 0.8261979818344116
+        },
+        "$Additional:J_Sec_R_SkirtFront2": {
+          "vertices": 13,
+          "uMin": 0.36871200799942017,
+          "uMax": 0.5,
+          "pngYMin": 0.8612164855003357,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_SkirtSide1": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.7879089713096619,
+          "pngYMax": 0.8612164855003357
+        },
+        "$Additional:J_Sec_R_SkirtSide2": {
+          "vertices": 12,
+          "uMin": 0.19608299434185028,
+          "uMax": 0.3274259865283966,
+          "pngYMin": 0.8962349891662598,
+          "pngYMax": 0.9551079869270325
+        },
+        "$Additional:J_Sec_R_TipSleeve": {
+          "vertices": 13,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.5165119767189026,
+          "pngYMax": 0.5165119767189026
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 181,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.18131697177886963,
+          "pngYMax": 0.5524929761886597
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 104,
+          "uMin": 0.0032600199338048697,
+          "uMax": 0.9967399835586548,
+          "pngYMin": 0.22240102291107178,
+          "pngYMax": 0.7879089713096619
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 56,
+          "uMin": 0.26335498690605164,
+          "uMax": 0.736644983291626,
+          "pngYMin": 0.25909602642059326,
+          "pngYMax": 0.31906598806381226
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 43,
+          "uMin": 0.2837179899215698,
+          "uMax": 0.7162820100784302,
+          "pngYMin": 0.1993730068206787,
+          "pngYMax": 0.6224759817123413
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 190,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12649601697921753,
+          "pngYMax": 0.4650399684906006
+        },
+        "J_Adj_L_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.28809404373168945,
+          "pngYMax": 0.48783397674560547
+        },
+        "J_Adj_L_LowerArm2": {
+          "vertices": 22,
+          "uMin": 0.7666580080986023,
+          "uMax": 0.9473419785499573,
+          "pngYMin": 0.310757040977478,
+          "pngYMax": 0.40084898471832275
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.5446730256080627,
+          "uMax": 0.9237710237503052,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 55,
+          "uMin": 0.5831760168075562,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 29,
+          "uMin": 0.7424839735031128,
+          "uMax": 0.9967340230941772,
+          "pngYMin": 0.19348502159118652,
+          "pngYMax": 0.25419700145721436
+        },
+        "J_Adj_R_LowerArm1": {
+          "vertices": 61,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.28809404373168945,
+          "pngYMax": 0.48783397674560547
+        },
+        "J_Adj_R_LowerArm2": {
+          "vertices": 22,
+          "uMin": 0.052657999098300934,
+          "uMax": 0.2333420068025589,
+          "pngYMin": 0.310757040977478,
+          "pngYMax": 0.40084898471832275
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 37,
+          "uMin": 0.07622899860143661,
+          "uMax": 0.45532700419425964,
+          "pngYMin": 0.09297758340835571,
+          "pngYMax": 0.3466539978981018
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 55,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.41682401299476624,
+          "pngYMin": 0.12283599376678467,
+          "pngYMax": 0.37038999795913696
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 29,
+          "uMin": 0.0032659799326211214,
+          "uMax": 0.2575159966945648,
+          "pngYMin": 0.19348502159118652,
+          "pngYMax": 0.25419700145721436
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 30,
+          "uMin": 0.5225309729576111,
+          "uMax": 0.5780739784240723,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 30,
+          "uMin": 0.42192599177360535,
+          "uMax": 0.47746899724006653,
+          "pngYMin": 0.3943049907684326,
+          "pngYMax": 0.4493420124053955
+        }
+      }
+    },
+    {
+      "family": "N00_000_00_Head",
+      "sourceMeshResource": "e2b755b15488800315eeb28a78ba87d0d1172dac.mesh",
+      "resourcePath": "N00/N00_000_00_Body/N00_000_00_Head/M_N00_000_00_Head.mesh",
+      "vertexCount": 487,
+      "triangleCount": 906,
+      "wireframe": "UV_Mesh_Wireframes/N00_000_00_Head.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_FaceTop": {
+          "vertices": 241,
+          "uMin": 0.38781750202178955,
+          "uMax": 0.6121824979782104,
+          "pngYMin": 0.7831000089645386,
+          "pngYMax": 0.9088252186775208
+        },
+        "J_Adj_C_HeadBack": {
+          "vertices": 27,
+          "uMin": 0.45369040966033936,
+          "uMax": 0.5463095903396606,
+          "pngYMin": 0.9099342823028564,
+          "pngYMax": 0.92912757396698
+        },
+        "J_Bip_C_Head": {
+          "vertices": 219,
+          "uMin": 0.3779999911785126,
+          "uMax": 0.621999979019165,
+          "pngYMin": 0.8844799995422363,
+          "pngYMax": 0.9920200109481812
+        }
+      }
+    },
+    {
+      "family": "N00_011_04_Bottoms",
+      "sourceMeshResource": "eda428b8ec708125a3030cb7e52d118f6453b939.mesh",
+      "resourcePath": "N00/N00_011_04_Bottoms/N00_011_04_Bottoms/M_N00_011_04_Bottoms.mesh",
+      "vertexCount": 2438,
+      "triangleCount": 4242,
+      "wireframe": "UV_Mesh_Wireframes/N00_011_04_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 120,
+          "uMin": 0.064411461353302,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.00884246826171875,
+          "pngYMax": 0.09558641910552979
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 318,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.09558641910552979,
+          "pngYMax": 0.3517850637435913
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 58,
+          "uMin": 0.064411461353302,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.0666877031326294,
+          "pngYMax": 0.17748939990997314
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 537,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.5328822135925293,
+          "pngYMax": 0.9911574795842171
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 130,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.694283127784729,
+          "pngYMax": 0.8076274991035461
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 254,
+          "uMin": 0.039949238300323486,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.26271283626556396,
+          "pngYMax": 0.5587719082832336
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 52,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.36105334758758545,
+          "pngYMax": 0.44051897525787354
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 537,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.5328822135925293,
+          "pngYMax": 0.9911574795842171
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 130,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.694283127784729,
+          "pngYMax": 0.8076274991035461
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 250,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.26271283626556396,
+          "pngYMax": 0.5587719082832336
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 52,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.36105334758758545,
+          "pngYMax": 0.44051897525787354
+        }
+      }
+    },
+    {
+      "family": "N00_004_01_Tops",
+      "sourceMeshResource": "f182542d73248a9350b36efa2127f33e8c10db9c.mesh",
+      "resourcePath": "N00/N00_004_01_Tops/N00_004_01_Tops/M_N00_004_01_Tops.mesh",
+      "vertexCount": 739,
+      "triangleCount": 1296,
+      "wireframe": "UV_Mesh_Wireframes/N00_004_01_Tops.svg",
+      "dominantBoneUVBounds": {
+        "$Additional:J_Sec_L_TopsUpperArmOutside": {
+          "vertices": 16,
+          "uMin": 0.049740079790353775,
+          "uMax": 0.9501299858093262,
+          "pngYMin": 0.12150818109512329,
+          "pngYMax": 0.6504018902778625
+        },
+        "$Additional:J_Sec_L_TopsUpperLegBack": {
+          "vertices": 9,
+          "uMin": 0.36236780881881714,
+          "uMax": 0.5000284910202026,
+          "pngYMin": 0.9196636080741882,
+          "pngYMax": 0.9367976188659668
+        },
+        "$Additional:J_Sec_L_TopsUpperLegFront": {
+          "vertices": 12,
+          "uMin": 0.49978700280189514,
+          "uMax": 0.665503978729248,
+          "pngYMin": 0.40641361474990845,
+          "pngYMax": 0.4367976188659668
+        },
+        "$Additional:J_Sec_L_TopsUpperLegSide": {
+          "vertices": 15,
+          "uMin": 0.23704910278320312,
+          "uMax": 0.7627180814743042,
+          "pngYMin": 0.42057526111602783,
+          "pngYMax": 0.9367976188659668
+        },
+        "$Additional:J_Sec_R_TopsUpperArmOutside": {
+          "vertices": 16,
+          "uMin": 0.04987001046538353,
+          "uMax": 0.9502599239349365,
+          "pngYMin": 0.12150818109512329,
+          "pngYMax": 0.6504018902778625
+        },
+        "$Additional:J_Sec_R_TopsUpperLegBack": {
+          "vertices": 7,
+          "uMin": 0.5336971879005432,
+          "uMax": 0.6376321911811829,
+          "pngYMin": 0.9196636080741882,
+          "pngYMax": 0.9367976188659668
+        },
+        "$Additional:J_Sec_R_TopsUpperLegFront": {
+          "vertices": 10,
+          "uMin": 0.33449599146842957,
+          "uMax": 0.4449084997177124,
+          "pngYMin": 0.40641361474990845,
+          "pngYMax": 0.4367976188659668
+        },
+        "$Additional:J_Sec_R_TopsUpperLegSide": {
+          "vertices": 15,
+          "uMin": 0.2372819036245346,
+          "uMax": 0.7629508972167969,
+          "pngYMin": 0.42057526111602783,
+          "pngYMax": 0.9367976188659668
+        },
+        "J_Adj_C_Chest": {
+          "vertices": 82,
+          "uMin": 0.23742470145225525,
+          "uMax": 0.7625753283500671,
+          "pngYMin": 0.24335891008377075,
+          "pngYMax": 0.7871472239494324
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 155,
+          "uMin": 0.23721100389957428,
+          "uMax": 0.7627890110015869,
+          "pngYMin": 0.2959778308868408,
+          "pngYMax": 0.9202098846435547
+        },
+        "J_Adj_C_Neck": {
+          "vertices": 19,
+          "uMin": 0.4258694052696228,
+          "uMax": 0.5741305947303772,
+          "pngYMin": 0.08160954713821411,
+          "pngYMax": 0.6178045868873596
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 19,
+          "uMin": 0.3704097867012024,
+          "uMax": 0.6295902132987976,
+          "pngYMin": 0.3013523817062378,
+          "pngYMax": 0.7844070196151733
+        },
+        "J_Adj_C_UpperChest": {
+          "vertices": 101,
+          "uMin": 0.23745769262313843,
+          "uMax": 0.7625423073768616,
+          "pngYMin": 0.09956002235412598,
+          "pngYMax": 0.7428171038627625
+        },
+        "J_Adj_L_Shoulder": {
+          "vertices": 21,
+          "uMin": 0.29407399892807007,
+          "uMax": 0.7027047872543335,
+          "pngYMin": 0.09126311540603638,
+          "pngYMax": 0.6385201811790466
+        },
+        "J_Adj_L_UpperArm1": {
+          "vertices": 86,
+          "uMin": 0.072776198387146,
+          "uMax": 0.9197142124176025,
+          "pngYMin": 0.1083173155784607,
+          "pngYMax": 0.7199887037277222
+        },
+        "J_Adj_L_UpperArm2": {
+          "vertices": 3,
+          "uMin": 0.1818391978740692,
+          "uMax": 0.20352250337600708,
+          "pngYMin": 0.6410884857177734,
+          "pngYMax": 0.6716083884239197
+        },
+        "J_Adj_R_Shoulder": {
+          "vertices": 21,
+          "uMin": 0.2972952127456665,
+          "uMax": 0.7059258818626404,
+          "pngYMin": 0.09126311540603638,
+          "pngYMax": 0.6385201811790466
+        },
+        "J_Adj_R_UpperArm1": {
+          "vertices": 86,
+          "uMin": 0.08028578758239746,
+          "uMax": 0.9272239208221436,
+          "pngYMin": 0.1083173155784607,
+          "pngYMax": 0.7199887037277222
+        },
+        "J_Adj_R_UpperArm2": {
+          "vertices": 3,
+          "uMin": 0.7964774966239929,
+          "uMax": 0.8181607723236084,
+          "pngYMin": 0.6410884857177734,
+          "pngYMax": 0.6716083884239197
+        },
+        "J_Sec_L_Bust1": {
+          "vertices": 22,
+          "uMin": 0.5,
+          "uMax": 0.6624308228492737,
+          "pngYMin": 0.1874135136604309,
+          "pngYMax": 0.2430592179298401
+        },
+        "J_Sec_R_Bust1": {
+          "vertices": 21,
+          "uMin": 0.3375692069530487,
+          "uMax": 0.5,
+          "pngYMin": 0.1874135136604309,
+          "pngYMax": 0.2430592179298401
+        }
+      }
+    },
+    {
+      "family": "N00_011_03_Bottoms",
+      "sourceMeshResource": "f7164a3ee8bf067d622540b3c1029dd7a83863f2.mesh",
+      "resourcePath": "N00/N00_011_03_Bottoms/N00_011_03_Bottoms/M_N00_011_03_Bottoms.mesh",
+      "vertexCount": 2270,
+      "triangleCount": 4242,
+      "wireframe": "UV_Mesh_Wireframes/N00_011_03_Bottoms.svg",
+      "dominantBoneUVBounds": {
+        "J_Adj_C_Chest": {
+          "vertices": 120,
+          "uMin": 0.064411461353302,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.00884246826171875,
+          "pngYMax": 0.09558641910552979
+        },
+        "J_Adj_C_Hips": {
+          "vertices": 296,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.09558641910552979,
+          "pngYMax": 0.3517850637435913
+        },
+        "J_Adj_C_Spine": {
+          "vertices": 56,
+          "uMin": 0.064411461353302,
+          "uMax": 0.935588538646698,
+          "pngYMin": 0.0666877031326294,
+          "pngYMax": 0.17748939990997314
+        },
+        "J_Adj_L_LowerLeg1": {
+          "vertices": 498,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.5328822135925293,
+          "pngYMax": 0.9911574795842171
+        },
+        "J_Adj_L_LowerLeg2": {
+          "vertices": 120,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.694283127784729,
+          "pngYMax": 0.8076274991035461
+        },
+        "J_Adj_L_UpperLeg1": {
+          "vertices": 233,
+          "uMin": 0.039949238300323486,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.26271283626556396,
+          "pngYMax": 0.5587719082832336
+        },
+        "J_Adj_L_UpperLeg2": {
+          "vertices": 50,
+          "uMin": 0.5096920728683472,
+          "uMax": 0.9911884069442749,
+          "pngYMin": 0.36105334758758545,
+          "pngYMax": 0.44051897525787354
+        },
+        "J_Adj_R_LowerLeg1": {
+          "vertices": 498,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.5328822135925293,
+          "pngYMax": 0.9911574795842171
+        },
+        "J_Adj_R_LowerLeg2": {
+          "vertices": 120,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.694283127784729,
+          "pngYMax": 0.8076274991035461
+        },
+        "J_Adj_R_UpperLeg1": {
+          "vertices": 229,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.26271283626556396,
+          "pngYMax": 0.5587719082832336
+        },
+        "J_Adj_R_UpperLeg2": {
+          "vertices": 50,
+          "uMin": 0.008811593055725098,
+          "uMax": 0.49030792713165283,
+          "pngYMin": 0.36105334758758545,
+          "pngYMax": 0.44051897525787354
+        }
+      }
+    }
+  ],
+  "note": "Original rest-mesh UV triangles; grey empty UV areas have no mesh surface. Alpha of a specific template may additionally hide existing faces. Bone colors are diagnostic dominant weights, not sewing boundaries."
+}

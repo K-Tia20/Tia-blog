@@ -1,0 +1,38 @@
+[
+  {
+    "file": "20261111-vroid-test28-native-parameters.jpg",
+    "caption": "Test28 수정 중 상의 설정: 전체 볼륨 13, 어깨 접힘 주름 27.533",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid"
+  },
+  {
+    "file": "20261111-vroid-test28-blouse-uv.jpg",
+    "caption": "원본 UV 위치에 맞춘 몸판과 아래팔 천, 투명하게 비운 위팔",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid*"
+  },
+  {
+    "file": "20261111-vroid-test28-belt-layer.jpg",
+    "caption": "허리띠와 리본을 별도 템플릿으로 구성한 실제 화면",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid*"
+  },
+  {
+    "file": "20261111-vroid-test28-lace-layer.jpg",
+    "caption": "위팔 레이스만 남긴 전용 템플릿과 투명 구멍",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid*"
+  },
+  {
+    "file": "20261111-vroid-test28-bottom-mask.jpg",
+    "caption": "속치마 하의에서 팔과 상체를 더는 숨기지 않는 피부 마스크",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid*"
+  },
+  {
+    "file": "20261111-vroid-test28-current-front.jpg",
+    "caption": "Test28 저장된 수정 작업본의 실제 전면: 최종 촬영 전 검수용",
+    "source": "sky native app screenshot",
+    "windowTitle": "VRoid Studio 2.14.0 - Test28_Clothing_Rework_Working.vroid*"
+  }
+]
