@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TIL/VRoid_20261111/appendix.md",
+                "file": "TIL/261111(수)_TIL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "appendix"
+              "title": "261111(수)_TIL"
             }
           }
         ]
@@ -201,10 +201,12 @@
   },
   "active": "7b7e102ae994c6a1",
   "lastOpenFiles": [
+    "TIL/261110(화)_TIL.md",
+    "TIL/261111(수)_TIL.md",
+    "TIL/VRoid_20261111/appendix.md",
     "TIL/VRoid_20261111/assets/20261111-capture-Test3-Helmet_Front_Fixed_20261111.png",
     "TIL/VRoid_20261111/기본템플릿_연구/UV_Original_PNG/AccessoryArm/Initial_1001/5c17483792dc68e5.png",
     "TIL/VRoid_20261111/기본템플릿_연구/UV_Mesh_Wireframes/N00_000_00_Body.svg",
-    "TIL/261110(화)_TIL.md",
     "TIL/첨부파일모음/20261111-capture-Test26-Test26_Back.png",
     "TIL/첨부파일모음/20261111-capture-Test26-Test26_Front.png",
     "TIL/첨부파일모음/20261111-capture-Test25-Test25_Back.png",
@@ -212,7 +214,6 @@
     "TIL/첨부파일모음/20261111-capture-Test24-Test24_Back.png",
     "TIL/첨부파일모음/20261111-capture-Test24-Test24_Front.png",
     "TIL/첨부파일모음/20261111-capture-Test23-Test23_Back.png",
-    "TIL/첨부파일모음/20261111-capture-Test23-Test23_Front.png",
     "TIL/261109(월)_TIL.md",
     "게임 프로젝트/IsekaiClass(진행중)/이세계 클래스.md",
     "Coding Test/[260701]-두 개 뽑아서 더하기.md",
@@ -236,7 +237,6 @@
     "Tech Note/언리얼 엔진5 핵심기술/08_Mesh_Terrain.md",
     "Tech Note/언리얼 엔진5 핵심기술/06_PCG.md",
     "Tech Note/언리얼 엔진5 핵심기술/01_MetaHuman.md",
-    "TIL/260401(수)_TIL.md",
     "Tech Note/MetaHuman",
     "게임 프로젝트/HaremTextRPG/텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf",
     "Tech Note/언리얼 엔진5 핵심기술",
