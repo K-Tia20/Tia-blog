@@ -1,0 +1,39 @@
+/* IDOL SINBI: keep the approved layout; inherit the normal vault text/heading sizes. */
+.markdown-preview-view.sinbi-editorial,
+.markdown-source-view.mod-cm6.sinbi-editorial {
+  --font-text: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --file-line-width: 850px;
+  --link-color: #b69ce9;
+  --link-color-hover: #d7c5ff;
+  font-size: var(--font-text-size, 16px);
+  line-height: var(--line-height-normal);
+  letter-spacing: -0.025em;
+}
+.markdown-preview-view.sinbi-editorial p,
+.markdown-preview-view.sinbi-editorial li {
+  font-size: var(--font-text-size, 16px);
+  line-height: var(--line-height-normal);
+}
+.markdown-preview-view.sinbi-editorial h1,
+.markdown-preview-view.sinbi-editorial h2,
+.markdown-preview-view.sinbi-editorial h3 {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border: 0;
+  padding: 0;
+  margin-top: 2.5rem;
+}
+.markdown-preview-view.sinbi-editorial li { margin-block: 0.85rem; }
+.markdown-preview-view.sinbi-editorial img,
+.markdown-preview-view.sinbi-editorial video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  margin: 1.5rem auto;
+}
+.sinbi-editorial .inline-title { font-weight: 800; line-height: 1.25; }
