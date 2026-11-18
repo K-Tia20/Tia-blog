@@ -1,0 +1,19 @@
+{
+  "date_kst": "2026-11-17",
+  "scope": "Project introduction, 33 feature posts (including 8 removed/incomplete topics), troubleshooting index and 20 posts",
+  "new_markdown": 55,
+  "existing_demo_preserved": true,
+  "screenshot_and_video_still_count": 60,
+  "image_source_hash_duplicates": 0,
+  "short_silent_clips": 6,
+  "local_quartz_build": "56 Markdown parsed and emitted successfully",
+  "rendered_links_checked": 1539,
+  "broken_rendered_links": 0,
+  "rendered_figures": 59,
+  "rendered_videos": 6,
+  "missing_rendered_media": 0,
+  "push_performed": false,
+  "commit_performed": false,
+  "game_runtime_change": false,
+  "performance": "No runtime changes or new performance measurement. Video clips are H.264 1280-wide silent excerpts, no autoplay."
+}

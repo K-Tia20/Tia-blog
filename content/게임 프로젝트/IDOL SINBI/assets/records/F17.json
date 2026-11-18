@@ -1,0 +1,49 @@
+{
+  "article": "F17",
+  "title": "공연 결과와 보상",
+  "status": "구현 · 정산 연결 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/result.jpg",
+      "id": "result",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/result.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "35b53d1d418293208cec7f9bff7b505b3cb4095295ac3695ffce88369d4db432",
+      "display_sha256": "a30a2833db535de014e1faf5f401a017e3d34b470cadfb2c8eb001acb9df3c09",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "최종6곡 실제오디오시계/자동타자 시험 모두100점과보상50점. 이사진은마지막IDOL SINBI실제결과를다시열어촬영했으며최초결과시각화면이라고주장하지않음. 사람가창점수가아님."
+    }
+  ],
+  "verified": [
+    "최종 6곡 실제 시간 자동 타자 시험에서 100점과 보상용 50점을 확인했다.",
+    "사진은 마지막 IDOL SINBI 결과를 나중에 다시 연 화면이다."
+  ],
+  "limitations": [
+    "자동 100점을 사람의 가창 결과로 소개하지 않는다.",
+    "관객 수·모드·곡·오류 조합별 전체 경제 균형은 미검증이다."
+  ],
+  "video": {
+    "file": "../clips/F17.mp4",
+    "start_seconds": 3067,
+    "duration_seconds": 7,
+    "audio": "silent excerpt",
+    "source": "2026-11-16 Q01-Q50 continuous editor playthrough"
+  }
+}

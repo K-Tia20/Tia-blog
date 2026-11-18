@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Starlight Run",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\Starlight Run.mp3",
+    "source_sha256": "b86af90680f979ba480f15000beb74061170c7bf8d1f7ad61d68be03c2663949",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  },
+  {
+    "title": "Don’t Hurt Each Other",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\Don’t Hurt Each Other.mp3",
+    "source_sha256": "30dde5a509c2d5bdf1eb7ce739b17c70479ed93d7a1d4bb1aa1ca199d5052718",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  },
+  {
+    "title": "Mars Fiesta",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\Mars Fiesta.mp3",
+    "source_sha256": "40724a84a76f9b616a3b72725561550b472587fb0a2d271c4257ca2010dda7a7",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  },
+  {
+    "title": "Beyond the Galaxy",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\Beyond the Galaxy.mp3",
+    "source_sha256": "4b774e9a79c57f1ad74f1727fb3d85fc9d0b0d3caf9176907a7c5efadc084471",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  },
+  {
+    "title": "Midnight Disco",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\Midnight Disco.mp3",
+    "source_sha256": "fef82778640c8d93c87e783a18879ee8655fa3b8942bb7b5af1a6b874b6b6ca7",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  },
+  {
+    "title": "IDOL SINBI",
+    "project_relative_source": "SourceAssets\\Audio\\Gemini-2026-11-15\\Original\\IDOL SINBI.mp3",
+    "source_sha256": "2b3c0c838c13bdfc9536ba7410790039d65312878ac2285be66038f5685e010d",
+    "purpose": "Actual mono amplitude waveform for blog illustration; not scoring accuracy or performance data."
+  }
+]

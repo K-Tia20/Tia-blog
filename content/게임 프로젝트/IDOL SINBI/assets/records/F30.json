@@ -1,0 +1,47 @@
+{
+  "article": "F30",
+  "title": "(미완) 다섯 능력치와 SP",
+  "status": "기획 단순화 · 기존 표시 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-13.md",
+      "type": "source document",
+      "sha256": "9e82e316917b69feebef7df734781622d217be6d19edf1adb460d8b9cdbe8dc4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/oldParty.jpg",
+      "id": "oldParty",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-13",
+      "display_file": "assets/captures/oldParty.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 128,
+        "width": 1014,
+        "height": 570
+      },
+      "source_sha256": "e4156dea5a1eb27dffb90b2a695db77355079304a7584b1329b2c78f6274c1c5",
+      "display_sha256": "226fc6f9d38c4dbba9bc47942e9a076169adc3fc70123e8f93cc8556f2a4d50a",
+      "feature_id": "F007-SINBIUI",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "First actual native party screen; style and portrait defects remain."
+    }
+  ],
+  "verified": [
+    "오래된 파티 화면과 단순화된 후속 파티 화면에서 정보 구성이 달라진 것을 확인할 수 있다."
+  ],
+  "limitations": [
+    "사진의 오래된 능력치 구조는 현재 게임 안내가 아니다.",
+    "모든 성장 수치의 최종 밸런스와 레벨별 계수 전수 검증은 남았다."
+  ],
+  "video": null
+}

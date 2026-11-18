@@ -1,0 +1,48 @@
+{
+  "article": "F04",
+  "title": "적의 추격과 원위치 복귀",
+  "status": "구현 · 적 1종 회귀 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/EnemyReturn",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Verification/World-F043/README.md",
+      "type": "source document",
+      "sha256": "97f3b6292e8760a8039294a965ec72171997556423d0246b58d7bf144aa258f6"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/enemy.jpg",
+      "id": "enemy",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/enemy.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "30776523ca7162def70b7d3f57c79f1443ae916ef93b284d6c2392384711b44e",
+      "display_sha256": "5beb5bed0651b340515bc0ea0efaa1c23da2fdb64df3794085768335cf2a80b7",
+      "feature_id": "EnemyVitals",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Test맵에서 표시 순서, HP 70%, 연속 피격과 2초 만료, 신비 및 페이즈 감지, R 영입 시 숨김 확인."
+    }
+  ],
+  "verified": [
+    "시험 맵에서 추격 → 대상 이탈 → 원위치 귀환 → 재추격을 확인했다.",
+    "아고라 적 1종의 20초 뒤 같은 개체 기상을 별도 기록했다."
+  ],
+  "limitations": [
+    "모든 적 종류와 최종 패키지의 장시간 반복은 미검증이다.",
+    "이 사진은 당시 기능 시험 화면이다."
+  ],
+  "video": null
+}

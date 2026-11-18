@@ -1,0 +1,62 @@
+{
+  "article": "T16",
+  "title": "보물상자가 남아 있거나 땅에 박히는 문제",
+  "status": "수정 · 지면 배치와 수집 상태 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F091-ChestFix-CinematicLyrics.md",
+      "type": "source document",
+      "sha256": "591aa9ed1ba9a366a5f5a239904252b3062d57c10f477666522670662d1db508"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/chestBefore.jpg",
+      "id": "chestBefore",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/chestBefore.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "042ccb8a48f2f920cf4210286ec008fae24947164bb69a06cc953abeecf17ccd",
+      "display_sha256": "811fad61c19d5d56531f712390229610bd6af7d15bffb8ddc2fee66b2a1438dd",
+      "feature_id": "F091-ChestPlacement",
+      "error_id": "E091-TiltedPlacement",
+      "stage": "Error",
+      "note": "실제 레타 상자의 기울어진 수정 전 화면. Rotator의 두번째 위치 인자가 pitch로 해석됨."
+    },
+    {
+      "target": "assets/captures/chestFixed.jpg",
+      "id": "chestFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/chestFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 142,
+        "width": 1521,
+        "height": 856
+      },
+      "source_sha256": "bc99f5a1b19af6609e1638322aabc067aa1c548bcafd5d8ad832ab07dd151804",
+      "display_sha256": "0932bcf21e83abfa9e55bfc420d0d7f10efc0bbc94ec51a630e5b38345505cc2",
+      "feature_id": "F091-ChestPlacement",
+      "error_id": "E091-TiltedPlacement",
+      "stage": "Fixed",
+      "note": "동일 상자 배치 시나리오 수정 후 실제 에디터 화면. 전체80개 플레이어 도달 검증과 구분."
+    }
+  ],
+  "verified": [
+    "수집 후 숨김·중복 보상 거절·저장 재로드·가방 부족 거절을 확인했다.",
+    "4개 맵을 다시 열어 20개씩·기울기 0을 재조회했다."
+  ],
+  "limitations": [
+    "아래 사진은 기울어진 레타 상자의 전후다. 수집 전후 사진 쌍은 완전하지 않다.",
+    "평탄 지지 검사와 플레이어가 모든 상자에 도달하는 것은 다른 검증이다."
+  ],
+  "video": null
+}

@@ -1,0 +1,50 @@
+{
+  "article": "F01",
+  "title": "게임의 전체 구조와 제작 과정",
+  "status": "구현 · 에디터 완주 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    },
+    {
+      "project_relative_path": "Docs/Verification/Release-F085/ActualJourney-Summary.json",
+      "type": "source document",
+      "sha256": "b2cf3a1e03e439af6a8149eb6ec62f1f0a5618ecb8d1a163d1fc0a2de9aa2d05"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/video-5100.jpg",
+      "id": "video-5100",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-5100.jpg",
+      "display_crop": null,
+      "source_sha256": "4b1dab4af9cd27ea8de3ccfa9524d0900082c2709833d70b6ebbc79b96596e47",
+      "display_sha256": "c38b7b072ba3293a57521e0be0a8148a9b0140a1a7275cd2fd6cd7a646d9e07f",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 5100s; UI predates final HUD.",
+      "video_time_seconds": 5100
+    }
+  ],
+  "verified": [
+    "11월 16일 새 게임부터 Q50 엔딩까지 약 1시간 43분 45초의 연속 플레이 기록이 있다.",
+    "완료 퀘스트 50개와 엔딩 상태를 디스크 저장에서도 확인했다."
+  ],
+  "limitations": [
+    "이 완주는 에디터의 독립 실행 창에서 진행했다. 최종 패키지의 동일 완주를 뜻하지 않는다.",
+    "타자 공연에는 자동 입력을 사용했다. 사람이 전곡을 부른 시험과 구분한다."
+  ],
+  "video": {
+    "file": "../clips/F01.mp4",
+    "start_seconds": 5096,
+    "duration_seconds": 8,
+    "audio": "silent excerpt",
+    "source": "2026-11-16 Q01-Q50 continuous editor playthrough"
+  }
+}

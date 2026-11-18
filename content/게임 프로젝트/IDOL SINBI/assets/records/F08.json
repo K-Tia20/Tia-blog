@@ -1,0 +1,48 @@
+{
+  "article": "F08",
+  "title": "선물과 팬심",
+  "status": "구현 · 취향 데이터 / 일부 지급 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Exploration-F024/GiftPreferences-Runtime-Verification.json",
+      "type": "source document",
+      "sha256": "7ad03b84d6cbc25dd7be6f41c99c10e617928347e64e9dfd1244e48523058276"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F090-Skills-Treasure-Lyrics.md",
+      "type": "source document",
+      "sha256": "1b4786edd9cb194d42ae577ba9b8ca2ded9a00d2fad95eaebd45e4b2c9452a45"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/giftActual.jpg",
+      "id": "giftActual",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/giftActual.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "c739e73addea7f3c155e1033eb82dda7a85a8bd81821c01c3ced29c5f92ffaa7",
+      "display_sha256": "4c051b803c80b0c3ea6547edbf6eea78864ff336e661389c25e67fbb213a3ec2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-15 actual gift preview; historical Phase test, character later removed."
+    }
+  ],
+  "verified": [
+    "실제 선물 창에서 아이템 수량 감소와 팬심 변화를 확인한 기록이 있다.",
+    "이전 취향 검증은 23개 사례를 점검했으며 모든 조합을 시각 검수한 것은 아니다."
+  ],
+  "limitations": [
+    "105종 × 전체 NPC의 취향 조합과 최종 보상 균형은 미검증이다.",
+    "사진은 삭제 전 페이즈로 실행한 선물 기능 시험이다. 현재 인물 명단이나 최종 수치를 뜻하지 않는다."
+  ],
+  "video": null
+}

@@ -1,0 +1,67 @@
+{
+  "article": "T05",
+  "title": "신비 팔 장식이 뒤엉키는 문제",
+  "status": "완화 · 제한 재시험 / 재발 이력 있음",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/ShinbiClothTransitions",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F080-Cloth-Portal.md",
+      "type": "source document",
+      "sha256": "4146d3bf28688ad429b005d98d656cd871dc8f6408d2004e41c68a036dee7a64"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/clothError.jpg",
+      "id": "clothError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/clothError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e4a12d355294f54817c2c8c31ddcde524b7d2540bd913d4b6f46bfd96d821e8b",
+      "display_sha256": "f07d3e8f9114e9ad4a3516d5638697432350748331dcd89da63eb5695273e051",
+      "feature_id": "F067-StoryWalk",
+      "error_id": "Q07F077ShinbiCloth",
+      "stage": "Error",
+      "note": "실제 Q07 장면에서 자주색 형상이 크게 뻗어 신비 몸을 가림. 장식·천 시뮬레이션 또는 에셋 준비 영향 여부는 진단 전이며 단정하지 않음."
+    },
+    {
+      "target": "assets/captures/clothFixed.jpg",
+      "id": "clothFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/clothFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "81708cb5fe004495bae7c6610048dd6e7bb534af67300aa8a4bac38de77ed0d0",
+      "display_sha256": "69ae8fdc33131e9fcbd6a83f693691a74490be186153d81bbca2ebfab6dd0e98",
+      "feature_id": "F067-StoryWalk",
+      "error_id": "Q07F077ShinbiCloth",
+      "stage": "Fixed",
+      "note": "F080 same Q07 trial save: automatic reset, several observed animation frames without prior extreme purple spikes. Limited sampled observation; whole song and cooked build remain unverified. Shader and mesh preparation warnings visible."
+    }
+  ],
+  "verified": [
+    "11월 14일 제한된 이동·공격·영입·복귀 후 장식 형태를 확인했다.",
+    "11월 16일 Q07 같은 저장 사본의 여러 관측 프레임에서도 큰 돌출이 없음을 확인했다."
+  ],
+  "limitations": [
+    "전체 곡·모든 모션·최종 패키지에서 영구 해결됐다고 쓰지 않는다.",
+    "두 사진은 11월 16일 Q07 시험의 오류와 후속 관측이며, 2번 기능 글과 같은 사진을 사용하지 않았다."
+  ],
+  "video": null
+}

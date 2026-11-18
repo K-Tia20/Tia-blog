@@ -1,0 +1,67 @@
+{
+  "article": "T06",
+  "title": "영입한 NPC가 복제되는 문제",
+  "status": "중복 경로 수정 · 파티 UI 별도 수정",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14-Party.md",
+      "type": "source document",
+      "sha256": "6110aa00030562b09746b764a6f3bd89e2d08a62c41d30658c6f6b13492940dc"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/partyError.jpg",
+      "id": "partyError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/partyError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 350,
+        "width": 855,
+        "height": 481
+      },
+      "source_sha256": "12a36a404e9a8a49e2d8fa858c1be4bf8da9de13a4541dfce118045731a228a2",
+      "display_sha256": "93b5ead729e41cd8a69d1a08eb7431a794f428e9fea08f1c30c4225a89d8ff97",
+      "feature_id": "F014-NPCCatalog",
+      "error_id": "PartyRoster",
+      "stage": "Error",
+      "note": "칼라리 팬심100 영입 성공 후 실제 파티 UI가 빈 동료칸으로 보임. 기존 고정 ID 조건으로 신규 동료 버튼이 Collapsed 되는 것을 실행 중 확인."
+    },
+    {
+      "target": "assets/captures/partyFixed.jpg",
+      "id": "partyFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/partyFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 350,
+        "width": 855,
+        "height": 481
+      },
+      "source_sha256": "6cdf3090a3cb7c9d0d907fbca7b49c3f89ca470448abf02d4cd53e8dfc0acc4d",
+      "display_sha256": "3ad8a7bd9bc7de72387750da0dc07cb4f0522787a004bb2db3b37996c99f2390",
+      "feature_id": "F014-NPCCatalog",
+      "error_id": "PartyRoster",
+      "stage": "Fixed",
+      "note": "칼라리/펭 마오/머독 실제 영입 후 기존3칸이 순서대로 해당ID를 선택. 실제 모델 프리뷰와 HP/MP/기본공격 표시 및 보내주기4검사 통과. 신규 초상은 공통 파티 아이콘으로 구분하며 다른 캐릭터 얼굴을 쓰지 않음."
+    }
+  ],
+  "verified": [
+    "후속 영입 시험에서 같은 Pawn 유지와 팬심 99 거절·100 합류를 확인했다.",
+    "칼라리·펭 마오·머독의 실제 편성·선택·보내주기 검사를 통과했다."
+  ],
+  "limitations": [
+    "사진 쌍은 최초 복제 순간이 아니라 후속 “빈 파티 칸” 오류와 수정이다.",
+    "최초 복제 오류의 전후 사진이 모두 있다는 표현은 하지 않는다."
+  ],
+  "video": null
+}

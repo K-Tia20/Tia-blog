@@ -1,0 +1,48 @@
+{
+  "article": "F23",
+  "title": "오프닝 사운드 엔딩",
+  "status": "연결 완료 · 최종 청취 / 패키지 실행 미검증",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F099-MenuAudioNPC.md",
+      "type": "source document",
+      "sha256": "8a49deb2859dbe1645d45cdd5c44f828ce2f1c6a989d389d27c4c6c37f500b58"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F100-Opening.md",
+      "type": "source document",
+      "sha256": "6f5a55fdd19e8163e11f6942e10d358119dab1a66367e5d3d789d746553ee5fd"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F102-EndingConsole.md",
+      "type": "source document",
+      "sha256": "4c7e9f16c11bceae52a0f485e6d070938fe3225e3f8d1ef3aa35dabf54f97e66"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/openingStill.jpg",
+      "id": "openingStill",
+      "source_type": "still from user-provided fal AI opening movie; not an in-engine capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/openingStill.jpg",
+      "display_crop": null,
+      "source_sha256": "b13adf282aa9216426e478e2b4984696aeec26de9ace22c869b93bf79ffc5ebf",
+      "display_sha256": "0a069f44ee1bb8641f379717fcd8e88ad0261abd1cf06d5d7d15ff3b55408ff2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 video frame; 4 seconds"
+    }
+  ],
+  "verified": [
+    "Opening 변환 파일 디코딩과 패키지 포함 여부를 확인했다.",
+    "개발자 엔딩 미리보기에서 기존 게임 클리어 UI와 세 버튼·저장 불변을 확인했다."
+  ],
+  "limitations": [
+    "실제 패키지의 강제 시청·전체 음질·NPC 발 접지·버튼 음량 드래그는 최종 확인이 남았다.",
+    "엔딩 즉시 보기 명령은 정상 퀘스트 완주의 증거로 사용하지 않았다."
+  ],
+  "video": null
+}

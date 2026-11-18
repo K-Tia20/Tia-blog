@@ -1,0 +1,48 @@
+{
+  "article": "F32",
+  "title": "(미완) 9개 언어 전체 현지화 검수",
+  "status": "AI 번역 초안 · 전체 검수 미완",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-13.md",
+      "type": "source document",
+      "sha256": "9e82e316917b69feebef7df734781622d217be6d19edf1adb460d8b9cdbe8dc4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F089-HUD-Menu.md",
+      "type": "source document",
+      "sha256": "cadad9b7b8f1dcdc604027663edef1c2bd6787683f08aa6208ef1f35d96fd78d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/english.jpg",
+      "id": "english",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/english.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5790ca4822d52259ca63a42de4a87fdd7d9f1366a52694c96c1dad0c69ecd8ad",
+      "display_sha256": "66ecf2b7af7e595a63782c1f03fbd14f39906193767d62c8651e450a25e7d194",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "Clicked English in actual title UI; separate text labels changed immediately over real Omeda screenshot."
+    }
+  ],
+  "verified": [
+    "실제 메인 메뉴 English 전환은 확인했다.",
+    "검토 요청은 있었지만 전 문구·전 언어에 서로 다른 모델 3회 검수가 완료됐다는 근거는 확보하지 못했다."
+  ],
+  "limitations": [
+    "원어민 검수는 없다.",
+    "모든 NPC 대사와 글리프·아랍어 방향·현지 문자 발음이 완벽하다고 보증하지 않는다."
+  ],
+  "video": null
+}

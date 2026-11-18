@@ -1,0 +1,53 @@
+{
+  "article": "F25",
+  "title": "에셋 AI 생성물 장부",
+  "status": "장부 작성 · 적용과 생성 구분",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Assets/Generated3D-AssetRegister.json",
+      "type": "source document",
+      "sha256": "95c111482c5f88627e8e22b2709f2d135994a53816ef7a64c22aa68ae2e01227"
+    },
+    {
+      "project_relative_path": "Docs/Assets/Gemini-Music-2026-11-15.json",
+      "type": "source document",
+      "sha256": "7f8f8a054cc9fb9d5dd02c26a46dace5118f234cc6ad5207c67df1b028068ea0"
+    },
+    {
+      "project_relative_path": "Docs/Verification/AssetSource-Reconciliation-2026-11-16",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/microphone.jpg",
+      "id": "microphone",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/microphone.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 151,
+        "width": 1144,
+        "height": 644
+      },
+      "source_sha256": "31ebfebfe33d644f1f1a05be5d85a93f1cbd7dffab3d41d0cdaac0e4217acabe",
+      "display_sha256": "dc5d2ccf7b54f8028bac613c0cd3414219113e45d36959311c698f6da3f39dfc",
+      "feature_id": "F017-GeneratedMicrophone",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "Actual generated/Blender-cleaned160cm microphone placed in Omeda stage, editor camera view with editor icons hidden. Not a gameplay/LOD/collision validation."
+    }
+  ],
+  "verified": [
+    "생성 후 Blender에서 정리한 높이 160cm 마이크가 오메다 무대에 배치된 편집기 화면이 있다.",
+    "게임 시작 메뉴의 사용 에셋 목록과 아고라 팩 출처 정정 기록이 있다."
+  ],
+  "limitations": [
+    "마이크 사진은 배치 확인이며 전체 충돌·LOD·게임플레이 검증은 아니다.",
+    "장부가 모든 제3자 권리나 재배포 허용을 보증하는 것은 아니다. 출처 미확인 항목은 별도로 남겼다."
+  ],
+  "video": null
+}

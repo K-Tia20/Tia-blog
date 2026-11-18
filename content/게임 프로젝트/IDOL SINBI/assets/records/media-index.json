@@ -1,0 +1,1612 @@
+{
+  "created_date": "2026-11-17",
+  "scope": "Blog documentation only; no game changes, no commit, no push.",
+  "captures": [
+    {
+      "id": "video-5100",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-5100.jpg",
+      "display_crop": null,
+      "source_sha256": "4b1dab4af9cd27ea8de3ccfa9524d0900082c2709833d70b6ebbc79b96596e47",
+      "display_sha256": "c38b7b072ba3293a57521e0be0a8148a9b0140a1a7275cd2fd6cd7a646d9e07f",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 5100s; UI predates final HUD.",
+      "video_time_seconds": 5100
+    },
+    {
+      "id": "zoomIn",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/zoomIn.jpg",
+      "display_crop": null,
+      "source_sha256": "d17cdf052f0e521a24353a1bf0936234360e9924cb7ba78c4813cd760d3db348",
+      "display_sha256": "d3336dc5e149cc499be082483cfded3df3fcbeccbe91364a7c486a9d833a4f1c",
+      "feature_id": "F036-CameraZoom",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Real CUA upward wheel input; target arm 150 cm, pivot offset Z 63.59 cm, collision check enabled. Test map, not a planet-wide wall collision test."
+    },
+    {
+      "id": "zoomOut",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/zoomOut.jpg",
+      "display_crop": null,
+      "source_sha256": "ad1eb9d3327527709d42d893301caa818a303230f3ae47b42708220128577ab0",
+      "display_sha256": "9c67472b3cd7430eaf47a45b063c62f576d737aa680b8c34dd6137285ef974ed",
+      "feature_id": "F036-CameraZoom",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Real CUA downward wheel input; target arm 1230 cm, pivot offset Z 0, collision check enabled. Test map."
+    },
+    {
+      "id": "combat",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/combat.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "0dd9283ed7b013176d11d7675c84263d1674370da47b026a812dce68a82ce0b2",
+      "display_sha256": "e7a3b30bd593cf4e0151bd9d72142ec8d73b20eaf9b1d1a46c51fc3a3ca21ae2",
+      "feature_id": "LastSongCombat",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Combat-Reward"
+    },
+    {
+      "id": "enemy",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/enemy.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "30776523ca7162def70b7d3f57c79f1443ae916ef93b284d6c2392384711b44e",
+      "display_sha256": "5beb5bed0651b340515bc0ea0efaa1c23da2fdb64df3794085768335cf2a80b7",
+      "feature_id": "EnemyVitals",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Test맵에서 표시 순서, HP 70%, 연속 피격과 2초 만료, 신비 및 페이즈 감지, R 영입 시 숨김 확인."
+    },
+    {
+      "id": "heartLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/heartLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "396e97a022afc1f1c16c5237d6e28c6844027400fa1285f97a6d7cd97660a880",
+      "display_sha256": "4b03ddfef60c1088d61cc03f893af5f8276b17a1b3edf639fa19a1a18281d2e2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 F089: full-health target state checked after diagnostic reposition; input source not asserted."
+    },
+    {
+      "id": "follow",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/follow.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "8089bed1d4a06769c29f7f5d6f064c428183c259def72f6425f02f9d9fd724d2",
+      "display_sha256": "933585d6c1ab9dc6b29ea741cb0eefe19e50d17f164004ef8f57cb6fee35b21a",
+      "feature_id": "StableParty",
+      "error_id": "PartyBlocking",
+      "stage": "Fixed",
+      "note": "동일 크기 6동료 이동 시험, 파티 이동 충돌 수정 후 전원 도착하고 정지."
+    },
+    {
+      "id": "dialog",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/dialog.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "6309f0c3b509399928461ebef0591cedb52a0334c14b2e7bd623ac8d84a5b278",
+      "display_sha256": "e1381a570de6b2ef1567bb482be7a2bc83e67f45edc21fd3683c33558443c051",
+      "feature_id": "F058-OmedaResidentPIE",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "오메다 PIE 임시 진행 객체·진단 텔레포트. NPC_20 팬심100, 동행 버튼 숨김. 실제 일반 플레이 이동은 미시험."
+    },
+    {
+      "id": "giftActual",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/giftActual.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "c739e73addea7f3c155e1033eb82dda7a85a8bd81821c01c3ced29c5f92ffaa7",
+      "display_sha256": "4c051b803c80b0c3ea6547edbf6eea78864ff336e661389c25e67fbb213a3ec2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-15 actual gift preview; historical Phase test, character later removed."
+    },
+    {
+      "id": "cinderAfter",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/cinderAfter.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "67c62fd024990efc7fa54625ce9f3f551c326a47df4ea3f8fae2739aec1917be",
+      "display_sha256": "4f143de7931fb0e1960bfc31cffd05a20bb1e38f18cbd6a1a5243396527c0695",
+      "feature_id": "F046-Cinder",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "E 흡수 후 XP 25와 재입력 중복 방지 확인. 진단 이동 사용."
+    },
+    {
+      "id": "pickup",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/pickup.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "4bd4475eebda3ff207d15c87d42fdb7b9d95632a5880d9c76d9bc80cd0695c58",
+      "display_sha256": "44c0413dddcb165512d240b8fe85251b48a479323199e7828f5deaff017f2b90",
+      "feature_id": "F091-PickupHUD",
+      "error_id": "E091-ToastPanel",
+      "stage": "Fixed",
+      "note": "최종 사용자 지시: 배경·패널·상자 없이 +아이템명 글자만, 검은 외곽선 두께4. 실제 지급·수량 화면 확인."
+    },
+    {
+      "id": "video-3040",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-3040.jpg",
+      "display_crop": null,
+      "source_sha256": "40cafae31a463224771ddf1eacc0d2939d7b7a447a2330514a4543bf1e25b667",
+      "display_sha256": "bf25ba39efbe5f7120a6e61e8eb22255c24a3da9eaec51d258f8a3065971585e",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 video frame; 3040 seconds",
+      "video_time_seconds": 3040
+    },
+    {
+      "id": "mic",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/mic.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "c7bdd8b302ace39ea12993d63ff3c64aeee89cd281b28cc342cf3a83a6f1fef4",
+      "display_sha256": "4f2b62876e40be0228b513b21baa5e0366e5ad23e8c158da3b66d6dd738a5854",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "사용자가 실제 부른 새곡 마이크 시험 결과를 현재 남아 있는 마지막 정산에서 다시 연 화면. 처음 종료 순간 캡처가 아니며 재촬영 시점을 명시함. 입력4,498,280프레임/overflow0/점수17.096은 변경 전 채점식. 목소리나 프레임별 음정은 저장하지 않음."
+    },
+    {
+      "id": "typingInput",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/typingInput.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "dc68ef606e3fda1733b924c216b3e96a68c85ff251b9c707c450f93d48b5ddd2",
+      "display_sha256": "a07a4c16f98b8b56bc3edd23b754e4dbe2e7553011106050c99d63df3bc4d986",
+      "feature_id": "F032-PlayableTyping",
+      "error_id": "E032-TypingWindow",
+      "stage": "Fixed",
+      "note": "실제 입력창의 Slate 문자 이벤트와 Enter로 across를 시작 후1.002초 뒤 제출해 정상 채점. 물리 키보드나 Windows IME 한글 조합 시험 아님; 에러 이전 화면 없음."
+    },
+    {
+      "id": "video-2170",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-2170.jpg",
+      "display_crop": null,
+      "source_sha256": "b12f362d9430b6428999ecf1681ddd9fbe5615dba26a919a013a63aaeb6ad634",
+      "display_sha256": "cb521eea00bbc4680397a08913a676b392aaa8eb5c13cf42b1ce17ae92dc213e",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 2170s; UI predates final HUD.",
+      "video_time_seconds": 2170
+    },
+    {
+      "id": "karaoke",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/karaoke.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "743655ac8b5236b2517827030ccd1cbea7f524b02a2bf9489c00399b410a424f",
+      "display_sha256": "acb3c888a9c729fd07676c1a89be5dc9c9f8650201fd291d83258569f430f593",
+      "feature_id": "F031-KaraokeLyrics",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "실제 Song1 오디오11.3998초에서 원문 단어 부분 파란 채움. 촬영을 위해 실제 재생 일시정지했고1.5초간 곡시간 변화0. 정지 화면을 연속 재생영상으로 주장하지 않음."
+    },
+    {
+      "id": "karaokeLater",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/karaokeLater.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "1e770f09782754386296bb4f64c1c76541a54802f9cecfc3ea22e5a285111764",
+      "display_sha256": "77509f6704f5a68994fde5a52847d324572eba91c413f830776a0436f5b86010",
+      "feature_id": "F031-KaraokeLyrics",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "같은 실제 재생을 재개하고14.2157초에서 다시 일시정지해 가사 색이 다음 단어까지 진행됨을 확인. 자동 색칠 모형이 아닌 실제 PIE."
+    },
+    {
+      "id": "result",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/result.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "35b53d1d418293208cec7f9bff7b505b3cb4095295ac3695ffce88369d4db432",
+      "display_sha256": "a30a2833db535de014e1faf5f401a017e3d34b470cadfb2c8eb001acb9df3c09",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "최종6곡 실제오디오시계/자동타자 시험 모두100점과보상50점. 이사진은마지막IDOL SINBI실제결과를다시열어촬영했으며최초결과시각화면이라고주장하지않음. 사람가창점수가아님."
+    },
+    {
+      "id": "diaryLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/diaryLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "9357134c8a538f171e1fa05c1626edf3be66df736576268fc52ae38ea1034b95",
+      "display_sha256": "4661920ec234b493ac233fe26a948aee7b84b2423e3425fdb6fd4d41027025f3",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 F089: temporary Q03 and completed Q01/Q02 to test diary navigation; not normal story completion."
+    },
+    {
+      "id": "lyricScene",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/lyricScene.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "eca576a63ea877245ec26b8b744bfa5dd1243ab55e21764886f9d9d4e206bed8",
+      "display_sha256": "d489c29f9e1ab333b02e37417e9811b6d82bef7adf44c5f22f845984effc9787",
+      "feature_id": "F091-CinematicLyrics",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "실제 레타 Q07 임시 미리보기의3줄 가사와 파란 진행 강조. 전체6곡 전곡 동기 측정/새50퀘스트 완주와 구분."
+    },
+    {
+      "id": "video-1320",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-1320.jpg",
+      "display_crop": null,
+      "source_sha256": "0a8d80a51d0fc526f983b7b8ac8007a6e55cbb3561e4d5aa3ec5721b0444ff0d",
+      "display_sha256": "0a3e39ff266c6c04cb81e03bac15b6421fb57cd3dacf62e89dee425e37f0d277",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 1320s; UI predates final HUD.",
+      "video_time_seconds": 1320
+    },
+    {
+      "id": "hudLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/hudLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "96c7bcf479a47c3c3cdea6c9f116d994a214bcf7fd06b2ad26ae60196fdccbd5",
+      "display_sha256": "06659f51d18c54de4923d916d603d48547e28cab1edddb0778f8a69731b9fc48",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 F096 actual reduced HUD in Omeda; M menu disabled test."
+    },
+    {
+      "id": "ui-09",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/ui-09.jpg",
+      "display_crop": null,
+      "source_sha256": "c62303987608bc3d33b187384cc35de51a1a7d117b8176a005e83cd7df023716",
+      "display_sha256": "fc92ccd3955c651aeb82289a7e4b1660cd578dc1cbf9f4b94ec5df3dd957c157",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-14 UI development capture; historical."
+    },
+    {
+      "id": "openingStill",
+      "source_type": "still from user-provided fal AI opening movie; not an in-engine capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/openingStill.jpg",
+      "display_crop": null,
+      "source_sha256": "b13adf282aa9216426e478e2b4984696aeec26de9ace22c869b93bf79ffc5ebf",
+      "display_sha256": "0a069f44ee1bb8641f379717fcd8e88ad0261abd1cf06d5d7d15ff3b55408ff2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 video frame; 4 seconds"
+    },
+    {
+      "id": "microphone",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/microphone.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 151,
+        "width": 1144,
+        "height": 644
+      },
+      "source_sha256": "31ebfebfe33d644f1f1a05be5d85a93f1cbd7dffab3d41d0cdaac0e4217acabe",
+      "display_sha256": "dc5d2ccf7b54f8028bac613c0cd3414219113e45d36959311c698f6da3f39dfc",
+      "feature_id": "F017-GeneratedMicrophone",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "Actual generated/Blender-cleaned160cm microphone placed in Omeda stage, editor camera view with editor icons hidden. Not a gameplay/LOD/collision validation."
+    },
+    {
+      "id": "phaseSkill",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/phaseSkill.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "8ef813a1494fa051ec5a11d453a0531b00490688c29fd887dacb3c2b880baa53",
+      "display_sha256": "e4fa1e7058102bcae091e1a07c2711602b774c6a315042db096f3cad925032b6",
+      "feature_id": "PhaseBoost",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Test map frame 80"
+    },
+    {
+      "id": "oldShop",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/oldShop.jpg",
+      "display_crop": null,
+      "source_sha256": "4066fa5a87e842e5c442be7bbfaea252777c652726d7bfd26d96118234527c04",
+      "display_sha256": "3c5170e4c6d1b858e2819b164ecaf7abe3f58aa84972bd14df2c332222f86673",
+      "feature_id": "F011-Adventure",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "상점 첫 실제 화면. 구매 버튼 마우스 클릭 골드965→960 확인. 모델 방향은 별도 오류로 기록."
+    },
+    {
+      "id": "oldMap",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/oldMap.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e8080773706891524513049409ffee7d2bacdb08b0b0df0bb5b5e4fb968d46b8",
+      "display_sha256": "2b94870bc1c2262e9af7815105c8417a7939a4f32cc8e1fea0431f7ca67de22f",
+      "feature_id": "F060-HUDMinimap",
+      "error_id": "MinimapInvisible",
+      "stage": "Error",
+      "note": "오메다 실제 시작점 PIE: 미니맵 지형·테두리는 나타나지 않고 노란 위치 표식만 보임. 수정 전 실제 화면."
+    },
+    {
+      "id": "oldParty",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-13",
+      "display_file": "assets/captures/oldParty.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 128,
+        "width": 1014,
+        "height": 570
+      },
+      "source_sha256": "e4156dea5a1eb27dffb90b2a695db77355079304a7584b1329b2c78f6274c1c5",
+      "display_sha256": "226fc6f9d38c4dbba9bc47942e9a076169adc3fc70123e8f93cc8556f2a4d50a",
+      "feature_id": "F007-SINBIUI",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "First actual native party screen; style and portrait defects remain."
+    },
+    {
+      "id": "phaseSolo",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/phaseSolo.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "838cdc894efd4e1b9fc2c2c2d2da80188c0b5e56458e704d13cec84293117211",
+      "display_sha256": "fc617de44dfb2127cc657fbfea67b90687b060daf4fa236cbb0d7793a88536d9",
+      "feature_id": "PhaseSolo",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "동행 페이즈 단독 원거리 전투"
+    },
+    {
+      "id": "english",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/english.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5790ca4822d52259ca63a42de4a87fdd7d9f1366a52694c96c1dad0c69ecd8ad",
+      "display_sha256": "66ecf2b7af7e595a63782c1f03fbd14f39906193767d62c8651e450a25e7d194",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "Clicked English in actual title UI; separate text labels changed immediately over real Omeda screenshot."
+    },
+    {
+      "id": "catalog",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/catalog.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 174,
+        "width": 2033,
+        "height": 1144
+      },
+      "source_sha256": "8b0b61e62dfe1bac3f5750a54dfc84ad3467380a0f3a86db48e58c02b5e7dead",
+      "display_sha256": "311f5bde2aee738bb1725a59bb66f399648d529cb65509196986c338836e057c",
+      "feature_id": "F014-NPCCatalog",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "최종74프로필/고유ID/발판/원본 데이터 보존을 검증한 실제 Test맵. 가까운7명 상세 표시 상태이며 전체74명이 동시에 고품질로 보인다는 뜻이 아님."
+    },
+    {
+      "id": "firstPacket",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-13",
+      "display_file": "assets/captures/firstPacket.jpg",
+      "display_crop": null,
+      "source_sha256": "b538c9a23e213a1a7268c7c702d00fd7802f99004bc660d4e70c33d335c7641a",
+      "display_sha256": "cfa1d644411069375b7a331dcdb1929ab064cbdbbb5dffd11b0c713cd5a9864c",
+      "feature_id": "F001-Concert-Microphone",
+      "error_id": "E-FirstPacket",
+      "stage": "Fixed",
+      "note": "최종 실제 입력·정산 검증 화면. 오류 전 이미지가 없어 완전한 전후 쌍이 아님."
+    },
+    {
+      "id": "guideError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/guideError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "1779858465e566e2c12b691c3f079890e72cbaf76eb16b46dfaf85148602a361",
+      "display_sha256": "52b7667c84dc7461e9b112301aa1d7d705ee7d397b010e3795ff88deea01d36c",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-GuideDistance",
+      "stage": "Error",
+      "note": "준비창 닫기 후14m 이탈에도 가이드가 계속되는 실제 상태를 JSON으로 재현. 사용자 입력 감지 후 새로 촬영한 화면이며 소리 자체나 정확히 같은 카메라 구도 비교를 주장하지 않는다."
+    },
+    {
+      "id": "guideFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/guideFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e57c1117f6027082b4735cca591879b1f8d1899951be294f73e20f532a53dfc9",
+      "display_sha256": "74f5bc3e722b334f0b3704257f3fb574c037d00ebde162acf1568fb6223df19a",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-GuideDistance",
+      "stage": "Fixed",
+      "note": "실제 PIE 동일 시나리오: 가이드 시작 후 준비창 닫고14m 이동. 전 guide_playing=true, 후 false. 추가로 준비창 유지14m 이동 및 버튼 toggle도 별도 로그로 확인. 스크린샷은 상태 증거이며 소리의 청취 검증을 대신하지 않음."
+    },
+    {
+      "id": "earlyWord",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/earlyWord.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "ad85328c7c2366e20020fdbca1ea900c40787ca8f54ae95557857188d465c7a2",
+      "display_sha256": "e83946b14780a94df8e49927079ad9da046719ca801f726d0a8d9e2a995f8496",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-EarlyTypingPrompt",
+      "stage": "Error",
+      "note": "실제 Mars Fiesta50.43초 간주에서 가사는 비었지만 다음 입력 단어corazón이 먼저 표시됨. 수정 전 촬영을 위해 실제 재생 일시정지."
+    },
+    {
+      "id": "wordFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/wordFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "f9ac0e5feebadb7ef3548ca5ca13ddd9204d505c732cfb376d6660e411a0a523",
+      "display_sha256": "8092c842c3676b35942e0e3067fb336a6a20dd7679fcfc22d9c6aa5b92498494",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-EarlyTypingPrompt",
+      "stage": "Fixed",
+      "note": "같은 Song4 간주50.43/50.94초 조건에서 가사와 입력 단어 모두 빈 상태. 전 사진의미리나온corazón표시없음. 실제노래가진행된뒤일시정지하여촬영;시계0.51초차있음. 노래구간9.407초에는원문Red와입력Red가함께나온별도캡처도보관."
+    },
+    {
+      "id": "clothError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/clothError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e4a12d355294f54817c2c8c31ddcde524b7d2540bd913d4b6f46bfd96d821e8b",
+      "display_sha256": "f07d3e8f9114e9ad4a3516d5638697432350748331dcd89da63eb5695273e051",
+      "feature_id": "F067-StoryWalk",
+      "error_id": "Q07F077ShinbiCloth",
+      "stage": "Error",
+      "note": "실제 Q07 장면에서 자주색 형상이 크게 뻗어 신비 몸을 가림. 장식·천 시뮬레이션 또는 에셋 준비 영향 여부는 진단 전이며 단정하지 않음."
+    },
+    {
+      "id": "clothFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/clothFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "81708cb5fe004495bae7c6610048dd6e7bb534af67300aa8a4bac38de77ed0d0",
+      "display_sha256": "69ae8fdc33131e9fcbd6a83f693691a74490be186153d81bbca2ebfab6dd0e98",
+      "feature_id": "F067-StoryWalk",
+      "error_id": "Q07F077ShinbiCloth",
+      "stage": "Fixed",
+      "note": "F080 same Q07 trial save: automatic reset, several observed animation frames without prior extreme purple spikes. Limited sampled observation; whole song and cooked build remain unverified. Shader and mesh preparation warnings visible."
+    },
+    {
+      "id": "partyError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/partyError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 350,
+        "width": 855,
+        "height": 481
+      },
+      "source_sha256": "12a36a404e9a8a49e2d8fa858c1be4bf8da9de13a4541dfce118045731a228a2",
+      "display_sha256": "93b5ead729e41cd8a69d1a08eb7431a794f428e9fea08f1c30c4225a89d8ff97",
+      "feature_id": "F014-NPCCatalog",
+      "error_id": "PartyRoster",
+      "stage": "Error",
+      "note": "칼라리 팬심100 영입 성공 후 실제 파티 UI가 빈 동료칸으로 보임. 기존 고정 ID 조건으로 신규 동료 버튼이 Collapsed 되는 것을 실행 중 확인."
+    },
+    {
+      "id": "partyFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/partyFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 350,
+        "width": 855,
+        "height": 481
+      },
+      "source_sha256": "6cdf3090a3cb7c9d0d907fbca7b49c3f89ca470448abf02d4cd53e8dfc0acc4d",
+      "display_sha256": "3ad8a7bd9bc7de72387750da0dc07cb4f0522787a004bb2db3b37996c99f2390",
+      "feature_id": "F014-NPCCatalog",
+      "error_id": "PartyRoster",
+      "stage": "Fixed",
+      "note": "칼라리/펭 마오/머독 실제 영입 후 기존3칸이 순서대로 해당ID를 선택. 실제 모델 프리뷰와 HP/MP/기본공격 표시 및 보내주기4검사 통과. 신규 초상은 공통 파티 아이콘으로 구분하며 다른 캐릭터 얼굴을 쓰지 않음."
+    },
+    {
+      "id": "followError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/followError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "f5202ece0333691ced01deba57ce5ca53800c10545259fe9bca24ece4144ea3e",
+      "display_sha256": "8bd941f9f15fee2e0afaf8d3725e8af876e7ba6ebad742cabc885c78ce79c1cc",
+      "feature_id": "StableParty",
+      "error_id": "PartyBlocking",
+      "stage": "Error",
+      "note": "크기별 목표는 계산됐지만 캡슐 충돌로 3명이 막혔다."
+    },
+    {
+      "id": "laterPath",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/laterPath.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e79be50569339b4b842b58fab4216e5111f7e6bf48b20a6953a9aab4189f8360",
+      "display_sha256": "bd4d7f3caa0be32ea707156ac82945c2ba29d81e4a0e8b18ffa8f54efce90809",
+      "feature_id": "F054-OmedaCompact",
+      "error_id": "ApproachBlocked",
+      "stage": "Error",
+      "note": "실제 신비와 파라곤 3명의 입력 시험에서 첫 경유점 전에 구조물에 막힘. 접근로 대안 조사."
+    },
+    {
+      "id": "returnError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/returnError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "d8e78f95cb9ebfff4058e32e04ae8c26784179d82614e3f0e390f5fc09fa9636",
+      "display_sha256": "c06a362f751301473c409a9dd5bb089a50be166cfb9d067d8c032ad496357582",
+      "feature_id": "EnemyReturn",
+      "error_id": "EnemyStopsAway",
+      "stage": "Error",
+      "note": "감지 대상을 잃은 뒤 201.2cm 떨어진 곳에서 1초간 0cm 이동한 기존 동작을 재현."
+    },
+    {
+      "id": "returnFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/returnFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "1c0bd5ba2f7732843f8ae84c7b857079359030d82d5b3f4368016e26de1e9fe3",
+      "display_sha256": "13d7a37d7b649fa5039c9d5f174b291f496b4f1949bb0319f08d4c02116ccef3",
+      "feature_id": "EnemyReturn",
+      "error_id": "EnemyStopsAway",
+      "stage": "Fixed",
+      "note": "동일 Test맵의 1마리 추격 시험. 귀환 시작 시 이름표 숨김, 0.4초 동안 원점 거리 285.1cm에서 136.7cm로 감소, 28.6cm 이내 도착."
+    },
+    {
+      "id": "waterError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/waterError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "368b0575993cd758b4743ba2c422c9e32faaa1528b5e12b723cc1cbc5cea63be",
+      "display_sha256": "7b6381e1b55729e00ebeb9d47f53c5db3e27972651089bff174ea4447ff202af",
+      "feature_id": "F030-WaterBounds",
+      "error_id": "E030-ZechenWaterOverlap",
+      "stage": "Error",
+      "note": "Retained actual CUA pre-fix water-overlap image. The initial export reused an older valid BEFORE state. Exact original capture time is not available; file timestamp is export time. The final fresh AFTER uses the same pond area with a slightly different camera, not an exact frame alignment."
+    },
+    {
+      "id": "waterFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/waterFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "5764e7f991b6091bb268e4fc4736e7e2bf3ba28bbe312579dbd34a85dedee779",
+      "display_sha256": "af6818cd80e99bb7de3be22f0f9a2fe7c34bfa52ca15d0f55dc0d3fa799e129e",
+      "feature_id": "F030-WaterBounds",
+      "error_id": "E030-ZechenWaterOverlap",
+      "stage": "Fixed",
+      "note": "Fresh actual CUA AFTER export with distinct hash. Same village shoreline scenario as retained genuine BEFORE, slightly different camera angle; not frame-aligned. Duplicate after exports rejected before commit. Saved game-world water bounds readback separately passed."
+    },
+    {
+      "id": "sceneError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/sceneError.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "210a7fa2abbbf646fdfd77cd77371fd97ca1c7f583e5712cbe93e56cbd193f8c",
+      "display_sha256": "e9846e6ec537d9cdaa77a3a8e035dc637d4608da3d058300ad8a24285a5a2f18",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_StoryCameraStart",
+      "stage": "Error",
+      "note": "Q46 failed to start because focus was inside a large NPC model. Progress did not advance."
+    },
+    {
+      "id": "sceneWorkaround",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/sceneWorkaround.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "44fa02ed9b5fb7b914a58d81016f0e5e9a2e51134a5ecd556053bc86725611c7",
+      "display_sha256": "4bce592f8d88ff7681ae90b0283393f9b9793b73567b650c4488aeed2fa1e3f9",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_StoryCameraStart",
+      "stage": "Fixed",
+      "note": "Workaround: physically step away, open/close menu, then full-song playback starts. No permanent automatic recovery claimed."
+    },
+    {
+      "id": "treeError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/treeError.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5dea614b24397eb5f14f2b9df77f93641148cfa1be0575e7aa011c8b0fabf727",
+      "display_sha256": "49a00cd58ba7686970b1a00529f4474ef85422d9007155abd4b73368cce52186",
+      "feature_id": "F086-ConcertCamera",
+      "error_id": "E_TreeOcclusion",
+      "stage": "Error",
+      "note": "Original production camera inside a decorative tree. Physics probe alone did not detect it."
+    },
+    {
+      "id": "treeFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/treeFixed.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5883371ce97d918479646cb25c5260d9184d5f4300e9cbecc06111e5bf83e395",
+      "display_sha256": "f54efbc38e1ee89c1bb43725d60d25d1aca84c82f3a02f7adefa8c55fc353133",
+      "feature_id": "F086-ConcertCamera",
+      "error_id": "E_TreeOcclusion",
+      "stage": "Fixed",
+      "note": "Authored venue yaw180 and mirrored backstage saved/reopened; compiled camera fallback checked in separate staged zero-fee preview. Does not validate economy or walking."
+    },
+    {
+      "id": "bakedError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/bakedError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "a6f63f6dd10553c0efb4f76c5af76df8fa5d38cc4bebd4c267a4da48577bed15",
+      "display_sha256": "d3a8fd70ac3c4a7299f9ded676b6a4d1389ada14f3147035d796f8684235e4bc",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": "E_BakedTitleLabels",
+      "stage": "Error",
+      "note": "English culture selected but prior title labels were baked Korean pixels."
+    },
+    {
+      "id": "bakedFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/bakedFixed.jpg",
+      "display_crop": null,
+      "source_sha256": "f16eb211e8b76235f12c34dda09c948d8b7f76ff188505c794df8d26a12522bb",
+      "display_sha256": "53a025ea0ed1d006a3dbe18cffa5a9590ca7b47057d31a7679a4e7d49ad71b10",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": "E_BakedTitleLabels",
+      "stage": "Fixed",
+      "note": "Actual menu recording frame: real Omeda photo with separate English menu labels. Dynamic underline final build pending."
+    },
+    {
+      "id": "continueError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/continueError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "74f56792f94249653302debe1625b1a1bc511ffc5e18c1fdb79fb6491a231bf6",
+      "display_sha256": "3951d2cd0b127cd2a4bc7c56f9022a99cda2aa38d7fa8300c9a8ba3326e16d4d",
+      "feature_id": "F033-MenuContinue",
+      "error_id": "E033-NoVisibleContinue",
+      "stage": "Error",
+      "note": "실제 Test PIE의 일시정지 메뉴 스크린샷: 상단 설정 옆에 계속하기가 없고 설정 내용에 저장/불러오기/게임 설정/나가기만 보임. 별도 조회에서 기존 A_Close는 COLLAPSED; 이 사진과 별도 화면 상태 조회를 같은 순간의 로그로 위장하지 않음."
+    },
+    {
+      "id": "continueFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/continueFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "6fe16a695d82b6e10a0eae31d461f8e2100cc1de01e46f3d568872c9322333ad",
+      "display_sha256": "e3e5bfd008e35aa1821be546ca393b6896abfc32c52a242f9ffcf8b93d390054",
+      "feature_id": "F033-MenuContinue",
+      "error_id": "E033-NoVisibleContinue",
+      "stage": "Fixed",
+      "note": "동일 Test 메뉴의 설정 옆 계속하기 표시, 실제 마우스 클릭 후 일시정지해제와 Enhanced Input 전진 287.4cm 확인. 실제 키보드·게임패드 선택은 별도 검증 필요."
+    },
+    {
+      "id": "chestBefore",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/chestBefore.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "042ccb8a48f2f920cf4210286ec008fae24947164bb69a06cc953abeecf17ccd",
+      "display_sha256": "811fad61c19d5d56531f712390229610bd6af7d15bffb8ddc2fee66b2a1438dd",
+      "feature_id": "F091-ChestPlacement",
+      "error_id": "E091-TiltedPlacement",
+      "stage": "Error",
+      "note": "실제 레타 상자의 기울어진 수정 전 화면. Rotator의 두번째 위치 인자가 pitch로 해석됨."
+    },
+    {
+      "id": "chestFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/chestFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 142,
+        "width": 1521,
+        "height": 856
+      },
+      "source_sha256": "bc99f5a1b19af6609e1638322aabc067aa1c548bcafd5d8ad832ab07dd151804",
+      "display_sha256": "0932bcf21e83abfa9e55bfc420d0d7f10efc0bbc94ec51a630e5b38345505cc2",
+      "feature_id": "F091-ChestPlacement",
+      "error_id": "E091-TiltedPlacement",
+      "stage": "Fixed",
+      "note": "동일 상자 배치 시나리오 수정 후 실제 에디터 화면. 전체80개 플레이어 도달 검증과 구분."
+    },
+    {
+      "id": "lumen",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/lumen.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "3778b05eddb743fb0c97622b4515b680d3b58294476c48bca3e7025eb472c00f",
+      "display_sha256": "d170a905ffccb94f0165f991cd8b693499181e4090c689235ba39f1c861e10a8",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_LumenAtlasBudget",
+      "stage": "Error",
+      "note": "Actual Q25 concert. Lumen surface-cache atlas oversubscribed 39.89%; atlas4096. Gameplay proceeds; rendering budget issue unresolved."
+    },
+    {
+      "id": "obsAudio",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/obsAudio.jpg",
+      "display_crop": null,
+      "source_sha256": "df5eaa97917e6ad8b8a336d7141c24f1b4d46fecc0409ffb5e913e666fc8388f",
+      "display_sha256": "8db2594015ac2bc2a3cfe601b7d90cd3bb4b818c2e1f7dfc603885ad195b3fc0",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_RecordingSilent",
+      "stage": "Fixed",
+      "note": "Output-device source shows song signal; recorded sample max -3.1dB. Original earlier silence preserved; no before-after image pair."
+    },
+    {
+      "id": "menuLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/menuLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "5418a2700329376abb84badf583f88f435284091b0278fd2840af08fb092b17b",
+      "display_sha256": "863a53f651960e7ebcc76a5dfd065bb535a1699a4a50e62fe2e6005ba10acb0a",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 menu atmosphere revision baseline."
+    }
+  ],
+  "articles": [
+    {
+      "id": "F01",
+      "file": "구현기능/1. 게임의 전체 구조와 제작 과정.md",
+      "status": "구현 · 에디터 완주 확인",
+      "figure": "assets/figures/F01.webp",
+      "captures": [
+        "video-5100"
+      ],
+      "clip": "assets/clips/F01.mp4"
+    },
+    {
+      "id": "F02",
+      "file": "구현기능/2. 플레이어 이동과 카메라.md",
+      "status": "구현 · 조작 일부 확인",
+      "figure": "assets/figures/F02.webp",
+      "captures": [
+        "zoomIn",
+        "zoomOut"
+      ],
+      "clip": "assets/clips/F02.mp4"
+    },
+    {
+      "id": "F03",
+      "file": "구현기능/3. 기본 공격과 전투 상태.md",
+      "status": "구현 · 제한된 전투 시험",
+      "figure": "assets/figures/F03.webp",
+      "captures": [
+        "combat"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F04",
+      "file": "구현기능/4. 적의 추격과 원위치 복귀.md",
+      "status": "구현 · 적 1종 회귀 확인",
+      "figure": "assets/figures/F04.webp",
+      "captures": [
+        "enemy"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F05",
+      "file": "구현기능/5. 몬스터를 동료로 만드는 R 영입.md",
+      "status": "구현 · 최신 영입 조건 반영",
+      "figure": "assets/figures/F05.webp",
+      "captures": [
+        "heartLatest"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F06",
+      "file": "구현기능/6. 동료 추종과 협동 전투.md",
+      "status": "구현 · 협동 시험 / 길찾기 한계",
+      "figure": "assets/figures/F06.webp",
+      "captures": [
+        "follow"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F07",
+      "file": "구현기능/7. NPC 대화와 주민 행동.md",
+      "status": "구현 · 일부 주민 실행 확인",
+      "figure": "assets/figures/F07.webp",
+      "captures": [
+        "dialog"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F08",
+      "file": "구현기능/8. 선물과 팬심.md",
+      "status": "구현 · 취향 데이터 / 일부 지급 확인",
+      "figure": "assets/figures/F08.webp",
+      "captures": [
+        "giftActual"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F09",
+      "file": "구현기능/9. 불씨와 영감 성장.md",
+      "status": "구현 · 흡수와 중복 방지 확인",
+      "figure": "assets/figures/F09.webp",
+      "captures": [
+        "cinderAfter"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F10",
+      "file": "구현기능/10. 가방과 집 창고.md",
+      "status": "구현 · 저장 데이터와 제한 시험",
+      "figure": "assets/figures/F10.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "F11",
+      "file": "구현기능/11. 보물상자와 아이템 획득.md",
+      "status": "구현 · 실제 획득과 재로드 확인",
+      "figure": "assets/figures/F11.webp",
+      "captures": [
+        "pickup"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F12",
+      "file": "구현기능/12. 공연장과 관객 시스템.md",
+      "status": "구현 · 공연장 연결 / 군중 일부 확인",
+      "figure": "assets/figures/F12.webp",
+      "captures": [
+        "video-3040"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F13",
+      "file": "구현기능/13. 실제 마이크 노래 채점.md",
+      "status": "구현 · 실제 마이크 1곡 / 분석 시험",
+      "figure": "assets/figures/F13.webp",
+      "captures": [
+        "mic"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F14",
+      "file": "구현기능/14. 박자에 맞춘 타자 공연.md",
+      "status": "구현 · 입력 경로와 전곡 자동 시험",
+      "figure": "assets/figures/F14.webp",
+      "captures": [
+        "typingInput"
+      ],
+      "clip": "assets/clips/F14.mp4"
+    },
+    {
+      "id": "F15",
+      "file": "구현기능/15. Gemini 6곡을 게임에 넣기.md",
+      "status": "구현 · 6곡 도입 / 정렬 초안",
+      "figure": "assets/figures/F15.webp",
+      "captures": [
+        "video-2170"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F16",
+      "file": "구현기능/16. 노래방처럼 진행되는 가사.md",
+      "status": "구현 · 실제 색 진행 확인",
+      "figure": "assets/figures/F16.webp",
+      "captures": [
+        "karaoke",
+        "karaokeLater"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F17",
+      "file": "구현기능/17. 공연 결과와 보상.md",
+      "status": "구현 · 정산 연결 확인",
+      "figure": "assets/figures/F17.webp",
+      "captures": [
+        "result"
+      ],
+      "clip": "assets/clips/F17.mp4"
+    },
+    {
+      "id": "F18",
+      "file": "구현기능/18. 50개 메인 퀘스트와 일기.md",
+      "status": "구현 · 50개 여정 완주 기록",
+      "figure": "assets/figures/F18.webp",
+      "captures": [
+        "diaryLatest"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F19",
+      "file": "구현기능/19. 이야기 속 노래와 시네마틱.md",
+      "status": "구현 · 이야기 재생 / 가사 미리보기",
+      "figure": "assets/figures/F19.webp",
+      "captures": [
+        "lyricScene"
+      ],
+      "clip": "assets/clips/F19.mp4"
+    },
+    {
+      "id": "F20",
+      "file": "구현기능/20. 네 행성과 포털 연결.md",
+      "status": "구현 · 실제 왕복 / 전체 동선 미검증",
+      "figure": "assets/figures/F20.webp",
+      "captures": [
+        "video-1320"
+      ],
+      "clip": "assets/clips/F20.mp4"
+    },
+    {
+      "id": "F21",
+      "file": "구현기능/21. 메인 메뉴 HUD 파티 UI.md",
+      "status": "구현 · 최신 HUD 반영",
+      "figure": "assets/figures/F21.webp",
+      "captures": [
+        "hudLatest"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F22",
+      "file": "구현기능/22. 저장과 다국어.md",
+      "status": "구현 · 언어 전환 / 현지화 부분 검수",
+      "figure": "assets/figures/F22.webp",
+      "captures": [
+        "ui-09"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F23",
+      "file": "구현기능/23. 오프닝 사운드 엔딩.md",
+      "status": "연결 완료 · 최종 청취 / 패키지 실행 미검증",
+      "figure": "assets/figures/F23.webp",
+      "captures": [
+        "openingStill"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F24",
+      "file": "구현기능/24. Windows 패키징.md",
+      "status": "Win64 패키징 성공 · 최종 실행 미검증",
+      "figure": "assets/figures/F24.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "F25",
+      "file": "구현기능/25. 에셋 AI 생성물 장부.md",
+      "status": "장부 작성 · 적용과 생성 구분",
+      "figure": "assets/figures/F25.webp",
+      "captures": [
+        "microphone"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F26",
+      "file": "구현기능/26. (미완) NPC 스킬 학습과 플레이어 Q.md",
+      "status": "구현 후 삭제",
+      "figure": "assets/figures/F26.webp",
+      "captures": [
+        "phaseSkill"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F27",
+      "file": "구현기능/27. (미완) NPC 상점.md",
+      "status": "구현 후 삭제",
+      "figure": "assets/figures/F27.webp",
+      "captures": [
+        "oldShop"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F28",
+      "file": "구현기능/28. (미완) 전체 지도와 회전 미니맵.md",
+      "status": "일부 구현 후 삭제",
+      "figure": "assets/figures/F28.webp",
+      "captures": [
+        "oldMap"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F29",
+      "file": "구현기능/29. (미완) 캐릭터 AI 대사 음성.md",
+      "status": "연결 후 삭제",
+      "figure": "assets/figures/F29.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "F30",
+      "file": "구현기능/30. (미완) 다섯 능력치와 SP.md",
+      "status": "기획 단순화 · 기존 표시 삭제",
+      "figure": "assets/figures/F30.webp",
+      "captures": [
+        "oldParty"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F31",
+      "file": "구현기능/31. (미완) 페이즈 동료와 관련 설정.md",
+      "status": "기능 시험 후 에셋 · 설정 삭제",
+      "figure": "assets/figures/F31.webp",
+      "captures": [
+        "phaseSolo"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F32",
+      "file": "구현기능/32. (미완) 9개 언어 전체 현지화 검수.md",
+      "status": "AI 번역 초안 · 전체 검수 미완",
+      "figure": "assets/figures/F32.webp",
+      "captures": [
+        "english"
+      ],
+      "clip": null
+    },
+    {
+      "id": "F33",
+      "file": "구현기능/33. (미완) 전체 NPC의 전용 스킬.md",
+      "status": "기본 공격 연결 · 전용 스킬 보류",
+      "figure": "assets/figures/F33.webp",
+      "captures": [
+        "catalog"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T01",
+      "file": "트러블슈팅/1. 마이크가 연결됐는데 입력되지 않는 문제.md",
+      "status": "수정 · 입력 경로 확인 / 오류 사진 없음",
+      "figure": "assets/figures/T01.webp",
+      "captures": [
+        "firstPacket"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T02",
+      "file": "트러블슈팅/2. 공연이 시작하자마자 끝나는 문제.md",
+      "status": "수정 · 오디오 시작 / 끝 판정 분리",
+      "figure": "assets/figures/T02.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "T03",
+      "file": "트러블슈팅/3. 멀리 가도 가이드 음악이 계속 나오는 문제.md",
+      "status": "수정 · 같은 시나리오 상태 재시험",
+      "figure": "assets/figures/T03.webp",
+      "captures": [
+        "guideError",
+        "guideFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T04",
+      "file": "트러블슈팅/4. 간주에 타자 단어가 먼저 나오는 문제.md",
+      "status": "수정 · 간주와 노래 구간 확인",
+      "figure": "assets/figures/T04.webp",
+      "captures": [
+        "earlyWord",
+        "wordFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T05",
+      "file": "트러블슈팅/5. 신비 팔 장식이 뒤엉키는 문제.md",
+      "status": "완화 · 제한 재시험 / 재발 이력 있음",
+      "figure": "assets/figures/T05.webp",
+      "captures": [
+        "clothError",
+        "clothFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T06",
+      "file": "트러블슈팅/6. 영입한 NPC가 복제되는 문제.md",
+      "status": "중복 경로 수정 · 파티 UI 별도 수정",
+      "figure": "assets/figures/T06.webp",
+      "captures": [
+        "partyError",
+        "partyFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T07",
+      "file": "트러블슈팅/7. 동료가 막히거나 따라오지 않는 문제.md",
+      "status": "부분 수정 · 실제 월드 경로 남음",
+      "figure": "assets/figures/T07.webp",
+      "captures": [
+        "followError",
+        "laterPath"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T08",
+      "file": "트러블슈팅/8. 적이 추격을 멈추고도 돌아가지 않는 문제.md",
+      "status": "수정 · 같은 적 귀환 확인",
+      "figure": "assets/figures/T08.webp",
+      "captures": [
+        "returnError",
+        "returnFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T09",
+      "file": "트러블슈팅/9. 배경 팩을 합치며 생긴 틈과 물 겹침.md",
+      "status": "일부 구역 수정 · 전체 월드 미완 검증",
+      "figure": "assets/figures/T09.webp",
+      "captures": [
+        "waterError",
+        "waterFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T10",
+      "file": "트러블슈팅/10. 배치를 저장했는데 재실행하면 달라지는 문제.md",
+      "status": "저장 경로 보완 · 재열기 기준",
+      "figure": "assets/figures/T10.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "T11",
+      "file": "트러블슈팅/11. 시네마틱이 시작되지 않거나 중단되는 문제.md",
+      "status": "부분 수정 · 우회 성공과 원인 미확정 분리",
+      "figure": "assets/figures/T11.webp",
+      "captures": [
+        "sceneError",
+        "sceneWorkaround"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T12",
+      "file": "트러블슈팅/12. 공연 화면이 나무에 가려지는 문제.md",
+      "status": "카메라 수정 · 별도 미리보기 확인",
+      "figure": "assets/figures/T12.webp",
+      "captures": [
+        "treeError",
+        "treeFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T13",
+      "file": "트러블슈팅/13. 메인 메뉴 글자가 번역되지 않는 문제.md",
+      "status": "수정 · 실제 영어 전환 확인",
+      "figure": "assets/figures/T13.webp",
+      "captures": [
+        "bakedError",
+        "bakedFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T14",
+      "file": "트러블슈팅/14. 계속하기 버튼이 눌리지 않는 문제.md",
+      "status": "수정 · 클릭 뒤 이동 재개 확인",
+      "figure": "assets/figures/T14.webp",
+      "captures": [
+        "continueError",
+        "continueFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T15",
+      "file": "트러블슈팅/15. 포털 이동 때 미니맵이 잠깐 나타나는 문제.md",
+      "status": "제거 후 왕복 조회 · 오류 영상 없음",
+      "figure": "assets/figures/T15.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "T16",
+      "file": "트러블슈팅/16. 보물상자가 남아 있거나 땅에 박히는 문제.md",
+      "status": "수정 · 지면 배치와 수집 상태 확인",
+      "figure": "assets/figures/T16.webp",
+      "captures": [
+        "chestBefore",
+        "chestFixed"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T17",
+      "file": "트러블슈팅/17. 패키징 마지막에 실패하는 문제.md",
+      "status": "대체 텍스처로 재쿠킹 성공",
+      "figure": "assets/figures/T17.webp",
+      "captures": [],
+      "clip": null
+    },
+    {
+      "id": "T18",
+      "file": "트러블슈팅/18. Lumen 그림자 메모리 경고.md",
+      "status": "일부 경고 완화 · 전체 성능 미측정",
+      "figure": "assets/figures/T18.webp",
+      "captures": [
+        "lumen"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T19",
+      "file": "트러블슈팅/19. 플레이 영상에 소리가 녹음되지 않는 문제.md",
+      "status": "녹음 경로 수정 · 앞부분 무음 보존",
+      "figure": "assets/figures/T19.webp",
+      "captures": [
+        "obsAudio"
+      ],
+      "clip": null
+    },
+    {
+      "id": "T20",
+      "file": "트러블슈팅/20. Rider MCP 연결과 빌드 결과가 어긋나는 문제.md",
+      "status": "연결 수정 · 상태 API 우회",
+      "figure": "assets/figures/T20.webp",
+      "captures": [],
+      "clip": null
+    }
+  ],
+  "clips": [
+    {
+      "article": "F01",
+      "file": "assets/clips/F01.mp4",
+      "source_start_seconds": 5096,
+      "duration_seconds": 8,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "레타에서 이어지는 실제 여정"
+    },
+    {
+      "article": "F02",
+      "file": "assets/clips/F02.mp4",
+      "source_start_seconds": 237,
+      "duration_seconds": 8,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "실제 여정의 이동 장면"
+    },
+    {
+      "article": "F14",
+      "file": "assets/clips/F14.mp4",
+      "source_start_seconds": 2395,
+      "duration_seconds": 8,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "실제 여정의 타자 공연 · 가사 표시"
+    },
+    {
+      "article": "F17",
+      "file": "assets/clips/F17.mp4",
+      "source_start_seconds": 3067,
+      "duration_seconds": 7,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "정상 여정 중 실제 공연 결과"
+    },
+    {
+      "article": "F19",
+      "file": "assets/clips/F19.mp4",
+      "source_start_seconds": 5406,
+      "duration_seconds": 8,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "가사 추가 전 실제 여정의 이야기 노래"
+    },
+    {
+      "article": "F20",
+      "file": "assets/clips/F20.mp4",
+      "source_start_seconds": 1317,
+      "duration_seconds": 7,
+      "audio": "deliberately omitted for a compact screen demonstration; full recording has original audio gap",
+      "label": "실제 여정 중 행성 로딩 전환"
+    }
+  ],
+  "diagram_method": "Editable SVG layouts authored by Codex from retained evidence and rendered to WebP. No AI repainting of game captures.",
+  "record_status": "Retrospective documentation; current game runtime was not changed or newly tested."
+}

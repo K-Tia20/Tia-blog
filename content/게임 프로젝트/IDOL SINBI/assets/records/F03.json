@@ -1,0 +1,43 @@
+{
+  "article": "F03",
+  "title": "기본 공격과 전투 상태",
+  "status": "구현 · 제한된 전투 시험",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/combat.jpg",
+      "id": "combat",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/combat.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "0dd9283ed7b013176d11d7675c84263d1674370da47b026a812dce68a82ce0b2",
+      "display_sha256": "e7a3b30bd593cf4e0151bd9d72142ec8d73b20eaf9b1d1a46c51fc3a3ca21ae2",
+      "feature_id": "LastSongCombat",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Combat-Reward"
+    }
+  ],
+  "verified": [
+    "시험 맵에서 먼 적·진입·이탈, 선딜, 뒤쪽 대상, 선딜 중 이탈 등 11개 검사를 통과했다.",
+    "마을 복귀 뒤 신비와 쓰러졌던 동료의 HP·MP 20 복구를 확인했다."
+  ],
+  "limitations": [
+    "벽을 둔 실제 차폐 배치 시험과 모든 캐릭터·다수 적 전투는 별도 확인이 남았다.",
+    "사진은 해당 전투 시험이 남아 있는 11월 14일 화면으로, 최종 HUD 모습은 아니다."
+  ],
+  "video": null
+}

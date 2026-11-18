@@ -1,0 +1,66 @@
+{
+  "article": "T14",
+  "title": "계속하기 버튼이 눌리지 않는 문제",
+  "status": "수정 · 클릭 뒤 이동 재개 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/UI-F032-F034",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F089-HUD-Menu.md",
+      "type": "source document",
+      "sha256": "cadad9b7b8f1dcdc604027663edef1c2bd6787683f08aa6208ef1f35d96fd78d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/continueError.jpg",
+      "id": "continueError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/continueError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "74f56792f94249653302debe1625b1a1bc511ffc5e18c1fdb79fb6491a231bf6",
+      "display_sha256": "3951d2cd0b127cd2a4bc7c56f9022a99cda2aa38d7fa8300c9a8ba3326e16d4d",
+      "feature_id": "F033-MenuContinue",
+      "error_id": "E033-NoVisibleContinue",
+      "stage": "Error",
+      "note": "실제 Test PIE의 일시정지 메뉴 스크린샷: 상단 설정 옆에 계속하기가 없고 설정 내용에 저장/불러오기/게임 설정/나가기만 보임. 별도 조회에서 기존 A_Close는 COLLAPSED; 이 사진과 별도 화면 상태 조회를 같은 순간의 로그로 위장하지 않음."
+    },
+    {
+      "target": "assets/captures/continueFixed.jpg",
+      "id": "continueFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/continueFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "6fe16a695d82b6e10a0eae31d461f8e2100cc1de01e46f3d568872c9322333ad",
+      "display_sha256": "e3e5bfd008e35aa1821be546ca393b6896abfc32c52a242f9ffcf8b93d390054",
+      "feature_id": "F033-MenuContinue",
+      "error_id": "E033-NoVisibleContinue",
+      "stage": "Fixed",
+      "note": "동일 Test 메뉴의 설정 옆 계속하기 표시, 실제 마우스 클릭 후 일시정지해제와 Enhanced Input 전진 287.4cm 확인. 실제 키보드·게임패드 선택은 별도 검증 필요."
+    }
+  ],
+  "verified": [
+    "실제 마우스 클릭 후 일시정지가 풀리고 전진 287.4cm를 확인했다."
+  ],
+  "limitations": [
+    "사진은 F033의 표시 전후다. 후속 겹침 수정과 같은 순간의 화면은 아니다.",
+    "게임패드 포커스와 모든 탭 조합 전수 시험은 남았다."
+  ],
+  "video": null
+}

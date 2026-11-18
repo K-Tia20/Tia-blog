@@ -42,7 +42,7 @@
   "dateInHistoryView": false,
   "diffStyle": "split",
   "diffTimeout": 50,
-  "autoStageOnEmptyIndex": false,
+  "autoStageOnEmptyIndex": true,
   "hunks": {
     "showSigns": false,
     "hunkCommands": false,

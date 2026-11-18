@@ -1,0 +1,38 @@
+{
+  "article": "T19",
+  "title": "플레이 영상에 소리가 녹음되지 않는 문제",
+  "status": "녹음 경로 수정 · 앞부분 무음 보존",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/obsAudio.jpg",
+      "id": "obsAudio",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/obsAudio.jpg",
+      "display_crop": null,
+      "source_sha256": "df5eaa97917e6ad8b8a336d7141c24f1b4d46fecc0409ffb5e913e666fc8388f",
+      "display_sha256": "8db2594015ac2bc2a3cfe601b7d90cd3bb4b818c2e1f7dfc603885ad195b3fc0",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_RecordingSilent",
+      "stage": "Fixed",
+      "note": "Output-device source shows song signal; recorded sample max -3.1dB. Original earlier silence preserved; no before-after image pair."
+    }
+  ],
+  "verified": [
+    "후속 샘플의 최대 레벨 -3.1dB와 출력 신호를 확인했다.",
+    "전체 MP4 디코딩 검사를 통과했다."
+  ],
+  "limitations": [
+    "초기 1,769.811초의 무음은 그대로다. 전체 영상에 소리가 있다는 표현은 하지 않는다.",
+    "녹화 30fps를 게임 성능 측정으로 사용하지 않는다."
+  ],
+  "video": null
+}

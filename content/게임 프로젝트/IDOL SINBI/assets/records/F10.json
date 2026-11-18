@@ -1,0 +1,28 @@
+{
+  "article": "F10",
+  "title": "가방과 집 창고",
+  "status": "구현 · 저장 데이터와 제한 시험",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Verification/F091/Consumption-Runtime-Verification.json",
+      "type": "source document",
+      "sha256": "101f67fcc913ef0331ffdf90a28c86974a281798672b1119e2f240078129ab23"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "초기 기능 시험에서 가방·창고 이동과 저장 데이터 연결을 확인했다.",
+    "최신 상자 시험에서 가방 부족 시 보상을 지급하거나 상자를 소비하지 않는 동작을 확인했다."
+  ],
+  "limitations": [
+    "완성된 플레이어 집 실내와 모든 창고 동선까지 확인한 상태는 아니다.",
+    "보관 기능 자체의 최신 전용 캡처가 부족해 구조도로 설명한다."
+  ],
+  "video": null
+}

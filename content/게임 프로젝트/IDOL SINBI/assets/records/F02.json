@@ -1,0 +1,62 @@
+{
+  "article": "F02",
+  "title": "플레이어 이동과 카메라",
+  "status": "구현 · 조작 일부 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-15.md",
+      "type": "source document",
+      "sha256": "f2ed7b16bd02b4f111615f235d0c2c0ded3d808f376296b1f01c8a761322c17d"
+    },
+    {
+      "project_relative_path": "Docs/Verification/MouseLook-F022",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/zoomIn.jpg",
+      "id": "zoomIn",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/zoomIn.jpg",
+      "display_crop": null,
+      "source_sha256": "d17cdf052f0e521a24353a1bf0936234360e9924cb7ba78c4813cd760d3db348",
+      "display_sha256": "d3336dc5e149cc499be082483cfded3df3fcbeccbe91364a7c486a9d833a4f1c",
+      "feature_id": "F036-CameraZoom",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Real CUA upward wheel input; target arm 150 cm, pivot offset Z 63.59 cm, collision check enabled. Test map, not a planet-wide wall collision test."
+    },
+    {
+      "target": "assets/captures/zoomOut.jpg",
+      "id": "zoomOut",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/zoomOut.jpg",
+      "display_crop": null,
+      "source_sha256": "ad1eb9d3327527709d42d893301caa818a303230f3ae47b42708220128577ab0",
+      "display_sha256": "9c67472b3cd7430eaf47a45b063c62f576d737aa680b8c34dd6137285ef974ed",
+      "feature_id": "F036-CameraZoom",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Real CUA downward wheel input; target arm 1230 cm, pivot offset Z 0, collision check enabled. Test map."
+    }
+  ],
+  "verified": [
+    "실제 휠 입력으로 카메라 거리 150cm와 1,230cm 양끝을 확인했다.",
+    "메뉴 전후 시야 입력 재개를 별도로 시험했다."
+  ],
+  "limitations": [
+    "확대·축소의 전 행성 벽 충돌과 모든 게임패드 조합은 전수 확인하지 않았다."
+  ],
+  "video": {
+    "file": "../clips/F02.mp4",
+    "start_seconds": 237,
+    "duration_seconds": 8,
+    "audio": "silent excerpt",
+    "source": "2026-11-16 Q01-Q50 continuous editor playthrough"
+  }
+}

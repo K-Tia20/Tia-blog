@@ -1,0 +1,48 @@
+{
+  "article": "F28",
+  "title": "(미완) 전체 지도와 회전 미니맵",
+  "status": "일부 구현 후 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F092-HUDNoMinimap.md",
+      "type": "source document",
+      "sha256": "02ee8a67b20069061f74024655295874b9a3894150f16eb34d3e56b359841550"
+    },
+    {
+      "project_relative_path": "Docs/Verification/World-F055",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/oldMap.jpg",
+      "id": "oldMap",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/oldMap.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e8080773706891524513049409ffee7d2bacdb08b0b0df0bb5b5e4fb968d46b8",
+      "display_sha256": "2b94870bc1c2262e9af7815105c8417a7939a4f32cc8e1fea0431f7ca67de22f",
+      "feature_id": "F060-HUDMinimap",
+      "error_id": "MinimapInvisible",
+      "stage": "Error",
+      "note": "오메다 실제 시작점 PIE: 미니맵 지형·테두리는 나타나지 않고 노란 위치 표식만 보임. 수정 전 실제 화면."
+    }
+  ],
+  "verified": [
+    "오메다에서 지도 없이 포인터만 남던 실제 화면을 보관했다.",
+    "F092 포털 왕복 조회에서 지도 위젯이 없음을 확인했다."
+  ],
+  "limitations": [
+    "완성된 4행성 지도를 제공한 상태가 아니다.",
+    "사진은 제거 전 오류 상태다."
+  ],
+  "video": null
+}

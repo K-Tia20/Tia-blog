@@ -1,0 +1,43 @@
+{
+  "article": "F13",
+  "title": "실제 마이크 노래 채점",
+  "status": "구현 · 실제 마이크 1곡 / 분석 시험",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/mic.jpg",
+      "id": "mic",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/mic.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "c7bdd8b302ace39ea12993d63ff3c64aeee89cd281b28cc342cf3a83a6f1fef4",
+      "display_sha256": "4f2b62876e40be0228b513b21baa5e0366e5ad23e8c158da3b66d6dd738a5854",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "사용자가 실제 부른 새곡 마이크 시험 결과를 현재 남아 있는 마지막 정산에서 다시 연 화면. 처음 종료 순간 캡처가 아니며 재촬영 시점을 명시함. 입력4,498,280프레임/overflow0/점수17.096은 변경 전 채점식. 목소리나 프레임별 음정은 저장하지 않음."
+    }
+  ],
+  "verified": [
+    "Tia의 실제 마이크 1곡 입력은 기존 점수식 17.096점으로 기록했다. 화면은 그 결과를 나중에 다시 연 것이다.",
+    "별도의 분리 보컬 6곡 분석은 새 식에서 약 92.847~95.089점, 무음은 모두 0점이었다."
+  ],
+  "limitations": [
+    "17.096점을 새 식의 실제 재시험 점수로 바꾸어 쓰지 않는다.",
+    "분리 보컬 입력은 사람이 마이크로 부른 정확도 시험과 다르다. 여러 사람·마이크 환경 검증은 남았다."
+  ],
+  "video": null
+}

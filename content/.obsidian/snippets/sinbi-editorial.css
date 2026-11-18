@@ -1,39 +1,92 @@
-/* IDOL SINBI: keep the approved layout; inherit the normal vault text/heading sizes. */
-.markdown-preview-view.sinbi-editorial,
-.markdown-source-view.mod-cm6.sinbi-editorial {
-  --font-text: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  --file-line-width: 850px;
-  --link-color: #b69ce9;
-  --link-color-hover: #d7c5ff;
-  font-size: var(--font-text-size, 16px);
-  line-height: var(--line-height-normal);
-  letter-spacing: -0.025em;
-}
-.markdown-preview-view.sinbi-editorial p,
-.markdown-preview-view.sinbi-editorial li {
-  font-size: var(--font-text-size, 16px);
-  line-height: var(--line-height-normal);
-}
-.markdown-preview-view.sinbi-editorial h1,
-.markdown-preview-view.sinbi-editorial h2,
-.markdown-preview-view.sinbi-editorial h3 {
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  border: 0;
-  padding: 0;
-  margin-top: 2.5rem;
-}
-.markdown-preview-view.sinbi-editorial li { margin-block: 0.85rem; }
-.markdown-preview-view.sinbi-editorial img,
-.markdown-preview-view.sinbi-editorial video {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: none;
-  margin: 1.5rem auto;
-}
+/* IDOL SINBI: keep the approved layout; inherit the normal vault text/heading sizes. */
+.markdown-preview-view.sinbi-editorial,
+.markdown-source-view.mod-cm6.sinbi-editorial {
+  --font-text: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --file-line-width: 850px;
+  --link-color: #b69ce9;
+  --link-color-hover: #d7c5ff;
+  font-size: var(--font-text-size, 16px);
+  line-height: var(--line-height-normal);
+  letter-spacing: -0.025em;
+}
+.markdown-preview-view.sinbi-editorial p,
+.markdown-preview-view.sinbi-editorial li {
+  font-size: var(--font-text-size, 16px);
+  line-height: var(--line-height-normal);
+}
+.markdown-preview-view.sinbi-editorial h1,
+.markdown-preview-view.sinbi-editorial h2,
+.markdown-preview-view.sinbi-editorial h3 {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border: 0;
+  padding: 0;
+  margin-top: 2.5rem;
+}
+.markdown-preview-view.sinbi-editorial li { margin-block: 0.85rem; }
+.markdown-preview-view.sinbi-editorial img,
+.markdown-preview-view.sinbi-editorial video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  margin: 1.5rem auto;
+}
 .sinbi-editorial .inline-title { font-weight: 800; line-height: 1.25; }
+
+/* BEGIN TIA GIT PUBLISH LIST FILTER */
+/* View-only filter: no files are deleted, ignored, untracked, committed or pushed.
+   Staged files and conflicts deliberately remain visible for final review. */
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self:is(
+  [data-path^=".obsidian/"],
+  [data-path^="../검토용/"],
+  [data-path^="../quartz/.quartz-cache/"],
+  [data-path^="게임 프로젝트/IDOL SINBI/assets/records/"]
+)) { display: none !important; }
+
+/* Unused retained review media; tracked edits remain visible. */
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/cinderAfter.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/combat.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/dialog.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/diaryLatest.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/enemy.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/english.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/follow.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/giftActual.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/heartLatest.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/hudLatest.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/karaoke.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/karaokeLater.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/latest-01-06.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/latest-02-07-4.5.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/latest-02-07.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/latest-04-04.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/latest-fresh-enemy-nameplate.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/lyricScene.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/mic.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/result.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/typingInput.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/ui-09.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/video-1320.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/video-2170.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/video-3040.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/video-5100.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/zoomIn.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/captures/zoomOut.jpg"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/clips/F17.mp4"] .type[data-type="U"]),
+.workspace-leaf-content[data-type="git-view"] .changes .nav-file:has(> .tree-item-self[data-path="게임 프로젝트/IDOL SINBI/assets/visuals/F01-PlayFlow-1x3-v1.png"] .type[data-type="U"]) { display: none !important; }
+
+/* Raw totals include hidden files, so omit those totals from this view.
+   Per-file +, staged review, check, push, pull and refresh remain available.
+   Hide bulk stage/commit actions so hidden files cannot be selected by accident. */
+.workspace-leaf-content[data-type="git-view"] .changes:has(> .tree-item-self.is-clickable) > .tree-item-self .files-count,
+.workspace-leaf-content[data-type="git-view"] .changes > .tree-item-self .buttons,
+.workspace-leaf-content[data-type="git-view"] .changes .nav-folder > .tree-item-self .buttons,
+.workspace-leaf-content[data-type="git-view"] #stage-all,
+.workspace-leaf-content[data-type="git-view"] #backup-btn,
+.workspace-leaf-content[data-type="git-view"] #commit-menu { display: none !important; }
+/* END TIA GIT PUBLISH LIST FILTER */

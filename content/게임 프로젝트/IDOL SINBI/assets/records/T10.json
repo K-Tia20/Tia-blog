@@ -1,0 +1,33 @@
+{
+  "article": "T10",
+  "title": "배치를 저장했는데 재실행하면 달라지는 문제",
+  "status": "저장 경로 보완 · 재열기 기준",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-15.md",
+      "type": "source document",
+      "sha256": "f2ed7b16bd02b4f111615f235d0c2c0ded3d808f376296b1f01c8a761322c17d"
+    },
+    {
+      "project_relative_path": "Docs/Verification/World-F021",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F091-ChestFix-CinematicLyrics.md",
+      "type": "source document",
+      "sha256": "591aa9ed1ba9a366a5f5a239904252b3062d57c10f477666522670662d1db508"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "외부 액터 저장·다시 열기 관련 실제 실패와 재시도 로그가 남아 있다.",
+    "후속 상자 배치도 4맵을 디스크에서 다시 열어 수량·기울기를 확인했다."
+  ],
+  "limitations": [
+    "이 오류의 당시 화면은 미촬영이다. 도식은 기록을 설명하는 용도다.",
+    "모든 액터가 최종 원격 저장소에 동일하게 반영됐다는 뜻은 아니다."
+  ],
+  "video": null
+}

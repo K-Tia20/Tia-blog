@@ -1,0 +1,54 @@
+{
+  "article": "F19",
+  "title": "이야기 속 노래와 시네마틱",
+  "status": "구현 · 이야기 재생 / 가사 미리보기",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F091-ChestFix-CinematicLyrics.md",
+      "type": "source document",
+      "sha256": "591aa9ed1ba9a366a5f5a239904252b3062d57c10f477666522670662d1db508"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/lyricScene.jpg",
+      "id": "lyricScene",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/lyricScene.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "eca576a63ea877245ec26b8b744bfa5dd1243ab55e21764886f9d9d4e206bed8",
+      "display_sha256": "d489c29f9e1ab333b02e37417e9811b6d82bef7adf44c5f22f845984effc9787",
+      "feature_id": "F091-CinematicLyrics",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "실제 레타 Q07 임시 미리보기의3줄 가사와 파란 진행 강조. 전체6곡 전곡 동기 측정/새50퀘스트 완주와 구분."
+    }
+  ],
+  "verified": [
+    "이전 정상 완주에서 전곡 길이 이야기 노래 6개를 기록했다.",
+    "이후 F091의 임시 Q07 미리보기에서 실제 노래와 가사 표시를 확인했다."
+  ],
+  "limitations": [
+    "가사 추가 후 전체 50퀘스트를 새로 완주한 것은 아니다.",
+    "Q07 자동 시작·오디오 시간 차와 Q46 카메라 진입 문제 이력은 트러블슈팅에 분리했다."
+  ],
+  "video": {
+    "file": "../clips/F19.mp4",
+    "start_seconds": 5406,
+    "duration_seconds": 8,
+    "audio": "silent excerpt",
+    "source": "2026-11-16 Q01-Q50 continuous editor playthrough"
+  }
+}

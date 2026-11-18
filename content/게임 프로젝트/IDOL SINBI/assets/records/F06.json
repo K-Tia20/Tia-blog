@@ -1,0 +1,53 @@
+{
+  "article": "F06",
+  "title": "동료 추종과 협동 전투",
+  "status": "구현 · 협동 시험 / 길찾기 한계",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14-Party.md",
+      "type": "source document",
+      "sha256": "6110aa00030562b09746b764a6f3bd89e2d08a62c41d30658c6f6b13492940dc"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F050-F054-World-2026-11-16.md",
+      "type": "source document",
+      "sha256": "f7acad356fa286a0b42b9300a21e6b306ef3bf45d23c5d239e55139ace49e2a9"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/follow.jpg",
+      "id": "follow",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/follow.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "8089bed1d4a06769c29f7f5d6f064c428183c259def72f6425f02f9d9fd724d2",
+      "display_sha256": "933585d6c1ab9dc6b29ea741cb0eefe19e50d17f164004ef8f57cb6fee35b21a",
+      "feature_id": "StableParty",
+      "error_id": "PartyBlocking",
+      "stage": "Fixed",
+      "note": "동일 크기 6동료 이동 시험, 파티 이동 충돌 수정 후 전원 도착하고 정지."
+    }
+  ],
+  "verified": [
+    "시험 공간에서 크기가 다른 6동료의 목표 지점 도착을 확인했다.",
+    "플레이어가 공격하지 않는 원거리 동료 전투 시험 기록이 있다. 해당 시험의 페이즈는 이후 삭제됐다."
+  ],
+  "limitations": [
+    "최종 주민 전체의 공격·공연 응원과 전 행성 길찾기를 모두 확인한 것은 아니다.",
+    "실제 오메다 접근로에서 3동료와 함께 막힌 후속 사례도 있어 완전 해결로 쓰지 않는다."
+  ],
+  "video": null
+}

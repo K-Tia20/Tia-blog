@@ -1,0 +1,56 @@
+{
+  "article": "T13",
+  "title": "메인 메뉴 글자가 번역되지 않는 문제",
+  "status": "수정 · 실제 영어 전환 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/bakedError.jpg",
+      "id": "bakedError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/bakedError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "a6f63f6dd10553c0efb4f76c5af76df8fa5d38cc4bebd4c267a4da48577bed15",
+      "display_sha256": "d3a8fd70ac3c4a7299f9ded676b6a4d1389ada14f3147035d796f8684235e4bc",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": "E_BakedTitleLabels",
+      "stage": "Error",
+      "note": "English culture selected but prior title labels were baked Korean pixels."
+    },
+    {
+      "target": "assets/captures/bakedFixed.jpg",
+      "id": "bakedFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/bakedFixed.jpg",
+      "display_crop": null,
+      "source_sha256": "f16eb211e8b76235f12c34dda09c948d8b7f76ff188505c794df8d26a12522bb",
+      "display_sha256": "53a025ea0ed1d006a3dbe18cffa5a9590ca7b47057d31a7679a4e7d49ad71b10",
+      "feature_id": "F085-ReleaseTitle",
+      "error_id": "E_BakedTitleLabels",
+      "stage": "Fixed",
+      "note": "Actual menu recording frame: real Omeda photo with separate English menu labels. Dynamic underline final build pending."
+    }
+  ],
+  "verified": [
+    "실제 메인 화면에서 English를 클릭한 뒤 Continue·New Game·Settings·Quit 표시를 확인했다."
+  ],
+  "limitations": [
+    "이 비교는 당시 메뉴 배경이다. 현재 소개에는 더 최근 메뉴 캡처를 사용한다.",
+    "전체 언어의 모든 화면 검수가 완료됐다는 뜻은 아니다."
+  ],
+  "video": null
+}

@@ -1,0 +1,48 @@
+{
+  "article": "F26",
+  "title": "(미완) NPC 스킬 학습과 플레이어 Q",
+  "status": "구현 후 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F090-Skills-Treasure-Lyrics.md",
+      "type": "source document",
+      "sha256": "1b4786edd9cb194d42ae577ba9b8ca2ded9a00d2fad95eaebd45e4b2c9452a45"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/phaseSkill.jpg",
+      "id": "phaseSkill",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/phaseSkill.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "8ef813a1494fa051ec5a11d453a0531b00490688c29fd887dacb3c2b880baa53",
+      "display_sha256": "e4fa1e7058102bcae091e1a07c2711602b774c6a315042db096f3cad925032b6",
+      "feature_id": "PhaseBoost",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "Test map frame 80"
+    }
+  ],
+  "verified": [
+    "초기 시험 화면과 강화 동작 기록이 남아 있다.",
+    "F090에 플레이어 스킬 제거 변경이 명시되어 있다."
+  ],
+  "limitations": [
+    "현재 게임에서 사용할 수 있는 기능으로 소개하지 않는다.",
+    "스킬 전체가 완성된 뒤 출시한 것으로 쓰지 않는다."
+  ],
+  "video": null
+}

@@ -1,0 +1,27 @@
+{
+  "article": "F29",
+  "title": "(미완) 캐릭터 AI 대사 음성",
+  "status": "연결 후 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Source/EpicAIMegaJam/Public/Audio/MJCharacterVoicePolicy.h",
+      "type": "source document",
+      "sha256": "81578a2c917843289e197f7a4dbefcc717c72dabd515148a7b8af81b5aa88af1"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F099-MenuAudioNPC.md",
+      "type": "source document",
+      "sha256": "8a49deb2859dbe1645d45cdd5c44f828ce2f1c6a989d389d27c4c6c37f500b58"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "F088 음성 제거 작업과 이후 사운드 기록에서 제거 범위를 구분했다."
+  ],
+  "limitations": [
+    "정지 화면으로 실제 무음을 증명할 수 없어 이 항목은 변경 구조도로 설명한다.",
+    "최종 패키지 모든 캐릭터 발성의 청취 전수 검사는 남았다."
+  ],
+  "video": null
+}

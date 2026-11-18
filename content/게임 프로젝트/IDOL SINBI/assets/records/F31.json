@@ -1,0 +1,52 @@
+{
+  "article": "F31",
+  "title": "(미완) 페이즈 동료와 관련 설정",
+  "status": "기능 시험 후 에셋 · 설정 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Verification/Story-F039",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Verification/Story-F038",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/phaseSolo.jpg",
+      "id": "phaseSolo",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/phaseSolo.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 187,
+        "width": 1371,
+        "height": 771
+      },
+      "source_sha256": "838cdc894efd4e1b9fc2c2c2d2da80188c0b5e56458e704d13cec84293117211",
+      "display_sha256": "fc617de44dfb2127cc657fbfea67b90687b060daf4fa236cbb0d7793a88536d9",
+      "feature_id": "PhaseSolo",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "동행 페이즈 단독 원거리 전투"
+    }
+  ],
+  "verified": [
+    "플레이어가 공격하지 않고 페이즈가 적을 공격한 당시 실행 사진이 남아 있다."
+  ],
+  "limitations": [
+    "이 화면은 최종 동료 명단의 증거가 아니다.",
+    "페이즈를 따라 싸웠다는 원작 줄거리를 현재 신비 이야기의 설정으로 쓰지 않는다."
+  ],
+  "video": null
+}

@@ -1,0 +1,28 @@
+{
+  "article": "T15",
+  "title": "포털 이동 때 미니맵이 잠깐 나타나는 문제",
+  "status": "제거 후 왕복 조회 · 오류 영상 없음",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F092-HUDNoMinimap.md",
+      "type": "source document",
+      "sha256": "02ee8a67b20069061f74024655295874b9a3894150f16eb34d3e56b359841550"
+    },
+    {
+      "project_relative_path": "Docs/Verification/F092/Portal-Runtime.json",
+      "type": "source document",
+      "sha256": "1fb19249e60b80357130122506345399656f47dbfcde34f5f90bcec0c6aedac5"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "오메다 → 아고라 → 오메다 실제 포털 상호작용을 실행했다.",
+    "관측된 두 맵에서 지도 위젯 발견 목록은 비어 있었다."
+  ],
+  "limitations": [
+    "제보 당시 번쩍임 영상은 없다. 편집기 화면을 성공한 HUD 화면으로 대체하지 않았다.",
+    "상호작용 거리로 진단 배치한 시험이며 도보·모든 행성 왕복은 아니다."
+  ],
+  "video": null
+}

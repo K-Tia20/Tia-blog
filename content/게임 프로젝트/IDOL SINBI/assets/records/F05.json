@@ -1,0 +1,48 @@
+{
+  "article": "F05",
+  "title": "몬스터를 동료로 만드는 R 영입",
+  "status": "구현 · 최신 영입 조건 반영",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F089-HUD-Menu.md",
+      "type": "source document",
+      "sha256": "cadad9b7b8f1dcdc604027663edef1c2bd6787683f08aa6208ef1f35d96fd78d"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14-Party.md",
+      "type": "source document",
+      "sha256": "6110aa00030562b09746b764a6f3bd89e2d08a62c41d30658c6f6b13492940dc"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/heartLatest.jpg",
+      "id": "heartLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/heartLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "396e97a022afc1f1c16c5237d6e28c6844027400fa1285f97a6d7cd97660a880",
+      "display_sha256": "4b03ddfef60c1088d61cc03f893af5f8276b17a1b3edf639fa19a1a18281d2e2",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 F089: full-health target state checked after diagnostic reposition; input source not asserted."
+    }
+  ],
+  "verified": [
+    "최신 만피 영입·하트 표시는 F089 실행 조회와 화면으로 확인했다.",
+    "같은 적 액터의 진영을 바꾸는 경로와 보내주기 후 귀환을 이전 시험에서 확인했다."
+  ],
+  "limitations": [
+    "이전 사진에 남은 HP 20 안내는 폐기된 옛 규칙이다. 본문은 최신 F089 규칙을 따른다.",
+    "모든 적 외형을 최종 패키지에서 영입한 전수 시험은 없다."
+  ],
+  "video": null
+}

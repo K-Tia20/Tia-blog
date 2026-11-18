@@ -1,0 +1,50 @@
+{
+  "article": "F20",
+  "title": "네 행성과 포털 연결",
+  "status": "구현 · 실제 왕복 / 전체 동선 미검증",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/World-F043/README.md",
+      "type": "source document",
+      "sha256": "97f3b6292e8760a8039294a965ec72171997556423d0246b58d7bf144aa258f6"
+    },
+    {
+      "project_relative_path": "Docs/Verification/F092/Portal-Runtime.json",
+      "type": "source document",
+      "sha256": "1fb19249e60b80357130122506345399656f47dbfcde34f5f90bcec0c6aedac5"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/video-1320.jpg",
+      "id": "video-1320",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-1320.jpg",
+      "display_crop": null,
+      "source_sha256": "0a8d80a51d0fc526f983b7b8ac8007a6e55cbb3561e4d5aa3ec5721b0444ff0d",
+      "display_sha256": "0a3e39ff266c6c04cb81e03bac15b6421fb57cd3dacf62e89dee425e37f0d277",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 1320s; UI predates final HUD.",
+      "video_time_seconds": 1320
+    }
+  ],
+  "verified": [
+    "실제 여정에서 네 세계를 방문한 기록이 있다.",
+    "F092에서는 오메다 → 아고라 → 오메다 포털 상호작용 왕복을 별도 확인했다."
+  ],
+  "limitations": [
+    "F092 왕복은 포털 근처로 진단 배치한 뒤 실행했다. 전체 도보 길찾기 시험과 다르다.",
+    "합친 모든 구역·건물·경계·동료 경로의 완전한 검증은 남았다."
+  ],
+  "video": {
+    "file": "../clips/F20.mp4",
+    "start_seconds": 1317,
+    "duration_seconds": 7,
+    "audio": "silent excerpt",
+    "source": "2026-11-16 Q01-Q50 continuous editor playthrough"
+  }
+}

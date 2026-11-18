@@ -1,0 +1,66 @@
+{
+  "article": "T11",
+  "title": "시네마틱이 시작되지 않거나 중단되는 문제",
+  "status": "부분 수정 · 우회 성공과 원인 미확정 분리",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F067-ActualStoryWalk.md",
+      "type": "source document",
+      "sha256": "d3e20bc84a68019d4485c469687076c9bd98b38fe4d1582edc3c51f43d8fecd8"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/sceneError.jpg",
+      "id": "sceneError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/sceneError.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "210a7fa2abbbf646fdfd77cd77371fd97ca1c7f583e5712cbe93e56cbd193f8c",
+      "display_sha256": "e9846e6ec537d9cdaa77a3a8e035dc637d4608da3d058300ad8a24285a5a2f18",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_StoryCameraStart",
+      "stage": "Error",
+      "note": "Q46 failed to start because focus was inside a large NPC model. Progress did not advance."
+    },
+    {
+      "target": "assets/captures/sceneWorkaround.jpg",
+      "id": "sceneWorkaround",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/sceneWorkaround.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "44fa02ed9b5fb7b914a58d81016f0e5e9a2e51134a5ecd556053bc86725611c7",
+      "display_sha256": "4bce592f8d88ff7681ae90b0283393f9b9793b73567b650c4488aeed2fa1e3f9",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_StoryCameraStart",
+      "stage": "Fixed",
+      "note": "Workaround: physically step away, open/close menu, then full-song playback starts. No permanent automatic recovery claimed."
+    }
+  ],
+  "verified": [
+    "실제 완주에서 우회 후 전곡 재생과 뒤 퀘스트 진행을 확인했다."
+  ],
+  "limitations": [
+    "Q46 우회 성공을 영구 자동 복구 수정으로 쓰지 않는다.",
+    "저장 사본 로드와 최초 Q06 대화 종료는 다른 입력 경로다. 전부 동일 조건 비교가 아니다."
+  ],
+  "video": null
+}

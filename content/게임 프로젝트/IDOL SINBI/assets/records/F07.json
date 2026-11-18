@@ -1,0 +1,48 @@
+{
+  "article": "F07",
+  "title": "NPC 대화와 주민 행동",
+  "status": "구현 · 일부 주민 실행 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/NPC-F058",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F099-MenuAudioNPC.md",
+      "type": "source document",
+      "sha256": "8a49deb2859dbe1645d45cdd5c44f828ce2f1c6a989d389d27c4c6c37f500b58"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/dialog.jpg",
+      "id": "dialog",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/dialog.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "6309f0c3b509399928461ebef0591cedb52a0334c14b2e7bd623ac8d84a5b278",
+      "display_sha256": "e1381a570de6b2ef1567bb482be7a2bc83e67f45edc21fd3683c33558443c051",
+      "feature_id": "F058-OmedaResidentPIE",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "오메다 PIE 임시 진행 객체·진단 텔레포트. NPC_20 팬심100, 동행 버튼 숨김. 실제 일반 플레이 이동은 미시험."
+    }
+  ],
+  "verified": [
+    "오메다 NPC_20은 팬심 100이어도 동행 버튼이 없고, 동행 호출도 거절됨을 확인했다.",
+    "같은 시험에서 전투 동료 후보의 합류와 주민의 선물 반응을 확인했다."
+  ],
+  "limitations": [
+    "모든 주민의 순찰 경로·자연스러운 보행·대화 카메라는 전수 검증하지 않았다.",
+    "사진의 상점 버튼은 당시 상태이며 상점 기능은 최종 범위에서 삭제했다."
+  ],
+  "video": null
+}

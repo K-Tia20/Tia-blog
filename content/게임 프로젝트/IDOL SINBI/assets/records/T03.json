@@ -1,0 +1,62 @@
+{
+  "article": "T03",
+  "title": "멀리 가도 가이드 음악이 계속 나오는 문제",
+  "status": "수정 · 같은 시나리오 상태 재시험",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/guideError.jpg",
+      "id": "guideError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/guideError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "1779858465e566e2c12b691c3f079890e72cbaf76eb16b46dfaf85148602a361",
+      "display_sha256": "52b7667c84dc7461e9b112301aa1d7d705ee7d397b010e3795ff88deea01d36c",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-GuideDistance",
+      "stage": "Error",
+      "note": "준비창 닫기 후14m 이탈에도 가이드가 계속되는 실제 상태를 JSON으로 재현. 사용자 입력 감지 후 새로 촬영한 화면이며 소리 자체나 정확히 같은 카메라 구도 비교를 주장하지 않는다."
+    },
+    {
+      "target": "assets/captures/guideFixed.jpg",
+      "id": "guideFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/guideFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e57c1117f6027082b4735cca591879b1f8d1899951be294f73e20f532a53dfc9",
+      "display_sha256": "74f5bc3e722b334f0b3704257f3fb574c037d00ebde162acf1568fb6223df19a",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-GuideDistance",
+      "stage": "Fixed",
+      "note": "실제 PIE 동일 시나리오: 가이드 시작 후 준비창 닫고14m 이동. 전 guide_playing=true, 후 false. 추가로 준비창 유지14m 이동 및 버튼 toggle도 별도 로그로 확인. 스크린샷은 상태 증거이며 소리의 청취 검증을 대신하지 않음."
+    }
+  ],
+  "verified": [
+    "실제 PIE에서 창을 닫고 14m 이동하는 같은 시나리오를 재시험했다.",
+    "전 guide_playing=true, 후 false를 확인하고 창 유지 거리 이탈·토글도 점검했다."
+  ],
+  "limitations": [
+    "사진만으로 소리 청취를 증명하지 않는다. 상태 로그와 함께 판단했다.",
+    "전후 사진의 카메라 구도는 정확히 같지 않다."
+  ],
+  "video": null
+}

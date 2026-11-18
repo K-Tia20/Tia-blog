@@ -1,0 +1,62 @@
+{
+  "article": "T12",
+  "title": "공연 화면이 나무에 가려지는 문제",
+  "status": "카메라 수정 · 별도 미리보기 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/treeError.jpg",
+      "id": "treeError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/treeError.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5dea614b24397eb5f14f2b9df77f93641148cfa1be0575e7aa011c8b0fabf727",
+      "display_sha256": "49a00cd58ba7686970b1a00529f4474ef85422d9007155abd4b73368cce52186",
+      "feature_id": "F086-ConcertCamera",
+      "error_id": "E_TreeOcclusion",
+      "stage": "Error",
+      "note": "Original production camera inside a decorative tree. Physics probe alone did not detect it."
+    },
+    {
+      "target": "assets/captures/treeFixed.jpg",
+      "id": "treeFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/treeFixed.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "5883371ce97d918479646cb25c5260d9184d5f4300e9cbecc06111e5bf83e395",
+      "display_sha256": "f54efbc38e1ee89c1bb43725d60d25d1aca84c82f3a02f7adefa8c55fc353133",
+      "feature_id": "F086-ConcertCamera",
+      "error_id": "E_TreeOcclusion",
+      "stage": "Fixed",
+      "note": "Authored venue yaw180 and mirrored backstage saved/reopened; compiled camera fallback checked in separate staged zero-fee preview. Does not validate economy or walking."
+    }
+  ],
+  "verified": [
+    "공연장 설정을 저장하고 다시 열어 확인했다.",
+    "별도의 위치 스테이징·무료 미리보기에서 가림이 줄어든 화면을 확인했다."
+  ],
+  "limitations": [
+    "이 미리보기는 비용 지출·실제 도보·정상 퀘스트 진행을 검증한 것이 아니다.",
+    "모든 무대의 모든 관객 수와 카메라 구도가 항상 안전하다는 보증은 아니다."
+  ],
+  "video": null
+}

@@ -1,0 +1,48 @@
+{
+  "article": "F22",
+  "title": "저장과 다국어",
+  "status": "구현 · 언어 전환 / 현지화 부분 검수",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    },
+    {
+      "project_relative_path": "Docs/Verification/UI-PC-9-Applied",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-13.md",
+      "type": "source document",
+      "sha256": "9e82e316917b69feebef7df734781622d217be6d19edf1adb460d8b9cdbe8dc4"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/ui-09.jpg",
+      "id": "ui-09",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/ui-09.jpg",
+      "display_crop": null,
+      "source_sha256": "c62303987608bc3d33b187384cc35de51a1a7d117b8176a005e83cd7df023716",
+      "display_sha256": "fc92ccd3955c651aeb82289a7e4b1660cd578dc1cbf9f4b94ec5df3dd957c157",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-14 UI development capture; historical."
+    }
+  ],
+  "verified": [
+    "정상 완주 뒤 디스크 저장에 완료50과 엔딩 상태가 남는 것을 확인했다.",
+    "메인 화면에서 English 선택 직후 메뉴 문구가 바뀌는 실제 실행을 확인했다."
+  ],
+  "limitations": [
+    "슬롯 사진은 11월 14일 보존된 기능 화면이다. 최종 UI 외형과 다를 수 있다.",
+    "9개 언어 전체의 자연스러운 문장·글꼴·RTL·손상 저장 복구 전수 검증은 남았다."
+  ],
+  "video": null
+}

@@ -1,0 +1,28 @@
+{
+  "article": "T02",
+  "title": "공연이 시작하자마자 끝나는 문제",
+  "status": "수정 · 오디오 시작 / 끝 판정 분리",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-13.md",
+      "type": "source document",
+      "sha256": "9e82e316917b69feebef7df734781622d217be6d19edf1adb460d8b9cdbe8dc4"
+    },
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "후속 실제 마이크·타자 공연이 끝까지 진행된 기록이 있다.",
+    "새 6곡 전체 길이 재생도 별도로 통과했다."
+  ],
+  "limitations": [
+    "최초 조기 종료 화면은 미촬영이다. 구조도는 실제 로그와 변경을 설명한 것이며 당시 UI 재현이 아니다.",
+    "마이크 첫 패킷 문제와 같은 시기에 조사됐지만 서로 다른 판정 문제다."
+  ],
+  "video": null
+}

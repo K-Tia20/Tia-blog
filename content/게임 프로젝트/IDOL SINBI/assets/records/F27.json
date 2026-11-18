@@ -1,0 +1,46 @@
+{
+  "article": "F27",
+  "title": "(미완) NPC 상점",
+  "status": "구현 후 삭제",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F089-HUD-Menu.md",
+      "type": "source document",
+      "sha256": "cadad9b7b8f1dcdc604027663edef1c2bd6787683f08aa6208ef1f35d96fd78d"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/oldShop.jpg",
+      "id": "oldShop",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/oldShop.jpg",
+      "display_crop": null,
+      "source_sha256": "4066fa5a87e842e5c442be7bbfaea252777c652726d7bfd26d96118234527c04",
+      "display_sha256": "3c5170e4c6d1b858e2819b164ecaf7abe3f58aa84972bd14df2c332222f86673",
+      "feature_id": "F011-Adventure",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "상점 첫 실제 화면. 구매 버튼 마우스 클릭 골드965→960 확인. 모델 방향은 별도 오류로 기록."
+    }
+  ],
+  "verified": [
+    "초기 실제 클릭 시험에서 골드 965 → 960 구매가 확인됐다."
+  ],
+  "limitations": [
+    "이 사진은 삭제 전 기록이다. 지금도 구매할 수 있다는 설명이 아니다."
+  ],
+  "video": null
+}

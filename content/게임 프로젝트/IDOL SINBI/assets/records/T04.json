@@ -1,0 +1,62 @@
+{
+  "article": "T04",
+  "title": "간주에 타자 단어가 먼저 나오는 문제",
+  "status": "수정 · 간주와 노래 구간 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/earlyWord.jpg",
+      "id": "earlyWord",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/earlyWord.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "ad85328c7c2366e20020fdbca1ea900c40787ca8f54ae95557857188d465c7a2",
+      "display_sha256": "e83946b14780a94df8e49927079ad9da046719ca801f726d0a8d9e2a995f8496",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-EarlyTypingPrompt",
+      "stage": "Error",
+      "note": "실제 Mars Fiesta50.43초 간주에서 가사는 비었지만 다음 입력 단어corazón이 먼저 표시됨. 수정 전 촬영을 위해 실제 재생 일시정지."
+    },
+    {
+      "target": "assets/captures/wordFixed.jpg",
+      "id": "wordFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/wordFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "f9ac0e5feebadb7ef3548ca5ca13ddd9204d505c732cfb376d6660e411a0a523",
+      "display_sha256": "8092c842c3676b35942e0e3067fb336a6a20dd7679fcfc22d9c6aa5b92498494",
+      "feature_id": "F031-ConcertSixSongs",
+      "error_id": "E031-EarlyTypingPrompt",
+      "stage": "Fixed",
+      "note": "같은 Song4 간주50.43/50.94초 조건에서 가사와 입력 단어 모두 빈 상태. 전 사진의미리나온corazón표시없음. 실제노래가진행된뒤일시정지하여촬영;시계0.51초차있음. 노래구간9.407초에는원문Red와입력Red가함께나온별도캡처도보관."
+    }
+  ],
+  "verified": [
+    "Song4 간주 50.43초 전후의 오류와 수정 후 50.94초 빈 표시를 확인했다.",
+    "노래 구간 9.407초에는 가사 Red와 입력 Red가 함께 나타났다."
+  ],
+  "limitations": [
+    "촬영 시계에 0.51초 차이가 있어 완전히 같은 프레임 비교는 아니다.",
+    "모든 음절의 사람 청취 동기 검수나 입력 지연 0ms를 뜻하지 않는다."
+  ],
+  "video": null
+}

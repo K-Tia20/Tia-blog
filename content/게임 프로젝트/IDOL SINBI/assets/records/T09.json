@@ -1,0 +1,67 @@
+{
+  "article": "T09",
+  "title": "배경 팩을 합치며 생긴 틈과 물 겹침",
+  "status": "일부 구역 수정 · 전체 월드 미완 검증",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/World-F030/WaterBounds",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Verification/World-F021",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/waterError.jpg",
+      "id": "waterError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/waterError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "368b0575993cd758b4743ba2c422c9e32faaa1528b5e12b723cc1cbc5cea63be",
+      "display_sha256": "7b6381e1b55729e00ebeb9d47f53c5db3e27972651089bff174ea4447ff202af",
+      "feature_id": "F030-WaterBounds",
+      "error_id": "E030-ZechenWaterOverlap",
+      "stage": "Error",
+      "note": "Retained actual CUA pre-fix water-overlap image. The initial export reused an older valid BEFORE state. Exact original capture time is not available; file timestamp is export time. The final fresh AFTER uses the same pond area with a slightly different camera, not an exact frame alignment."
+    },
+    {
+      "target": "assets/captures/waterFixed.jpg",
+      "id": "waterFixed",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/waterFixed.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "5764e7f991b6091bb268e4fc4736e7e2bf3ba28bbe312579dbd34a85dedee779",
+      "display_sha256": "af6818cd80e99bb7de3be22f0f9a2fe7c34bfa52ca15d0f55dc0d3fa799e129e",
+      "feature_id": "F030-WaterBounds",
+      "error_id": "E030-ZechenWaterOverlap",
+      "stage": "Fixed",
+      "note": "Fresh actual CUA AFTER export with distinct hash. Same village shoreline scenario as retained genuine BEFORE, slightly different camera angle; not frame-aligned. Duplicate after exports rejected before commit. Saved game-world water bounds readback separately passed."
+    }
+  ],
+  "verified": [
+    "같은 마을 해안 시나리오에서 겹치던 물 제거와 섬의 물 유지 상태를 확인했다.",
+    "일부 지형은 같은 카메라에서 하부 가림 전후를 확인했다."
+  ],
+  "limitations": [
+    "물 사진의 촬영 각도는 조금 다르다. 최초 원본 촬영 시각도 일부 미상이다.",
+    "시각용 암벽에는 충돌이 없는 것도 있어 낙하 방지·전 구역 보행 완료를 뜻하지 않는다."
+  ],
+  "video": null
+}

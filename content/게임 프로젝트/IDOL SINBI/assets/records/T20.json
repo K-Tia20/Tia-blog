@@ -1,0 +1,28 @@
+{
+  "article": "T20",
+  "title": "Rider MCP 연결과 빌드 결과가 어긋나는 문제",
+  "status": "연결 수정 · 상태 API 우회",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Tooling/Rider-MCP",
+      "type": "evidence directory",
+      "sha256": null
+    },
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "Rider의 게임·엔진 C++ 트리와 UBT 성공을 확인했다.",
+    "동일 빌드 실행 구성 종료 0을 읽어 상태 API false와 구분했다."
+  ],
+  "limitations": [
+    "MCP 서버의 상태 API 결함을 고쳤다는 뜻은 아니다. 결과를 우회 검증한 것이다.",
+    "진단 화면은 남아 있으나 공개 글에는 코드·계정 화면 대신 결과 도식을 사용했다."
+  ],
+  "video": null
+}

@@ -1,0 +1,62 @@
+{
+  "article": "F16",
+  "title": "노래방처럼 진행되는 가사",
+  "status": "구현 · 실제 색 진행 확인",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/karaoke.jpg",
+      "id": "karaoke",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/karaoke.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "743655ac8b5236b2517827030ccd1cbea7f524b02a2bf9489c00399b410a424f",
+      "display_sha256": "acb3c888a9c729fd07676c1a89be5dc9c9f8650201fd291d83258569f430f593",
+      "feature_id": "F031-KaraokeLyrics",
+      "error_id": null,
+      "stage": "NewFeature",
+      "note": "실제 Song1 오디오11.3998초에서 원문 단어 부분 파란 채움. 촬영을 위해 실제 재생 일시정지했고1.5초간 곡시간 변화0. 정지 화면을 연속 재생영상으로 주장하지 않음."
+    },
+    {
+      "target": "assets/captures/karaokeLater.jpg",
+      "id": "karaokeLater",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-15",
+      "display_file": "assets/captures/karaokeLater.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "1e770f09782754386296bb4f64c1c76541a54802f9cecfc3ea22e5a285111764",
+      "display_sha256": "77509f6704f5a68994fde5a52847d324572eba91c413f830776a0436f5b86010",
+      "feature_id": "F031-KaraokeLyrics",
+      "error_id": null,
+      "stage": "Verified",
+      "note": "같은 실제 재생을 재개하고14.2157초에서 다시 일시정지해 가사 색이 다음 단어까지 진행됨을 확인. 자동 색칠 모형이 아닌 실제 PIE."
+    }
+  ],
+  "verified": [
+    "실제 재생 11.40초의 부분 채움과 재개 후 14.22초의 진행 변화를 촬영했다.",
+    "정지 상태 1.5초 동안 곡 시간이 변하지 않는 것을 확인했다."
+  ],
+  "limitations": [
+    "이 글의 두 장은 실제 재생을 멈춰 촬영한 사진이다. 연속 동영상으로 표현하지 않는다.",
+    "6곡의 모든 음절을 사람이 듣고 맞춘 검수와 9언어 발음 검수는 남았다."
+  ],
+  "video": null
+}

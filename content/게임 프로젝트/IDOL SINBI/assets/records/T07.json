@@ -1,0 +1,66 @@
+{
+  "article": "T07",
+  "title": "동료가 막히거나 따라오지 않는 문제",
+  "status": "부분 수정 · 실제 월드 경로 남음",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-14.md",
+      "type": "source document",
+      "sha256": "c010c61929502b726c4e479b33002760e530d4c53d29880214a7a9fb351b44d4"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F050-F054-World-2026-11-16.md",
+      "type": "source document",
+      "sha256": "f7acad356fa286a0b42b9300a21e6b306ef3bf45d23c5d239e55139ace49e2a9"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/followError.jpg",
+      "id": "followError",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-14",
+      "display_file": "assets/captures/followError.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 340,
+        "width": 827,
+        "height": 465
+      },
+      "source_sha256": "f5202ece0333691ced01deba57ce5ca53800c10545259fe9bca24ece4144ea3e",
+      "display_sha256": "8bd941f9f15fee2e0afaf8d3725e8af876e7ba6ebad742cabc885c78ce79c1cc",
+      "feature_id": "StableParty",
+      "error_id": "PartyBlocking",
+      "stage": "Error",
+      "note": "크기별 목표는 계산됐지만 캡슐 충돌로 3명이 막혔다."
+    },
+    {
+      "target": "assets/captures/laterPath.jpg",
+      "id": "laterPath",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/laterPath.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 177,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "e79be50569339b4b842b58fab4216e5111f7e6bf48b20a6953a9aab4189f8360",
+      "display_sha256": "bd4d7f3caa0be32ea707156ac82945c2ba29d81e4a0e8b18ffa8f54efce90809",
+      "feature_id": "F054-OmedaCompact",
+      "error_id": "ApproachBlocked",
+      "stage": "Error",
+      "note": "실제 신비와 파라곤 3명의 입력 시험에서 첫 경유점 전에 구조물에 막힘. 접근로 대안 조사."
+    }
+  ],
+  "verified": [
+    "시험 맵에서 6동료가 목적지에 도착하고 멈추는 것을 확인했다."
+  ],
+  "limitations": [
+    "후속 오메다 3동료 접근 시험은 막혔다. 전 행성 길찾기 해결로 표시하지 않는다.",
+    "아래는 시험 공간 오류와 나중의 실제 월드 장애 사례다. 같은 조건의 전후 쌍이 아니다."
+  ],
+  "video": null
+}

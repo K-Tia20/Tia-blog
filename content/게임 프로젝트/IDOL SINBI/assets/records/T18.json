@@ -1,0 +1,48 @@
+{
+  "article": "T18",
+  "title": "Lumen 그림자 메모리 경고",
+  "status": "일부 경고 완화 · 전체 성능 미측정",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    },
+    {
+      "project_relative_path": "Docs/Technical/Performance.md",
+      "type": "source document",
+      "sha256": "70b8348a701e3c4b4a90e6730ec29ec70a9abcd14f4645d57f2a5e4caa11f210"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/lumen.jpg",
+      "id": "lumen",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/lumen.jpg",
+      "display_crop": {
+        "left": 3,
+        "top": 33,
+        "width": 1920,
+        "height": 1080
+      },
+      "source_sha256": "3778b05eddb743fb0c97622b4515b680d3b58294476c48bca3e7025eb472c00f",
+      "display_sha256": "d170a905ffccb94f0165f991cd8b693499181e4090c689235ba39f1c861e10a8",
+      "feature_id": "F086-ActualJourney",
+      "error_id": "E_LumenAtlasBudget",
+      "stage": "Error",
+      "note": "Actual Q25 concert. Lumen surface-cache atlas oversubscribed 39.89%; atlas4096. Gameplay proceeds; rendering budget issue unresolved."
+    }
+  ],
+  "verified": [
+    "같은 공연장에서 Lumen 초과 경고가 43.78% → 21.20%로 줄었다.",
+    "밀도 50 재방문에서는 해당 경고가 보이지 않았다."
+  ],
+  "limitations": [
+    "아래 그래프는 경고 관측값이며 FPS·VRAM 사용률 개선 그래프가 아니다.",
+    "밀도 50은 경고 미관측이지 측정값 0%가 아니다. 최종 패키지 성능과 화질 비교는 미측정이다."
+  ],
+  "video": null
+}

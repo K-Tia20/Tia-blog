@@ -1,0 +1,43 @@
+{
+  "article": "T01",
+  "title": "마이크가 연결됐는데 입력되지 않는 문제",
+  "status": "수정 · 입력 경로 확인 / 오류 사진 없음",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-13.md",
+      "type": "source document",
+      "sha256": "9e82e316917b69feebef7df734781622d217be6d19edf1adb460d8b9cdbe8dc4"
+    },
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/firstPacket.jpg",
+      "id": "firstPacket",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-13",
+      "display_file": "assets/captures/firstPacket.jpg",
+      "display_crop": null,
+      "source_sha256": "b538c9a23e213a1a7268c7c702d00fd7802f99004bc660d4e70c33d335c7641a",
+      "display_sha256": "cfa1d644411069375b7a331dcdb1929ab064cbdbbb5dffd11b0c713cd5a9864c",
+      "feature_id": "F001-Concert-Microphone",
+      "error_id": "E-FirstPacket",
+      "stage": "Fixed",
+      "note": "최종 실제 입력·정산 검증 화면. 오류 전 이미지가 없어 완전한 전후 쌍이 아님."
+    }
+  ],
+  "verified": [
+    "후속 시험에서 실제 마이크 입력과 정산을 확인했다.",
+    "새 곡의 사용자 입력에는 약 449만 프레임·overflow 0이 남았다."
+  ],
+  "limitations": [
+    "실패 당시 화면은 남아 있지 않다. 성공 화면을 과거 실패 화면처럼 쓰지 않는다.",
+    "모든 Windows 장치와 샘플레이트 조합 시험은 아니다."
+  ],
+  "video": null
+}

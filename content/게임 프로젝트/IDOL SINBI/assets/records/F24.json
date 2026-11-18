@@ -1,0 +1,28 @@
+{
+  "article": "F24",
+  "title": "Windows 패키징",
+  "status": "Win64 패키징 성공 · 최종 실행 미검증",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F103-Package.md",
+      "type": "source document",
+      "sha256": "9a9c984c6faed4043c8393a26b66c29e7199d60e848849551df3ad317b0980b7"
+    },
+    {
+      "project_relative_path": "Docs/Verification/F103-Package",
+      "type": "evidence directory",
+      "sha256": null
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "UAT exit 0과 BUILD SUCCESSFUL을 확인했다. 마지막 소요 시간은 4분 56초였다.",
+    "이전 실패·성공 로그를 별도로 남겼다."
+  ],
+  "limitations": [
+    "Shipping 빌드라고 쓰지 않는다.",
+    "사용자가 직접 결과를 보기로 해 F103 패키지 실행은 하지 않았다. 최종 FPS·메모리·전체 여정도 미측정이다."
+  ],
+  "video": null
+}

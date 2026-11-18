@@ -1,3 +1,6 @@
 {
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [
+    "sinbi-editorial"
+  ],
+  "showRibbon": true
 }

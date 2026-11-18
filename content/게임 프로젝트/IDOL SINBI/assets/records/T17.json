@@ -1,0 +1,28 @@
+{
+  "article": "T17",
+  "title": "패키징 마지막에 실패하는 문제",
+  "status": "대체 텍스처로 재쿠킹 성공",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F087-WindowsPackage.md",
+      "type": "source document",
+      "sha256": "3e7e1b3e6c0848fdcfba4385ddf560dbd8ae8d1d33d16c3ba8d43dff48e2050a"
+    },
+    {
+      "project_relative_path": "Docs/Assets/F087-Laguna-TextureRepair-AssetRegister.json",
+      "type": "source document",
+      "sha256": "e8c2e2b917d8375244c6958e050e8f58eff3b7a64ab29dd5fac8f4c36fc8d9ca"
+    }
+  ],
+  "captures": [],
+  "verified": [
+    "실패 실행은 약 1시간 2분 42초 뒤 중단됐다. 이후 재쿠킹 성공 로그가 있다.",
+    "최종 F103 재패키징도 exit 0으로 완료됐다."
+  ],
+  "limitations": [
+    "실패 당시 화면은 없고 실제 UAT 로그가 남아 있다.",
+    "원본 이미지가 완전히 복구됐다고 쓰지 않는다. 재쿠킹 성공도 최종 플레이 보증은 아니다."
+  ],
+  "video": null
+}

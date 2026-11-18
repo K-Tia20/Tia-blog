@@ -1,0 +1,48 @@
+{
+  "article": "F18",
+  "title": "50개 메인 퀘스트와 일기",
+  "status": "구현 · 50개 여정 완주 기록",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Devlog/2026-11-16-F089-HUD-Menu.md",
+      "type": "source document",
+      "sha256": "cadad9b7b8f1dcdc604027663edef1c2bd6787683f08aa6208ef1f35d96fd78d"
+    },
+    {
+      "project_relative_path": "Docs/Devlog/F085-F086-Release-2026-11-16.md",
+      "type": "source document",
+      "sha256": "ee1e4fa4efb0e7b0f6b53d4a9895ae055538fee8d35cea210b1ea4d6e0239a8d"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/diaryLatest.jpg",
+      "id": "diaryLatest",
+      "source_type": "retained actual application capture",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/diaryLatest.jpg",
+      "display_crop": {
+        "left": 7,
+        "top": 339,
+        "width": 1052,
+        "height": 592
+      },
+      "source_sha256": "9357134c8a538f171e1fa05c1626edf3be66df736576268fc52ae38ea1034b95",
+      "display_sha256": "4661920ec234b493ac233fe26a948aee7b84b2423e3425fdb6fd4d41027025f3",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 F089: temporary Q03 and completed Q01/Q02 to test diary navigation; not normal story completion."
+    }
+  ],
+  "verified": [
+    "새 게임부터 Q50 엔딩까지 연속 진행하고 저장 상태를 확인했다.",
+    "일기의 이전 버튼 분기와 클릭 영역을 수정한 기록이 있다."
+  ],
+  "limitations": [
+    "최종 UI 수정 뒤 50페이지를 다시 모두 열어 본 시험은 아니다.",
+    "사진은 최근 일기 수정 시점의 화면이며 이때 남은 시작 알림은 이후 제거됐다."
+  ],
+  "video": null
+}

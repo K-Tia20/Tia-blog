@@ -1,0 +1,44 @@
+{
+  "article": "F15",
+  "title": "Gemini 6곡을 게임에 넣기",
+  "status": "구현 · 6곡 도입 / 정렬 초안",
+  "record_scope": "Past development evidence curated on 2026-11-17; no game execution in this blog task.",
+  "sources": [
+    {
+      "project_relative_path": "Docs/Assets/Gemini-Music-2026-11-15.json",
+      "type": "source document",
+      "sha256": "7f8f8a054cc9fb9d5dd02c26a46dace5118f234cc6ad5207c67df1b028068ea0"
+    },
+    {
+      "project_relative_path": "Docs/Verification/Concert-F031/README.md",
+      "type": "source document",
+      "sha256": "351c4413de259284978efcacb9ec0c8d16f178f76e7cce3d48492ce4e0622fa1"
+    }
+  ],
+  "captures": [
+    {
+      "target": "assets/captures/video-2170.jpg",
+      "id": "video-2170",
+      "source_type": "actual continuous editor playthrough frame",
+      "source_date": "2026-11-16",
+      "display_file": "assets/captures/video-2170.jpg",
+      "display_crop": null,
+      "source_sha256": "b12f362d9430b6428999ecf1681ddd9fbe5615dba26a919a013a63aaeb6ad634",
+      "display_sha256": "cb521eea00bbc4680397a08913a676b392aaa8eb5c13cf42b1ce17ae92dc213e",
+      "feature_id": null,
+      "error_id": null,
+      "stage": null,
+      "note": "2026-11-16 actual continuous editor playthrough, time 2170s; UI predates final HUD.",
+      "video_time_seconds": 2170
+    }
+  ],
+  "verified": [
+    "최종 곡 여섯 개의 실제 길이 재생과 자동 타자 완료를 확인했다.",
+    "정상 완주에서 여섯 곡 획득과 전곡 길이 이야기 장면 여섯 번을 기록했다."
+  ],
+  "limitations": [
+    "분리 반주와 정답 차트는 로컬 자동 분석 결과다. 사람의 전 구절 승인본으로 보지 않는다.",
+    "초기 “내 노래의 이유”는 현재 곡 목록에서 제외했다."
+  ],
+  "video": null
+}
