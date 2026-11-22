@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 326.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +200,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "59727fb28d3bac90",
+  "active": "58e3bc8890257fbc",
   "lastOpenFiles": [
     "게임 프로젝트/IDOL SINBI/Demo Video.md",
     "게임 프로젝트/IsekaiClass/Demo Video.md",
