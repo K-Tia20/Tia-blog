@@ -1,12 +1,3 @@
----
-title: IDOL SINBI
-date: 2026-11-17
-tags:
-  - IDOL-SINBI
-  - 프로젝트
-cssclasses:
-  - sinbi-editorial
----
 
 ![[menuLatest.jpg]]
 

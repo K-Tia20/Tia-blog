@@ -9,16 +9,17 @@ Unreal Engine 5.5와 C++로 개발한 **3인칭 좀비 웨이브 액션 게임**
 
 ## 개발 환경
 
-| 항목 | 사용 기술 |
-| --- | --- |
-| 게임 엔진 | Unreal Engine 5.5 |
-| 개발 언어 | C++ / Blueprint |
-| 개발 도구 | Visual Studio 2022 |
-| 입력 시스템 | Enhanced Input |
-| UI | UMG |
-| 시각 효과 | Niagara |
+| 항목      | 사용 기술                            |
+| ------- | -------------------------------- |
+| 게임 엔진   | Unreal Engine 5.5                |
+| 개발 언어   | C++ / Blueprint                  |
+| 개발 도구   | Visual Studio 2022               |
+| 입력 시스템  | Enhanced Input                   |
+| UI      | UMG                              |
+| 시각 효과   | Niagara                          |
 | AI 및 이동 | AIController / Navigation System |
-| 버전 관리 | Git / Git LFS |
+| 버전 관리   | Git / Git LFS                    |
+| 제작 기간   | 2026.06.02 ~ 2026.06.22          |
 
 ## 주요 기능
 

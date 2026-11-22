@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Game Project/HaremTextRPG/Demo Video.md",
+                "file": "Game Project/ProjectF/Intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Demo Video"
+              "title": "Intro"
             }
           }
         ]
@@ -200,20 +200,27 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ed21fa0731abd996",
+  "active": "59727fb28d3bac90",
   "lastOpenFiles": [
-    "Game Project/IDOL SINBI/Demo Video.md",
-    "Game Project/IsekaiClass/Demo Video.md",
+    "Game Project/ProjectF/GameOpening.mp4",
+    "Game Project/ProjectF/ProjectF.png",
+    "Game Project/ProjectF/Intro.md",
+    "Game Project/ProjectF/ProjectF.md",
+    "Game Project/PrincessRPG/프린세스 RPG.md",
     "Game Project/PrincessRPG/Demo Video.md",
+    "Game Project/IsekaiClass/이세계 클래스.md",
+    "Game Project/IsekaiClass/Demo Video.md",
+    "Game Project/IDOL SINBI/IDOL SINBI.md",
+    "Game Project/IDOL SINBI/Demo Video.md",
+    "Game Project/HaremTextRPG/하렘 텍스트 RPG.md",
+    "Game Project/HaremTextRPG/하렘텍스트RPG.png",
+    "Game Project/HaremTextRPG/Demo Video.md",
+    "Game Project/IsekaiClass/이세계클래스_중간발표.pdf",
+    "Game Project/IsekaiClass/IC_1.png",
     "Game Project/ProjectF/Demo Video.md",
     "게임 프로젝트/PrincessRPG/Features/0. 시연 영상.md",
     "게임 프로젝트/ProjectF/Features/0.시연 영상.md",
-    "Game Project/ProjectF/ProjectF.md",
     "Game Project/ProjectF/ProjectF.pdf",
-    "Game Project/ProjectF/ProjectF.png",
-    "Game Project/IsekaiClass/IC_1.png",
-    "Game Project/HaremTextRPG/Demo Video.md",
-    "Game Project/IDOL SINBI/IDOL SINBI.md",
     "Game Project/IsekaiClass/VRoid API Integration/4. 버전 기록.md",
     "Game Project/IsekaiClass/VRoid API Integration/3. 구조와 원리.md",
     "Game Project/IsekaiClass/VRoid API Integration/2. 기능 정리.md",
@@ -237,16 +244,9 @@
     "게임 프로젝트/IsekaiClass/VROID API/ClassVroid.md",
     "게임 프로젝트/IsekaiClass/VROID API/ClassVroid.md.tmp.24508.fa33a6a7cbd9",
     "게임 프로젝트/IsekaiClass/VROID API/images/console_job.jpg",
-    "게임 프로젝트/IsekaiClass/VROID API/images/outfit_controls.png",
     "게임 프로젝트/IsekaiClass/VROID API/images",
     "게임 프로젝트/IsekaiClass/VROID API",
-    "Game Project/IsekaiClass/이세계 클래스.md",
-    "Game Project/HaremTextRPG/하렘 텍스트 RPG.md",
-    "Game Project/HaremTextRPG/텍스트 RPG 세계관에서 하렘을 구축하는 방법.pdf",
     "게임 프로젝트/IDOL SINBI/Features/0. 시연 영상.md",
-    "게임 프로젝트/HaremTextRPG/Features/0.시연 영상.md",
-    "TIL/261118(수)_TIL.md",
-    "TIL/269999(요일)_TIL.md",
-    "TIL/261117(화)_TIL.md"
+    "게임 프로젝트/HaremTextRPG/Features/0.시연 영상.md"
   ]
 }
